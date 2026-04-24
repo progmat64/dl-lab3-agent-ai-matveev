@@ -9,6 +9,9 @@ from openai import OpenAI
 from .config import LLMConfig
 
 
+DEFAULT_OPENROUTER_MODEL = "openai/gpt-5-mini"
+
+
 class LLM(Protocol):
     model_name: str
 
@@ -70,7 +73,7 @@ class OpenRouterLLM:
         if explicit_model:
             self.model_candidates = [explicit_model]
         else:
-            self.model_candidates = free_openrouter_models() or ["openrouter/auto"]
+            self.model_candidates = [DEFAULT_OPENROUTER_MODEL] + free_openrouter_models()
         self.model_name = self.model_candidates[0]
         self.temperature = config.temperature
         self.max_tokens = config.max_tokens
@@ -106,7 +109,11 @@ class OpenRouterLLM:
                 message = str(exc).lower()
                 can_retry = (
                     "429" in message
+                    or "402" in message
                     or "403" in message
+                    or "payment" in message
+                    or "spend" in message
+                    or "quota" in message
                     or "rate" in message
                     or "temporarily" in message
                     or "blocked" in message

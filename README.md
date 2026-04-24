@@ -23,10 +23,16 @@ export OPENROUTER_API_KEY="..."
 Можно явно указать модель:
 
 ```bash
-export OPENROUTER_MODEL="meta-llama/llama-3.1-8b-instruct:free"
+export OPENROUTER_MODEL="openai/gpt-5-mini"
 ```
 
-Если `OPENROUTER_MODEL` не задана, код попробует выбрать бесплатную модель из OpenRouter `/models`.
+Если `OPENROUTER_MODEL` не задана, код использует платную модель `openai/gpt-5-mini`. Если она недоступна, временно заблокирована или у ключа исчерпан spend limit, скрипт попробует перейти на бесплатные модели из OpenRouter `/models`.
+
+Для принудительного запуска на бесплатной модели можно указать ее явно:
+
+```bash
+export OPENROUTER_MODEL="openrouter/free"
+```
 
 Полный запуск:
 
@@ -37,7 +43,7 @@ python3 scripts/run_experiments.py
 Экономный запуск для проверки:
 
 ```bash
-python3 scripts/run_experiments.py --limit 2 --top-k 3 --max-steps 4
+python3 scripts/run_experiments.py --limit 2 --top-k 3 --max-steps 4 --max-tokens 700
 ```
 
 ## Результаты
@@ -47,4 +53,3 @@ python3 scripts/run_experiments.py --limit 2 --top-k 3 --max-steps 4
 - `output/results/summary.csv` - средние значения по конфигурациям;
 - `output/figures/` - графики;
 - `output/report/lab3_report.docx` - черновик отчета по результатам.
-
