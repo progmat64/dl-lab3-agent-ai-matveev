@@ -91,16 +91,20 @@ class OpenRouterLLM:
         for model in self.model_candidates:
             self.model_name = model
             try:
-                response = self.client.chat.completions.create(
-                    model=model,
-                    messages=[{"role": "user", "content": prompt}],
-                    temperature=self.temperature,
-                    max_tokens=self.max_tokens,
-                )
-                content = response.choices[0].message.content
-                if content and content.strip():
-                    return content
-                last_error = RuntimeError(f"Model {model} returned an empty response")
+                for token_limit in [self.max_tokens, self.max_tokens * 2]:
+                    response = self.client.chat.completions.create(
+                        model=model,
+                        messages=[{"role": "user", "content": prompt}],
+                        temperature=self.temperature,
+                        max_tokens=token_limit,
+                        extra_body={"reasoning": {"effort": "minimal"}},
+                    )
+                    content = response.choices[0].message.content
+                    if content and content.strip():
+                        return content
+                    last_error = RuntimeError(
+                        f"Model {model} returned an empty response with max_tokens={token_limit}"
+                    )
                 if len(self.model_candidates) > 1:
                     continue
                 raise last_error

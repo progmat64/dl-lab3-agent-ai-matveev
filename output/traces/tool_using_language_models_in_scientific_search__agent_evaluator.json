@@ -1,0 +1,5548 @@
+{
+  "topic": "Tool-using language models in scientific search",
+  "objective": "Подготовить структурированный научно-аналитический обзор темы",
+  "step_id": 6,
+  "history": [
+    {
+      "step_id": 0,
+      "action": "search_wikipedia",
+      "payload": {
+        "topic": "Tool-using language models in scientific search"
+      },
+      "result": "A large language model (LLM) is a neural network trained on a vast amount of text for natural language processing tasks, especially language generation. LLMs can generate, summarize, translate and parse text in many contexts, and are a foundational technology behind modern chatbots. Biased or inaccurate training data can make an LLM's output less reliable.",
+      "n_sources": 0,
+      "n_notes": 0,
+      "next_reason": "need general context before publication search"
+    },
+    {
+      "step_id": 1,
+      "action": "search_openalex",
+      "payload": {
+        "query": "Tool-using language models in scientific search",
+        "per_page": 5
+      },
+      "result": "found=5",
+      "n_sources": 5,
+      "n_notes": 0,
+      "next_reason": "extract notes from returned publications"
+    },
+    {
+      "step_id": 2,
+      "action": "extract_notes",
+      "payload": {
+        "n_sources": 5,
+        "top_k": 5
+      },
+      "result": "notes_prepared=5",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "generate final answer from context and notes"
+    },
+    {
+      "step_id": 3,
+      "action": "generate_final_answer",
+      "payload": {
+        "topic": "Tool-using language models in scientific search"
+      },
+      "result": "Определение темы\nTool-using language models in scientific search — это направление, где большие языковые модели (LLM) не только генерируют текст, но и взаимодействуют с внешними инструментами (поисковыми движками, базами данных, библиотеками вычислений, визуализацией и т.п.) для выполнения научного поиска, верификации, извлечения и обработки информации. В общем контексте LLM — нейронные сети, обученные на больших корпусах текста для задач генерации и понимания языка; их надежность зависит от кач",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "finish or run evaluator depending on configuration"
+    },
+    {
+      "step_id": 4,
+      "action": "internal_evaluator",
+      "payload": {
+        "criteria": [
+          "correctness",
+          "groundedness",
+          "completeness",
+          "coverage_of_required_fields",
+          "source_consistency",
+          "comment",
+          "rubric"
+        ]
+      },
+      "result": "{'correctness': 4, 'groundedness': 4, 'completeness': 4, 'coverage_of_required_fields': 4, 'source_consistency': 5, 'comment': 'Ответ в целом корректен, логично связывает идею tool-using LLM с приведёнными источниками и выделяет релевантные приложения и примеры. Обоснования в основном соответствуют содержанию перечисленных работ (SciPy, PHENIX, Coot, ImageJ, обсуждение этики в JAMA), но в тексте есть явное признание отсутствия прямых исследований по именно «tool-using LLM in scientific search» в",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "refine if rubric is below threshold"
+    },
+    {
+      "step_id": 5,
+      "action": "finish",
+      "payload": {
+        "status": "finished",
+        "stop_reason": "final_answer_generated"
+      },
+      "result": "final_answer_generated",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "stop criterion reached"
+    }
+  ],
+  "sources": [
+    {
+      "id": "https://openalex.org/W2099540110",
+      "display_name": "NIH Image to ImageJ: 25 years of image analysis",
+      "publication_year": 2012,
+      "abstract_inverted_index": null,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5111881458",
+            "display_name": "Caroline A Schneider",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I135310074",
+              "display_name": "University of Wisconsin–Madison",
+              "ror": "https://ror.org/01y2jtd41",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I135310074"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Caroline A Schneider",
+          "raw_affiliation_strings": [
+            "Caroline A. Schneider and Kevin W. Eliceiri are at the Laboratory for Optical and Computational Instrumentation, University of Wisconsin at Madison, Madison, Wisconsin, USA.,",
+            "Laboratory for Optical and Computational Instrumentation, University of Wisconsin at Madison, Madison, Wisconsin, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Caroline A. Schneider and Kevin W. Eliceiri are at the Laboratory for Optical and Computational Instrumentation, University of Wisconsin at Madison, Madison, Wisconsin, USA.,",
+              "institution_ids": [
+                "https://openalex.org/I135310074"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Laboratory for Optical and Computational Instrumentation, University of Wisconsin at Madison, Madison, Wisconsin, USA",
+              "institution_ids": [
+                "https://openalex.org/I135310074"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5052725140",
+            "display_name": "Wayne Rasband",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1299303238",
+              "display_name": "National Institutes of Health",
+              "ror": "https://ror.org/01cwqze88",
+              "country_code": "US",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1299022934",
+                "https://openalex.org/I1299303238"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Wayne S Rasband",
+          "raw_affiliation_strings": [
+            "Wayne S. Rasband is at the Section on Instrumentation, US National Institutes of Health, Bethesda, Maryland, USA.,"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Wayne S. Rasband is at the Section on Instrumentation, US National Institutes of Health, Bethesda, Maryland, USA.,",
+              "institution_ids": [
+                "https://openalex.org/I1299303238"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5010413374",
+            "display_name": "Kevin W. Eliceiri",
+            "orcid": "https://orcid.org/0000-0001-8678-670X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I135310074",
+              "display_name": "University of Wisconsin–Madison",
+              "ror": "https://ror.org/01y2jtd41",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I135310074"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Kevin W Eliceiri",
+          "raw_affiliation_strings": [
+            "Caroline A. Schneider and Kevin W. Eliceiri are at the Laboratory for Optical and Computational Instrumentation, University of Wisconsin at Madison, Madison, Wisconsin, USA.,"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Caroline A. Schneider and Kevin W. Eliceiri are at the Laboratory for Optical and Computational Instrumentation, University of Wisconsin at Madison, Madison, Wisconsin, USA.,",
+              "institution_ids": [
+                "https://openalex.org/I135310074"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1038/nmeth.2089"
+    },
+    {
+      "id": "https://openalex.org/W3003257820",
+      "display_name": "SciPy 1.0: fundamental algorithms for scientific computing in Python",
+      "publication_year": 2020,
+      "abstract_inverted_index": {
+        "SciPy": [
+          0,
+          18,
+          65
+        ],
+        "is": [
+          1
+        ],
+        "an": [
+          2,
+          56
+        ],
+        "open-source": [
+          3
+        ],
+        "scientific": [
+          4,
+          27
+        ],
+        "computing": [
+          5
+        ],
+        "library": [
+          6
+        ],
+        "for": [
+          7,
+          25
+        ],
+        "the": [
+          8,
+          59
+        ],
+        "Python": [
+          9
+        ],
+        "programming": [
+          10
+        ],
+        "language.": [
+          11
+        ],
+        "Since": [
+          12
+        ],
+        "its": [
+          13
+        ],
+        "initial": [
+          14
+        ],
+        "release": [
+          15
+        ],
+        "in": [
+          16,
+          29
+        ],
+        "2001,": [
+          17
+        ],
+        "has": [
+          19
+        ],
+        "become": [
+          20
+        ],
+        "a": [
+          21
+        ],
+        "de": [
+          22
+        ],
+        "facto": [
+          23
+        ],
+        "standard": [
+          24
+        ],
+        "leveraging": [
+          26
+        ],
+        "algorithms": [
+          28
+        ],
+        "Python,": [
+          30
+        ],
+        "with": [
+          31
+        ],
+        "over": [
+          32,
+          41
+        ],
+        "600": [
+          33
+        ],
+        "unique": [
+          34
+        ],
+        "code": [
+          35
+        ],
+        "contributors,": [
+          36
+        ],
+        "thousands": [
+          37
+        ],
+        "of": [
+          38,
+          47,
+          58,
+          64
+        ],
+        "dependent": [
+          39,
+          43
+        ],
+        "packages,": [
+          40
+        ],
+        "100,000": [
+          42
+        ],
+        "repositories": [
+          44
+        ],
+        "and": [
+          45,
+          61,
+          67
+        ],
+        "millions": [
+          46
+        ],
+        "downloads": [
+          48
+        ],
+        "per": [
+          49
+        ],
+        "year.": [
+          50
+        ],
+        "In": [
+          51
+        ],
+        "this": [
+          52
+        ],
+        "work,": [
+          53
+        ],
+        "we": [
+          54
+        ],
+        "provide": [
+          55
+        ],
+        "overview": [
+          57
+        ],
+        "capabilities": [
+          60
+        ],
+        "development": [
+          62
+        ],
+        "practices": [
+          63
+        ],
+        "1.0": [
+          66
+        ],
+        "highlight": [
+          68
+        ],
+        "some": [
+          69
+        ],
+        "recent": [
+          70
+        ],
+        "technical": [
+          71
+        ],
+        "developments.": [
+          72
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": null,
+            "display_name": "Pauli Virtanen",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I94722563",
+              "display_name": "University of Jyväskylä",
+              "ror": "https://ror.org/05n3dz165",
+              "country_code": "FI",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I94722563"
+              ]
+            }
+          ],
+          "countries": [
+            "FI"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Pauli Virtanen",
+          "raw_affiliation_strings": [
+            "University of Jyväskylä, Jyväskylä, Finland"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Jyväskylä, Jyväskylä, Finland",
+              "institution_ids": [
+                "https://openalex.org/I94722563"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Ralf Gommers",
+            "orcid": "https://orcid.org/0000-0002-0300-3333"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210098317",
+              "display_name": "Quansight (United States)",
+              "ror": "https://ror.org/00zeq0353",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210098317"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ralf Gommers",
+          "raw_affiliation_strings": [
+            "Quansight LLC, Austin, TX, USA. scipy.articles@gmail.com"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-0300-3333",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Quansight LLC, Austin, TX, USA. scipy.articles@gmail.com",
+              "institution_ids": [
+                "https://openalex.org/I4210098317"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Travis E. Oliphant",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I100005738",
+              "display_name": "Brigham Young University",
+              "ror": "https://ror.org/047rhhm47",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I100005738"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210098317",
+              "display_name": "Quansight (United States)",
+              "ror": "https://ror.org/00zeq0353",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210098317"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210104575",
+              "display_name": "Anaconda (United States)",
+              "ror": "https://ror.org/0164jks53",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210104575"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210121859",
+              "display_name": "Enthought (United States)",
+              "ror": "https://ror.org/02xfc1977",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210121859"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210146710",
+              "display_name": "Mayo Clinic in Florida",
+              "ror": "https://ror.org/03zzw1w08",
+              "country_code": "US",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I1330342723",
+                "https://openalex.org/I4210146710"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Travis E. Oliphant",
+          "raw_affiliation_strings": [
+            "Anaconda Inc., Austin, TX, USA",
+            "Electrical Engineering, Brigham Young University, Provo, UT, USA",
+            "Enthought, Inc., Austin, TX, USA",
+            "Quansight LLC, Austin, TX, USA",
+            "Ultrasound Imaging, Mayo Clinic, Rochester, MN, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Anaconda Inc., Austin, TX, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210104575"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Electrical Engineering, Brigham Young University, Provo, UT, USA",
+              "institution_ids": [
+                "https://openalex.org/I100005738"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Enthought, Inc., Austin, TX, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210121859"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Quansight LLC, Austin, TX, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210098317"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Ultrasound Imaging, Mayo Clinic, Rochester, MN, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210146710"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Matt Haberland",
+            "orcid": "https://orcid.org/0000-0003-4806-3601"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I149919469",
+              "display_name": "California Polytechnic State University",
+              "ror": "https://ror.org/001gpfp45",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I149919469"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I161318765",
+              "display_name": "University of California, Los Angeles",
+              "ror": "https://ror.org/046rm7j60",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I161318765"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Matt Haberland",
+          "raw_affiliation_strings": [
+            "BioResource and Agricultural Engineering Department, California Polytechnic State University, San Luis Obispo, CA, USA. scipy.articles@gmail.com",
+            "Department of Mathematics, University of California Los Angeles, Los Angeles, CA, USA. scipy.articles@gmail.com"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-4806-3601",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "BioResource and Agricultural Engineering Department, California Polytechnic State University, San Luis Obispo, CA, USA. scipy.articles@gmail.com",
+              "institution_ids": [
+                "https://openalex.org/I149919469"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Mathematics, University of California Los Angeles, Los Angeles, CA, USA. scipy.articles@gmail.com",
+              "institution_ids": [
+                "https://openalex.org/I161318765"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Tyler Reddy",
+            "orcid": "https://orcid.org/0000-0003-2364-6157"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1343871089",
+              "display_name": "Los Alamos National Laboratory",
+              "ror": "https://ror.org/01e41cf67",
+              "country_code": "US",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1330989302",
+                "https://openalex.org/I1343871089",
+                "https://openalex.org/I198811213",
+                "https://openalex.org/I4210120050"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Tyler Reddy",
+          "raw_affiliation_strings": [
+            "Los Alamos National Laboratory, Los Alamos, NM, USA. scipy.articles@gmail.com"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-2364-6157",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Los Alamos National Laboratory, Los Alamos, NM, USA. scipy.articles@gmail.com",
+              "institution_ids": [
+                "https://openalex.org/I1343871089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "David Cournapeau",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "David Cournapeau",
+          "raw_affiliation_strings": [
+            "Independent researcher, Tokyo, Japan"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Independent researcher, Tokyo, Japan",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Evgeni Burovski",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I118501908",
+              "display_name": "National Research University Higher School of Economics",
+              "ror": "https://ror.org/055f7t516",
+              "country_code": "RU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I118501908"
+              ]
+            }
+          ],
+          "countries": [
+            "RU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Evgeni Burovski",
+          "raw_affiliation_strings": [
+            "National Research University Higher School of Economics, Moscow, Russia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "National Research University Higher School of Economics, Moscow, Russia",
+              "institution_ids": [
+                "https://openalex.org/I118501908"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Pearu Peterson",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I111112146",
+              "display_name": "Tallinn University of Technology",
+              "ror": "https://ror.org/0443cwa12",
+              "country_code": "EE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I111112146"
+              ]
+            }
+          ],
+          "countries": [
+            "EE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Pearu Peterson",
+          "raw_affiliation_strings": [
+            "Department of Mechanics and Applied Mathematics, Institute of Cybernetics at Tallinn Technical University, Tallinn, Estonia",
+            "Independent researcher, Saue, Estonia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Mechanics and Applied Mathematics, Institute of Cybernetics at Tallinn Technical University, Tallinn, Estonia",
+              "institution_ids": [
+                "https://openalex.org/I111112146"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Independent researcher, Saue, Estonia",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Warren Weckesser",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I95457486",
+              "display_name": "University of California, Berkeley",
+              "ror": "https://ror.org/01an7q238",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I95457486"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Warren Weckesser",
+          "raw_affiliation_strings": [
+            "Berkeley Institute for Data Science, University of California Berkeley, Berkeley, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Berkeley Institute for Data Science, University of California Berkeley, Berkeley, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I95457486"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Jonathan Bright",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Jonathan Bright",
+          "raw_affiliation_strings": [
+            "Independent researcher, New York, NY, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Independent researcher, New York, NY, USA",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Stéfan J. van der Walt",
+            "orcid": "https://orcid.org/0000-0001-9276-1891"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I95457486",
+              "display_name": "University of California, Berkeley",
+              "ror": "https://ror.org/01an7q238",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I95457486"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Stéfan J. van der Walt",
+          "raw_affiliation_strings": [
+            "Berkeley Institute for Data Science, University of California Berkeley, Berkeley, CA, USA"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-9276-1891",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Berkeley Institute for Data Science, University of California Berkeley, Berkeley, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I95457486"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Matthew Brett",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I79619799",
+              "display_name": "University of Birmingham",
+              "ror": "https://ror.org/03angcq70",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I79619799"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Matthew Brett",
+          "raw_affiliation_strings": [
+            "School of Psychology, University of Birmingham, Edgbaston, Birmingham, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Psychology, University of Birmingham, Edgbaston, Birmingham, UK",
+              "institution_ids": [
+                "https://openalex.org/I79619799"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Joshua Wilson",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210121988",
+              "display_name": "Film Independent",
+              "ror": "https://ror.org/036cy3843",
+              "country_code": "US",
+              "type": "nonprofit",
+              "lineage": [
+                "https://openalex.org/I4210121988"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Joshua Wilson",
+          "raw_affiliation_strings": [
+            "Independent researcher, San Francisco, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Independent researcher, San Francisco, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210121988"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "K. Jarrod Millman",
+            "orcid": "https://orcid.org/0000-0002-5263-5070"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I95457486",
+              "display_name": "University of California, Berkeley",
+              "ror": "https://ror.org/01an7q238",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I95457486"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "K. Jarrod Millman",
+          "raw_affiliation_strings": [
+            "Berkeley Institute for Data Science, University of California Berkeley, Berkeley, CA, USA",
+            "Division of Biostatistics, University of California Berkeley, Berkeley, CA, USA"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-5263-5070",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Berkeley Institute for Data Science, University of California Berkeley, Berkeley, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I95457486"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Division of Biostatistics, University of California Berkeley, Berkeley, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I95457486"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Nikolay Mayorov",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210128657",
+              "display_name": "WayRay (Russia)",
+              "ror": "https://ror.org/03nrpad60",
+              "country_code": "RU",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210128657"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210165827",
+              "display_name": "Skolkovo Foundation",
+              "ror": "https://ror.org/05qj99v29",
+              "country_code": "RU",
+              "type": "nonprofit",
+              "lineage": [
+                "https://openalex.org/I4210165827"
+              ]
+            }
+          ],
+          "countries": [
+            "RU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Nikolay Mayorov",
+          "raw_affiliation_strings": [
+            "WayRay LLC, Skolkovo Innovation Center, Moscow, Russia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "WayRay LLC, Skolkovo Innovation Center, Moscow, Russia",
+              "institution_ids": [
+                "https://openalex.org/I4210165827",
+                "https://openalex.org/I4210128657"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Andrew R. J. Nelson",
+            "orcid": "https://orcid.org/0000-0002-4548-3558"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1334950195",
+              "display_name": "Australian Nuclear Science and Technology Organisation",
+              "ror": "https://ror.org/05j7fep28",
+              "country_code": "AU",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I1334950195",
+                "https://openalex.org/I2801453606",
+                "https://openalex.org/I4387156119"
+              ]
+            }
+          ],
+          "countries": [
+            "AU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Andrew R. J. Nelson",
+          "raw_affiliation_strings": [
+            "Australian Nuclear Science and Technology Organisation, Lucas Heights, NSW, Australia"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-4548-3558",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Australian Nuclear Science and Technology Organisation, Lucas Heights, NSW, Australia",
+              "institution_ids": [
+                "https://openalex.org/I1334950195"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Eric Jones",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210121859",
+              "display_name": "Enthought (United States)",
+              "ror": "https://ror.org/02xfc1977",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210121859"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Eric Jones",
+          "raw_affiliation_strings": [
+            "Enthought, Inc., Austin, TX, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Enthought, Inc., Austin, TX, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210121859"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Robert Kern",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210121859",
+              "display_name": "Enthought (United States)",
+              "ror": "https://ror.org/02xfc1977",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210121859"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Robert Kern",
+          "raw_affiliation_strings": [
+            "Enthought, Inc., Austin, TX, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Enthought, Inc., Austin, TX, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210121859"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Eric Larson",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I201448701",
+              "display_name": "University of Washington",
+              "ror": "https://ror.org/00cvxb145",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I201448701"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Eric Larson",
+          "raw_affiliation_strings": [
+            "Institute for Learning and Brain Sciences, University of Washington, Seattle, WA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institute for Learning and Brain Sciences, University of Washington, Seattle, WA, USA",
+              "institution_ids": [
+                "https://openalex.org/I201448701"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "C J Carey",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I177605424",
+              "display_name": "Amherst College",
+              "ror": "https://ror.org/028vqfs63",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I177605424"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I24603500",
+              "display_name": "University of Massachusetts Amherst",
+              "ror": "https://ror.org/0072zz521",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I24603500"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "C J Carey",
+          "raw_affiliation_strings": [
+            "College of Information and Computing Sciences, University of Massachusetts Amherst, Amherst, MA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Information and Computing Sciences, University of Massachusetts Amherst, Amherst, MA, USA",
+              "institution_ids": [
+                "https://openalex.org/I177605424",
+                "https://openalex.org/I24603500"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "İlhan Polat",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "İlhan Polat",
+          "raw_affiliation_strings": [
+            "Independent researcher, Amsterdam, the Netherlands"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Independent researcher, Amsterdam, the Netherlands",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Yu Feng",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I95457486",
+              "display_name": "University of California, Berkeley",
+              "ror": "https://ror.org/01an7q238",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I95457486"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yu Feng",
+          "raw_affiliation_strings": [
+            "Berkeley Center for Cosmological Physics, University of California Berkeley, Berkeley, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Berkeley Center for Cosmological Physics, University of California Berkeley, Berkeley, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I95457486"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Eric W. Moore",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I193170854",
+              "display_name": "Bruker (United States)",
+              "ror": "https://ror.org/04r739x86",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I193170854"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Eric W. Moore",
+          "raw_affiliation_strings": [
+            "Bruker Biospin Corp., Billerica, MA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Bruker Biospin Corp., Billerica, MA, USA",
+              "institution_ids": [
+                "https://openalex.org/I193170854"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Jake VanderPlas",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I201448701",
+              "display_name": "University of Washington",
+              "ror": "https://ror.org/00cvxb145",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I201448701"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jake VanderPlas",
+          "raw_affiliation_strings": [
+            "University of Washington, Seattle, WA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Washington, Seattle, WA, USA",
+              "institution_ids": [
+                "https://openalex.org/I201448701"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Denis Laxalde",
+            "orcid": "https://orcid.org/0000-0002-5540-4825"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Denis Laxalde",
+          "raw_affiliation_strings": [
+            "Independent researcher, Toulouse, France"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-5540-4825",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Independent researcher, Toulouse, France",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Josef Perktold",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Josef Perktold",
+          "raw_affiliation_strings": [
+            "Independent researcher, Montreal, Quebec, Canada"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Independent researcher, Montreal, Quebec, Canada",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Robert Cimrman",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I92715842",
+              "display_name": "University of West Bohemia in Pilsen",
+              "ror": "https://ror.org/040t43x18",
+              "country_code": "CZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I92715842"
+              ]
+            }
+          ],
+          "countries": [
+            "CZ"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Robert Cimrman",
+          "raw_affiliation_strings": [
+            "New Technologies Research Centre, University of West Bohemia, Plzeň, Czech Republic"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "New Technologies Research Centre, University of West Bohemia, Plzeň, Czech Republic",
+              "institution_ids": [
+                "https://openalex.org/I92715842"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Ian Henriksen",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I100005738",
+              "display_name": "Brigham Young University",
+              "ror": "https://ror.org/047rhhm47",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I100005738"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210104575",
+              "display_name": "Anaconda (United States)",
+              "ror": "https://ror.org/0164jks53",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210104575"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I86519309",
+              "display_name": "The University of Texas at Austin",
+              "ror": "https://ror.org/00hj54h04",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I86519309"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ian Henriksen",
+          "raw_affiliation_strings": [
+            "Anaconda Inc., Austin, TX, USA",
+            "Department of Mathematics, Brigham Young University, Provo, UT, USA",
+            "Oden Institute for Computational Engineering and Sciences, The University of Texas at Austin, Austin, TX, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Anaconda Inc., Austin, TX, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210104575"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Mathematics, Brigham Young University, Provo, UT, USA",
+              "institution_ids": [
+                "https://openalex.org/I100005738"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Oden Institute for Computational Engineering and Sciences, The University of Texas at Austin, Austin, TX, USA",
+              "institution_ids": [
+                "https://openalex.org/I86519309"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "E. A. Quintero",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "E. A. Quintero",
+          "raw_affiliation_strings": [
+            "Independent researcher, Belmont, Massachusetts, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Independent researcher, Belmont, Massachusetts, USA",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Charles R. Harris",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4388482684",
+              "display_name": "Utah State University Space Dynamics Laboratory",
+              "ror": "https://ror.org/02w403h65",
+              "country_code": null,
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I121980950",
+                "https://openalex.org/I4388482684"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Charles R. Harris",
+          "raw_affiliation_strings": [
+            "Independent researcher, Logan, Utah, USA",
+            "Space Dynamics Laboratory, North Logan, UT, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Independent researcher, Logan, Utah, USA",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Space Dynamics Laboratory, North Logan, UT, USA",
+              "institution_ids": [
+                "https://openalex.org/I4388482684"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Anne M. Archibald",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Anne M. Archibald",
+          "raw_affiliation_strings": [
+            "Anton Pannekoek Institute, Amsterdam, The Netherlands"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Anton Pannekoek Institute, Amsterdam, The Netherlands",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Antônio H. Ribeiro",
+            "orcid": "https://orcid.org/0000-0003-3632-8529"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I110200422",
+              "display_name": "Universidade Federal de Minas Gerais",
+              "ror": "https://ror.org/0176yjw32",
+              "country_code": "BR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I110200422"
+              ]
+            }
+          ],
+          "countries": [
+            "BR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Antônio H. Ribeiro",
+          "raw_affiliation_strings": [
+            "Graduate Program in Electrical Engineering, Universidade Federal de Minas Gerais, Belo Horizonte, Brazil"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-3632-8529",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Graduate Program in Electrical Engineering, Universidade Federal de Minas Gerais, Belo Horizonte, Brazil",
+              "institution_ids": [
+                "https://openalex.org/I110200422"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Fabian Pedregosa",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210148186",
+              "display_name": "Google (Canada)",
+              "ror": "https://ror.org/04d06q394",
+              "country_code": "CA",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969",
+                "https://openalex.org/I4210148186"
+              ]
+            }
+          ],
+          "countries": [
+            "CA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Fabian Pedregosa",
+          "raw_affiliation_strings": [
+            "Google LLC, Montreal, Quebec, Canada"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google LLC, Montreal, Quebec, Canada",
+              "institution_ids": [
+                "https://openalex.org/I4210148186"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Paul van Mulbregt",
+            "orcid": "https://orcid.org/0000-0002-2382-8308"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Paul van Mulbregt",
+          "raw_affiliation_strings": [
+            "Google LLC, Cambridge, MA, USA"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-2382-8308",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google LLC, Cambridge, MA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "SciPy 1.0 Contributors",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "SciPy 1.0 Contributors",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Aditya Vijaykumar",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Aditya Vijaykumar",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Alessandro Pietro Bardelli",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Alessandro Pietro Bardelli",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Alex Rothberg",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Alex Rothberg",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Andreas Hilboll",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Andreas Hilboll",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Andreas Kloeckner",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Andreas Kloeckner",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Anthony Scopatz",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Anthony Scopatz",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Antony Lee",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Antony Lee",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Ariel Rokem",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Ariel Rokem",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "C. Nathan Woods",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "C. Nathan Woods",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Chad Fulton",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Chad Fulton",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Charles Masson",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Charles Masson",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Christian Häggström",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Christian Häggström",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Clark Fitzgerald",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Clark Fitzgerald",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "David A. Nicholson",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "David A. Nicholson",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "David R. Hagen",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "David R. Hagen",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Dmitrii V. Pasechnik",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Dmitrii V. Pasechnik",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Emanuele Olivetti",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Emanuele Olivetti",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Eric Martin",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Eric Martin",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Eric Wieser",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Eric Wieser",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Fabrice Silva",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Fabrice Silva",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Felix Lenders",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Felix Lenders",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Florian Wilhelm",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Florian Wilhelm",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "G. Young",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "G. Young",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Gavin A. Price",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Gavin A. Price",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Gert-Ludwig Ingold",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Gert-Ludwig Ingold",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Gregory E. Allen",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Gregory E. Allen",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Gregory R. Lee",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Gregory R. Lee",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Hervé Audren",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Hervé Audren",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Irvin Probst",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Irvin Probst",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Jörg P. Dietrich",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Jörg P. Dietrich",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Jacob Silterra",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Jacob Silterra",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "James T Webber",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "James T Webber",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Janko Slavič",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Janko Slavič",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Joel Nothman",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Joel Nothman",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Johannes Buchner",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Johannes Buchner",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Johannes Kulick",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Johannes Kulick",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Johannes L. Schönberger",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Johannes L. Schönberger",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "José Vinícius de Miranda Cardoso",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "José Vinícius de Miranda Cardoso",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Joscha Reimer",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Joscha Reimer",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Joseph Harrington",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Joseph Harrington",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Juan Luis Cano Rodríguez",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Juan Luis Cano Rodríguez",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Juan Nunez-Iglesias",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Juan Nunez-Iglesias",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Justin Kuczynski",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Justin Kuczynski",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Kevin Tritz",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Kevin Tritz",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Martin Thoma",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Martin Thoma",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Matthew Newville",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Matthew Newville",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Matthias Kümmerer",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Matthias Kümmerer",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Maximilian Bolingbroke",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Maximilian Bolingbroke",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Michael Tartre",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Michael Tartre",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Mikhail Pak",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Mikhail Pak",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Nathaniel J. Smith",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Nathaniel J. Smith",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Nikolai Nowaczyk",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Nikolai Nowaczyk",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Nikolay Shebanov",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Nikolay Shebanov",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Oleksandr Pavlyk",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Oleksandr Pavlyk",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Per A. Brodtkorb",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Per A. Brodtkorb",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Perry Lee",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Perry Lee",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Robert T. McGibbon",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Robert T. McGibbon",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Roman Feldbauer",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Roman Feldbauer",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Sam Lewis",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Sam Lewis",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Sam Tygier",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Sam Tygier",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Scott Sievert",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Scott Sievert",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Sebastiano Vigna",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Sebastiano Vigna",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Stefan Peterson",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Stefan Peterson",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Surhud More",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Surhud More",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Tadeusz Pudlik",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Tadeusz Pudlik",
+          "raw_affiliation_strings": [],
+          "raw_orcid": null,
+          "affiliations": []
+        }
+      ],
+      "doi": "https://doi.org/10.1038/s41592-019-0686-2"
+    },
+    {
+      "id": "https://openalex.org/W4318671267",
+      "display_name": "Nonhuman “Authors” and Implications for the Integrity of Scientific Publication and Medical Knowledge",
+      "publication_year": 2023,
+      "abstract_inverted_index": {
+        "Artificial": [
+          0
+        ],
+        "intelligence": [
+          1
+        ],
+        "(AI)": [
+          2
+        ],
+        "technologies": [
+          3,
+          328
+        ],
+        "to": [
+          4,
+          27,
+          49,
+          74,
+          106,
+          112,
+          147,
+          208,
+          248,
+          300,
+          345,
+          374
+        ],
+        "help": [
+          5
+        ],
+        "authors": [
+          6
+        ],
+        "improve": [
+          7
+        ],
+        "the": [
+          8,
+          144,
+          175,
+          198,
+          205,
+          216,
+          250,
+          282,
+          305,
+          336
+        ],
+        "preparation": [
+          9
+        ],
+        "and": [
+          10,
+          15,
+          23,
+          36,
+          39,
+          65,
+          73,
+          78,
+          155,
+          170,
+          177,
+          195,
+          230,
+          240,
+          284,
+          315,
+          331,
+          350,
+          358,
+          377
+        ],
+        "quality": [
+          11
+        ],
+        "of": [
+          12,
+          100,
+          188,
+          197,
+          213,
+          252,
+          262,
+          275,
+          310,
+          325,
+          338
+        ],
+        "their": [
+          13,
+          231
+        ],
+        "manuscripts": [
+          14
+        ],
+        "published": [
+          16,
+          173
+        ],
+        "articles": [
+          17,
+          172,
+          199,
+          229
+        ],
+        "are": [
+          18,
+          318,
+          356,
+          402
+        ],
+        "rapidly": [
+          19
+        ],
+        "increasing": [
+          20
+        ],
+        "in": [
+          21,
+          70,
+          110,
+          174,
+          215,
+          238,
+          256,
+          304,
+          341,
+          360
+        ],
+        "number": [
+          22
+        ],
+        "sophistication.These": [
+          24
+        ],
+        "include": [
+          25,
+          390
+        ],
+        "tools": [
+          26,
+          44,
+          264,
+          286,
+          299,
+          355
+        ],
+        "assist": [
+          28
+        ],
+        "with": [
+          29,
+          278
+        ],
+        "writing,": [
+          30
+        ],
+        "grammar,": [
+          31
+        ],
+        "language,": [
+          32
+        ],
+        "references,": [
+          33,
+          63
+        ],
+        "statistical": [
+          34
+        ],
+        "analysis,": [
+          35
+        ],
+        "reporting": [
+          37
+        ],
+        "standards.Editors": [
+          38
+        ],
+        "publishers": [
+          40
+        ],
+        "also": [
+          41,
+          134,
+          293,
+          383
+        ],
+        "use": [
+          42,
+          251,
+          297,
+          303
+        ],
+        "AI-assisted": [
+          43
+        ],
+        "for": [
+          45,
+          52,
+          68,
+          118,
+          193,
+          204,
+          281,
+          352,
+          372
+        ],
+        "myriad": [
+          46
+        ],
+        "purposes,": [
+          47
+        ],
+        "including": [
+          48,
+          158
+        ],
+        "screen": [
+          50
+        ],
+        "submissions": [
+          51
+        ],
+        "problems": [
+          53
+        ],
+        "(eg,": [
+          54
+        ],
+        "plagiarism,": [
+          55
+        ],
+        "image": [
+          56
+        ],
+        "manipulation,": [
+          57
+        ],
+        "ethical": [
+          58
+        ],
+        "issues),": [
+          59
+        ],
+        "triage": [
+          60
+        ],
+        "submissions,": [
+          61
+        ],
+        "validate": [
+          62
+        ],
+        "edit,": [
+          64
+        ],
+        "code": [
+          66
+        ],
+        "content": [
+          67
+        ],
+        "publication": [
+          69
+        ],
+        "different": [
+          71
+        ],
+        "media": [
+          72
+        ],
+        "facilitate": [
+          75
+        ],
+        "postpublication": [
+          76
+        ],
+        "search": [
+          77
+        ],
+        "discoverability.": [
+          79
+        ],
+        "1": [
+          80,
+          196
+        ],
+        "In": [
+          81
+        ],
+        "November": [
+          82
+        ],
+        "2022,": [
+          83
+        ],
+        "OpenAI": [
+          84
+        ],
+        "released": [
+          85
+        ],
+        "a": [
+          86,
+          101,
+          184,
+          246,
+          266,
+          270,
+          385,
+          394
+        ],
+        "new": [
+          87,
+          386
+        ],
+        "open": [
+          88
+        ],
+        "source,": [
+          89
+        ],
+        "natural": [
+          90
+        ],
+        "language": [
+          91,
+          145,
+          254,
+          396
+        ],
+        "processing": [
+          92
+        ],
+        "tool": [
+          93
+        ],
+        "called": [
+          94
+        ],
+        "ChatGPT.": [
+          95
+        ],
+        "2,3ChatGPT": [
+          96
+        ],
+        "is": [
+          97,
+          104
+        ],
+        "an": [
+          98,
+          191,
+          201,
+          220
+        ],
+        "evolution": [
+          99
+        ],
+        "chatbot": [
+          102
+        ],
+        "that": [
+          103,
+          180,
+          210,
+          222,
+          322,
+          332,
+          389
+        ],
+        "designed": [
+          105
+        ],
+        "simulate": [
+          107
+        ],
+        "human": [
+          108
+        ],
+        "conversation": [
+          109
+        ],
+        "response": [
+          111
+        ],
+        "prompts": [
+          113
+        ],
+        "or": [
+          114,
+          307
+        ],
+        "questions": [
+          115
+        ],
+        "(GPT": [
+          116
+        ],
+        "stands": [
+          117
+        ],
+        "\"generative": [
+          119
+        ],
+        "pretrained": [
+          120
+        ],
+        "transformer\").The": [
+          121
+        ],
+        "release": [
+          122
+        ],
+        "has": [
+          123,
+          243,
+          382
+        ],
+        "prompted": [
+          124
+        ],
+        "immediate": [
+          125
+        ],
+        "excitement": [
+          126
+        ],
+        "about": [
+          127,
+          136,
+          142
+        ],
+        "its": [
+          128,
+          380
+        ],
+        "many": [
+          129
+        ],
+        "potential": [
+          130,
+          137
+        ],
+        "uses": [
+          131
+        ],
+        "4": [
+          132
+        ],
+        "but": [
+          133
+        ],
+        "trepidation": [
+          135
+        ],
+        "misuse,": [
+          138
+        ],
+        "such": [
+          139,
+          263,
+          289,
+          354,
+          399
+        ],
+        "as": [
+          140,
+          183,
+          265,
+          329,
+          400
+        ],
+        "concerns": [
+          141
+        ],
+        "using": [
+          143
+        ],
+        "model": [
+          146,
+          397
+        ],
+        "cheat": [
+          148
+        ],
+        "on": [
+          149,
+          167,
+          269,
+          366
+        ],
+        "homework": [
+          150
+        ],
+        "assignments,": [
+          151
+        ],
+        "write": [
+          152
+        ],
+        "student": [
+          153
+        ],
+        "essays,": [
+          154
+        ],
+        "take": [
+          156,
+          288
+        ],
+        "examinations,": [
+          157
+        ],
+        "medical": [
+          159
+        ],
+        "licensing": [
+          160
+        ],
+        "examinations.": [
+          161
+        ],
+        "5n": [
+          162
+        ],
+        "January": [
+          163
+        ],
+        "2023,": [
+          164
+        ],
+        "Nature": [
+          165
+        ],
+        "reported": [
+          166,
+          359
+        ],
+        "2": [
+          168,
+          171
+        ],
+        "preprints": [
+          169
+        ],
+        "science": [
+          176
+        ],
+        "health": [
+          178
+        ],
+        "fields": [
+          179
+        ],
+        "included": [
+          181
+        ],
+        "ChatGPT": [
+          182,
+          214,
+          401
+        ],
+        "bylined": [
+          185
+        ],
+        "author.": [
+          186
+        ],
+        "6Each": [
+          187
+        ],
+        "these": [
+          189,
+          228,
+          298,
+          326
+        ],
+        "includes": [
+          190,
+          200
+        ],
+        "affiliation": [
+          192
+        ],
+        "ChatGPT,": [
+          194
+        ],
+        "email": [
+          202
+        ],
+        "address": [
+          203
+        ],
+        "nonhuman": [
+          206,
+          232,
+          327
+        ],
+        "\"author.\"According": [
+          207
+        ],
+        "Nature,": [
+          209
+        ],
+        "article's": [
+          211
+        ],
+        "inclusion": [
+          212,
+          324,
+          337
+        ],
+        "author": [
+          217,
+          268
+        ],
+        "byline": [
+          218
+        ],
+        "was": [
+          219
+        ],
+        "\"error": [
+          221
+        ],
+        "will": [
+          223
+        ],
+        "soon": [
+          224
+        ],
+        "be": [
+          225,
+          375
+        ],
+        "corrected.\"": [
+          226
+        ],
+        "6However,": [
+          227
+        ],
+        "\"authors\"": [
+          233,
+          330
+        ],
+        "have": [
+          234
+        ],
+        "already": [
+          235
+        ],
+        "been": [
+          236
+        ],
+        "indexed": [
+          237
+        ],
+        "PubMed": [
+          239
+        ],
+        "Google": [
+          241
+        ],
+        "Scholar.Nature": [
+          242
+        ],
+        "since": [
+          244
+        ],
+        "defined": [
+          245
+        ],
+        "policy": [
+          247,
+          292
+        ],
+        "guide": [
+          249
+        ],
+        "large-scale": [
+          253,
+          395
+        ],
+        "models": [
+          255
+        ],
+        "scientific": [
+          257
+        ],
+        "publication,": [
+          258
+        ],
+        "which": [
+          259,
+          369
+        ],
+        "prohibits": [
+          260
+        ],
+        "naming": [
+          261
+        ],
+        "\"credited": [
+          267
+        ],
+        "research": [
+          271
+        ],
+        "paper\"": [
+          272
+        ],
+        "because": [
+          273
+        ],
+        "\"attribution": [
+          274
+        ],
+        "authorship": [
+          276
+        ],
+        "carries": [
+          277
+        ],
+        "it": [
+          279
+        ],
+        "accountability": [
+          280,
+          351
+        ],
+        "work,": [
+          283
+        ],
+        "AI": [
+          285
+        ],
+        "cannot": [
+          287
+        ],
+        "responsibility.\"": [
+          290
+        ],
+        "7The": [
+          291
+        ],
+        "advises": [
+          294
+        ],
+        "researchers": [
+          295
+        ],
+        "who": [
+          296
+        ],
+        "document": [
+          301
+        ],
+        "this": [
+          302
+        ],
+        "Methods": [
+          306
+        ],
+        "Acknowledgment": [
+          308
+        ],
+        "sections": [
+          309
+        ],
+        "manuscripts.": [
+          311
+        ],
+        "7Other": [
+          312
+        ],
+        "journals": [
+          313
+        ],
+        "8,9": [
+          314
+        ],
+        "organizations": [
+          316
+        ],
+        "10": [
+          317
+        ],
+        "swiftly": [
+          319
+        ],
+        "developing": [
+          320
+        ],
+        "policies": [
+          321
+        ],
+        "ban": [
+          323
+        ],
+        "range": [
+          333
+        ],
+        "from": [
+          334,
+          393
+        ],
+        "prohibiting": [
+          335
+        ],
+        "AI-generated": [
+          339
+        ],
+        "text": [
+          340,
+          391
+        ],
+        "submitted": [
+          342
+        ],
+        "work": [
+          343
+        ],
+        "8": [
+          344
+        ],
+        "requiring": [
+          346
+        ],
+        "full": [
+          347
+        ],
+        "transparency,": [
+          348
+        ],
+        "responsibility,": [
+          349
+        ],
+        "how": [
+          353
+        ],
+        "used": [
+          357
+        ],
+        "scholarly": [
+          361
+        ],
+        "publication.": [
+          362
+        ],
+        "9,10The": [
+          363
+        ],
+        "International": [
+          364
+        ],
+        "Conference": [
+          365
+        ],
+        "Machine": [
+          367
+        ],
+        "Learning,": [
+          368
+        ],
+        "issues": [
+          370
+        ],
+        "calls": [
+          371
+        ],
+        "papers": [
+          373
+        ],
+        "reviewed": [
+          376
+        ],
+        "discussed": [
+          378
+        ],
+        "at": [
+          379
+        ],
+        "conferences,": [
+          381
+        ],
+        "announced": [
+          384
+        ],
+        "policy:": [
+          387
+        ],
+        "\"Papers": [
+          388
+        ],
+        "generated": [
+          392
+        ],
+        "(LLM)": [
+          398
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5067177086",
+            "display_name": "Annette Flanagin",
+            "orcid": "https://orcid.org/0000-0001-9114-6221"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I140141095",
+              "display_name": "ING Direct",
+              "ror": "https://ror.org/05dwsnj39",
+              "country_code": "US",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I140141095"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Annette Flanagin",
+          "raw_affiliation_strings": [
+            "Ms Flanagin is Executive Managing Editor, Dr Bibbins-Domingo is Editor in Chief, and Dr Berkwits is Electronic Editor, JAMA and the JAMA Network, and Ms Christiansen is Managing Editor, JAMA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Ms Flanagin is Executive Managing Editor, Dr Bibbins-Domingo is Editor in Chief, and Dr Berkwits is Electronic Editor, JAMA and the JAMA Network, and Ms Christiansen is Managing Editor, JAMA",
+              "institution_ids": [
+                "https://openalex.org/I140141095"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5086681800",
+            "display_name": "Kirsten Bibbins‐Domingo",
+            "orcid": "https://orcid.org/0000-0002-8962-0622"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I140141095",
+              "display_name": "ING Direct",
+              "ror": "https://ror.org/05dwsnj39",
+              "country_code": "US",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I140141095"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Kirsten Bibbins-Domingo",
+          "raw_affiliation_strings": [
+            "Ms Flanagin is Executive Managing Editor, Dr Bibbins-Domingo is Editor in Chief, and Dr Berkwits is Electronic Editor, JAMA and the JAMA Network, and Ms Christiansen is Managing Editor, JAMA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Ms Flanagin is Executive Managing Editor, Dr Bibbins-Domingo is Editor in Chief, and Dr Berkwits is Electronic Editor, JAMA and the JAMA Network, and Ms Christiansen is Managing Editor, JAMA",
+              "institution_ids": [
+                "https://openalex.org/I140141095"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5037086756",
+            "display_name": "Michael Berkwits",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I140141095",
+              "display_name": "ING Direct",
+              "ror": "https://ror.org/05dwsnj39",
+              "country_code": "US",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I140141095"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Michael Berkwits",
+          "raw_affiliation_strings": [
+            "Ms Flanagin is Executive Managing Editor, Dr Bibbins-Domingo is Editor in Chief, and Dr Berkwits is Electronic Editor, JAMA and the JAMA Network, and Ms Christiansen is Managing Editor, JAMA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Ms Flanagin is Executive Managing Editor, Dr Bibbins-Domingo is Editor in Chief, and Dr Berkwits is Electronic Editor, JAMA and the JAMA Network, and Ms Christiansen is Managing Editor, JAMA",
+              "institution_ids": [
+                "https://openalex.org/I140141095"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5015540772",
+            "display_name": "Stacy Christiansen",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I140141095",
+              "display_name": "ING Direct",
+              "ror": "https://ror.org/05dwsnj39",
+              "country_code": "US",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I140141095"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Stacy L. Christiansen",
+          "raw_affiliation_strings": [
+            "Ms Flanagin is Executive Managing Editor, Dr Bibbins-Domingo is Editor in Chief, and Dr Berkwits is Electronic Editor, JAMA and the JAMA Network, and Ms Christiansen is Managing Editor, JAMA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Ms Flanagin is Executive Managing Editor, Dr Bibbins-Domingo is Editor in Chief, and Dr Berkwits is Electronic Editor, JAMA and the JAMA Network, and Ms Christiansen is Managing Editor, JAMA",
+              "institution_ids": [
+                "https://openalex.org/I140141095"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1001/jama.2023.1344"
+    },
+    {
+      "id": "https://openalex.org/W2180229411",
+      "display_name": "<i>PHENIX</i>: a comprehensive Python-based system for macromolecular structure solution",
+      "publication_year": 2010,
+      "abstract_inverted_index": {
+        "Macromolecular": [
+          0
+        ],
+        "X-ray": [
+          1
+        ],
+        "crystallography": [
+          2
+        ],
+        "is": [
+          3
+        ],
+        "routinely": [
+          4
+        ],
+        "applied": [
+          5
+        ],
+        "to": [
+          6,
+          22,
+          57
+        ],
+        "understand": [
+          7
+        ],
+        "biological": [
+          8
+        ],
+        "processes": [
+          9
+        ],
+        "at": [
+          10
+        ],
+        "a": [
+          11,
+          59,
+          108,
+          112
+        ],
+        "molecular": [
+          12
+        ],
+        "level.": [
+          13
+        ],
+        "However,": [
+          14
+        ],
+        "significant": [
+          15
+        ],
+        "time": [
+          16
+        ],
+        "and": [
+          17,
+          24,
+          45
+        ],
+        "effort": [
+          18
+        ],
+        "are": [
+          19,
+          98
+        ],
+        "still": [
+          20
+        ],
+        "required": [
+          21
+        ],
+        "solve": [
+          23
+        ],
+        "complete": [
+          25
+        ],
+        "many": [
+          26,
+          42
+        ],
+        "of": [
+          27,
+          31,
+          37,
+          49,
+          73,
+          82,
+          92,
+          107
+        ],
+        "these": [
+          28
+        ],
+        "structures": [
+          29
+        ],
+        "because": [
+          30
+        ],
+        "the": [
+          32,
+          46,
+          71,
+          80,
+          90,
+          105,
+          116
+        ],
+        "need": [
+          33
+        ],
+        "for": [
+          34,
+          62
+        ],
+        "manual": [
+          35
+        ],
+        "interpretation": [
+          36
+        ],
+        "complex": [
+          38
+        ],
+        "numerical": [
+          39
+        ],
+        "data": [
+          40
+        ],
+        "using": [
+          41
+        ],
+        "software": [
+          43
+        ],
+        "packages": [
+          44
+        ],
+        "repeated": [
+          47
+        ],
+        "use": [
+          48
+        ],
+        "interactive": [
+          50
+        ],
+        "three-dimensional": [
+          51
+        ],
+        "graphics.": [
+          52
+        ],
+        "PHENIX": [
+          53
+        ],
+        "has": [
+          54,
+          77
+        ],
+        "been": [
+          55
+        ],
+        "developed": [
+          56
+        ],
+        "provide": [
+          58
+        ],
+        "comprehensive": [
+          60
+        ],
+        "system": [
+          61
+        ],
+        "macromolecular": [
+          63
+        ],
+        "crystallographic": [
+          64
+        ],
+        "structure": [
+          65
+        ],
+        "solution": [
+          66
+        ],
+        "with": [
+          67
+        ],
+        "an": [
+          68
+        ],
+        "emphasis": [
+          69
+        ],
+        "on": [
+          70,
+          79
+        ],
+        "automation": [
+          72
+        ],
+        "all": [
+          74
+        ],
+        "procedures.": [
+          75
+        ],
+        "This": [
+          76
+        ],
+        "relied": [
+          78
+        ],
+        "development": [
+          81,
+          91,
+          106
+        ],
+        "algorithms": [
+          83,
+          93
+        ],
+        "that": [
+          84,
+          94,
+          97,
+          110
+        ],
+        "minimize": [
+          85
+        ],
+        "or": [
+          86
+        ],
+        "eliminate": [
+          87
+        ],
+        "subjective": [
+          88
+        ],
+        "input,": [
+          89
+        ],
+        "automate": [
+          95
+        ],
+        "procedures": [
+          96
+        ],
+        "traditionally": [
+          99
+        ],
+        "performed": [
+          100
+        ],
+        "by": [
+          101
+        ],
+        "hand": [
+          102
+        ],
+        "and,": [
+          103
+        ],
+        "finally,": [
+          104
+        ],
+        "framework": [
+          109
+        ],
+        "allows": [
+          111
+        ],
+        "tight": [
+          113
+        ],
+        "integration": [
+          114
+        ],
+        "between": [
+          115
+        ],
+        "algorithms.": [
+          117
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5027915011",
+            "display_name": "Paul D. Adams",
+            "orcid": "https://orcid.org/0000-0001-9333-8219"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210133661",
+              "display_name": "La Jolla Bioengineering Institute",
+              "ror": "https://ror.org/03sgbh608",
+              "country_code": "US",
+              "type": "nonprofit",
+              "lineage": [
+                "https://openalex.org/I4210133661"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I148283060",
+              "display_name": "Lawrence Berkeley National Laboratory",
+              "ror": "https://ror.org/02jbv0t02",
+              "country_code": "US",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1330989302",
+                "https://openalex.org/I148283060",
+                "https://openalex.org/I39565521"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I95457486",
+              "display_name": "University of California, Berkeley",
+              "ror": "https://ror.org/01an7q238",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I95457486"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Paul D. Adams",
+          "raw_affiliation_strings": [
+            "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA. pdadams@lbl.gov",
+            "Department of Bioengineering, UC Berkeley, CA 94720, USA",
+            "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA. pdadams@lbl.gov",
+              "institution_ids": [
+                "https://openalex.org/I148283060"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Bioengineering, UC Berkeley, CA 94720, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210133661",
+                "https://openalex.org/I95457486"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA",
+              "institution_ids": [
+                "https://openalex.org/I148283060"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5027485418",
+            "display_name": "Pavel V. Afonine",
+            "orcid": "https://orcid.org/0000-0002-5052-991X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I148283060",
+              "display_name": "Lawrence Berkeley National Laboratory",
+              "ror": "https://ror.org/02jbv0t02",
+              "country_code": "US",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1330989302",
+                "https://openalex.org/I148283060",
+                "https://openalex.org/I39565521"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Pavel V. Afonine",
+          "raw_affiliation_strings": [
+            "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA",
+              "institution_ids": [
+                "https://openalex.org/I148283060"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5032792168",
+            "display_name": "G. Bunkóczi",
+            "orcid": "https://orcid.org/0000-0002-4911-7248"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I241749",
+              "display_name": "University of Cambridge",
+              "ror": "https://ror.org/013meh722",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I241749"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I87048295",
+              "display_name": "Wellcome Trust",
+              "ror": "https://ror.org/029chgv08",
+              "country_code": "GB",
+              "type": "funder",
+              "lineage": [
+                "https://openalex.org/I87048295"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Gábor Bunkóczi",
+          "raw_affiliation_strings": [
+            "Department of Haematology, University of Cambridge, Cambridge Institute for Medical Research, Wellcome Trust/MRC Building, Cambridge CB2 0XY, England"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Haematology, University of Cambridge, Cambridge Institute for Medical Research, Wellcome Trust/MRC Building, Cambridge CB2 0XY, England",
+              "institution_ids": [
+                "https://openalex.org/I241749",
+                "https://openalex.org/I87048295"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5019366254",
+            "display_name": "Vincent B. Chen",
+            "orcid": "https://orcid.org/0000-0003-2492-979X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210153043",
+              "display_name": "Duke University Hospital",
+              "ror": "https://ror.org/04bct7p84",
+              "country_code": "US",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I4210126298",
+                "https://openalex.org/I4210144876",
+                "https://openalex.org/I4210144876",
+                "https://openalex.org/I4210153043"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210126298",
+              "display_name": "Duke Medical Center",
+              "ror": "https://ror.org/03njmea73",
+              "country_code": "US",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I4210126298",
+                "https://openalex.org/I4210144876"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Vincent B. Chen",
+          "raw_affiliation_strings": [
+            "Department of Biochemistry, Duke University Medical Center, Durham, NC 27710, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Biochemistry, Duke University Medical Center, Durham, NC 27710, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210153043",
+                "https://openalex.org/I4210126298"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5061053575",
+            "display_name": "Ian Davis",
+            "orcid": "https://orcid.org/0000-0002-1566-4972"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210153043",
+              "display_name": "Duke University Hospital",
+              "ror": "https://ror.org/04bct7p84",
+              "country_code": "US",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I4210126298",
+                "https://openalex.org/I4210144876",
+                "https://openalex.org/I4210144876",
+                "https://openalex.org/I4210153043"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210126298",
+              "display_name": "Duke Medical Center",
+              "ror": "https://ror.org/03njmea73",
+              "country_code": "US",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I4210126298",
+                "https://openalex.org/I4210144876"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ian W. Davis",
+          "raw_affiliation_strings": [
+            "Department of Biochemistry, Duke University Medical Center, Durham, NC 27710, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Biochemistry, Duke University Medical Center, Durham, NC 27710, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210153043",
+                "https://openalex.org/I4210126298"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5112138120",
+            "display_name": "Nathaniel Echols",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I148283060",
+              "display_name": "Lawrence Berkeley National Laboratory",
+              "ror": "https://ror.org/02jbv0t02",
+              "country_code": "US",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1330989302",
+                "https://openalex.org/I148283060",
+                "https://openalex.org/I39565521"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Nathaniel Echols",
+          "raw_affiliation_strings": [
+            "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA",
+              "institution_ids": [
+                "https://openalex.org/I148283060"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5027195057",
+            "display_name": "Jeffrey J. Headd",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210153043",
+              "display_name": "Duke University Hospital",
+              "ror": "https://ror.org/04bct7p84",
+              "country_code": "US",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I4210126298",
+                "https://openalex.org/I4210144876",
+                "https://openalex.org/I4210144876",
+                "https://openalex.org/I4210153043"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210126298",
+              "display_name": "Duke Medical Center",
+              "ror": "https://ror.org/03njmea73",
+              "country_code": "US",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I4210126298",
+                "https://openalex.org/I4210144876"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jeffrey J. Headd",
+          "raw_affiliation_strings": [
+            "Department of Biochemistry, Duke University Medical Center, Durham, NC 27710, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Biochemistry, Duke University Medical Center, Durham, NC 27710, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210153043",
+                "https://openalex.org/I4210126298"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5023778323",
+            "display_name": "Li‐Wei Hung",
+            "orcid": "https://orcid.org/0000-0001-6690-8458"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1343871089",
+              "display_name": "Los Alamos National Laboratory",
+              "ror": "https://ror.org/01e41cf67",
+              "country_code": "US",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1330989302",
+                "https://openalex.org/I1343871089",
+                "https://openalex.org/I198811213",
+                "https://openalex.org/I4210120050"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Li-Wei Hung",
+          "raw_affiliation_strings": [
+            "Los Alamos National Laboratory, Los Alamos, NM 87545, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Los Alamos National Laboratory, Los Alamos, NM 87545, USA",
+              "institution_ids": [
+                "https://openalex.org/I1343871089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5069575711",
+            "display_name": "Gary J. Kapral",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210126298",
+              "display_name": "Duke Medical Center",
+              "ror": "https://ror.org/03njmea73",
+              "country_code": "US",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I4210126298",
+                "https://openalex.org/I4210144876"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210153043",
+              "display_name": "Duke University Hospital",
+              "ror": "https://ror.org/04bct7p84",
+              "country_code": "US",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I4210126298",
+                "https://openalex.org/I4210144876",
+                "https://openalex.org/I4210144876",
+                "https://openalex.org/I4210153043"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Gary J. Kapral",
+          "raw_affiliation_strings": [
+            "Department of Biochemistry, Duke University Medical Center, Durham, NC 27710, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Biochemistry, Duke University Medical Center, Durham, NC 27710, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210153043",
+                "https://openalex.org/I4210126298"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5110342059",
+            "display_name": "Ralf W. Grosse‐Kunstleve",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I148283060",
+              "display_name": "Lawrence Berkeley National Laboratory",
+              "ror": "https://ror.org/02jbv0t02",
+              "country_code": "US",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1330989302",
+                "https://openalex.org/I148283060",
+                "https://openalex.org/I39565521"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ralf W. Grosse-Kunstleve",
+          "raw_affiliation_strings": [
+            "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA",
+              "institution_ids": [
+                "https://openalex.org/I148283060"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5103453342",
+            "display_name": "Airlie J. McCoy",
+            "orcid": "https://orcid.org/0009-0001-6855-9631"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I87048295",
+              "display_name": "Wellcome Trust",
+              "ror": "https://ror.org/029chgv08",
+              "country_code": "GB",
+              "type": "funder",
+              "lineage": [
+                "https://openalex.org/I87048295"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I241749",
+              "display_name": "University of Cambridge",
+              "ror": "https://ror.org/013meh722",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I241749"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Airlie J. McCoy",
+          "raw_affiliation_strings": [
+            "Department of Haematology, University of Cambridge, Cambridge Institute for Medical Research, Wellcome Trust/MRC Building, Cambridge CB2 0XY, England"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Haematology, University of Cambridge, Cambridge Institute for Medical Research, Wellcome Trust/MRC Building, Cambridge CB2 0XY, England",
+              "institution_ids": [
+                "https://openalex.org/I241749",
+                "https://openalex.org/I87048295"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5084490031",
+            "display_name": "Nigel W. Moriarty",
+            "orcid": "https://orcid.org/0000-0001-8857-9464"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I148283060",
+              "display_name": "Lawrence Berkeley National Laboratory",
+              "ror": "https://ror.org/02jbv0t02",
+              "country_code": "US",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1330989302",
+                "https://openalex.org/I148283060",
+                "https://openalex.org/I39565521"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Nigel W. Moriarty",
+          "raw_affiliation_strings": [
+            "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA",
+              "institution_ids": [
+                "https://openalex.org/I148283060"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5019087806",
+            "display_name": "Robert D. Oeffner",
+            "orcid": "https://orcid.org/0000-0003-3107-2202"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I87048295",
+              "display_name": "Wellcome Trust",
+              "ror": "https://ror.org/029chgv08",
+              "country_code": "GB",
+              "type": "funder",
+              "lineage": [
+                "https://openalex.org/I87048295"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I241749",
+              "display_name": "University of Cambridge",
+              "ror": "https://ror.org/013meh722",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I241749"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Robert Oeffner",
+          "raw_affiliation_strings": [
+            "Department of Haematology, University of Cambridge, Cambridge Institute for Medical Research, Wellcome Trust/MRC Building, Cambridge CB2 0XY, England"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Haematology, University of Cambridge, Cambridge Institute for Medical Research, Wellcome Trust/MRC Building, Cambridge CB2 0XY, England",
+              "institution_ids": [
+                "https://openalex.org/I241749",
+                "https://openalex.org/I87048295"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5068323278",
+            "display_name": "Randy J. Read",
+            "orcid": "https://orcid.org/0000-0001-8273-0047"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I241749",
+              "display_name": "University of Cambridge",
+              "ror": "https://ror.org/013meh722",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I241749"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I87048295",
+              "display_name": "Wellcome Trust",
+              "ror": "https://ror.org/029chgv08",
+              "country_code": "GB",
+              "type": "funder",
+              "lineage": [
+                "https://openalex.org/I87048295"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Randy J. Read",
+          "raw_affiliation_strings": [
+            "Department of Haematology, University of Cambridge, Cambridge Institute for Medical Research, Wellcome Trust/MRC Building, Cambridge CB2 0XY, England"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Haematology, University of Cambridge, Cambridge Institute for Medical Research, Wellcome Trust/MRC Building, Cambridge CB2 0XY, England",
+              "institution_ids": [
+                "https://openalex.org/I241749",
+                "https://openalex.org/I87048295"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5035236781",
+            "display_name": "David Richardson",
+            "orcid": "https://orcid.org/0000-0001-5069-343X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210126298",
+              "display_name": "Duke Medical Center",
+              "ror": "https://ror.org/03njmea73",
+              "country_code": "US",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I4210126298",
+                "https://openalex.org/I4210144876"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210153043",
+              "display_name": "Duke University Hospital",
+              "ror": "https://ror.org/04bct7p84",
+              "country_code": "US",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I4210126298",
+                "https://openalex.org/I4210144876",
+                "https://openalex.org/I4210144876",
+                "https://openalex.org/I4210153043"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "David C. Richardson",
+          "raw_affiliation_strings": [
+            "Department of Biochemistry, Duke University Medical Center, Durham, NC 27710, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Biochemistry, Duke University Medical Center, Durham, NC 27710, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210153043",
+                "https://openalex.org/I4210126298"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5046412779",
+            "display_name": "Jane S. Richardson",
+            "orcid": "https://orcid.org/0000-0002-3311-2944"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210153043",
+              "display_name": "Duke University Hospital",
+              "ror": "https://ror.org/04bct7p84",
+              "country_code": "US",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I4210126298",
+                "https://openalex.org/I4210144876",
+                "https://openalex.org/I4210144876",
+                "https://openalex.org/I4210153043"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210126298",
+              "display_name": "Duke Medical Center",
+              "ror": "https://ror.org/03njmea73",
+              "country_code": "US",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I4210126298",
+                "https://openalex.org/I4210144876"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jane S. Richardson",
+          "raw_affiliation_strings": [
+            "Department of Biochemistry, Duke University Medical Center, Durham, NC 27710, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Biochemistry, Duke University Medical Center, Durham, NC 27710, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210153043",
+                "https://openalex.org/I4210126298"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5090015351",
+            "display_name": "Thomas C. Terwilliger",
+            "orcid": "https://orcid.org/0000-0001-6384-0320"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1343871089",
+              "display_name": "Los Alamos National Laboratory",
+              "ror": "https://ror.org/01e41cf67",
+              "country_code": "US",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1330989302",
+                "https://openalex.org/I1343871089",
+                "https://openalex.org/I198811213",
+                "https://openalex.org/I4210120050"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Thomas C. Terwilliger",
+          "raw_affiliation_strings": [
+            "Los Alamos National Laboratory, Los Alamos, NM 87545, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Los Alamos National Laboratory, Los Alamos, NM 87545, USA",
+              "institution_ids": [
+                "https://openalex.org/I1343871089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5081770773",
+            "display_name": "Peter H. Zwart",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I148283060",
+              "display_name": "Lawrence Berkeley National Laboratory",
+              "ror": "https://ror.org/02jbv0t02",
+              "country_code": "US",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1330989302",
+                "https://openalex.org/I148283060",
+                "https://openalex.org/I39565521"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Peter H. Zwart",
+          "raw_affiliation_strings": [
+            "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA",
+              "institution_ids": [
+                "https://openalex.org/I148283060"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1107/s0907444909052925"
+    },
+    {
+      "id": "https://openalex.org/W2124026197",
+      "display_name": "Features and development of <i>Coot</i>",
+      "publication_year": 2010,
+      "abstract_inverted_index": {
+        "Coot": [
+          0
+        ],
+        "is": [
+          1,
+          63,
+          74,
+          120,
+          141
+        ],
+        "a": [
+          2,
+          144
+        ],
+        "molecular-graphics": [
+          3
+        ],
+        "application": [
+          4
+        ],
+        "for": [
+          5,
+          46,
+          56,
+          70,
+          80,
+          105
+        ],
+        "model": [
+          6,
+          23,
+          47
+        ],
+        "building": [
+          7
+        ],
+        "and": [
+          8,
+          18,
+          21,
+          39,
+          59,
+          90,
+          113,
+          150
+        ],
+        "validation": [
+          9,
+          48,
+          58
+        ],
+        "of": [
+          10,
+          138,
+          146,
+          151,
+          153
+        ],
+        "biological": [
+          11
+        ],
+        "macromolecules.": [
+          12
+        ],
+        "The": [
+          13,
+          61,
+          118,
+          135
+        ],
+        "program": [
+          14
+        ],
+        "displays": [
+          15
+        ],
+        "electron-density": [
+          16
+        ],
+        "maps": [
+          17
+        ],
+        "atomic": [
+          19
+        ],
+        "models": [
+          20
+        ],
+        "allows": [
+          22
+        ],
+        "manipulations": [
+          24
+        ],
+        "such": [
+          25
+        ],
+        "as": [
+          26,
+          49,
+          51
+        ],
+        "idealization,": [
+          27
+        ],
+        "real-space": [
+          28
+        ],
+        "refinement,": [
+          29,
+          57
+        ],
+        "manual": [
+          30
+        ],
+        "rotation/translation,": [
+          31
+        ],
+        "rigid-body": [
+          32
+        ],
+        "fitting,": [
+          33
+        ],
+        "ligand": [
+          34
+        ],
+        "search,": [
+          35
+        ],
+        "solvation,": [
+          36
+        ],
+        "mutations,": [
+          37
+        ],
+        "rotamers": [
+          38
+        ],
+        "Ramachandran": [
+          40
+        ],
+        "idealization.": [
+          41
+        ],
+        "Furthermore,": [
+          42
+        ],
+        "tools": [
+          43,
+          79,
+          104
+        ],
+        "are": [
+          44,
+          83
+        ],
+        "provided": [
+          45
+        ],
+        "well": [
+          50
+        ],
+        "interfaces": [
+          52
+        ],
+        "to": [
+          53,
+          65,
+          68
+        ],
+        "external": [
+          54
+        ],
+        "programs": [
+          55
+        ],
+        "graphics.": [
+          60
+        ],
+        "software": [
+          62,
+          119,
+          140
+        ],
+        "designed": [
+          64
+        ],
+        "be": [
+          66
+        ],
+        "easy": [
+          67
+        ],
+        "learn": [
+          69
+        ],
+        "novice": [
+          71
+        ],
+        "users,": [
+          72,
+          107
+        ],
+        "which": [
+          73
+        ],
+        "achieved": [
+          75,
+          127
+        ],
+        "by": [
+          76,
+          93
+        ],
+        "ensuring": [
+          77
+        ],
+        "that": [
+          78
+        ],
+        "common": [
+          81
+        ],
+        "tasks": [
+          82
+        ],
+        "'discoverable'": [
+          84
+        ],
+        "through": [
+          85
+        ],
+        "familiar": [
+          86
+        ],
+        "user-interface": [
+          87
+        ],
+        "elements": [
+          88
+        ],
+        "(menus": [
+          89
+        ],
+        "toolbars)": [
+          91
+        ],
+        "or": [
+          92
+        ],
+        "intuitive": [
+          94
+        ],
+        "behaviour": [
+          95
+        ],
+        "(mouse": [
+          96
+        ],
+        "controls).": [
+          97
+        ],
+        "Recent": [
+          98
+        ],
+        "developments": [
+          99
+        ],
+        "have": [
+          100
+        ],
+        "focused": [
+          101
+        ],
+        "on": [
+          102
+        ],
+        "providing": [
+          103
+        ],
+        "expert": [
+          106
+        ],
+        "with": [
+          108,
+          143
+        ],
+        "customisable": [
+          109
+        ],
+        "key": [
+          110
+        ],
+        "bindings,": [
+          111
+        ],
+        "extensions": [
+          112
+        ],
+        "an": [
+          114
+        ],
+        "extensive": [
+          115
+        ],
+        "scripting": [
+          116
+        ],
+        "interface.": [
+          117
+        ],
+        "under": [
+          121
+        ],
+        "rapid": [
+          122
+        ],
+        "development,": [
+          123
+        ],
+        "but": [
+          124
+        ],
+        "has": [
+          125
+        ],
+        "already": [
+          126
+        ],
+        "very": [
+          128
+        ],
+        "widespread": [
+          129
+        ],
+        "use": [
+          130
+        ],
+        "within": [
+          131
+        ],
+        "the": [
+          132,
+          139,
+          147,
+          154
+        ],
+        "crystallographic": [
+          133
+        ],
+        "community.": [
+          134
+        ],
+        "current": [
+          136
+        ],
+        "state": [
+          137
+        ],
+        "presented,": [
+          142
+        ],
+        "description": [
+          145
+        ],
+        "facilities": [
+          148
+        ],
+        "available": [
+          149
+        ],
+        "some": [
+          152
+        ],
+        "underlying": [
+          155
+        ],
+        "methods": [
+          156
+        ],
+        "employed.": [
+          157
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5071138931",
+            "display_name": "Paul Emsley",
+            "orcid": "https://orcid.org/0000-0002-0138-5227"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I40120149",
+              "display_name": "University of Oxford",
+              "ror": "https://ror.org/052gg0110",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I40120149"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "P. Emsley",
+          "raw_affiliation_strings": [
+            "Department of Biochemistry, University of Oxford, South Parks Road, Oxford OX1 3QU, England. paul.emsley@bioch.ox.ac.uk",
+            "Department of Biochemistry University of Oxford South Parks Road Oxford OX1 3QU England"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Biochemistry, University of Oxford, South Parks Road, Oxford OX1 3QU, England. paul.emsley@bioch.ox.ac.uk",
+              "institution_ids": [
+                "https://openalex.org/I40120149"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Biochemistry University of Oxford South Parks Road Oxford OX1 3QU England",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5073942998",
+            "display_name": "Bernhard Lohkamp",
+            "orcid": "https://orcid.org/0000-0002-5646-2090"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I28166907",
+              "display_name": "Karolinska Institutet",
+              "ror": "https://ror.org/056d84691",
+              "country_code": "SE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I28166907"
+              ]
+            }
+          ],
+          "countries": [
+            "SE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "B. Lohkamp",
+          "raw_affiliation_strings": [
+            "Department of Medical Biochemistry and Biophysics, Karolinska Institute, SE-171 77 Stockholm, Sweden"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Medical Biochemistry and Biophysics, Karolinska Institute, SE-171 77 Stockholm, Sweden",
+              "institution_ids": [
+                "https://openalex.org/I28166907"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5063283743",
+            "display_name": "W. G. Scott",
+            "orcid": "https://orcid.org/0000-0002-9273-3564"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I185103710",
+              "display_name": "University of California, Santa Cruz",
+              "ror": "https://ror.org/03s65by71",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I185103710"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "W. G. Scott",
+          "raw_affiliation_strings": [
+            "Department of Chemistry, University of California, 1156 High Street, Santa Cruz, CA 95064, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Chemistry, University of California, 1156 High Street, Santa Cruz, CA 95064, USA",
+              "institution_ids": [
+                "https://openalex.org/I185103710"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5018808577",
+            "display_name": "Kevin Cowtan",
+            "orcid": "https://orcid.org/0000-0002-0189-1437"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I52099693",
+              "display_name": "University of York",
+              "ror": "https://ror.org/04m01e293",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I52099693"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "K. Cowtan",
+          "raw_affiliation_strings": [
+            "Department of Chemistry, University of York, Heslington, York YO10 5DD, England",
+            "Department of Chemistry, University of York, Heslington, YORK, YO10 5DD, England"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Chemistry, University of York, Heslington, York YO10 5DD, England",
+              "institution_ids": [
+                "https://openalex.org/I52099693"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Chemistry, University of York, Heslington, YORK, YO10 5DD, England",
+              "institution_ids": [
+                "https://openalex.org/I52099693"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1107/s0907444910007493"
+    }
+  ],
+  "notes": [
+    {
+      "id": "https://openalex.org/W2099540110",
+      "doi": "https://doi.org/10.1038/nmeth.2089",
+      "title": "NIH Image to ImageJ: 25 years of image analysis",
+      "year": 2012,
+      "authors": [
+        "Caroline A Schneider",
+        "Wayne Rasband",
+        "Kevin W. Eliceiri"
+      ],
+      "abstract": ""
+    },
+    {
+      "id": "https://openalex.org/W3003257820",
+      "doi": "https://doi.org/10.1038/s41592-019-0686-2",
+      "title": "SciPy 1.0: fundamental algorithms for scientific computing in Python",
+      "year": 2020,
+      "authors": [
+        "Pauli Virtanen",
+        "Ralf Gommers",
+        "Travis E. Oliphant",
+        "Matt Haberland",
+        "Tyler Reddy"
+      ],
+      "abstract": "SciPy is an open-source scientific computing library for the Python programming language. Since its initial release in 2001, SciPy has become a de facto standard for leveraging scientific algorithms in Python, with over 600 unique code contributors, thousands of dependent packages, over 100,000 dependent repositories and millions of downloads per year. In this work, we provide an overview of the capabilities and development practices of SciPy 1.0 and highlight some recent technical developments."
+    },
+    {
+      "id": "https://openalex.org/W4318671267",
+      "doi": "https://doi.org/10.1001/jama.2023.1344",
+      "title": "Nonhuman “Authors” and Implications for the Integrity of Scientific Publication and Medical Knowledge",
+      "year": 2023,
+      "authors": [
+        "Annette Flanagin",
+        "Kirsten Bibbins‐Domingo",
+        "Michael Berkwits",
+        "Stacy Christiansen"
+      ],
+      "abstract": "Artificial intelligence (AI) technologies to help authors improve the preparation and quality of their manuscripts and published articles are rapidly increasing in number and sophistication.These include tools to assist with writing, grammar, language, references, statistical analysis, and reporting standards.Editors and publishers also use AI-assisted tools for myriad purposes, including to screen submissions for problems (eg, plagiarism, image manipulation, ethical issues), triage submissions, validate references, edit, and code content for publication in different media and to facilitate postpublication search and discoverability. 1 In November 2022, OpenAI released a new open source, natural language processing tool called ChatGPT. 2,3ChatGPT is an evolution of a chatbot that is designed to simulate human conversation in response to prompts or questions (GPT stands for \"generative pretrained transformer\").The release has prompted immediate excitement about its many potential uses 4 but also trepidation about potential misuse, such as concerns about using the language model to cheat on homework assignments, write student essays, and take examinations, including medical licensing examinations. 5n January 2023, Nature reported on 2 preprints and 2 articles published in the science and health fields that included ChatGPT as a bylined author. 6Each of these includes an affiliation for ChatGPT, and 1 of the articles includes an email address for the nonhuman \"author.\"According to Nature, that article's inclusion of ChatGPT in the author byline was an \"error that will soon be "
+    },
+    {
+      "id": "https://openalex.org/W2180229411",
+      "doi": "https://doi.org/10.1107/s0907444909052925",
+      "title": "<i>PHENIX</i>: a comprehensive Python-based system for macromolecular structure solution",
+      "year": 2010,
+      "authors": [
+        "Paul D. Adams",
+        "Pavel V. Afonine",
+        "G. Bunkóczi",
+        "Vincent B. Chen",
+        "Ian Davis"
+      ],
+      "abstract": "Macromolecular X-ray crystallography is routinely applied to understand biological processes at a molecular level. However, significant time and effort are still required to solve and complete many of these structures because of the need for manual interpretation of complex numerical data using many software packages and the repeated use of interactive three-dimensional graphics. PHENIX has been developed to provide a comprehensive system for macromolecular crystallographic structure solution with an emphasis on the automation of all procedures. This has relied on the development of algorithms that minimize or eliminate subjective input, the development of algorithms that automate procedures that are traditionally performed by hand and, finally, the development of a framework that allows a tight integration between the algorithms."
+    },
+    {
+      "id": "https://openalex.org/W2124026197",
+      "doi": "https://doi.org/10.1107/s0907444910007493",
+      "title": "Features and development of <i>Coot</i>",
+      "year": 2010,
+      "authors": [
+        "Paul Emsley",
+        "Bernhard Lohkamp",
+        "W. G. Scott",
+        "Kevin Cowtan"
+      ],
+      "abstract": "Coot is a molecular-graphics application for model building and validation of biological macromolecules. The program displays electron-density maps and atomic models and allows model manipulations such as idealization, real-space refinement, manual rotation/translation, rigid-body fitting, ligand search, solvation, mutations, rotamers and Ramachandran idealization. Furthermore, tools are provided for model validation as well as interfaces to external programs for refinement, validation and graphics. The software is designed to be easy to learn for novice users, which is achieved by ensuring that tools for common tasks are 'discoverable' through familiar user-interface elements (menus and toolbars) or by intuitive behaviour (mouse controls). Recent developments have focused on providing tools for expert users, with customisable key bindings, extensions and an extensive scripting interface. The software is under rapid development, but has already achieved very widespread use within the crystallographic community. The current state of the software is presented, with a description of the facilities available and of some of the underlying methods employed."
+    }
+  ],
+  "final_answer": "Определение темы\nTool-using language models in scientific search — это направление, где большие языковые модели (LLM) не только генерируют текст, но и взаимодействуют с внешними инструментами (поисковыми движками, базами данных, библиотеками вычислений, визуализацией и т.п.) для выполнения научного поиска, верификации, извлечения и обработки информации. В общем контексте LLM — нейронные сети, обученные на больших корпусах текста для задач генерации и понимания языка; их надежность зависит от качества обучающих данных.\n\nОсновные подходы\nПрямые сведения о конкретных методах tool-using LLM в переданных источниках ограничены. На основе контекста и видов представленных работ можно выделить логически взаимосвязанные подходы, применимые в научном поиске:\n- Интеграция LLM с вычислительными и аналитическими библиотеками: использование LLM как интерфейса к инструментам (например, SciPy, PHENIX, Coot) для автоматизации научных расчетов, анализа данных и интерпретации результатов.\n- Автоматизация рабочего процесса и пайплайнов: LLM, использующие внешние инструменты для выполнения частей рабочего процесса (предобработка данных, численные вычисления, визуализация), снижая ручной труд и ускоряя итерации.\n- Вспомогательные инструменты для подготовки и проверки публикаций: использование LLM для редактирования, форматирования, проверки ссылок и соответствия стандартам (включая обнаружение этических вопросов при использовании ИИ), с интеграцией в редакционные/поисковые системы.\n- Интерфейс-ориентированные решения: LLM как «умный» слой между исследователем и сложными программными пакетами, переводящий естественный язык в команды/скрипты для соответствующих инструментов.\n\n3–5 ключевых работ (из предоставленных источников) с годами и вкладом\nПримечание: прямые исследования по теме «tool-using LLM in scientific search» в переданных источниках отсутствуют; ниже — релевантные работы по инструментам и вопросам применения ИИ в научной коммуникации, которые дают контекст для разработки и интеграции LLM с научными инструментами.\n\n1) SciPy 1.0: fundamental algorithms for scientific computing in Python (2020) — Pauli Virtanen et al.\n   Краткий вклад: обзор и описание фундаментальных алгоритмов и практик разработки в SciPy, демонстрирующий зрелую экосистему научных вычислений на Python с большим количеством компонентов, которые могут быть использованы LLM как внешние инструменты для выполнения численных задач и воспроизводимых вычислений.\n\n2) PHENIX: a comprehensive Python-based system for macromolecular structure solution (2010) — Paul D. Adams et al.\n   Краткий вклад: описание интегрированной автоматизированной системы для решения макромолекулярных структур. Представляет пример сложного научного программного стека, взаимодействие с которым может быть автоматизировано с помощью LLM-интерфейсов для ускорения интерпретации данных и уменьшения субъективных вмешательств.\n\n3) Features and development of Coot (2010) — Paul Emsley et al.\n   Краткий вклад: описание визуального и скриптового инструмента для моделирования макромолекул, с акцентом на расширяемость и скриптинг. Демонстрирует возможности программ, куда LLM могут переводить команды на основе естественного языка и генерировать/модифицировать скрипты для автоматизации задач.\n\n4) NIH Image to ImageJ: 25 years of image analysis (2012) — Caroline A Schneider et al.\n   Краткий вклад: обзор развития ImageJ, платформы для анализа изображений в бионауках. Подчеркивает важность модульности, плагинов и воспроизводимости — качества, нужные для интеграции с LLM, выполняющими поиск и анализ научных изображений.\n\n5) Nonhuman “Authors” and Implications for the Integrity of Scientific Publication and Medical Knowledge (2023) — Annette Flanagin et al.\n   Краткий вклад: обсуждение применения ИИ-инструментов (включая ChatGPT) в подготовке рукописей, этических и практических рисков (например, присвоение авторства ИИ, ошибки, недостоверность). Даёт важный контекст для использования LLM в научном поиске: потребность в проверке, прозрачности и учёте рисков неверной/неэтичной автоматизации.\n\nВозможные приложения (в научном поиске)\n- Семантический поиск и резюмирование литературы: LLM, соединённые с базами данных и инструментами поиска, могут формировать расширенные запросы, агрегировать и кратко резюмировать релевантные статьи.\n- Автоматизированная валидация и воспроизводимость: LLM может вызывать вычислительные библиотеки (SciPy, PHENIX) для воспроизведения численных экспериментов или проверки расчётов, генерируя код и интерпретируя результаты.\n- Поддержка в обработке и анализе данных: преобразование естественно-языковых запросов в скрипты для ImageJ, Coot, PHENIX и SciPy, автоматизация конвейеров анализа изображений, структур или численных данных.\n- Подготовка и проверка рукописей и метаданных: помощь в формат",
+  "status": "finished",
+  "stop_reason": "final_answer_generated",
+  "tool_errors": 0,
+  "evaluator_result": {
+    "correctness": 4,
+    "groundedness": 4,
+    "completeness": 4,
+    "coverage_of_required_fields": 4,
+    "source_consistency": 5,
+    "comment": "Ответ в целом корректен, логично связывает идею tool-using LLM с приведёнными источниками и выделяет релевантные приложения и примеры. Обоснования в основном соответствуют содержанию перечисленных работ (SciPy, PHENIX, Coot, ImageJ, обсуждение этики в JAMA), но в тексте есть явное признание отсутствия прямых исследований по именно «tool-using LLM in scientific search» в предоставленных источниках — это снижает полноту прямых доказательств. Покрыты ключевые подходы, приложения и релевантные работы; могло бы быть больше конкретики по методам интеграции LLM (архитектуры, протоколы взаимодействия, примеры API/плагины) и явных ссылок на утверждения в самих источниках. Источники использованы последовательно и корректно.",
+    "rubric": 4.2
+  }
+}

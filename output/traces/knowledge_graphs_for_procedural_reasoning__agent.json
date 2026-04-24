@@ -1,0 +1,2897 @@
+{
+  "topic": "Knowledge graphs for procedural reasoning",
+  "objective": "Подготовить структурированный научно-аналитический обзор темы",
+  "step_id": 5,
+  "history": [
+    {
+      "step_id": 0,
+      "action": "search_wikipedia",
+      "payload": {
+        "topic": "Knowledge graphs for procedural reasoning"
+      },
+      "result": "A knowledge-based system (KBS) is a computer program that reasons and uses a knowledge base to solve complex problems. Knowledge-based systems were the focus of early artificial intelligence researchers in the 1980s. The term can refer to a broad range of systems. However, all knowledge-based systems have two defining components: an attempt to represent knowledge explicitly, called a knowledge base, and a reasoning system that allows them to derive new knowledge, known as an inference engine.",
+      "n_sources": 0,
+      "n_notes": 0,
+      "next_reason": "need general context before publication search"
+    },
+    {
+      "step_id": 1,
+      "action": "search_openalex",
+      "payload": {
+        "query": "Knowledge graphs for procedural reasoning",
+        "per_page": 5
+      },
+      "result": "found=5",
+      "n_sources": 5,
+      "n_notes": 0,
+      "next_reason": "extract notes from returned publications"
+    },
+    {
+      "step_id": 2,
+      "action": "extract_notes",
+      "payload": {
+        "n_sources": 5,
+        "top_k": 5
+      },
+      "result": "notes_prepared=5",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "generate final answer from context and notes"
+    },
+    {
+      "step_id": 3,
+      "action": "generate_final_answer",
+      "payload": {
+        "topic": "Knowledge graphs for procedural reasoning"
+      },
+      "result": "Определение темы\nKnowledge graphs for procedural reasoning — это направление, в котором используются структурированные представления знаний (knowledge graphs, KG) для моделирования, хранения и вывода процедурных знаний (последовательностей действий, правил, планов, алгоритмов), с целью поддержки рассуждений о процессах, выполнении задач и управлении процедурами в системах, опирающихся на базу знаний и механизм вывода (KBS). В заданном общем контексте KBS определяются как системы, имеющие явное п",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "finish or run evaluator depending on configuration"
+    },
+    {
+      "step_id": 4,
+      "action": "finish",
+      "payload": {
+        "status": "finished",
+        "stop_reason": "final_answer_generated"
+      },
+      "result": "final_answer_generated",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "stop criterion reached"
+    }
+  ],
+  "sources": [
+    {
+      "id": "https://openalex.org/W599890814",
+      "display_name": "Task Analysis Methods for Instructional Design",
+      "publication_year": 1998,
+      "abstract_inverted_index": {
+        "Contents:": [
+          0
+        ],
+        "Introduction.": [
+          1
+        ],
+        "Part": [
+          2,
+          22,
+          40,
+          58,
+          84,
+          99,
+          119
+        ],
+        "I:": [
+          3
+        ],
+        "Task": [
+          4,
+          9,
+          20,
+          30,
+          35,
+          61,
+          96
+        ],
+        "Analysis": [
+          5,
+          28,
+          46,
+          62,
+          103
+        ],
+        "Processes.": [
+          6
+        ],
+        "What": [
+          7
+        ],
+        "Is": [
+          8
+        ],
+        "Analysis?": [
+          10
+        ],
+        "Selecting": [
+          11
+        ],
+        "Tasks": [
+          12
+        ],
+        "for": [
+          13
+        ],
+        "Analysis.": [
+          14,
+          21,
+          33,
+          36,
+          39,
+          51,
+          54,
+          57,
+          91,
+          107,
+          112,
+          118,
+          125
+        ],
+        "Classifying": [
+          15
+        ],
+        "Knowledge": [
+          16,
+          97,
+          121
+        ],
+        "and": [
+          17,
+          26,
+          43,
+          77,
+          137
+        ],
+        "Skills": [
+          18
+        ],
+        "From": [
+          19
+        ],
+        "II:": [
+          23
+        ],
+        "Job,": [
+          24
+        ],
+        "Procedural,": [
+          25
+        ],
+        "Skill": [
+          27
+        ],
+        "Methods.": [
+          29,
+          47,
+          63,
+          87,
+          95,
+          104
+        ],
+        "Description.": [
+          31
+        ],
+        "Procedural": [
+          32
+        ],
+        "Job": [
+          34,
+          38
+        ],
+        "Functional": [
+          37
+        ],
+        "III:": [
+          41
+        ],
+        "Instructional": [
+          42
+        ],
+        "Guided": [
+          44
+        ],
+        "Learning": [
+          45,
+          48,
+          55
+        ],
+        "Hierarchy": [
+          49
+        ],
+        "(Prerequisites)": [
+          50
+        ],
+        "Information": [
+          52
+        ],
+        "Processing": [
+          53
+        ],
+        "Contingency": [
+          56
+        ],
+        "IV:": [
+          59
+        ],
+        "Cognitive": [
+          60,
+          80
+        ],
+        "Goals,": [
+          64
+        ],
+        "Operators,": [
+          65
+        ],
+        "Methods,": [
+          66
+        ],
+        "&": [
+          67
+        ],
+        "Selection": [
+          68
+        ],
+        "(GOMS).": [
+          69
+        ],
+        "Prediction,": [
+          70
+        ],
+        "Actions,": [
+          71
+        ],
+        "Results,": [
+          72
+        ],
+        "Interpretation": [
+          73
+        ],
+        "(PARI).": [
+          74
+        ],
+        "Decompose,": [
+          75
+        ],
+        "Network,": [
+          76
+        ],
+        "Assess": [
+          78
+        ],
+        "(DNA).": [
+          79
+        ],
+        "Simulations.": [
+          81
+        ],
+        "Case-Based": [
+          82
+        ],
+        "Reasoning.": [
+          83
+        ],
+        "V:": [
+          85
+        ],
+        "Activity-Based": [
+          86
+        ],
+        "Activity": [
+          88
+        ],
+        "Theory.": [
+          89
+        ],
+        "Syntactic": [
+          90
+        ],
+        "Critical": [
+          92
+        ],
+        "Incident/Critical": [
+          93
+        ],
+        "Decision": [
+          94
+        ],
+        "Structures.": [
+          98
+        ],
+        "VI:": [
+          100
+        ],
+        "Subject": [
+          101
+        ],
+        "Matter/Content": [
+          102
+        ],
+        "Conceptual": [
+          105
+        ],
+        "Graph": [
+          106
+        ],
+        "Master": [
+          108
+        ],
+        "Design": [
+          109
+        ],
+        "Chart.": [
+          110
+        ],
+        "Matrix": [
+          111
+        ],
+        "Repertory": [
+          113
+        ],
+        "Grid": [
+          114
+        ],
+        "Technique.": [
+          115,
+          143
+        ],
+        "Fault": [
+          116
+        ],
+        "Tree": [
+          117
+        ],
+        "VII:": [
+          120
+        ],
+        "Elicitation": [
+          122
+        ],
+        "Techniques.": [
+          123
+        ],
+        "Documentation": [
+          124
+        ],
+        "Observation.": [
+          126
+        ],
+        "Survey": [
+          127
+        ],
+        "Questionnaires.": [
+          128
+        ],
+        "Interviews.": [
+          129
+        ],
+        "Think-Aloud": [
+          130
+        ],
+        "Protocols.": [
+          131
+        ],
+        "Unstructured": [
+          132
+        ],
+        "Group": [
+          133,
+          140
+        ],
+        "Interviews:": [
+          134,
+          141
+        ],
+        "Focus": [
+          135
+        ],
+        "Groups": [
+          136
+        ],
+        "Brainstorming.": [
+          138
+        ],
+        "Structured": [
+          139
+        ],
+        "Delphi": [
+          142
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5077079209",
+            "display_name": "David H. Jonassen",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I130769515",
+              "display_name": "Pennsylvania State University",
+              "ror": "https://ror.org/04p491231",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I130769515"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "David H. Jonassen",
+          "raw_affiliation_strings": [
+            "Pennsylvania State U, PA, US"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Pennsylvania State U, PA, US",
+              "institution_ids": [
+                "https://openalex.org/I130769515"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5110484202",
+            "display_name": "Martin Tessmer",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Martin Tessmer",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5113765173",
+            "display_name": "Wallace H. Hannum",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Wallace H. Hannum",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        }
+      ],
+      "doi": "https://doi.org/10.4324/9781410602657"
+    },
+    {
+      "id": "https://openalex.org/W376080155",
+      "display_name": "Teaching and Learning in the Science Laboratory",
+      "publication_year": 2003,
+      "abstract_inverted_index": {
+        "General": [
+          0
+        ],
+        "Introduction.": [
+          1,
+          8,
+          70,
+          146,
+          198,
+          249
+        ],
+        "1:": [
+          2
+        ],
+        "Approaching": [
+          3
+        ],
+        "Labwork:": [
+          4,
+          11
+        ],
+        "Frames": [
+          5
+        ],
+        "and": [
+          6,
+          23,
+          56,
+          106,
+          112,
+          138,
+          175,
+          195,
+          222,
+          227,
+          270,
+          274,
+          292
+        ],
+        "Tools.": [
+          7
+        ],
+        "Varieties": [
+          9
+        ],
+        "of": [
+          10,
+          14,
+          28,
+          43,
+          51,
+          54,
+          73,
+          114,
+          133,
+          149,
+          162,
+          178,
+          181,
+          201,
+          220,
+          245,
+          253,
+          268,
+          308,
+          319
+        ],
+        "A": [
+          12,
+          39,
+          94
+        ],
+        "Way": [
+          13
+        ],
+        "Profiling": [
+          15
+        ],
+        "Labwork": [
+          16,
+          29,
+          37,
+          60,
+          65,
+          78,
+          86,
+          155,
+          194,
+          240,
+          325
+        ],
+        "Tasks": [
+          17
+        ],
+        "R.": [
+          18
+        ],
+        "Millar,": [
+          19
+        ],
+        "et": [
+          20,
+          47,
+          125,
+          237,
+          296
+        ],
+        "al.": [
+          21,
+          48,
+          126,
+          238,
+          297
+        ],
+        "Issues": [
+          22
+        ],
+        "Questions": [
+          24
+        ],
+        "Regarding": [
+          25
+        ],
+        "the": [
+          26,
+          52,
+          179,
+          231,
+          251,
+          287,
+          317
+        ],
+        "Effectiveness": [
+          27,
+          161
+        ],
+        "D.": [
+          30,
+          235,
+          264
+        ],
+        "Psillos,": [
+          31
+        ],
+        "H.": [
+          32,
+          45,
+          123
+        ],
+        "Niedderer.": [
+          33
+        ],
+        "Talking": [
+          34
+        ],
+        "Physics": [
+          35,
+          119,
+          233
+        ],
+        "in": [
+          36,
+          118,
+          152,
+          204,
+          209,
+          230,
+          272,
+          275,
+          286,
+          299,
+          314
+        ],
+        "Contexts:": [
+          38
+        ],
+        "Category": [
+          40
+        ],
+        "Based": [
+          41,
+          66,
+          241
+        ],
+        "Analysis": [
+          42,
+          208
+        ],
+        "Videotapes": [
+          44
+        ],
+        "Niedderer,": [
+          46
+        ],
+        "Students'": [
+          49
+        ],
+        "Understanding": [
+          50
+        ],
+        "Nature": [
+          53
+        ],
+        "Science": [
+          55,
+          182
+        ],
+        "its": [
+          57
+        ],
+        "Influence": [
+          58,
+          318
+        ],
+        "on": [
+          59,
+          67,
+          99,
+          242
+        ],
+        "J.": [
+          61,
+          170,
+          191,
+          216
+        ],
+        "Leach.": [
+          62,
+          217
+        ],
+        "2:": [
+          63
+        ],
+        "Standard": [
+          64,
+          85
+        ],
+        "Hands-on": [
+          68
+        ],
+        "Experiments.": [
+          69
+        ],
+        "Modelling": [
+          71,
+          298
+        ],
+        "Activities": [
+          72,
+          83,
+          174
+        ],
+        "Students": [
+          74,
+          122
+        ],
+        "during": [
+          75,
+          84,
+          183
+        ],
+        "a": [
+          76,
+          115,
+          131,
+          165,
+          184,
+          210,
+          303
+        ],
+        "Traditional": [
+          77,
+          273
+        ],
+        "K.": [
+          79
+        ],
+        "Becu-Robinault.": [
+          80
+        ],
+        "Student's": [
+          81,
+          176,
+          309
+        ],
+        "Intellectual": [
+          82
+        ],
+        "at": [
+          87
+        ],
+        "Undergraduate": [
+          88,
+          213
+        ],
+        "Level": [
+          89
+        ],
+        "M.": [
+          90,
+          141
+        ],
+        "Beney,": [
+          91
+        ],
+        "M.-G.": [
+          92,
+          158,
+          326
+        ],
+        "Sere.": [
+          93,
+          159,
+          327
+        ],
+        "Laboratory-Based": [
+          95
+        ],
+        "Teaching": [
+          96,
+          205,
+          221
+        ],
+        "Learning": [
+          97,
+          223
+        ],
+        "Sequence": [
+          98
+        ],
+        "Fluids:": [
+          100
+        ],
+        "Developing": [
+          101
+        ],
+        "Primary": [
+          102
+        ],
+        "Student": [
+          103
+        ],
+        "Teacher's": [
+          104
+        ],
+        "Conceptual": [
+          105
+        ],
+        "Procedural": [
+          107
+        ],
+        "Knowledge": [
+          108,
+          137,
+          255
+        ],
+        "P.": [
+          109
+        ],
+        "Kariotoglou.": [
+          110
+        ],
+        "Development": [
+          111
+        ],
+        "Evaluation": [
+          113
+        ],
+        "Laboratory": [
+          116,
+          234,
+          278
+        ],
+        "Course": [
+          117,
+          190,
+          215
+        ],
+        "for": [
+          120,
+          167
+        ],
+        "Medical": [
+          121
+        ],
+        "Theyssen,": [
+          124
+        ],
+        "The": [
+          127,
+          147,
+          160,
+          199,
+          266
+        ],
+        "Biology": [
+          128
+        ],
+        "Textbook": [
+          129
+        ],
+        "as": [
+          130,
+          164
+        ],
+        "Source": [
+          132
+        ],
+        "Ideas": [
+          134
+        ],
+        "about": [
+          135,
+          206,
+          224,
+          311
+        ],
+        "Scientific": [
+          136
+        ],
+        "Experimental": [
+          139
+        ],
+        "Activity": [
+          140
+        ],
+        "Bandiera.": [
+          142
+        ],
+        "3:": [
+          143
+        ],
+        "Open-Ended": [
+          144,
+          168
+        ],
+        "Labwork.": [
+          145
+        ],
+        "Role": [
+          148
+        ],
+        "Epistemological": [
+          150
+        ],
+        "information": [
+          151
+        ],
+        "open-ended": [
+          153
+        ],
+        "Investigative": [
+          154
+        ],
+        "A.": [
+          156
+        ],
+        "Guillon,": [
+          157
+        ],
+        "Mini-Projects": [
+          163
+        ],
+        "Preparation": [
+          166
+        ],
+        "Investigations": [
+          169
+        ],
+        "Lewis.": [
+          171
+        ],
+        "Data": [
+          172,
+          196,
+          203,
+          207,
+          226
+        ],
+        "Interpretation": [
+          173
+        ],
+        "Views": [
+          177
+        ],
+        "Epistemology": [
+          180
+        ],
+        "University": [
+          185,
+          277
+        ],
+        "Earth": [
+          186
+        ],
+        "Sciences": [
+          187
+        ],
+        "Field": [
+          188
+        ],
+        "Study": [
+          189
+        ],
+        "Ryder.": [
+          192
+        ],
+        "4:": [
+          193
+        ],
+        "Handling.": [
+          197
+        ],
+        "Use": [
+          200,
+          244
+        ],
+        "Secondary": [
+          202
+        ],
+        "First": [
+          211
+        ],
+        "Year": [
+          212
+        ],
+        "Biochemistry": [
+          214
+        ],
+        "An": [
+          218
+        ],
+        "Investigation": [
+          219
+        ],
+        "Measurement": [
+          225
+        ],
+        "their": [
+          228
+        ],
+        "Treatment": [
+          229
+        ],
+        "Introductory": [
+          232
+        ],
+        "Evangelinos,": [
+          236
+        ],
+        "5:": [
+          239
+        ],
+        "Integrated": [
+          243
+        ],
+        "New": [
+          246
+        ],
+        "Information": [
+          247
+        ],
+        "Technology.": [
+          248
+        ],
+        "Enhancing": [
+          250
+        ],
+        "Linking": [
+          252,
+          290
+        ],
+        "Theoretical": [
+          254
+        ],
+        "to": [
+          256
+        ],
+        "Physical": [
+          257
+        ],
+        "Phenomena": [
+          258
+        ],
+        "by": [
+          259
+        ],
+        "Real-Time": [
+          260
+        ],
+        "Graphing": [
+          261
+        ],
+        "G.": [
+          262
+        ],
+        "Bisdikian,": [
+          263
+        ],
+        "Psillos.": [
+          265
+        ],
+        "Link": [
+          267
+        ],
+        "Theory": [
+          269,
+          291
+        ],
+        "Practice": [
+          271
+        ],
+        "Computer-Based": [
+          276
+        ],
+        "Experiments": [
+          279
+        ],
+        "L.": [
+          280
+        ],
+        "Hucke,": [
+          281
+        ],
+        "H.E.": [
+          282
+        ],
+        "Fischer.": [
+          283
+        ],
+        "Computer": [
+          284
+        ],
+        "Tools": [
+          285
+        ],
+        "Lab:": [
+          288
+        ],
+        "Effects": [
+          289
+        ],
+        "Experiment": [
+          293
+        ],
+        "F.": [
+          294
+        ],
+        "Sander,": [
+          295
+        ],
+        "Geometrical": [
+          300
+        ],
+        "Optics": [
+          301
+        ],
+        "Using": [
+          302
+        ],
+        "Microcomputer": [
+          304
+        ],
+        "C.": [
+          305
+        ],
+        "Buty.": [
+          306
+        ],
+        "Evolution": [
+          307
+        ],
+        "Reasoning": [
+          310
+        ],
+        "Micrscopic": [
+          312
+        ],
+        "Processes": [
+          313
+        ],
+        "Electrostatics": [
+          315
+        ],
+        "under": [
+          316
+        ],
+        "Interactive": [
+          320
+        ],
+        "Simulations": [
+          321
+        ],
+        "Epilogue:": [
+          322
+        ],
+        "Towards": [
+          323
+        ],
+        "Targeted": [
+          324
+        ],
+        "Authors.": [
+          328
+        ],
+        "Index.": [
+          329
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5046001585",
+            "display_name": "Dimitris Psillos",
+            "orcid": "https://orcid.org/0000-0002-8634-8838"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Psillos, Dimitris",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5063076159",
+            "display_name": "Hans Niedderer",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Niedderer, Hans",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        }
+      ],
+      "doi": "https://doi.org/10.1007/0-306-48196-0"
+    },
+    {
+      "id": "https://openalex.org/W2963055053",
+      "display_name": "Programming with a differentiable forth interpreter",
+      "publication_year": 2017,
+      "abstract_inverted_index": {
+        "Given": [
+          0
+        ],
+        "that": [
+          1,
+          86,
+          124
+        ],
+        "in": [
+          2,
+          169
+        ],
+        "practice": [
+          3
+        ],
+        "training": [
+          4
+        ],
+        "data": [
+          5
+        ],
+        "is": [
+          6,
+          19,
+          127
+        ],
+        "scarce": [
+          7
+        ],
+        "for": [
+          8,
+          39,
+          72,
+          163
+        ],
+        "all": [
+          9
+        ],
+        "but": [
+          10,
+          52
+        ],
+        "a": [
+          11,
+          16,
+          26,
+          46,
+          50
+        ],
+        "small": [
+          12
+        ],
+        "set": [
+          13
+        ],
+        "of": [
+          14,
+          35,
+          134,
+          152
+        ],
+        "problems,": [
+          15
+        ],
+        "core": [
+          17
+        ],
+        "question": [
+          18
+        ],
+        "how": [
+          20,
+          45
+        ],
+        "to": [
+          21,
+          80,
+          129,
+          150
+        ],
+        "incorporate": [
+          22
+        ],
+        "prior": [
+          23,
+          36,
+          135
+        ],
+        "knowledge": [
+          24,
+          38
+        ],
+        "into": [
+          25,
+          115
+        ],
+        "model.": [
+          27
+        ],
+        "In": [
+          28
+        ],
+        "this": [
+          29,
+          64,
+          100
+        ],
+        "paper,": [
+          30
+        ],
+        "we": [
+          31,
+          66
+        ],
+        "consider": [
+          32
+        ],
+        "the": [
+          33,
+          73,
+          113
+        ],
+        "case": [
+          34
+        ],
+        "procedural": [
+          37
+        ],
+        "neural": [
+          40,
+          118
+        ],
+        "networks,": [
+          41
+        ],
+        "such": [
+          42,
+          142
+        ],
+        "as": [
+          43,
+          143
+        ],
+        "knowing": [
+          44
+        ],
+        "program": [
+          47,
+          82,
+          94,
+          114,
+          136
+        ],
+        "should": [
+          48,
+          57
+        ],
+        "traverse": [
+          49
+        ],
+        "sequence,": [
+          51
+        ],
+        "not": [
+          53
+        ],
+        "what": [
+          54
+        ],
+        "local": [
+          55
+        ],
+        "actions": [
+          56
+        ],
+        "be": [
+          58,
+          88
+        ],
+        "performed": [
+          59
+        ],
+        "at": [
+          60
+        ],
+        "each": [
+          61
+        ],
+        "step.": [
+          62
+        ],
+        "To": [
+          63
+        ],
+        "end,": [
+          65
+        ],
+        "present": [
+          67
+        ],
+        "an": [
+          68,
+          153
+        ],
+        "end-to-end": [
+          69,
+          164
+        ],
+        "differentiable": [
+          70
+        ],
+        "interpreter": [
+          71,
+          126,
+          159
+        ],
+        "programming": [
+          74
+        ],
+        "language": [
+          75,
+          171
+        ],
+        "Forth": [
+          76
+        ],
+        "which": [
+          77
+        ],
+        "enables": [
+          78
+        ],
+        "programmers": [
+          79
+        ],
+        "write": [
+          81
+        ],
+        "sketches": [
+          83
+        ],
+        "with": [
+          84,
+          90
+        ],
+        "slots": [
+          85
+        ],
+        "can": [
+          87,
+          98
+        ],
+        "filled": [
+          89
+        ],
+        "behaviour": [
+          91,
+          101
+        ],
+        "trained": [
+          92,
+          156
+        ],
+        "from": [
+          93
+        ],
+        "input-output": [
+          95
+        ],
+        "data.": [
+          96
+        ],
+        "We": [
+          97,
+          121
+        ],
+        "optimise": [
+          99
+        ],
+        "directly": [
+          102
+        ],
+        "through": [
+          103
+        ],
+        "gradient": [
+          104
+        ],
+        "descent": [
+          105
+        ],
+        "techniques": [
+          106
+        ],
+        "on": [
+          107
+        ],
+        "user-specified": [
+          108
+        ],
+        "objectives,": [
+          109
+        ],
+        "and": [
+          110,
+          138,
+          146,
+          155
+        ],
+        "also": [
+          111
+        ],
+        "integrate": [
+          112
+        ],
+        "any": [
+          116
+        ],
+        "larger": [
+          117
+        ],
+        "computation": [
+          119
+        ],
+        "graph.": [
+          120
+        ],
+        "show": [
+          122
+        ],
+        "empirically": [
+          123
+        ],
+        "our": [
+          125,
+          158
+        ],
+        "able": [
+          128
+        ],
+        "effectively": [
+          130
+        ],
+        "leverage": [
+          131
+        ],
+        "different": [
+          132
+        ],
+        "levels": [
+          133
+        ],
+        "structure": [
+          137
+        ],
+        "learn": [
+          139
+        ],
+        "complex": [
+          140
+        ],
+        "behaviours": [
+          141
+        ],
+        "sequence": [
+          144
+        ],
+        "sorting": [
+          145
+        ],
+        "addition.": [
+          147
+        ],
+        "When": [
+          148
+        ],
+        "connected": [
+          149
+        ],
+        "outputs": [
+          151
+        ],
+        "LSTM": [
+          154
+        ],
+        "jointly,": [
+          157
+        ],
+        "achieves": [
+          160
+        ],
+        "state-of-the-art": [
+          161
+        ],
+        "accuracy": [
+          162
+        ],
+        "reasoning": [
+          165
+        ],
+        "about": [
+          166
+        ],
+        "quantities": [
+          167
+        ],
+        "expressed": [
+          168
+        ],
+        "natural": [
+          170
+        ],
+        "stories.": [
+          172
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5016424155",
+            "display_name": "Matko Bošnjak",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I45129253",
+              "display_name": "University College London",
+              "ror": "https://ror.org/02jx3x895",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I45129253"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Matko Bošnjak",
+          "raw_affiliation_strings": [
+            "Department of Computer Science , University College London , London, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science , University College London , London, UK",
+              "institution_ids": [
+                "https://openalex.org/I45129253"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5079315903",
+            "display_name": "Tim Rocktäschel",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I40120149",
+              "display_name": "University of Oxford",
+              "ror": "https://ror.org/052gg0110",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I40120149"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Tim Rocktäschel",
+          "raw_affiliation_strings": [
+            "Dept. of Comput. Sci., Univ. of Oxford, Oxford, , UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Dept. of Comput. Sci., Univ. of Oxford, Oxford, , UK",
+              "institution_ids": [
+                "https://openalex.org/I40120149"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5082047528",
+            "display_name": "Jason Naradowsky",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I241749",
+              "display_name": "University of Cambridge",
+              "ror": "https://ror.org/013meh722",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I241749"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jason Naradowsky",
+          "raw_affiliation_strings": [
+            "Department of Theoretical and Applied Linguistics; University of Cambridge; Cambridge UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Theoretical and Applied Linguistics; University of Cambridge; Cambridge UK",
+              "institution_ids": [
+                "https://openalex.org/I241749"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5101404695",
+            "display_name": "Sebastian Riedel",
+            "orcid": "https://orcid.org/0000-0002-3655-2486"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I45129253",
+              "display_name": "University College London",
+              "ror": "https://ror.org/02jx3x895",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I45129253"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Sebastian Riedel",
+          "raw_affiliation_strings": [
+            "Department of Computer Science , University College London , London, UK"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-3655-2486",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science , University College London , London, UK",
+              "institution_ids": [
+                "https://openalex.org/I45129253"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": null
+    },
+    {
+      "id": "https://openalex.org/W2408283598",
+      "display_name": "Programming with a Differentiable Forth Interpreter",
+      "publication_year": 2016,
+      "abstract_inverted_index": {
+        "Given": [
+          0
+        ],
+        "that": [
+          1,
+          86,
+          124
+        ],
+        "in": [
+          2,
+          169
+        ],
+        "practice": [
+          3
+        ],
+        "training": [
+          4
+        ],
+        "data": [
+          5
+        ],
+        "is": [
+          6,
+          19,
+          127
+        ],
+        "scarce": [
+          7
+        ],
+        "for": [
+          8,
+          39,
+          72,
+          163
+        ],
+        "all": [
+          9
+        ],
+        "but": [
+          10,
+          52
+        ],
+        "a": [
+          11,
+          16,
+          26,
+          46,
+          50
+        ],
+        "small": [
+          12
+        ],
+        "set": [
+          13
+        ],
+        "of": [
+          14,
+          35,
+          134,
+          152
+        ],
+        "problems,": [
+          15
+        ],
+        "core": [
+          17
+        ],
+        "question": [
+          18
+        ],
+        "how": [
+          20,
+          45
+        ],
+        "to": [
+          21,
+          80,
+          129,
+          150
+        ],
+        "incorporate": [
+          22
+        ],
+        "prior": [
+          23,
+          36,
+          135
+        ],
+        "knowledge": [
+          24,
+          38
+        ],
+        "into": [
+          25,
+          115
+        ],
+        "model.": [
+          27
+        ],
+        "In": [
+          28
+        ],
+        "this": [
+          29,
+          64,
+          100
+        ],
+        "paper,": [
+          30
+        ],
+        "we": [
+          31,
+          66
+        ],
+        "consider": [
+          32
+        ],
+        "the": [
+          33,
+          73,
+          113
+        ],
+        "case": [
+          34
+        ],
+        "procedural": [
+          37
+        ],
+        "neural": [
+          40,
+          118
+        ],
+        "networks,": [
+          41
+        ],
+        "such": [
+          42,
+          142
+        ],
+        "as": [
+          43,
+          143
+        ],
+        "knowing": [
+          44
+        ],
+        "program": [
+          47,
+          82,
+          94,
+          114,
+          136
+        ],
+        "should": [
+          48,
+          57
+        ],
+        "traverse": [
+          49
+        ],
+        "sequence,": [
+          51
+        ],
+        "not": [
+          53
+        ],
+        "what": [
+          54
+        ],
+        "local": [
+          55
+        ],
+        "actions": [
+          56
+        ],
+        "be": [
+          58,
+          88
+        ],
+        "performed": [
+          59
+        ],
+        "at": [
+          60
+        ],
+        "each": [
+          61
+        ],
+        "step.": [
+          62
+        ],
+        "To": [
+          63
+        ],
+        "end,": [
+          65
+        ],
+        "present": [
+          67
+        ],
+        "an": [
+          68,
+          153
+        ],
+        "end-to-end": [
+          69,
+          164
+        ],
+        "differentiable": [
+          70
+        ],
+        "interpreter": [
+          71,
+          126,
+          159
+        ],
+        "programming": [
+          74
+        ],
+        "language": [
+          75,
+          171
+        ],
+        "Forth": [
+          76
+        ],
+        "which": [
+          77
+        ],
+        "enables": [
+          78
+        ],
+        "programmers": [
+          79
+        ],
+        "write": [
+          81
+        ],
+        "sketches": [
+          83
+        ],
+        "with": [
+          84,
+          90
+        ],
+        "slots": [
+          85
+        ],
+        "can": [
+          87,
+          98
+        ],
+        "filled": [
+          89
+        ],
+        "behaviour": [
+          91,
+          101
+        ],
+        "trained": [
+          92,
+          156
+        ],
+        "from": [
+          93
+        ],
+        "input-output": [
+          95
+        ],
+        "data.": [
+          96
+        ],
+        "We": [
+          97,
+          121
+        ],
+        "optimise": [
+          99
+        ],
+        "directly": [
+          102
+        ],
+        "through": [
+          103
+        ],
+        "gradient": [
+          104
+        ],
+        "descent": [
+          105
+        ],
+        "techniques": [
+          106
+        ],
+        "on": [
+          107
+        ],
+        "user-specified": [
+          108
+        ],
+        "objectives,": [
+          109
+        ],
+        "and": [
+          110,
+          138,
+          146,
+          155
+        ],
+        "also": [
+          111
+        ],
+        "integrate": [
+          112
+        ],
+        "any": [
+          116
+        ],
+        "larger": [
+          117
+        ],
+        "computation": [
+          119
+        ],
+        "graph.": [
+          120
+        ],
+        "show": [
+          122
+        ],
+        "empirically": [
+          123
+        ],
+        "our": [
+          125,
+          158
+        ],
+        "able": [
+          128
+        ],
+        "effectively": [
+          130
+        ],
+        "leverage": [
+          131
+        ],
+        "different": [
+          132
+        ],
+        "levels": [
+          133
+        ],
+        "structure": [
+          137
+        ],
+        "learn": [
+          139
+        ],
+        "complex": [
+          140
+        ],
+        "behaviours": [
+          141
+        ],
+        "sequence": [
+          144
+        ],
+        "sorting": [
+          145
+        ],
+        "addition.": [
+          147
+        ],
+        "When": [
+          148
+        ],
+        "connected": [
+          149
+        ],
+        "outputs": [
+          151
+        ],
+        "LSTM": [
+          154
+        ],
+        "jointly,": [
+          157
+        ],
+        "achieves": [
+          160
+        ],
+        "state-of-the-art": [
+          161
+        ],
+        "accuracy": [
+          162
+        ],
+        "reasoning": [
+          165
+        ],
+        "about": [
+          166
+        ],
+        "quantities": [
+          167
+        ],
+        "expressed": [
+          168
+        ],
+        "natural": [
+          170
+        ],
+        "stories.": [
+          172
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5016424155",
+            "display_name": "Matko Bošnjak",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I45129253",
+              "display_name": "University College London",
+              "ror": "https://ror.org/02jx3x895",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I45129253"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Bošnjak, Matko",
+          "raw_affiliation_strings": [
+            "Department of Computer Science , University College London , London, UK"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science , University College London , London, UK",
+              "institution_ids": [
+                "https://openalex.org/I45129253"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5079315903",
+            "display_name": "Tim Rocktäschel",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I40120149",
+              "display_name": "University of Oxford",
+              "ror": "https://ror.org/052gg0110",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I40120149"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Rocktäschel, Tim",
+          "raw_affiliation_strings": [
+            "Dept. of Comput. Sci., Univ. of Oxford, Oxford, , UK"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Dept. of Comput. Sci., Univ. of Oxford, Oxford, , UK",
+              "institution_ids": [
+                "https://openalex.org/I40120149"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5082047528",
+            "display_name": "Jason Naradowsky",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I241749",
+              "display_name": "University of Cambridge",
+              "ror": "https://ror.org/013meh722",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I241749"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Naradowsky, Jason",
+          "raw_affiliation_strings": [
+            "Department of Theoretical and Applied Linguistics; University of Cambridge; Cambridge UK"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Theoretical and Applied Linguistics; University of Cambridge; Cambridge UK",
+              "institution_ids": [
+                "https://openalex.org/I241749"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5101404695",
+            "display_name": "Sebastian Riedel",
+            "orcid": "https://orcid.org/0000-0002-3655-2486"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I45129253",
+              "display_name": "University College London",
+              "ror": "https://ror.org/02jx3x895",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I45129253"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Riedel, Sebastian",
+          "raw_affiliation_strings": [
+            "Department of Computer Science , University College London , London, UK"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science , University College London , London, UK",
+              "institution_ids": [
+                "https://openalex.org/I45129253"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.48550/arxiv.1605.06640"
+    },
+    {
+      "id": "https://openalex.org/W2981731882",
+      "display_name": "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI",
+      "publication_year": 2019,
+      "abstract_inverted_index": null,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5050115521",
+            "display_name": "Alejandro Barredo Arrieta",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210113430",
+              "display_name": "Tecnalia",
+              "ror": "https://ror.org/02fv8hj62",
+              "country_code": "ES",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I4210113430"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Alejandro Barredo Arrieta",
+          "raw_affiliation_strings": [
+            "Tecnalia [Derio] (Spain)"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Tecnalia [Derio] (Spain)",
+              "institution_ids": [
+                "https://openalex.org/I4210113430"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5058176171",
+            "display_name": "Natalia Díaz-Rodríguez",
+            "orcid": "https://orcid.org/0000-0003-3362-9326"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I201181511",
+              "display_name": "École Nationale Supérieure de Techniques Avancées",
+              "ror": "https://ror.org/0309cs235",
+              "country_code": "FR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I201181511",
+                "https://openalex.org/I4210145102"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4405258625",
+              "display_name": "École Nationale Supérieure de Techniques Avancées Paris",
+              "ror": "https://ror.org/0106ccb15",
+              "country_code": "FR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I201181511",
+                "https://openalex.org/I4210145102",
+                "https://openalex.org/I4405258625"
+              ]
+            }
+          ],
+          "countries": [
+            "FR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Natalia Díaz-Rodríguez",
+          "raw_affiliation_strings": [
+            "Flowers - Flowing Epigenetic Robots and Systems (200, avenue de la Vieille Tour \r\n33405 Talence cedex - France)",
+            "U2IS - Unité d'Informatique et d'Ingénierie des Systèmes (828, boulevard des Maréchaux, 91762 Palaiseau CEDEX - France)",
+            "ENSTA Paris - École Nationale Supérieure de Techniques Avancées (828, boulevard des Maréchaux 91120 Palaiseau - France)"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Flowers - Flowing Epigenetic Robots and Systems (200, avenue de la Vieille Tour \r\n33405 Talence cedex - France)",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "U2IS - Unité d'Informatique et d'Ingénierie des Systèmes (828, boulevard des Maréchaux, 91762 Palaiseau CEDEX - France)",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "ENSTA Paris - École Nationale Supérieure de Techniques Avancées (828, boulevard des Maréchaux 91120 Palaiseau - France)",
+              "institution_ids": [
+                "https://openalex.org/I201181511",
+                "https://openalex.org/I4405258625"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5017326471",
+            "display_name": "Javier Del Ser",
+            "orcid": "https://orcid.org/0000-0002-1260-9775"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210113430",
+              "display_name": "Tecnalia",
+              "ror": "https://ror.org/02fv8hj62",
+              "country_code": "ES",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I4210113430"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Javier Del Ser",
+          "raw_affiliation_strings": [
+            "Tecnalia [Derio] (Spain)"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Tecnalia [Derio] (Spain)",
+              "institution_ids": [
+                "https://openalex.org/I4210113430"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5023588408",
+            "display_name": "Adrien Bennetot",
+            "orcid": "https://orcid.org/0000-0001-8232-8728"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I39804081",
+              "display_name": "Sorbonne Université",
+              "ror": "https://ror.org/02en5vm52",
+              "country_code": "FR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I39804081"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210150358",
+              "display_name": "Institut Systèmes Intelligents et de Robotique",
+              "ror": "https://ror.org/05neq8668",
+              "country_code": "FR",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I154526488",
+                "https://openalex.org/I39804081",
+                "https://openalex.org/I4210150358",
+                "https://openalex.org/I4210159245"
+              ]
+            }
+          ],
+          "countries": [
+            "FR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Adrien Bennetot",
+          "raw_affiliation_strings": [
+            "U2IS - Unité d'Informatique et d'Ingénierie des Systèmes (828, boulevard des Maréchaux, 91762 Palaiseau CEDEX - France)",
+            "Flowers - Flowing Epigenetic Robots and Systems (200, avenue de la Vieille Tour \r\n33405 Talence cedex - France)",
+            "SEGULA Technologies [Trappes] (Zone d'activité Pissaloup, 8 Avenue Jean d'Alembert, 78190 Trappes - France)",
+            "ISIR - Institut des Systèmes Intelligents et de Robotique (Sorbonne-Université, Boite courrier 173 4 Place JUSSIEU 75252 Paris cedex 05 - France)"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "U2IS - Unité d'Informatique et d'Ingénierie des Systèmes (828, boulevard des Maréchaux, 91762 Palaiseau CEDEX - France)",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Flowers - Flowing Epigenetic Robots and Systems (200, avenue de la Vieille Tour \r\n33405 Talence cedex - France)",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "SEGULA Technologies [Trappes] (Zone d'activité Pissaloup, 8 Avenue Jean d'Alembert, 78190 Trappes - France)",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "ISIR - Institut des Systèmes Intelligents et de Robotique (Sorbonne-Université, Boite courrier 173 4 Place JUSSIEU 75252 Paris cedex 05 - France)",
+              "institution_ids": [
+                "https://openalex.org/I39804081",
+                "https://openalex.org/I4210150358"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5057876711",
+            "display_name": "Siham Tabik",
+            "orcid": "https://orcid.org/0000-0003-4093-5356"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Siham Tabik",
+          "raw_affiliation_strings": [
+            "DaSCI  - Instituto Andaluz Interuniversitario en Data Science and Computational Intelligence (Spain)"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "DaSCI  - Instituto Andaluz Interuniversitario en Data Science and Computational Intelligence (Spain)",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5064011907",
+            "display_name": "Alberto Barbado",
+            "orcid": "https://orcid.org/0000-0002-5123-5243"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210134591",
+              "display_name": "Telefonica Research and Development",
+              "ror": "https://ror.org/03qgzzb04",
+              "country_code": "ES",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210097190",
+                "https://openalex.org/I4210134591"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Alberto Barbado",
+          "raw_affiliation_strings": [
+            "Telefonica Research and Development [Madrid] (West 1 Building \r\nRonda de la Comunicación S/N, 28050\r\nMadrid - Spain)"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Telefonica Research and Development [Madrid] (West 1 Building \r\nRonda de la Comunicación S/N, 28050\r\nMadrid - Spain)",
+              "institution_ids": [
+                "https://openalex.org/I4210134591"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5078909305",
+            "display_name": "Salvador García",
+            "orcid": "https://orcid.org/0000-0003-4494-7565"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Salvador Garcia",
+          "raw_affiliation_strings": [
+            "DaSCI  - Instituto Andaluz Interuniversitario en Data Science and Computational Intelligence (Spain)"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "DaSCI  - Instituto Andaluz Interuniversitario en Data Science and Computational Intelligence (Spain)",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5019181050",
+            "display_name": "Sergio Gil-López",
+            "orcid": "https://orcid.org/0000-0002-3867-5439"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210113430",
+              "display_name": "Tecnalia",
+              "ror": "https://ror.org/02fv8hj62",
+              "country_code": "ES",
+              "type": "other",
+              "lineage": [
+                "https://openalex.org/I4210113430"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Sergio Gil-Lopez",
+          "raw_affiliation_strings": [
+            "Tecnalia [Derio] (Spain)"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Tecnalia [Derio] (Spain)",
+              "institution_ids": [
+                "https://openalex.org/I4210113430"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5070068995",
+            "display_name": "Daniel Molina",
+            "orcid": "https://orcid.org/0000-0002-4175-2204"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Daniel Molina",
+          "raw_affiliation_strings": [
+            "DaSCI  - Instituto Andaluz Interuniversitario en Data Science and Computational Intelligence (Spain)"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "DaSCI  - Instituto Andaluz Interuniversitario en Data Science and Computational Intelligence (Spain)",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5083664336",
+            "display_name": "Richard Benjamins",
+            "orcid": "https://orcid.org/0000-0002-9412-7082"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210134591",
+              "display_name": "Telefonica Research and Development",
+              "ror": "https://ror.org/03qgzzb04",
+              "country_code": "ES",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210097190",
+                "https://openalex.org/I4210134591"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Richard Benjamins",
+          "raw_affiliation_strings": [
+            "Telefonica Research and Development [Madrid] (West 1 Building \r\nRonda de la Comunicación S/N, 28050\r\nMadrid - Spain)"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Telefonica Research and Development [Madrid] (West 1 Building \r\nRonda de la Comunicación S/N, 28050\r\nMadrid - Spain)",
+              "institution_ids": [
+                "https://openalex.org/I4210134591"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5114376610",
+            "display_name": "Raja Chatila",
+            "orcid": "https://orcid.org/0000-0001-7822-0634"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I39804081",
+              "display_name": "Sorbonne Université",
+              "ror": "https://ror.org/02en5vm52",
+              "country_code": "FR",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I39804081"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210150358",
+              "display_name": "Institut Systèmes Intelligents et de Robotique",
+              "ror": "https://ror.org/05neq8668",
+              "country_code": "FR",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I1294671590",
+                "https://openalex.org/I154526488",
+                "https://openalex.org/I39804081",
+                "https://openalex.org/I4210150358",
+                "https://openalex.org/I4210159245"
+              ]
+            }
+          ],
+          "countries": [
+            "FR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Raja Chatila",
+          "raw_affiliation_strings": [
+            "ISIR - Institut des Systèmes Intelligents et de Robotique (Sorbonne-Université, Boite courrier 173 4 Place JUSSIEU 75252 Paris cedex 05 - France)"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "ISIR - Institut des Systèmes Intelligents et de Robotique (Sorbonne-Université, Boite courrier 173 4 Place JUSSIEU 75252 Paris cedex 05 - France)",
+              "institution_ids": [
+                "https://openalex.org/I39804081",
+                "https://openalex.org/I4210150358"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5045016749",
+            "display_name": "Francisco Herrera",
+            "orcid": "https://orcid.org/0000-0002-7283-312X"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Francisco Herrera",
+          "raw_affiliation_strings": [
+            "DaSCI  - Instituto Andaluz Interuniversitario en Data Science and Computational Intelligence (Spain)"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "DaSCI  - Instituto Andaluz Interuniversitario en Data Science and Computational Intelligence (Spain)",
+              "institution_ids": []
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1016/j.inffus.2019.12.012"
+    }
+  ],
+  "notes": [
+    {
+      "id": "https://openalex.org/W599890814",
+      "doi": "https://doi.org/10.4324/9781410602657",
+      "title": "Task Analysis Methods for Instructional Design",
+      "year": 1998,
+      "authors": [
+        "David H. Jonassen",
+        "Martin Tessmer",
+        "Wallace H. Hannum"
+      ],
+      "abstract": "Contents: Introduction. Part I: Task Analysis Processes. What Is Task Analysis? Selecting Tasks for Analysis. Classifying Knowledge and Skills From Task Analysis. Part II: Job, Procedural, and Skill Analysis Methods. Task Description. Procedural Analysis. Job Task Analysis. Functional Job Analysis. Part III: Instructional and Guided Learning Analysis Methods. Learning Hierarchy (Prerequisites) Analysis. Information Processing Analysis. Learning Contingency Analysis. Part IV: Cognitive Task Analysis Methods. Goals, Operators, Methods, & Selection (GOMS). Prediction, Actions, Results, Interpretation (PARI). Decompose, Network, and Assess (DNA). Cognitive Simulations. Case-Based Reasoning. Part V: Activity-Based Methods. Activity Theory. Syntactic Analysis. Critical Incident/Critical Decision Methods. Task Knowledge Structures. Part VI: Subject Matter/Content Analysis Methods. Conceptual Graph Analysis. Master Design Chart. Matrix Analysis. Repertory Grid Technique. Fault Tree Analysis. Part VII: Knowledge Elicitation Techniques. Documentation Analysis. Observation. Survey Questionnaires. Interviews. Think-Aloud Protocols. Unstructured Group Interviews: Focus Groups and Brainstorming. Structured Group Interviews: Delphi Technique."
+    },
+    {
+      "id": "https://openalex.org/W376080155",
+      "doi": "https://doi.org/10.1007/0-306-48196-0",
+      "title": "Teaching and Learning in the Science Laboratory",
+      "year": 2003,
+      "authors": [
+        "Dimitris Psillos",
+        "Hans Niedderer"
+      ],
+      "abstract": "General Introduction. 1: Approaching Labwork: Frames and Tools. Introduction. Varieties of Labwork: A Way of Profiling Labwork Tasks R. Millar, et al. Issues and Questions Regarding the Effectiveness of Labwork D. Psillos, H. Niedderer. Talking Physics in Labwork Contexts: A Category Based Analysis of Videotapes H. Niedderer, et al. Students' Understanding of the Nature of Science and its Influence on Labwork J. Leach. 2: Standard Labwork Based on Hands-on Experiments. Introduction. Modelling Activities of Students during a Traditional Labwork K. Becu-Robinault. Student's Intellectual Activities during Standard Labwork at Undergraduate Level M. Beney, M.-G. Sere. A Laboratory-Based Teaching Learning Sequence on Fluids: Developing Primary Student Teacher's Conceptual and Procedural Knowledge P. Kariotoglou. Development and Evaluation of a Laboratory Course in Physics for Medical Students H. Theyssen, et al. The Biology Textbook as a Source of Ideas about Scientific Knowledge and Experimental Activity M. Bandiera. 3: Open-Ended Labwork. Introduction. The Role of Epistemological information in open-ended Investigative Labwork A. Guillon, M.-G. Sere. The Effectiveness of Mini-Projects as a Preparation for Open-Ended Investigations J. Lewis. Data Interpretation Activities and Student's Views of the Epistemology of Science during a University Earth Sciences Field Study Course J. Ryder. 4: Labwork and Data Handling. Introduction. The Use of Secondary Data in Teaching about Data Analysis in a First Year Undergraduate Biochemistry Course J. Leach. An Investigation of Teaching and Le"
+    },
+    {
+      "id": "https://openalex.org/W2963055053",
+      "doi": null,
+      "title": "Programming with a differentiable forth interpreter",
+      "year": 2017,
+      "authors": [
+        "Matko Bošnjak",
+        "Tim Rocktäschel",
+        "Jason Naradowsky",
+        "Sebastian Riedel"
+      ],
+      "abstract": "Given that in practice training data is scarce for all but a small set of problems, a core question is how to incorporate prior knowledge into a model. In this paper, we consider the case of prior procedural knowledge for neural networks, such as knowing how a program should traverse a sequence, but not what local actions should be performed at each step. To this end, we present an end-to-end differentiable interpreter for the programming language Forth which enables programmers to write program sketches with slots that can be filled with behaviour trained from program input-output data. We can optimise this behaviour directly through gradient descent techniques on user-specified objectives, and also integrate the program into any larger neural computation graph. We show empirically that our interpreter is able to effectively leverage different levels of prior program structure and learn complex behaviours such as sequence sorting and addition. When connected to outputs of an LSTM and trained jointly, our interpreter achieves state-of-the-art accuracy for end-to-end reasoning about quantities expressed in natural language stories."
+    },
+    {
+      "id": "https://openalex.org/W2408283598",
+      "doi": "https://doi.org/10.48550/arxiv.1605.06640",
+      "title": "Programming with a Differentiable Forth Interpreter",
+      "year": 2016,
+      "authors": [
+        "Matko Bošnjak",
+        "Tim Rocktäschel",
+        "Jason Naradowsky",
+        "Sebastian Riedel"
+      ],
+      "abstract": "Given that in practice training data is scarce for all but a small set of problems, a core question is how to incorporate prior knowledge into a model. In this paper, we consider the case of prior procedural knowledge for neural networks, such as knowing how a program should traverse a sequence, but not what local actions should be performed at each step. To this end, we present an end-to-end differentiable interpreter for the programming language Forth which enables programmers to write program sketches with slots that can be filled with behaviour trained from program input-output data. We can optimise this behaviour directly through gradient descent techniques on user-specified objectives, and also integrate the program into any larger neural computation graph. We show empirically that our interpreter is able to effectively leverage different levels of prior program structure and learn complex behaviours such as sequence sorting and addition. When connected to outputs of an LSTM and trained jointly, our interpreter achieves state-of-the-art accuracy for end-to-end reasoning about quantities expressed in natural language stories."
+    },
+    {
+      "id": "https://openalex.org/W2981731882",
+      "doi": "https://doi.org/10.1016/j.inffus.2019.12.012",
+      "title": "Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI",
+      "year": 2019,
+      "authors": [
+        "Alejandro Barredo Arrieta",
+        "Natalia Díaz-Rodríguez",
+        "Javier Del Ser",
+        "Adrien Bennetot",
+        "Siham Tabik"
+      ],
+      "abstract": ""
+    }
+  ],
+  "final_answer": "Определение темы\nKnowledge graphs for procedural reasoning — это направление, в котором используются структурированные представления знаний (knowledge graphs, KG) для моделирования, хранения и вывода процедурных знаний (последовательностей действий, правил, планов, алгоритмов), с целью поддержки рассуждений о процессах, выполнении задач и управлении процедурами в системах, опирающихся на базу знаний и механизм вывода (KBS). В заданном общем контексте KBS определяются как системы, имеющие явное представление знаний (knowledge base) и механизм вывода (inference engine); в рамках данной темы KG выступают формой такой базы знаний, специально ориентированной на представление связей между действиями, операторами, предпосылками и эффектами — т.е. процедурной информацией.\n\nОсновные подходы\n(Опираюсь только на переданные источники; явного перечня подходов для KG и процедурного рассуждения в этих источниках немного, поэтому ниже — выводы из доступных работ и общая логика их применения.)\n\n1. Проектирование и анализ задач (task/procedural analysis)\n- Источник: Jonassen et al., \"Task Analysis Methods for Instructional Design\" (1998). Предлагает много методов для выделения и структурирования процедурных задач (procedural analysis, task description, job task analysis и т.д.). Эти методы служат основой для извлечения процедурных элементов, которые затем можно формализовать в KG (узлы — шаги/операторы/предпосылки, рёбра — последовательности, зависимости, причинно-следственные связи).\n\n2. Интеграция процедурного знания в обучаемые модели (дифференцируемые интерпретаторы / программные скетчи)\n- Источники: Bošnjak et al., \"Programming with a Differentiable Forth Interpreter\" (2016/2017). Подход: представлять часть процедуры как «скелет» (sketch) программы с заполнителями, которые обучаемы; интегрировать этот скелет в дифференцируемую вычислительную графовую структуру. В контексте KG это соответствует гибридным системам, где структурная процедурная информация задаётся явно (граф/скетч), а локальное поведение или параметры выводятся/обучаются из данных.\n\n3. Объяснимость и прозрачность процедурных рассуждений\n- Источник: Arrieta et al., \"Explainable Artificial Intelligence (XAI)...\" (2019). Хотя обзор посвящён XAI в целом, он релевантен для KG-решений, где процедурные рассуждения должны быть объяснимы: KG предоставляют структурированную, символическую основу, которая может повысить интерпретируемость выводов KBS.\n\n4. Контекст применения образовательной/лабораторной процедурной деятельности\n- Источник: Psillos & Niedderer, \"Teaching and Learning in the Science Laboratory\" (2003). Описывает виды лабораторных задач и процедуры обучения/выполнения экспериментальной работы — полезен при моделировании процедурных сценариев (lab protocols) в KG для поддержки обучения или автоматизированных рекомендаций.\n\n3–5 ключевых работ (из переданных источников) с годами и вкладом\n1. Jonassen, D. H., Tessmer, M., Hannum, W. H. — \"Task Analysis Methods for Instructional Design\" (1998)\n   - Вклад: систематизация методов анализа задач и процедур (procedural analysis, task description, cognitive task analysis), набор техник для извлечения и структурирования процедурного знания; служит источником для формализации процедур в KG и создания семантических структур процедур.\n\n2. Bošnjak, M.; Rocktäschel, T.; Naradowsky, J.; Riedel, S. — \"Programming with a Differentiable Forth Interpreter\" (2016/2017)\n   - Вклад: предложен дифференцируемый интерпретатор языка Forth, позволяющий задавать программные «скетчи» с пустыми слотами, которые обучаются градиентно. Подход демонстрирует интеграцию частично явного процедурного скелета с обучаемыми компонентами — релевантен гибридным KG+ML системам для процедурного рассуждения.\n\n3. Arrieta, A. B., Díaz-Rodríguez, N., Del Ser, J., Bennetot, A., Tabik, S., и др. — \"Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI\" (2019)\n   - Вклад: обзор XAI; релевантность — обсуждение требований к объяснимости моделей и методов, что важно для процедурных KG-систем, где требуется прозрачный вывод и внятные объяснения действий/планов.\n\n4. Psillos, D.; Niedderer, H. — \"Teaching and Learning in the Science Laboratory\" (2003)\n   - Вклад: анализ типов лабораторных заданий и интеллектуальной деятельности при их выполнении; полезен для применения KG в моделировании и поддержке процедур (лабораторные протоколы, обучение практическим процедурам).\n\n(Ограничение: в доступном списке нет прямых работ, формально связывающих knowledge graphs и procedural reasoning в широком ML/NGT смысле, за исключением косвенных источников и работы по дифференцируемым интерпретаторам. Поэтому конкретные архитектуры",
+  "status": "finished",
+  "stop_reason": "final_answer_generated",
+  "tool_errors": 0,
+  "evaluator_result": null
+}

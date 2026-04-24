@@ -1,0 +1,3106 @@
+{
+  "topic": "Human-in-the-loop AI systems",
+  "objective": "Подготовить структурированный научно-аналитический обзор темы",
+  "step_id": 6,
+  "history": [
+    {
+      "step_id": 0,
+      "action": "search_wikipedia",
+      "payload": {
+        "topic": "Human-in-the-loop AI systems"
+      },
+      "result": "Human-in-the-loop (HITL) is used in multiple contexts. It can be defined as a model requiring human interaction. HITL is associated with modeling and simulation (M&S) in the live, virtual, and constructive taxonomy. HITL, along with the related human-on-the-loop are also used in relation to lethal autonomous weapons. Further, HITL is used in the context of machine learning.",
+      "n_sources": 0,
+      "n_notes": 0,
+      "next_reason": "need general context before publication search"
+    },
+    {
+      "step_id": 1,
+      "action": "search_openalex",
+      "payload": {
+        "query": "Human-in-the-loop AI systems",
+        "per_page": 5
+      },
+      "result": "found=5",
+      "n_sources": 5,
+      "n_notes": 0,
+      "next_reason": "extract notes from returned publications"
+    },
+    {
+      "step_id": 2,
+      "action": "extract_notes",
+      "payload": {
+        "n_sources": 5,
+        "top_k": 5
+      },
+      "result": "notes_prepared=5",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "generate final answer from context and notes"
+    },
+    {
+      "step_id": 3,
+      "action": "generate_final_answer",
+      "payload": {
+        "topic": "Human-in-the-loop AI systems"
+      },
+      "result": "Определение темы\nHuman-in-the-loop (HITL) — подходы и системы, в которых в работу модели или симуляции интегрировано активное участие человека: человек обеспечивает данные, принимает решения, корректирует поведение модели или контролирует её работу. В разных контекстах HITL обозначает разные распределения ролей между человеком и машиной (например, человек в управляющем цикле обучения, верификации результатов или в оперативном контроле автономных систем). В представленном общем контексте HITL вст",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "finish or run evaluator depending on configuration"
+    },
+    {
+      "step_id": 4,
+      "action": "internal_evaluator",
+      "payload": {
+        "criteria": [
+          "correctness",
+          "groundedness",
+          "completeness",
+          "coverage_of_required_fields",
+          "source_consistency",
+          "comment",
+          "rubric"
+        ]
+      },
+      "result": "{'correctness': 5, 'groundedness': 5, 'completeness': 4, 'coverage_of_required_fields': 4, 'source_consistency': 5, 'comment': 'Ответ в целом корректен и хорошо обоснован ссылками на перечисленные источники (Mosqueira-Rey et al., Chen et al., Jakubův et al. и др.). Основные подходы описаны верно и согласуются с аннотациями источников. Недостатки: в разделе с ключевыми работами пункт 4 и 5 отмечены как релевантные, но для них явно указано, что абстракты в метаданных отсутствуют — следовало бы ясн",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "refine if rubric is below threshold"
+    },
+    {
+      "step_id": 5,
+      "action": "finish",
+      "payload": {
+        "status": "finished",
+        "stop_reason": "final_answer_generated"
+      },
+      "result": "final_answer_generated",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "stop criterion reached"
+    }
+  ],
+  "sources": [
+    {
+      "id": "https://openalex.org/W4385245566",
+      "display_name": "MizAR 60 for Mizar 50",
+      "publication_year": 2023,
+      "abstract_inverted_index": {
+        "As": [
+          0
+        ],
+        "a": [
+          1,
+          79,
+          93,
+          111
+        ],
+        "present": [
+          2,
+          110
+        ],
+        "to": [
+          3,
+          61
+        ],
+        "Mizar": [
+          4,
+          21,
+          34,
+          51,
+          114
+        ],
+        "on": [
+          5,
+          106
+        ],
+        "its": [
+          6
+        ],
+        "50th": [
+          7
+        ],
+        "anniversary,": [
+          8
+        ],
+        "we": [
+          9
+        ],
+        "develop": [
+          10
+        ],
+        "an": [
+          11
+        ],
+        "AI/TP": [
+          12,
+          104
+        ],
+        "system": [
+          13
+        ],
+        "that": [
+          14,
+          90,
+          116
+        ],
+        "automatically": [
+          15,
+          29
+        ],
+        "proves": [
+          16
+        ],
+        "about": [
+          17
+        ],
+        "60%": [
+          18
+        ],
+        "of": [
+          19,
+          32,
+          81,
+          95,
+          97,
+          113
+        ],
+        "the": [
+          20,
+          24,
+          33,
+          37,
+          45,
+          49,
+          55,
+          68,
+          87
+        ],
+        "theorems": [
+          22,
+          35
+        ],
+        "in": [
+          23,
+          48,
+          66
+        ],
+        "hammer": [
+          25
+        ],
+        "setting.": [
+          26
+        ],
+        "We": [
+          27,
+          53,
+          108
+        ],
+        "also": [
+          28,
+          109
+        ],
+        "prove": [
+          30
+        ],
+        "75%": [
+          31
+        ],
+        "when": [
+          36
+        ],
+        "automated": [
+          38
+        ],
+        "provers": [
+          39
+        ],
+        "are": [
+          40
+        ],
+        "helped": [
+          41
+        ],
+        "by": [
+          42
+        ],
+        "using": [
+          43
+        ],
+        "only": [
+          44
+        ],
+        "premises": [
+          46
+        ],
+        "used": [
+          47
+        ],
+        "human-written": [
+          50
+        ],
+        "proofs.": [
+          52
+        ],
+        "describe": [
+          54
+        ],
+        "methods": [
+          56
+        ],
+        "and": [
+          57,
+          70,
+          75,
+          86
+        ],
+        "large-scale": [
+          58
+        ],
+        "experiments": [
+          59
+        ],
+        "leading": [
+          60
+        ],
+        "these": [
+          62
+        ],
+        "results.": [
+          63
+        ],
+        "This": [
+          64
+        ],
+        "includes": [
+          65
+        ],
+        "particular": [
+          67
+        ],
+        "E": [
+          69
+        ],
+        "Vampire": [
+          71
+        ],
+        "provers,": [
+          72
+        ],
+        "their": [
+          73
+        ],
+        "ENIGMA": [
+          74
+        ],
+        "Deepire": [
+          76
+        ],
+        "learning": [
+          77
+        ],
+        "modifications,": [
+          78
+        ],
+        "number": [
+          80
+        ],
+        "learning-based": [
+          82
+        ],
+        "premise": [
+          83
+        ],
+        "selection": [
+          84,
+          112
+        ],
+        "methods,": [
+          85
+        ],
+        "incremental": [
+          88
+        ],
+        "loop": [
+          89
+        ],
+        "interleaves": [
+          91
+        ],
+        "growing": [
+          92
+        ],
+        "corpus": [
+          94
+        ],
+        "millions": [
+          96
+        ],
+        "ATP": [
+          98
+        ],
+        "proofs": [
+          99
+        ],
+        "with": [
+          100
+        ],
+        "training": [
+          101
+        ],
+        "increasingly": [
+          102
+        ],
+        "strong": [
+          103
+        ],
+        "systems": [
+          105
+        ],
+        "them.": [
+          107
+        ],
+        "problems": [
+          115
+        ],
+        "were": [
+          117
+        ],
+        "proved": [
+          118
+        ],
+        "automatically.": [
+          119
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": null,
+            "display_name": "Jakubův, Jan",
+            "orcid": "https://orcid.org/0000-0002-8848-5537"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I44504214",
+              "display_name": "Czech Technical University in Prague",
+              "ror": "https://ror.org/03kqpb082",
+              "country_code": "CZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I44504214"
+              ]
+            }
+          ],
+          "countries": [
+            "CZ"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Jakubův, Jan",
+          "raw_affiliation_strings": [
+            "Czech Technical University in Prague, Czech Republic"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-8848-5537",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Czech Technical University in Prague, Czech Republic",
+              "institution_ids": [
+                "https://openalex.org/I44504214"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Chvalovský, Karel",
+            "orcid": "https://orcid.org/0000-0002-0541-3889"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I44504214",
+              "display_name": "Czech Technical University in Prague",
+              "ror": "https://ror.org/03kqpb082",
+              "country_code": "CZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I44504214"
+              ]
+            }
+          ],
+          "countries": [
+            "CZ"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Chvalovský, Karel",
+          "raw_affiliation_strings": [
+            "Czech Technical University in Prague, Czech Republic"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-0541-3889",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Czech Technical University in Prague, Czech Republic",
+              "institution_ids": [
+                "https://openalex.org/I44504214"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Goertzel, Zarathustra",
+            "orcid": "https://orcid.org/0000-0002-8458-2786"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I44504214",
+              "display_name": "Czech Technical University in Prague",
+              "ror": "https://ror.org/03kqpb082",
+              "country_code": "CZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I44504214"
+              ]
+            }
+          ],
+          "countries": [
+            "CZ"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Goertzel, Zarathustra",
+          "raw_affiliation_strings": [
+            "Czech Technical University in Prague, Czech Republic"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-8458-2786",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Czech Technical University in Prague, Czech Republic",
+              "institution_ids": [
+                "https://openalex.org/I44504214"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Kaliszyk, Cezary",
+            "orcid": "https://orcid.org/0000-0002-8273-6059"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I190249584",
+              "display_name": "Universität Innsbruck",
+              "ror": "https://ror.org/054pv6659",
+              "country_code": "AT",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I190249584"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210119939",
+              "display_name": "Food Research Institute Prague",
+              "ror": "https://ror.org/02jdepa55",
+              "country_code": "CZ",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I4210119939"
+              ]
+            }
+          ],
+          "countries": [
+            "AT",
+            "CZ"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Kaliszyk, Cezary",
+          "raw_affiliation_strings": [
+            "Universität Innsbruck, Austria",
+            "INDRC, Prague, Czech Republic"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-8273-6059",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Universität Innsbruck, Austria",
+              "institution_ids": [
+                "https://openalex.org/I190249584"
+              ]
+            },
+            {
+              "raw_affiliation_string": "INDRC, Prague, Czech Republic",
+              "institution_ids": [
+                "https://openalex.org/I4210119939"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Olšák, Mirek",
+            "orcid": "https://orcid.org/0000-0002-9361-1921"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I84909340",
+              "display_name": "Institut des Hautes Études Scientifiques",
+              "ror": "https://ror.org/05d5m2r55",
+              "country_code": "FR",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I84909340"
+              ]
+            }
+          ],
+          "countries": [
+            "FR"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Olšák, Mirek",
+          "raw_affiliation_strings": [
+            "Institut des Hautes Études Scientifiques, Paris, France"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-9361-1921",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institut des Hautes Études Scientifiques, Paris, France",
+              "institution_ids": [
+                "https://openalex.org/I84909340"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Piotrowski, Bartosz",
+            "orcid": "https://orcid.org/0000-0002-1699-018X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I44504214",
+              "display_name": "Czech Technical University in Prague",
+              "ror": "https://ror.org/03kqpb082",
+              "country_code": "CZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I44504214"
+              ]
+            }
+          ],
+          "countries": [
+            "CZ"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Piotrowski, Bartosz",
+          "raw_affiliation_strings": [
+            "Czech Technical University in Prague, Czech Republic"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-1699-018X",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Czech Technical University in Prague, Czech Republic",
+              "institution_ids": [
+                "https://openalex.org/I44504214"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Schulz, Stephan",
+            "orcid": "https://orcid.org/0000-0001-6262-8555"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I108806672",
+              "display_name": "Baden-Wuerttemberg Cooperative State University",
+              "ror": "https://ror.org/02xdzy536",
+              "country_code": "DE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I108806672"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Schulz, Stephan",
+          "raw_affiliation_strings": [
+            "DHBW Stuttgart, Germany"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-6262-8555",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "DHBW Stuttgart, Germany",
+              "institution_ids": [
+                "https://openalex.org/I108806672"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Suda, Martin",
+            "orcid": "https://orcid.org/0000-0003-0989-5800"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I44504214",
+              "display_name": "Czech Technical University in Prague",
+              "ror": "https://ror.org/03kqpb082",
+              "country_code": "CZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I44504214"
+              ]
+            }
+          ],
+          "countries": [
+            "CZ"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Suda, Martin",
+          "raw_affiliation_strings": [
+            "Czech Technical University in Prague, Czech Republic"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-0989-5800",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Czech Technical University in Prague, Czech Republic",
+              "institution_ids": [
+                "https://openalex.org/I44504214"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": null,
+            "display_name": "Urban, Josef",
+            "orcid": "https://orcid.org/0000-0002-1384-1613"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I44504214",
+              "display_name": "Czech Technical University in Prague",
+              "ror": "https://ror.org/03kqpb082",
+              "country_code": "CZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I44504214"
+              ]
+            }
+          ],
+          "countries": [
+            "CZ"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Urban, Josef",
+          "raw_affiliation_strings": [
+            "Czech Technical University in Prague, Czech Republic"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-1384-1613",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Czech Technical University in Prague, Czech Republic",
+              "institution_ids": [
+                "https://openalex.org/I44504214"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.4230/lipics.itp.2023.19"
+    },
+    {
+      "id": "https://openalex.org/W3153513446",
+      "display_name": "Continental generalization of a human-in-the-loop AI system for clinical seizure recognition",
+      "publication_year": 2022,
+      "abstract_inverted_index": null,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5005904353",
+            "display_name": "Yikai Yang",
+            "orcid": "https://orcid.org/0000-0003-0852-0150"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I129604602",
+              "display_name": "The University of Sydney",
+              "ror": "https://ror.org/0384j8v12",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I129604602"
+              ]
+            }
+          ],
+          "countries": [
+            "AU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yikai Yang",
+          "raw_affiliation_strings": [
+            "School of Biomedical Engineering, Faculty of Engineering, The University of Sydney, NSW 2006, Australia"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-0852-0150",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Biomedical Engineering, Faculty of Engineering, The University of Sydney, NSW 2006, Australia",
+              "institution_ids": [
+                "https://openalex.org/I129604602"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5070106809",
+            "display_name": "Nhan Duy Truong",
+            "orcid": "https://orcid.org/0000-0003-4350-8026"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I129604602",
+              "display_name": "The University of Sydney",
+              "ror": "https://ror.org/0384j8v12",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I129604602"
+              ]
+            }
+          ],
+          "countries": [
+            "AU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Nhan Duy Truong",
+          "raw_affiliation_strings": [
+            "School of Biomedical Engineering, Faculty of Engineering, The University of Sydney, NSW 2006, Australia",
+            "BrainConnect Pty Ltd, NSW 2006, Australia"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-4350-8026",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Biomedical Engineering, Faculty of Engineering, The University of Sydney, NSW 2006, Australia",
+              "institution_ids": [
+                "https://openalex.org/I129604602"
+              ]
+            },
+            {
+              "raw_affiliation_string": "BrainConnect Pty Ltd, NSW 2006, Australia",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5002274878",
+            "display_name": "Christina Maher",
+            "orcid": "https://orcid.org/0000-0002-6023-9457"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I129604602",
+              "display_name": "The University of Sydney",
+              "ror": "https://ror.org/0384j8v12",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I129604602"
+              ]
+            }
+          ],
+          "countries": [
+            "AU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Christina Maher",
+          "raw_affiliation_strings": [
+            "School of Biomedical Engineering, Faculty of Engineering, The University of Sydney, NSW 2006, Australia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Biomedical Engineering, Faculty of Engineering, The University of Sydney, NSW 2006, Australia",
+              "institution_ids": [
+                "https://openalex.org/I129604602"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5055081506",
+            "display_name": "Armin Nikpour",
+            "orcid": "https://orcid.org/0000-0002-2384-0710"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I129604602",
+              "display_name": "The University of Sydney",
+              "ror": "https://ror.org/0384j8v12",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I129604602"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I2799732068",
+              "display_name": "Royal Prince Alfred Hospital",
+              "ror": "https://ror.org/05gpvde20",
+              "country_code": "AU",
+              "type": "healthcare",
+              "lineage": [
+                "https://openalex.org/I2799732068"
+              ]
+            }
+          ],
+          "countries": [
+            "AU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Armin Nikpour",
+          "raw_affiliation_strings": [
+            "Faculty of Medicine and Health, Central Clinical School, The University of Sydney, NSW 2006, Australia",
+            "Comprehensive Epilepsy Service and Department of Neurology at the Royal Prince Alfred Hospital, NSW 2050, Australia",
+            "BrainConnect Pty Ltd, NSW 2006, Australia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Faculty of Medicine and Health, Central Clinical School, The University of Sydney, NSW 2006, Australia",
+              "institution_ids": [
+                "https://openalex.org/I129604602"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Comprehensive Epilepsy Service and Department of Neurology at the Royal Prince Alfred Hospital, NSW 2050, Australia",
+              "institution_ids": [
+                "https://openalex.org/I2799732068"
+              ]
+            },
+            {
+              "raw_affiliation_string": "BrainConnect Pty Ltd, NSW 2006, Australia",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5065017416",
+            "display_name": "Omid Kavehei",
+            "orcid": "https://orcid.org/0000-0002-2753-5553"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I129604602",
+              "display_name": "The University of Sydney",
+              "ror": "https://ror.org/0384j8v12",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I129604602"
+              ]
+            }
+          ],
+          "countries": [
+            "AU"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Omid Kavehei",
+          "raw_affiliation_strings": [
+            "School of Biomedical Engineering, Faculty of Engineering, The University of Sydney, NSW 2006, Australia",
+            "BrainConnect Pty Ltd, NSW 2006, Australia"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-2753-5553",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Biomedical Engineering, Faculty of Engineering, The University of Sydney, NSW 2006, Australia",
+              "institution_ids": [
+                "https://openalex.org/I129604602"
+              ]
+            },
+            {
+              "raw_affiliation_string": "BrainConnect Pty Ltd, NSW 2006, Australia",
+              "institution_ids": []
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1016/j.eswa.2022.118083"
+    },
+    {
+      "id": "https://openalex.org/W4388628811",
+      "display_name": "Constructing Ethical AI Based on the “Human-in-the-Loop” System",
+      "publication_year": 2023,
+      "abstract_inverted_index": {
+        "The": [
+          0
+        ],
+        "Human-in-the-Loop": [
+          1
+        ],
+        "(HITL)": [
+          2
+        ],
+        "system": [
+          3,
+          79,
+          111
+        ],
+        "was": [
+          4
+        ],
+        "first": [
+          5
+        ],
+        "proposed": [
+          6
+        ],
+        "by": [
+          7
+        ],
+        "Robert": [
+          8
+        ],
+        "Monarch,": [
+          9
+        ],
+        "a": [
+          10,
+          16,
+          43
+        ],
+        "machine": [
+          11,
+          23,
+          31
+        ],
+        "learning": [
+          12,
+          32
+        ],
+        "expert.": [
+          13
+        ],
+        "It": [
+          14
+        ],
+        "adopted": [
+          15
+        ],
+        "“hybrid”": [
+          17
+        ],
+        "strategy": [
+          18
+        ],
+        "combining": [
+          19
+        ],
+        "human": [
+          20,
+          36
+        ],
+        "intelligence": [
+          21
+        ],
+        "and": [
+          22,
+          34,
+          53,
+          67,
+          90,
+          112
+        ],
+        "intelligence,": [
+          24
+        ],
+        "aiming": [
+          25
+        ],
+        "to": [
+          26,
+          129
+        ],
+        "improve": [
+          27
+        ],
+        "the": [
+          28,
+          50,
+          60,
+          77,
+          95,
+          106,
+          109,
+          121,
+          130
+        ],
+        "accuracy": [
+          29
+        ],
+        "of": [
+          30,
+          63,
+          75,
+          97,
+          108,
+          133
+        ],
+        "models": [
+          33
+        ],
+        "assist": [
+          35
+        ],
+        "learning.": [
+          37
+        ],
+        "At": [
+          38
+        ],
+        "present,": [
+          39
+        ],
+        "there": [
+          40,
+          71
+        ],
+        "have": [
+          41
+        ],
+        "been": [
+          42,
+          57
+        ],
+        "number": [
+          44
+        ],
+        "ethical": [
+          45,
+          61,
+          88,
+          100,
+          115,
+          134
+        ],
+        "design": [
+          46
+        ],
+        "attempts": [
+          47
+        ],
+        "based": [
+          48
+        ],
+        "on": [
+          49,
+          105
+        ],
+        "HITL": [
+          51,
+          78,
+          110,
+          122
+        ],
+        "system,": [
+          52
+        ],
+        "some": [
+          54
+        ],
+        "progress": [
+          55
+        ],
+        "has": [
+          56
+        ],
+        "made": [
+          58
+        ],
+        "in": [
+          59,
+          86,
+          99
+        ],
+        "choices": [
+          62
+        ],
+        "disaster": [
+          64
+        ],
+        "rescue": [
+          65
+        ],
+        "robots": [
+          66
+        ],
+        "nursing": [
+          68
+        ],
+        "robots.": [
+          69
+        ],
+        "However,": [
+          70
+        ],
+        "is": [
+          72
+        ],
+        "no": [
+          73
+        ],
+        "analysis": [
+          74
+        ],
+        "why": [
+          76
+        ],
+        "can": [
+          80,
+          93
+        ],
+        "serve": [
+          81
+        ],
+        "as": [
+          82
+        ],
+        "an": [
+          83
+        ],
+        "effective": [
+          84
+        ],
+        "path": [
+          85
+        ],
+        "constructing": [
+          87
+        ],
+        "AI": [
+          89,
+          98,
+          135
+        ],
+        "how": [
+          91,
+          114
+        ],
+        "it": [
+          92
+        ],
+        "implement": [
+          94
+        ],
+        "efficiency": [
+          96
+        ],
+        "scenarios.": [
+          101
+        ],
+        "This": [
+          102
+        ],
+        "paper": [
+          103
+        ],
+        "draws": [
+          104
+        ],
+        "feasibility": [
+          107
+        ],
+        "analyzes": [
+          113
+        ],
+        "AIs": [
+          116
+        ],
+        "are": [
+          117
+        ],
+        "possible": [
+          118
+        ],
+        "when": [
+          119
+        ],
+        "using": [
+          120
+        ],
+        "system.": [
+          123
+        ],
+        "We": [
+          124
+        ],
+        "advocate": [
+          125
+        ],
+        "for": [
+          126
+        ],
+        "its": [
+          127
+        ],
+        "application": [
+          128
+        ],
+        "entire": [
+          131
+        ],
+        "process": [
+          132
+        ],
+        "design.": [
+          136
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5086929279",
+            "display_name": "Ximeng Chen",
+            "orcid": "https://orcid.org/0000-0001-7428-1069"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I87445476",
+              "display_name": "Xi'an Jiaotong University",
+              "ror": "https://ror.org/017zhmm22",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Ximeng Chen",
+          "raw_affiliation_strings": [
+            "Department of Philosophy, Xi’an Jiaotong University, Xi’an 710049, China",
+            "Department of Philosophy, Xi'an Jiaotong University, Xi'an 710049, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-7428-1069",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Philosophy, Xi’an Jiaotong University, Xi’an 710049, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Philosophy, Xi'an Jiaotong University, Xi'an 710049, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100732787",
+            "display_name": "Xiaohong Wang",
+            "orcid": "https://orcid.org/0000-0001-8465-9782"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I87445476",
+              "display_name": "Xi'an Jiaotong University",
+              "ror": "https://ror.org/017zhmm22",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Xiaohong Wang",
+          "raw_affiliation_strings": [
+            "Department of Philosophy, Xi’an Jiaotong University, Xi’an 710049, China",
+            "Department of Philosophy, Xi'an Jiaotong University, Xi'an 710049, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Philosophy, Xi’an Jiaotong University, Xi’an 710049, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Philosophy, Xi'an Jiaotong University, Xi'an 710049, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5024436882",
+            "display_name": "Yanzhang Qu",
+            "orcid": "https://orcid.org/0009-0003-3101-005X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I87445476",
+              "display_name": "Xi'an Jiaotong University",
+              "ror": "https://ror.org/017zhmm22",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yanzhang Qu",
+          "raw_affiliation_strings": [
+            "Department of Philosophy, Xi’an Jiaotong University, Xi’an 710049, China",
+            "Department of Philosophy, Xi'an Jiaotong University, Xi'an 710049, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Philosophy, Xi’an Jiaotong University, Xi’an 710049, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Philosophy, Xi'an Jiaotong University, Xi'an 710049, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.3390/systems11110548"
+    },
+    {
+      "id": "https://openalex.org/W4292289324",
+      "display_name": "Human-in-the-loop machine learning: a state of the art",
+      "publication_year": 2022,
+      "abstract_inverted_index": {
+        "Abstract": [
+          0
+        ],
+        "Researchers": [
+          1
+        ],
+        "are": [
+          2
+        ],
+        "defining": [
+          3
+        ],
+        "new": [
+          4,
+          174
+        ],
+        "types": [
+          5
+        ],
+        "of": [
+          6,
+          25,
+          112,
+          165,
+          168,
+          176
+        ],
+        "interactions": [
+          7
+        ],
+        "between": [
+          8,
+          51,
+          127,
+          178,
+          209,
+          225
+        ],
+        "humans": [
+          9,
+          72,
+          118,
+          131,
+          179
+        ],
+        "and": [
+          10,
+          53,
+          56,
+          130,
+          155,
+          180,
+          199,
+          205,
+          213,
+          223
+        ],
+        "machine": [
+          11,
+          17,
+          42,
+          57
+        ],
+        "learning": [
+          12,
+          27,
+          54,
+          67,
+          79,
+          86,
+          139
+        ],
+        "algorithms": [
+          13
+        ],
+        "generically": [
+          14
+        ],
+        "called": [
+          15
+        ],
+        "human-in-the-loop": [
+          16
+        ],
+        "learning.": [
+          18
+        ],
+        "Depending": [
+          19
+        ],
+        "on": [
+          20,
+          95,
+          109
+        ],
+        "who": [
+          21
+        ],
+        "is": [
+          22,
+          47,
+          108,
+          185
+        ],
+        "in": [
+          23,
+          34,
+          39,
+          44,
+          77,
+          81,
+          103,
+          172
+        ],
+        "control": [
+          24,
+          64
+        ],
+        "the": [
+          26,
+          36,
+          66,
+          78,
+          96,
+          101,
+          106,
+          110,
+          113,
+          138,
+          163,
+          166,
+          169,
+          173,
+          189,
+          207,
+          210,
+          217,
+          221
+        ],
+        "process,": [
+          28
+        ],
+        "we": [
+          29,
+          142,
+          145,
+          161
+        ],
+        "can": [
+          30,
+          73,
+          146
+        ],
+        "identify:": [
+          31
+        ],
+        "active": [
+          32
+        ],
+        "learning,": [
+          33,
+          43
+        ],
+        "which": [
+          35,
+          45
+        ],
+        "system": [
+          37
+        ],
+        "remains": [
+          38
+        ],
+        "control;": [
+          40
+        ],
+        "interactive": [
+          41
+        ],
+        "there": [
+          46
+        ],
+        "a": [
+          48,
+          120
+        ],
+        "closer": [
+          49
+        ],
+        "interaction": [
+          50
+        ],
+        "users": [
+          52
+        ],
+        "systems;": [
+          55
+        ],
+        "teaching,": [
+          58
+        ],
+        "where": [
+          59
+        ],
+        "human": [
+          60,
+          87
+        ],
+        "domain": [
+          61,
+          88
+        ],
+        "experts": [
+          62,
+          89
+        ],
+        "have": [
+          63
+        ],
+        "over": [
+          65
+        ],
+        "process.": [
+          68
+        ],
+        "Aside": [
+          69
+        ],
+        "from": [
+          70
+        ],
+        "control,": [
+          71
+        ],
+        "also": [
+          74
+        ],
+        "be": [
+          75,
+          134
+        ],
+        "involved": [
+          76,
+          171
+        ],
+        "process": [
+          80
+        ],
+        "other": [
+          82,
+          148
+        ],
+        "ways.": [
+          83
+        ],
+        "In": [
+          84,
+          158
+        ],
+        "curriculum": [
+          85
+        ],
+        "try": [
+          90
+        ],
+        "to": [
+          91,
+          99,
+          115,
+          117,
+          137,
+          193,
+          203,
+          214
+        ],
+        "impose": [
+          92
+        ],
+        "some": [
+          93
+        ],
+        "structure": [
+          94
+        ],
+        "examples": [
+          97
+        ],
+        "presented": [
+          98
+        ],
+        "improve": [
+          100
+        ],
+        "learning;": [
+          102
+        ],
+        "explainable": [
+          104
+        ],
+        "AI": [
+          105,
+          128
+        ],
+        "focus": [
+          107
+        ],
+        "ability": [
+          111
+        ],
+        "model": [
+          114
+        ],
+        "explain": [
+          116
+        ],
+        "why": [
+          119
+        ],
+        "given": [
+          121
+        ],
+        "solution": [
+          122
+        ],
+        "was": [
+          123
+        ],
+        "chosen.": [
+          124
+        ],
+        "This": [
+          125
+        ],
+        "collaboration": [
+          126
+        ],
+        "models": [
+          129
+        ],
+        "should": [
+          132
+        ],
+        "not": [
+          133,
+          186
+        ],
+        "limited": [
+          135
+        ],
+        "only": [
+          136
+        ],
+        "process;": [
+          140
+        ],
+        "if": [
+          141
+        ],
+        "go": [
+          143
+        ],
+        "further,": [
+          144
+        ],
+        "see": [
+          147
+        ],
+        "terms": [
+          149
+        ],
+        "that": [
+          150
+        ],
+        "arise": [
+          151
+        ],
+        "such": [
+          152
+        ],
+        "as": [
+          153
+        ],
+        "Usable": [
+          154
+        ],
+        "Useful": [
+          156
+        ],
+        "AI.": [
+          157
+        ],
+        "this": [
+          159
+        ],
+        "paper": [
+          160
+        ],
+        "review": [
+          162
+        ],
+        "state": [
+          164
+        ],
+        "art": [
+          167
+        ],
+        "techniques": [
+          170,
+          218
+        ],
+        "forms": [
+          175
+        ],
+        "relationship": [
+          177
+        ],
+        "ML": [
+          181
+        ],
+        "algorithms.": [
+          182
+        ],
+        "Our": [
+          183
+        ],
+        "contribution": [
+          184
+        ],
+        "merely": [
+          187
+        ],
+        "listing": [
+          188
+        ],
+        "different": [
+          190,
+          211
+        ],
+        "approaches,": [
+          191
+        ],
+        "but": [
+          192
+        ],
+        "provide": [
+          194
+        ],
+        "definitions": [
+          195
+        ],
+        "clarifying": [
+          196
+        ],
+        "confusing,": [
+          197
+        ],
+        "varied": [
+          198
+        ],
+        "sometimes": [
+          200
+        ],
+        "contradictory": [
+          201
+        ],
+        "terms;": [
+          202
+        ],
+        "elucidate": [
+          204
+        ],
+        "determine": [
+          206
+        ],
+        "boundaries": [
+          208
+        ],
+        "methods;": [
+          212
+        ],
+        "correlate": [
+          215
+        ],
+        "all": [
+          216
+        ],
+        "searching": [
+          219
+        ],
+        "for": [
+          220
+        ],
+        "connections": [
+          222
+        ],
+        "influences": [
+          224
+        ],
+        "them.": [
+          226
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5001207425",
+            "display_name": "Eduardo Mosqueira-Rey",
+            "orcid": "https://orcid.org/0000-0002-4894-1067"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I11019714",
+              "display_name": "Universidade da Coruña",
+              "ror": "https://ror.org/01qckj285",
+              "country_code": "ES",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I11019714"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Eduardo Mosqueira-Rey",
+          "raw_affiliation_strings": [
+            "Department of Computer Science and Information Technologies, Universidade da Coruña (CITIC), Campus de Elviña, 15071, A Coruña, Spain"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-4894-1067",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science and Information Technologies, Universidade da Coruña (CITIC), Campus de Elviña, 15071, A Coruña, Spain",
+              "institution_ids": [
+                "https://openalex.org/I11019714"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5021138620",
+            "display_name": "Elena Hernández-Pereira",
+            "orcid": "https://orcid.org/0000-0001-8666-4075"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I11019714",
+              "display_name": "Universidade da Coruña",
+              "ror": "https://ror.org/01qckj285",
+              "country_code": "ES",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I11019714"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Elena Hernández-Pereira",
+          "raw_affiliation_strings": [
+            "Department of Computer Science and Information Technologies, Universidade da Coruña (CITIC), Campus de Elviña, 15071, A Coruña, Spain"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science and Information Technologies, Universidade da Coruña (CITIC), Campus de Elviña, 15071, A Coruña, Spain",
+              "institution_ids": [
+                "https://openalex.org/I11019714"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5072427305",
+            "display_name": "David Alonso-Ríos",
+            "orcid": "https://orcid.org/0000-0003-2147-3010"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I11019714",
+              "display_name": "Universidade da Coruña",
+              "ror": "https://ror.org/01qckj285",
+              "country_code": "ES",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I11019714"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "David Alonso-Ríos",
+          "raw_affiliation_strings": [
+            "Department of Computer Science and Information Technologies, Universidade da Coruña (CITIC), Campus de Elviña, 15071, A Coruña, Spain"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science and Information Technologies, Universidade da Coruña (CITIC), Campus de Elviña, 15071, A Coruña, Spain",
+              "institution_ids": [
+                "https://openalex.org/I11019714"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5076081465",
+            "display_name": "José Bobes-Bascarán",
+            "orcid": "https://orcid.org/0000-0002-7317-3039"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I11019714",
+              "display_name": "Universidade da Coruña",
+              "ror": "https://ror.org/01qckj285",
+              "country_code": "ES",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I11019714"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "José Bobes-Bascarán",
+          "raw_affiliation_strings": [
+            "Department of Computer Science and Information Technologies, Universidade da Coruña (CITIC), Campus de Elviña, 15071, A Coruña, Spain"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science and Information Technologies, Universidade da Coruña (CITIC), Campus de Elviña, 15071, A Coruña, Spain",
+              "institution_ids": [
+                "https://openalex.org/I11019714"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5077238823",
+            "display_name": "Ángel Fernández-Leal",
+            "orcid": "https://orcid.org/0000-0002-1143-9452"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I11019714",
+              "display_name": "Universidade da Coruña",
+              "ror": "https://ror.org/01qckj285",
+              "country_code": "ES",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I11019714"
+              ]
+            }
+          ],
+          "countries": [
+            "ES"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ángel Fernández-Leal",
+          "raw_affiliation_strings": [
+            "Department of Computer Science and Information Technologies, Universidade da Coruña (CITIC), Campus de Elviña, 15071, A Coruña, Spain"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science and Information Technologies, Universidade da Coruña (CITIC), Campus de Elviña, 15071, A Coruña, Spain",
+              "institution_ids": [
+                "https://openalex.org/I11019714"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1007/s10462-022-10246-w"
+    },
+    {
+      "id": "https://openalex.org/W4220966162",
+      "display_name": "AI for next generation computing: Emerging trends and future directions",
+      "publication_year": 2022,
+      "abstract_inverted_index": null,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5090188734",
+            "display_name": "Sukhpal Singh Gill",
+            "orcid": "https://orcid.org/0000-0002-3913-0369"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I166337079",
+              "display_name": "Queen Mary University of London",
+              "ror": "https://ror.org/026zzn846",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I166337079"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Sukhpal Singh Gill",
+          "raw_affiliation_strings": [
+            "School of Electronic Engineering and Computer Science, Queen Mary University of London, London, UK"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-3913-0369",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Electronic Engineering and Computer Science, Queen Mary University of London, London, UK",
+              "institution_ids": [
+                "https://openalex.org/I166337079"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5014474110",
+            "display_name": "Minxian Xu",
+            "orcid": "https://orcid.org/0000-0002-0046-5153"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I19820366",
+              "display_name": "Chinese Academy of Sciences",
+              "ror": "https://ror.org/034t30j35",
+              "country_code": "CN",
+              "type": "government",
+              "lineage": [
+                "https://openalex.org/I19820366"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210145761",
+              "display_name": "Shenzhen Institutes of Advanced Technology",
+              "ror": "https://ror.org/04gh4er46",
+              "country_code": "CN",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I19820366",
+                "https://openalex.org/I4210145761"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Minxian Xu",
+          "raw_affiliation_strings": [
+            "Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, Shenzhen, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, Shenzhen, China",
+              "institution_ids": [
+                "https://openalex.org/I4210145761",
+                "https://openalex.org/I19820366"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5102879737",
+            "display_name": "Carlo Ottaviani",
+            "orcid": "https://orcid.org/0000-0002-0032-3999"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I52099693",
+              "display_name": "University of York",
+              "ror": "https://ror.org/04m01e293",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I52099693"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Carlo Ottaviani",
+          "raw_affiliation_strings": [
+            "Department of Computer Science and York Centre for Quantum Technologies, University of York, York, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science and York Centre for Quantum Technologies, University of York, York, UK",
+              "institution_ids": [
+                "https://openalex.org/I52099693"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5056585882",
+            "display_name": "Panos Patros",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I52179390",
+              "display_name": "University of Waikato",
+              "ror": "https://ror.org/013fsnh78",
+              "country_code": "NZ",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I52179390"
+              ]
+            }
+          ],
+          "countries": [
+            "NZ"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Panos Patros",
+          "raw_affiliation_strings": [
+            "Department of Software Engineering, University of Waikato, Hamilton, Aotearoa New Zealand"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Software Engineering, University of Waikato, Hamilton, Aotearoa New Zealand",
+              "institution_ids": [
+                "https://openalex.org/I52179390"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5031155155",
+            "display_name": "Rami Bahsoon",
+            "orcid": "https://orcid.org/0000-0002-1139-5795"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I79619799",
+              "display_name": "University of Birmingham",
+              "ror": "https://ror.org/03angcq70",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I79619799"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Rami Bahsoon",
+          "raw_affiliation_strings": [
+            "School of Computer Science, University of Birmingham, Birmingham, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science, University of Birmingham, Birmingham, UK",
+              "institution_ids": [
+                "https://openalex.org/I79619799"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5070360947",
+            "display_name": "Arash Shaghaghi",
+            "orcid": "https://orcid.org/0000-0001-6630-9519"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I82951845",
+              "display_name": "RMIT University",
+              "ror": "https://ror.org/04ttjf776",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I82951845"
+              ]
+            }
+          ],
+          "countries": [
+            "AU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Arash Shaghaghi",
+          "raw_affiliation_strings": [
+            "Department of Information Systems and Business Analytics, RMIT University, Melbourne, Australia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Information Systems and Business Analytics, RMIT University, Melbourne, Australia",
+              "institution_ids": [
+                "https://openalex.org/I82951845"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5054023569",
+            "display_name": "Muhammed Golec",
+            "orcid": "https://orcid.org/0000-0003-0146-9735"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I166337079",
+              "display_name": "Queen Mary University of London",
+              "ror": "https://ror.org/026zzn846",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I166337079"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Muhammed Golec",
+          "raw_affiliation_strings": [
+            "School of Electronic Engineering and Computer Science, Queen Mary University of London, London, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Electronic Engineering and Computer Science, Queen Mary University of London, London, UK",
+              "institution_ids": [
+                "https://openalex.org/I166337079"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5067844537",
+            "display_name": "Vlado Stankovski",
+            "orcid": "https://orcid.org/0000-0001-9547-787X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I153976015",
+              "display_name": "University of Ljubljana",
+              "ror": "https://ror.org/05njb9z20",
+              "country_code": "SI",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I153976015"
+              ]
+            }
+          ],
+          "countries": [
+            "SI"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Vlado Stankovski",
+          "raw_affiliation_strings": [
+            "Faculty of Computer and Information Science, University of Ljubljana, Ljubljana, Slovenia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Faculty of Computer and Information Science, University of Ljubljana, Ljubljana, Slovenia",
+              "institution_ids": [
+                "https://openalex.org/I153976015"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5049269026",
+            "display_name": "Huaming Wu",
+            "orcid": "https://orcid.org/0000-0002-4761-9973"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I162868743",
+              "display_name": "Tianjin University",
+              "ror": "https://ror.org/012tb2g32",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I162868743"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Huaming Wu",
+          "raw_affiliation_strings": [
+            "Center for Applied Mathematics, Tianjin University, Tianjin, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Center for Applied Mathematics, Tianjin University, Tianjin, China",
+              "institution_ids": [
+                "https://openalex.org/I162868743"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5105788894",
+            "display_name": "Ajith Abraham",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210107658",
+              "display_name": "Machine Intelligence Research Labs",
+              "ror": "https://ror.org/013kgb629",
+              "country_code": "US",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I4210107658"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210116741",
+              "display_name": "Innopolis University",
+              "ror": "https://ror.org/02b7jh107",
+              "country_code": "RU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I4210116741"
+              ]
+            }
+          ],
+          "countries": [
+            "RU",
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ajith Abraham",
+          "raw_affiliation_strings": [
+            "Center for Artificial Intelligence, Innopolis University, Innopolis, Russia",
+            "Machine Intelligence Research Labs, Auburn, WA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Center for Artificial Intelligence, Innopolis University, Innopolis, Russia",
+              "institution_ids": [
+                "https://openalex.org/I4210116741"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Machine Intelligence Research Labs, Auburn, WA, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210107658"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5051961876",
+            "display_name": "Manmeet Singh",
+            "orcid": "https://orcid.org/0000-0002-3374-7149"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1333651918",
+              "display_name": "Indian Institute of Tropical Meteorology",
+              "ror": "https://ror.org/03jf2m686",
+              "country_code": "IN",
+              "type": "facility",
+              "lineage": [
+                "https://openalex.org/I1333651918",
+                "https://openalex.org/I4210100914"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I86519309",
+              "display_name": "The University of Texas at Austin",
+              "ror": "https://ror.org/00hj54h04",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I86519309"
+              ]
+            }
+          ],
+          "countries": [
+            "IN",
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Manmeet Singh",
+          "raw_affiliation_strings": [
+            "Centre for Climate Change Research, Indian Institute of Tropical Meteorology, Pune, India",
+            "Jackson School of Geosciences, University of Texas at Austin, Austin, TX, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Centre for Climate Change Research, Indian Institute of Tropical Meteorology, Pune, India",
+              "institution_ids": [
+                "https://openalex.org/I1333651918"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Jackson School of Geosciences, University of Texas at Austin, Austin, TX, USA",
+              "institution_ids": [
+                "https://openalex.org/I86519309"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5090533480",
+            "display_name": "Harshit Mehta",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210149435",
+              "display_name": "DELL (United States)",
+              "ror": "https://ror.org/05rejmm18",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210149435"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I4210164117",
+              "display_name": "Walker (United States)",
+              "ror": "https://ror.org/05hgh7849",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210164117"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I86519309",
+              "display_name": "The University of Texas at Austin",
+              "ror": "https://ror.org/00hj54h04",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I86519309"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Harshit Mehta",
+          "raw_affiliation_strings": [
+            "Dell Technologies, Austin, TX, USA",
+            "Walker Department of Mechanical Engineering, Cockrell School of Engineering, The University of Texas at Austin, TX, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Dell Technologies, Austin, TX, USA",
+              "institution_ids": [
+                "https://openalex.org/I4210149435"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Walker Department of Mechanical Engineering, Cockrell School of Engineering, The University of Texas at Austin, TX, USA",
+              "institution_ids": [
+                "https://openalex.org/I86519309",
+                "https://openalex.org/I4210164117"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5030936455",
+            "display_name": "Soumya K. Ghosh",
+            "orcid": "https://orcid.org/0000-0001-8359-581X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I145894827",
+              "display_name": "Indian Institute of Technology Kharagpur",
+              "ror": "https://ror.org/03w5sq511",
+              "country_code": "IN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I145894827"
+              ]
+            }
+          ],
+          "countries": [
+            "IN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Soumya K. Ghosh",
+          "raw_affiliation_strings": [
+            "Department of Computer Science and Engineering, Indian Institute of Technology, Kharagpur, India"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science and Engineering, Indian Institute of Technology, Kharagpur, India",
+              "institution_ids": [
+                "https://openalex.org/I145894827"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5065487579",
+            "display_name": "Thar Baker",
+            "orcid": "https://orcid.org/0000-0002-5166-4873"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I29891158",
+              "display_name": "University of Sharjah",
+              "ror": "https://ror.org/00engpz63",
+              "country_code": "AE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I29891158"
+              ]
+            }
+          ],
+          "countries": [
+            "AE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Thar Baker",
+          "raw_affiliation_strings": [
+            "Department of Computer Science, University of Sharjah, Sharjah, United Arab Emirates"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science, University of Sharjah, Sharjah, United Arab Emirates",
+              "institution_ids": [
+                "https://openalex.org/I29891158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5024191250",
+            "display_name": "Ajith Kumar Parlikad",
+            "orcid": "https://orcid.org/0000-0001-6214-1739"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I241749",
+              "display_name": "University of Cambridge",
+              "ror": "https://ror.org/013meh722",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I241749"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ajith Kumar Parlikad",
+          "raw_affiliation_strings": [
+            "Institute for Manufacturing, Department of Engineering, University of Cambridge, Cambridge, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Institute for Manufacturing, Department of Engineering, University of Cambridge, Cambridge, UK",
+              "institution_ids": [
+                "https://openalex.org/I241749"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5068665464",
+            "display_name": "Hanan Lutfiyya",
+            "orcid": "https://orcid.org/0000-0002-5341-9388"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I125749732",
+              "display_name": "Western University",
+              "ror": "https://ror.org/02grkyz14",
+              "country_code": "CA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I125749732"
+              ]
+            }
+          ],
+          "countries": [
+            "CA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Hanan Lutfiyya",
+          "raw_affiliation_strings": [
+            "Department of Computer Science, University of Western Ontario, London, Canada"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science, University of Western Ontario, London, Canada",
+              "institution_ids": [
+                "https://openalex.org/I125749732"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5059077090",
+            "display_name": "Salil S. Kanhere",
+            "orcid": "https://orcid.org/0000-0002-1835-3475"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I31746571",
+              "display_name": "UNSW Sydney",
+              "ror": "https://ror.org/03r8z3t63",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I31746571"
+              ]
+            }
+          ],
+          "countries": [
+            "AU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Salil S. Kanhere",
+          "raw_affiliation_strings": [
+            "School of Computer Science and Engineering, The University of New South Wales (UNSW), Sydney, Australia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science and Engineering, The University of New South Wales (UNSW), Sydney, Australia",
+              "institution_ids": [
+                "https://openalex.org/I31746571"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5079821707",
+            "display_name": "Rizos Sakellariou",
+            "orcid": "https://orcid.org/0000-0002-6104-6649"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I28407311",
+              "display_name": "University of Manchester",
+              "ror": "https://ror.org/027m9bs27",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I28407311"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Rizos Sakellariou",
+          "raw_affiliation_strings": [
+            "Department of Computer Science, University of Manchester, Oxford Road, Manchester, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Science, University of Manchester, Oxford Road, Manchester, UK",
+              "institution_ids": [
+                "https://openalex.org/I28407311"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5004847496",
+            "display_name": "Schahram Dustdar",
+            "orcid": "https://orcid.org/0000-0001-6872-8821"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I145847075",
+              "display_name": "TU Wien",
+              "ror": "https://ror.org/04d836q62",
+              "country_code": "AT",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I145847075"
+              ]
+            }
+          ],
+          "countries": [
+            "AT"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Schahram Dustdar",
+          "raw_affiliation_strings": [
+            "Distributed Systems Group, Vienna University of Technology, Vienna, Austria"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Distributed Systems Group, Vienna University of Technology, Vienna, Austria",
+              "institution_ids": [
+                "https://openalex.org/I145847075"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5021973291",
+            "display_name": "Omer Rana",
+            "orcid": "https://orcid.org/0000-0003-3597-2646"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I79510175",
+              "display_name": "Cardiff University",
+              "ror": "https://ror.org/03kk7td41",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I79510175"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Omer Rana",
+          "raw_affiliation_strings": [
+            "School of Computer Science and Informatics, Cardiff University, Cardiff, UK"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science and Informatics, Cardiff University, Cardiff, UK",
+              "institution_ids": [
+                "https://openalex.org/I79510175"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5009158531",
+            "display_name": "Ivona Brandić",
+            "orcid": "https://orcid.org/0000-0001-7424-0208"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I145847075",
+              "display_name": "TU Wien",
+              "ror": "https://ror.org/04d836q62",
+              "country_code": "AT",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I145847075"
+              ]
+            }
+          ],
+          "countries": [
+            "AT"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ivona Brandic",
+          "raw_affiliation_strings": [
+            "Faculty of Informatics, Vienna University of Technology, Vienna, Austria,"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Faculty of Informatics, Vienna University of Technology, Vienna, Austria,",
+              "institution_ids": [
+                "https://openalex.org/I145847075"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5024670650",
+            "display_name": "Steve Uhlig",
+            "orcid": "https://orcid.org/0000-0001-6251-6836"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I166337079",
+              "display_name": "Queen Mary University of London",
+              "ror": "https://ror.org/026zzn846",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I166337079"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Steve Uhlig",
+          "raw_affiliation_strings": [
+            "School of Electronic Engineering and Computer Science, Queen Mary University of London, London, UK,"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Electronic Engineering and Computer Science, Queen Mary University of London, London, UK,",
+              "institution_ids": [
+                "https://openalex.org/I166337079"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1016/j.iot.2022.100514"
+    }
+  ],
+  "notes": [
+    {
+      "id": "https://openalex.org/W4385245566",
+      "doi": "https://doi.org/10.4230/lipics.itp.2023.19",
+      "title": "MizAR 60 for Mizar 50",
+      "year": 2023,
+      "authors": [
+        "Jakubův, Jan",
+        "Chvalovský, Karel",
+        "Goertzel, Zarathustra",
+        "Kaliszyk, Cezary",
+        "Olšák, Mirek"
+      ],
+      "abstract": "As a present to Mizar on its 50th anniversary, we develop an AI/TP system that automatically proves about 60% of the Mizar theorems in the hammer setting. We also automatically prove 75% of the Mizar theorems when the automated provers are helped by using only the premises used in the human-written Mizar proofs. We describe the methods and large-scale experiments leading to these results. This includes in particular the E and Vampire provers, their ENIGMA and Deepire learning modifications, a number of learning-based premise selection methods, and the incremental loop that interleaves growing a corpus of millions of ATP proofs with training increasingly strong AI/TP systems on them. We also present a selection of Mizar problems that were proved automatically."
+    },
+    {
+      "id": "https://openalex.org/W3153513446",
+      "doi": "https://doi.org/10.1016/j.eswa.2022.118083",
+      "title": "Continental generalization of a human-in-the-loop AI system for clinical seizure recognition",
+      "year": 2022,
+      "authors": [
+        "Yikai Yang",
+        "Nhan Duy Truong",
+        "Christina Maher",
+        "Armin Nikpour",
+        "Omid Kavehei"
+      ],
+      "abstract": ""
+    },
+    {
+      "id": "https://openalex.org/W4388628811",
+      "doi": "https://doi.org/10.3390/systems11110548",
+      "title": "Constructing Ethical AI Based on the “Human-in-the-Loop” System",
+      "year": 2023,
+      "authors": [
+        "Ximeng Chen",
+        "Xiaohong Wang",
+        "Yanzhang Qu"
+      ],
+      "abstract": "The Human-in-the-Loop (HITL) system was first proposed by Robert Monarch, a machine learning expert. It adopted a “hybrid” strategy combining human intelligence and machine intelligence, aiming to improve the accuracy of machine learning models and assist human learning. At present, there have been a number ethical design attempts based on the HITL system, and some progress has been made in the ethical choices of disaster rescue robots and nursing robots. However, there is no analysis of why the HITL system can serve as an effective path in constructing ethical AI and how it can implement the efficiency of AI in ethical scenarios. This paper draws on the feasibility of the HITL system and analyzes how ethical AIs are possible when using the HITL system. We advocate for its application to the entire process of ethical AI design."
+    },
+    {
+      "id": "https://openalex.org/W4292289324",
+      "doi": "https://doi.org/10.1007/s10462-022-10246-w",
+      "title": "Human-in-the-loop machine learning: a state of the art",
+      "year": 2022,
+      "authors": [
+        "Eduardo Mosqueira-Rey",
+        "Elena Hernández-Pereira",
+        "David Alonso-Ríos",
+        "José Bobes-Bascarán",
+        "Ángel Fernández-Leal"
+      ],
+      "abstract": "Abstract Researchers are defining new types of interactions between humans and machine learning algorithms generically called human-in-the-loop machine learning. Depending on who is in control of the learning process, we can identify: active learning, in which the system remains in control; interactive machine learning, in which there is a closer interaction between users and learning systems; and machine teaching, where human domain experts have control over the learning process. Aside from control, humans can also be involved in the learning process in other ways. In curriculum learning human domain experts try to impose some structure on the examples presented to improve the learning; in explainable AI the focus is on the ability of the model to explain to humans why a given solution was chosen. This collaboration between AI models and humans should not be limited only to the learning process; if we go further, we can see other terms that arise such as Usable and Useful AI. In this paper we review the state of the art of the techniques involved in the new forms of relationship between humans and ML algorithms. Our contribution is not merely listing the different approaches, but to provide definitions clarifying confusing, varied and sometimes contradictory terms; to elucidate and determine the boundaries between the different methods; and to correlate all the techniques searching for the connections and influences between them."
+    },
+    {
+      "id": "https://openalex.org/W4220966162",
+      "doi": "https://doi.org/10.1016/j.iot.2022.100514",
+      "title": "AI for next generation computing: Emerging trends and future directions",
+      "year": 2022,
+      "authors": [
+        "Sukhpal Singh Gill",
+        "Minxian Xu",
+        "Carlo Ottaviani",
+        "Panos Patros",
+        "Rami Bahsoon"
+      ],
+      "abstract": ""
+    }
+  ],
+  "final_answer": "Определение темы\nHuman-in-the-loop (HITL) — подходы и системы, в которых в работу модели или симуляции интегрировано активное участие человека: человек обеспечивает данные, принимает решения, корректирует поведение модели или контролирует её работу. В разных контекстах HITL обозначает разные распределения ролей между человеком и машиной (например, человек в управляющем цикле обучения, верификации результатов или в оперативном контроле автономных систем). В представленном общем контексте HITL встречается в моделировании и симуляции (M&S) в таксономии live/virtual/constructive, в обсуждениях автономного оружия (human-in-the-loop vs human-on-the-loop) и в машинном обучении (интерактивное обучение, active learning, machine teaching и пр.).\n\nОсновные подходы\n(основано на доступных источниках; если терминология варьируется, см. ограничение в конце)\n- Active learning: система остаётся «в контроле» процесса обучения, но запрашивает человеческую разметку наиболее информативных примеров для ускорения и повышения качества обучения (указано в Mosqueira-Rey et al., 2022).\n- Interactive machine learning: тесное, циклическое взаимодействие пользователя и модели — человек корректирует поведение модели в интерактивном режиме; акцент на удобстве и скорости совместной работы (Mosqueira-Rey et al., 2022).\n- Machine teaching: человек (обычно эксперт) управляет процессом обучения, формирует учебные примеры/куррикулум и контролирует, какие знания получает модель (Mosqueira-Rey et al., 2022).\n- Curriculum learning / структурирование примеров: человеческие эксперты задают порядок или структуру примеров, чтобы улучшить обучение (Mosqueira-Rey et al., 2022).\n- Explainable AI + HITL: модели ориентированы на предоставление объяснений, чтобы человек мог интерпретировать и корректировать решения; это часть взаимодействия человека и модели (Mosqueira-Rey et al., 2022).\n- «Гибридные» этические/контрольные подходы: применение HITL при проектировании «этичного» ИИ, где человеческое вмешательство поддерживает соответствие этическим рамкам (Chen et al., 2023).\n- Инкрементальные циклы обучения с вмешательством человека: примеры из автоматического доказательства теорем, где человеческие доказательства/предпосылки используются для выбора и обучения автоматов (Jakubův et al., 2023).\n\n3–5 ключевых работ (из предоставленного списка)\n1) Mosqueira-Rey E., Hernández-Pereira E., Alonso-Ríos D., Bobes-Bascarán J., Fernández-Leal Á. — \"Human-in-the-loop machine learning: a state of the art\" (2022)\n   - Краткий вклад: обзор и систематизация подходов HITL в машинном обучении; даёт классификацию взаимодействий (active learning, interactive ML, machine teaching), обсуждает дополнительные роли человека (curriculum learning, explainability) и взаимосвязи между методами. Полезен как точка входа в разнообразие определений и методов HITL.\n\n2) Chen X., Wang X., Qu Y. — \"Constructing Ethical AI Based on the 'Human-in-the-Loop' System\" (2023)\n   - Краткий вклад: аналитика того, почему HITL рассматривается как путь к созданию этичного ИИ; обсуждение применения HITL на всём цикле проектирования этического ИИ и примеры в робототехнике (спасательные, медсестринские роботы). Подчёркивает потенциал HITL для обеспечения этичности и прозрачности.\n\n3) Jakubův J., Chvalovský K., Goertzel Z., Kaliszyk C., Olšák M. — \"MizAR 60 for Mizar 50\" (2023)\n   - Краткий вклад: пример HITL-подхода в автоматизации доказательств — сочетание автоматических доказателей (E, Vampire с их ML-модификациями ENIGMA, Deepire) и человеческих предпосылок/корпуса человеческих доказательств. Демонстрирует инкрементальный цикл: рост корпуса (миллионы ATP-доказательств) → обучение всё более сильных AI/TP систем → повышение доли автоматически доказываемых теорем (≈60–75% при помощи человеческих предпосылок).\n\n4) Yang Y., Truong N.D., Maher C., Nikpour A., Kavehei O. — \"Continental generalization of a human-in-the-loop AI system for clinical seizure recognition\" (2022)\n   - Краткий вклад: прикладное HITL-решение в клинической диагностике (распознавание припадков). (В предоставленных метаданных абстракт отсутствует, поэтому конкретные выводы и методология по источнику не доступны в деталях.)\n\n5) Gill Sukhpal Singh et al. — \"AI for next generation computing: Emerging trends and future directions\" (2022)\n   - Краткий вклад: обзор тенденций в развитии ИИ и вычислений; в списке найденных работ присутствует как общий обзор, который может касаться и ролей человека в системах будущего. (В предоставленных метаданных абстракт отсутствует, поэтому детальные положения о HITL из этой работы явным образом не изв",
+  "status": "finished",
+  "stop_reason": "final_answer_generated",
+  "tool_errors": 0,
+  "evaluator_result": {
+    "correctness": 5,
+    "groundedness": 5,
+    "completeness": 4,
+    "coverage_of_required_fields": 4,
+    "source_consistency": 5,
+    "comment": "Ответ в целом корректен и хорошо обоснован ссылками на перечисленные источники (Mosqueira-Rey et al., Chen et al., Jakubův et al. и др.). Основные подходы описаны верно и согласуются с аннотациями источников. Недостатки: в разделе с ключевыми работами пункт 4 и 5 отмечены как релевантные, но для них явно указано, что абстракты в метаданных отсутствуют — следовало бы яснее обозначить ограниченность выводов по этим двум работам или сократить претензии на вклад до указания только наличия релевантных тем. Также можно было бы добавить одно-два предложения про ограничения и возможные риски HITL (например, масштабируемость, человеческие ошибки, безопасность) для большей полноты.",
+    "rubric": 4.6
+  }
+}

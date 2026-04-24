@@ -1,0 +1,3088 @@
+{
+  "topic": "Planning and reflection in LLM agents",
+  "objective": "Подготовить структурированный научно-аналитический обзор темы",
+  "step_id": 6,
+  "history": [
+    {
+      "step_id": 0,
+      "action": "search_wikipedia",
+      "payload": {
+        "topic": "Planning and reflection in LLM agents"
+      },
+      "result": "Feedback neural networks are neural networks with the ability to provide bottom-up and top-down design feedback to their input or previous layers, based on their outputs or subsequent layers. This is notably used in large language models, specifically in reasoning language models (RLM). This process is designed to mimic self-assessment and internal deliberation, aiming to minimize errors and increase interpretability. This reflection is a form of \"test-time compute\", where additional computation",
+      "n_sources": 0,
+      "n_notes": 0,
+      "next_reason": "need general context before publication search"
+    },
+    {
+      "step_id": 1,
+      "action": "search_openalex",
+      "payload": {
+        "query": "Planning and reflection in LLM agents",
+        "per_page": 5
+      },
+      "result": "found=5",
+      "n_sources": 5,
+      "n_notes": 0,
+      "next_reason": "extract notes from returned publications"
+    },
+    {
+      "step_id": 2,
+      "action": "extract_notes",
+      "payload": {
+        "n_sources": 5,
+        "top_k": 5
+      },
+      "result": "notes_prepared=5",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "generate final answer from context and notes"
+    },
+    {
+      "step_id": 3,
+      "action": "generate_final_answer",
+      "payload": {
+        "topic": "Planning and reflection in LLM agents"
+      },
+      "result": "Определение темы\nPlanning and reflection in LLM agents — это набор методов и механизмов, с помощью которых большие языковые модели (LLM), встроенные в автономные агенты или агентные системы, формируют планы действий (planning) и выполняют внутреннюю оценку, самокоррекцию или доработку своих решений (reflection). В представленных материалах reflection рассматривается как форма тестового времени вычислений (test-time compute): дополнительные итерации вывода или обмена между компонентами (например,",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "finish or run evaluator depending on configuration"
+    },
+    {
+      "step_id": 4,
+      "action": "internal_evaluator",
+      "payload": {
+        "criteria": [
+          "correctness",
+          "groundedness",
+          "completeness",
+          "coverage_of_required_fields",
+          "source_consistency",
+          "comment",
+          "rubric"
+        ]
+      },
+      "result": "{'correctness': 5, 'groundedness': 5, 'completeness': 4, 'coverage_of_required_fields': 5, 'source_consistency': 5, 'comment': 'Ответ корректно и ясно описывает тему, основные подходы и приводит релевантные работы с годами и вкладами, согласуясь с перечисленными источниками. Единственный небольшой недостаток — раздел \"Возможные приложения\" обрывается и не завершён; из-за этого полнота по материалу чуть ниже максимальной. В остальном все ключевые поля и ссылки согласованы с источниками.', 'rubric",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "refine if rubric is below threshold"
+    },
+    {
+      "step_id": 5,
+      "action": "finish",
+      "payload": {
+        "status": "finished",
+        "stop_reason": "final_answer_generated"
+      },
+      "result": "final_answer_generated",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "stop criterion reached"
+    }
+  ],
+  "sources": [
+    {
+      "id": "https://openalex.org/W4401628481",
+      "display_name": "Large Language Model Enhanced Multi-Agent Systems for 6G Communications",
+      "publication_year": 2024,
+      "abstract_inverted_index": {
+        "The": [
+          0
+        ],
+        "rapid": [
+          1
+        ],
+        "development": [
+          2
+        ],
+        "of": [
+          3,
+          49,
+          67,
+          81,
+          111,
+          139,
+          204,
+          219
+        ],
+        "the": [
+          4,
+          65,
+          79,
+          120,
+          132,
+          136,
+          158,
+          166,
+          177,
+          182,
+          186,
+          202,
+          205
+        ],
+        "large": [
+          5
+        ],
+        "language": [
+          6
+        ],
+        "model": [
+          7
+        ],
+        "(LLM)": [
+          8
+        ],
+        "presents": [
+          9
+        ],
+        "huge": [
+          10
+        ],
+        "opportunities": [
+          11
+        ],
+        "for": [
+          12,
+          16,
+          83,
+          101,
+          157,
+          196
+        ],
+        "6G": [
+          13,
+          41,
+          84,
+          142,
+          220
+        ],
+        "communications": [
+          14
+        ],
+        "–": [
+          15,
+          22
+        ],
+        "example,": [
+          17
+        ],
+        "network": [
+          18
+        ],
+        "optimization": [
+          19
+        ],
+        "and": [
+          20,
+          52,
+          54,
+          59,
+          72,
+          99,
+          122,
+          127,
+          169,
+          172,
+          184,
+          189
+        ],
+        "management": [
+          21
+        ],
+        "by": [
+          23,
+          209
+        ],
+        "allowing": [
+          24
+        ],
+        "users": [
+          25
+        ],
+        "to": [
+          26,
+          30,
+          125,
+          153,
+          180,
+          192
+        ],
+        "input": [
+          27
+        ],
+        "task": [
+          28,
+          160
+        ],
+        "requirements": [
+          29
+        ],
+        "LLMs": [
+          31,
+          39,
+          63,
+          82,
+          140
+        ],
+        "with": [
+          32,
+          64,
+          95
+        ],
+        "natural": [
+          33,
+          106
+        ],
+        "language.": [
+          34,
+          107
+        ],
+        "However,": [
+          35
+        ],
+        "directly": [
+          36
+        ],
+        "applying": [
+          37
+        ],
+        "native": [
+          38
+        ],
+        "in": [
+          40,
+          74,
+          141
+        ],
+        "encounters": [
+          42
+        ],
+        "various": [
+          43
+        ],
+        "challenges,": [
+          44
+        ],
+        "such": [
+          45
+        ],
+        "as": [
+          46,
+          215
+        ],
+        "a": [
+          47,
+          92,
+          211,
+          216
+        ],
+        "lack": [
+          48
+        ],
+        "communication": [
+          50,
+          97,
+          129,
+          213
+        ],
+        "data": [
+          51,
+          115
+        ],
+        "knowledge,": [
+          53
+        ],
+        "limited": [
+          55
+        ],
+        "logical": [
+          56
+        ],
+        "reasoning,": [
+          57
+        ],
+        "evaluation,": [
+          58,
+          71
+        ],
+        "refinement": [
+          60,
+          190
+        ],
+        "abilities.": [
+          61
+        ],
+        "Integrating": [
+          62
+        ],
+        "capabilities": [
+          66
+        ],
+        "retrieval,": [
+          68
+        ],
+        "planning,": [
+          69
+        ],
+        "memory,": [
+          70
+        ],
+        "reflection": [
+          73,
+          173,
+          187
+        ],
+        "agents": [
+          75,
+          124,
+          152
+        ],
+        "can": [
+          76
+        ],
+        "greatly": [
+          77
+        ],
+        "enhance": [
+          78
+        ],
+        "potential": [
+          80
+        ],
+        "communications.": [
+          85,
+          221
+        ],
+        "To": [
+          86
+        ],
+        "this": [
+          87
+        ],
+        "end,": [
+          88
+        ],
+        "we": [
+          89,
+          200
+        ],
+        "propose": [
+          90
+        ],
+        "CommLLM,": [
+          91
+        ],
+        "multi-agent": [
+          93,
+          114,
+          144,
+          170,
+          207
+        ],
+        "system": [
+          94,
+          109,
+          208,
+          214
+        ],
+        "customized": [
+          96
+        ],
+        "knowledge": [
+          98,
+          130,
+          133,
+          137
+        ],
+        "tools": [
+          100
+        ],
+        "solving": [
+          102
+        ],
+        "communication-related": [
+          103
+        ],
+        "tasks": [
+          104
+        ],
+        "using": [
+          105
+        ],
+        "This": [
+          108
+        ],
+        "consists": [
+          110
+        ],
+        "three": [
+          112
+        ],
+        "components:": [
+          113
+        ],
+        "retrieval": [
+          116
+        ],
+        "(MDR),": [
+          117
+        ],
+        "which": [
+          118,
+          148,
+          175
+        ],
+        "employs": [
+          119
+        ],
+        "condensate": [
+          121
+        ],
+        "inference": [
+          123
+        ],
+        "refine": [
+          126
+        ],
+        "summarize": [
+          128
+        ],
+        "from": [
+          131,
+          161
+        ],
+        "base,": [
+          134
+        ],
+        "expanding": [
+          135
+        ],
+        "boundaries": [
+          138
+        ],
+        "communications;": [
+          143
+        ],
+        "collaborative": [
+          145
+        ],
+        "planning": [
+          146,
+          151
+        ],
+        "(MCP),": [
+          147
+        ],
+        "utilizes": [
+          149,
+          176
+        ],
+        "multiple": [
+          150
+        ],
+        "generate": [
+          154
+        ],
+        "feasible": [
+          155
+        ],
+        "solutions": [
+          156
+        ],
+        "communication-re-lated": [
+          159
+        ],
+        "different": [
+          162
+        ],
+        "perspectives": [
+          163
+        ],
+        "based": [
+          164
+        ],
+        "on": [
+          165
+        ],
+        "retrieved": [
+          167
+        ],
+        "knowledge;": [
+          168
+        ],
+        "evaluation": [
+          171,
+          178
+        ],
+        "(MER),": [
+          174
+        ],
+        "agent": [
+          179,
+          188,
+          191
+        ],
+        "assess": [
+          181
+        ],
+        "solutions,": [
+          183
+        ],
+        "applies": [
+          185
+        ],
+        "provide": [
+          193
+        ],
+        "improvement": [
+          194
+        ],
+        "suggestions": [
+          195
+        ],
+        "current": [
+          197
+        ],
+        "solutions.": [
+          198
+        ],
+        "Finally,": [
+          199
+        ],
+        "validate": [
+          201
+        ],
+        "effectiveness": [
+          203
+        ],
+        "proposed": [
+          206
+        ],
+        "designing": [
+          210
+        ],
+        "semantic": [
+          212
+        ],
+        "case": [
+          217
+        ],
+        "study": [
+          218
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5005311317",
+            "display_name": "Feibo Jiang",
+            "orcid": "https://orcid.org/0000-0002-0235-0253"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I173759888",
+              "display_name": "Hunan Normal University",
+              "ror": "https://ror.org/053w1zy07",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I173759888"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Feibo Jiang",
+          "raw_affiliation_strings": [
+            "Hunan Normal University,China",
+            "Hunan Normal University, China"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Hunan Normal University,China",
+              "institution_ids": [
+                "https://openalex.org/I173759888"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Hunan Normal University, China",
+              "institution_ids": [
+                "https://openalex.org/I173759888"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5000881104",
+            "display_name": "Yubo Peng",
+            "orcid": "https://orcid.org/0000-0001-9684-2971"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I173759888",
+              "display_name": "Hunan Normal University",
+              "ror": "https://ror.org/053w1zy07",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I173759888"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yubo Peng",
+          "raw_affiliation_strings": [
+            "Hunan Normal University,China",
+            "Hunan Normal University, China"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Hunan Normal University,China",
+              "institution_ids": [
+                "https://openalex.org/I173759888"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Hunan Normal University, China",
+              "institution_ids": [
+                "https://openalex.org/I173759888"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5079505833",
+            "display_name": "Li Dong",
+            "orcid": "https://orcid.org/0000-0002-0127-8480"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I49934816",
+              "display_name": "Hunan University of Technology",
+              "ror": "https://ror.org/04j3vr751",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I49934816"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Li Dong",
+          "raw_affiliation_strings": [
+            "Hunan University of Technology and Business,China",
+            "Xiangjiang Laboratory, China",
+            "Hunan University of Technology and Business, China"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Hunan University of Technology and Business,China",
+              "institution_ids": [
+                "https://openalex.org/I49934816"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Xiangjiang Laboratory, China",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Hunan University of Technology and Business, China",
+              "institution_ids": [
+                "https://openalex.org/I49934816"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5022523766",
+            "display_name": "Kezhi Wang",
+            "orcid": "https://orcid.org/0000-0001-8602-0800"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I59433898",
+              "display_name": "Brunel University of London",
+              "ror": "https://ror.org/00dn4t376",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Kezhi Wang",
+          "raw_affiliation_strings": [
+            "Brunel University,London,UK",
+            "Brunel University, London, UK"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Brunel University,London,UK",
+              "institution_ids": [
+                "https://openalex.org/I59433898"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Brunel University, London, UK",
+              "institution_ids": [
+                "https://openalex.org/I59433898"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5101631991",
+            "display_name": "Kun Yang",
+            "orcid": "https://orcid.org/0000-0002-9602-7050"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I881766915",
+              "display_name": "Nanjing University",
+              "ror": "https://ror.org/01rxvg760",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I881766915"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Kun Yang",
+          "raw_affiliation_strings": [
+            "Nanjing University,China",
+            "Nanjing University, China"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Nanjing University,China",
+              "institution_ids": [
+                "https://openalex.org/I881766915"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Nanjing University, China",
+              "institution_ids": [
+                "https://openalex.org/I881766915"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5075696071",
+            "display_name": "Cunhua Pan",
+            "orcid": "https://orcid.org/0000-0001-5286-7958"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I76569877",
+              "display_name": "Southeast University",
+              "ror": "https://ror.org/04ct4d772",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I76569877"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Cunhua Pan",
+          "raw_affiliation_strings": [
+            "Southeast University,China",
+            "Southeast University, China"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Southeast University,China",
+              "institution_ids": [
+                "https://openalex.org/I76569877"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Southeast University, China",
+              "institution_ids": [
+                "https://openalex.org/I76569877"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5091266202",
+            "display_name": "Dusit Niyato",
+            "orcid": "https://orcid.org/0000-0002-7442-7416"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I172675005",
+              "display_name": "Nanyang Technological University",
+              "ror": "https://ror.org/02e7b5302",
+              "country_code": "SG",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ],
+          "countries": [
+            "SG"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Dusit Niyato",
+          "raw_affiliation_strings": [
+            "Nanyang Technological University,Singapore",
+            "Nanyang Technological University, Singapore"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Nanyang Technological University,Singapore",
+              "institution_ids": [
+                "https://openalex.org/I172675005"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Nanyang Technological University, Singapore",
+              "institution_ids": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5077149719",
+            "display_name": "Octavia A. Dobre",
+            "orcid": "https://orcid.org/0000-0001-8528-0512"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I130438778",
+              "display_name": "Memorial University of Newfoundland",
+              "ror": "https://ror.org/04haebc03",
+              "country_code": "CA",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I130438778"
+              ]
+            }
+          ],
+          "countries": [
+            "CA"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Octavia A. Dobre",
+          "raw_affiliation_strings": [
+            "Memorial University,Canada",
+            "Memorial University, Canada"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Memorial University,Canada",
+              "institution_ids": [
+                "https://openalex.org/I130438778"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Memorial University, Canada",
+              "institution_ids": [
+                "https://openalex.org/I130438778"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1109/mwc.016.2300600"
+    },
+    {
+      "id": "https://openalex.org/W4391620956",
+      "display_name": "Understanding the planning of LLM agents: A survey",
+      "publication_year": 2024,
+      "abstract_inverted_index": {
+        "As": [
+          0
+        ],
+        "Large": [
+          1
+        ],
+        "Language": [
+          2
+        ],
+        "Models": [
+          3
+        ],
+        "(LLMs)": [
+          4
+        ],
+        "have": [
+          5
+        ],
+        "shown": [
+          6
+        ],
+        "significant": [
+          7
+        ],
+        "intelligence,": [
+          8
+        ],
+        "the": [
+          9,
+          27,
+          78
+        ],
+        "progress": [
+          10
+        ],
+        "to": [
+          11,
+          39
+        ],
+        "leverage": [
+          12
+        ],
+        "LLMs": [
+          13
+        ],
+        "as": [
+          14
+        ],
+        "planning": [
+          15,
+          41
+        ],
+        "modules": [
+          16
+        ],
+        "of": [
+          17,
+          31,
+          47,
+          80
+        ],
+        "autonomous": [
+          18
+        ],
+        "agents": [
+          19,
+          33
+        ],
+        "has": [
+          20
+        ],
+        "attracted": [
+          21
+        ],
+        "more": [
+          22
+        ],
+        "attention.": [
+          23
+        ],
+        "This": [
+          24
+        ],
+        "survey": [
+          25
+        ],
+        "provides": [
+          26
+        ],
+        "first": [
+          28
+        ],
+        "systematic": [
+          29
+        ],
+        "view": [
+          30
+        ],
+        "LLM-based": [
+          32
+        ],
+        "planning,": [
+          34,
+          52
+        ],
+        "covering": [
+          35
+        ],
+        "recent": [
+          36
+        ],
+        "works": [
+          37,
+          49
+        ],
+        "aiming": [
+          38
+        ],
+        "improve": [
+          40
+        ],
+        "ability.": [
+          42
+        ],
+        "We": [
+          43
+        ],
+        "provide": [
+          44
+        ],
+        "a": [
+          45
+        ],
+        "taxonomy": [
+          46
+        ],
+        "existing": [
+          48
+        ],
+        "on": [
+          50
+        ],
+        "LLM-Agent": [
+          51
+        ],
+        "which": [
+          53
+        ],
+        "can": [
+          54
+        ],
+        "be": [
+          55
+        ],
+        "categorized": [
+          56
+        ],
+        "into": [
+          57
+        ],
+        "Task": [
+          58
+        ],
+        "Decomposition,": [
+          59
+        ],
+        "Plan": [
+          60
+        ],
+        "Selection,": [
+          61
+        ],
+        "External": [
+          62
+        ],
+        "Module,": [
+          63
+        ],
+        "Reflection": [
+          64
+        ],
+        "and": [
+          65,
+          74
+        ],
+        "Memory.": [
+          66
+        ],
+        "Comprehensive": [
+          67
+        ],
+        "analyses": [
+          68
+        ],
+        "are": [
+          69,
+          82
+        ],
+        "conducted": [
+          70
+        ],
+        "for": [
+          71,
+          77
+        ],
+        "each": [
+          72
+        ],
+        "direction,": [
+          73
+        ],
+        "further": [
+          75
+        ],
+        "challenges": [
+          76
+        ],
+        "field": [
+          79
+        ],
+        "research": [
+          81
+        ],
+        "discussed.": [
+          83
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5093884496",
+            "display_name": "Xu Huang",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Huang, Xu",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5109721842",
+            "display_name": "Weiwen Liu",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Liu, Weiwen",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5102717638",
+            "display_name": "Xiaolong Chen",
+            "orcid": "https://orcid.org/0009-0007-2714-6404"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Chen, Xiaolong",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5034212740",
+            "display_name": "Xingmei Wang",
+            "orcid": "https://orcid.org/0009-0008-7821-4638"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Wang, Xingmei",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100688193",
+            "display_name": "Hao Wang",
+            "orcid": "https://orcid.org/0000-0003-2040-4136"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Wang, Hao",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5085254654",
+            "display_name": "Defu Lian",
+            "orcid": "https://orcid.org/0000-0002-3507-9607"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Lian, Defu",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5113114703",
+            "display_name": "Yasheng Wang",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Wang, Yasheng",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5108321555",
+            "display_name": "Ruiming Tang",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Tang, Ruiming",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5048237545",
+            "display_name": "Enhong Chen",
+            "orcid": "https://orcid.org/0000-0002-4835-4102"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Chen, Enhong",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        }
+      ],
+      "doi": "https://doi.org/10.48550/arxiv.2402.02716"
+    },
+    {
+      "id": "https://openalex.org/W4400491795",
+      "display_name": "Enhancing AI Systems with Agentic Workflows Patterns in Large Language Model",
+      "publication_year": 2024,
+      "abstract_inverted_index": {
+        "This": [
+          0
+        ],
+        "paper": [
+          1
+        ],
+        "explores": [
+          2
+        ],
+        "the": [
+          3,
+          10,
+          34,
+          63
+        ],
+        "significant": [
+          4
+        ],
+        "shift": [
+          5
+        ],
+        "towards": [
+          6,
+          108
+        ],
+        "agentic": [
+          7,
+          37,
+          64,
+          93
+        ],
+        "workflows": [
+          8
+        ],
+        "in": [
+          9,
+          47,
+          50
+        ],
+        "application": [
+          11
+        ],
+        "of": [
+          12,
+          36
+        ],
+        "Large": [
+          13
+        ],
+        "Language": [
+          14
+        ],
+        "Models": [
+          15
+        ],
+        "(LLMs),": [
+          16
+        ],
+        "moving": [
+          17
+        ],
+        "away": [
+          18
+        ],
+        "from": [
+          19
+        ],
+        "traditional,": [
+          20
+        ],
+        "linear": [
+          21
+        ],
+        "interactions": [
+          22
+        ],
+        "between": [
+          23
+        ],
+        "users": [
+          24
+        ],
+        "and": [
+          25,
+          44,
+          75,
+          86,
+          99
+        ],
+        "AI.": [
+          26
+        ],
+        "Through": [
+          27
+        ],
+        "a": [
+          28,
+          41,
+          105
+        ],
+        "case": [
+          29
+        ],
+        "study": [
+          30,
+          90
+        ],
+        "analysis,": [
+          31
+        ],
+        "we": [
+          32
+        ],
+        "highlight": [
+          33
+        ],
+        "effectiveness": [
+          35
+        ],
+        "workflows,": [
+          38,
+          94
+        ],
+        "which": [
+          39
+        ],
+        "facilitate": [
+          40
+        ],
+        "more": [
+          42
+        ],
+        "dynamic": [
+          43
+        ],
+        "iterative": [
+          45,
+          98
+        ],
+        "engagement,": [
+          46
+        ],
+        "improving": [
+          48
+        ],
+        "outcomes": [
+          49
+        ],
+        "tasks": [
+          51
+        ],
+        "such": [
+          52
+        ],
+        "as": [
+          53,
+          104
+        ],
+        "question": [
+          54
+        ],
+        "answering,": [
+          55
+        ],
+        "code": [
+          56
+        ],
+        "generation": [
+          57
+        ],
+        "or": [
+          58
+        ],
+        "stock": [
+          59
+        ],
+        "analysis.": [
+          60
+        ],
+        "Central": [
+          61
+        ],
+        "to": [
+          62
+        ],
+        "workflow": [
+          65
+        ],
+        "are": [
+          66,
+          80
+        ],
+        "four": [
+          67
+        ],
+        "foundational": [
+          68
+        ],
+        "design": [
+          69
+        ],
+        "patterns:": [
+          70
+        ],
+        "reflection,": [
+          71
+        ],
+        "planning,": [
+          72
+        ],
+        "multi-agent": [
+          73
+        ],
+        "collaboration,": [
+          74
+        ],
+        "tool": [
+          76
+        ],
+        "utilization.": [
+          77
+        ],
+        "These": [
+          78
+        ],
+        "components": [
+          79
+        ],
+        "crucial": [
+          81,
+          106
+        ],
+        "for": [
+          82
+        ],
+        "boosting": [
+          83
+        ],
+        "LLM": [
+          84
+        ],
+        "productivity": [
+          85
+        ],
+        "enhancing": [
+          87
+        ],
+        "performance.": [
+          88
+        ],
+        "The": [
+          89
+        ],
+        "demonstrates": [
+          91
+        ],
+        "how": [
+          92
+        ],
+        "by": [
+          95
+        ],
+        "promoting": [
+          96
+        ],
+        "an": [
+          97
+        ],
+        "reflective": [
+          100
+        ],
+        "process,": [
+          101
+        ],
+        "can": [
+          102
+        ],
+        "serve": [
+          103
+        ],
+        "step": [
+          107
+        ],
+        "achieving": [
+          109
+        ],
+        "Artificial": [
+          110
+        ],
+        "General": [
+          111
+        ],
+        "Intelligence": [
+          112
+        ],
+        "(AGI).": [
+          113
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5015331614",
+            "display_name": "Aditi Singh",
+            "orcid": "https://orcid.org/0000-0002-0082-8364"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I102607778",
+              "display_name": "Cleveland State University",
+              "ror": "https://ror.org/002tx1f22",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I102607778"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Aditi Singh",
+          "raw_affiliation_strings": [
+            "Cleveland State University,Department of Computer Science"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Cleveland State University,Department of Computer Science",
+              "institution_ids": [
+                "https://openalex.org/I102607778"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5093917766",
+            "display_name": "Abul Ehtesham",
+            "orcid": "https://orcid.org/0009-0001-8849-656X"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Abul Ehtesham",
+          "raw_affiliation_strings": [
+            "The Davey Tree Expert Company"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "The Davey Tree Expert Company",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5104346980",
+            "display_name": "Saket Kumar",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I887054487",
+              "display_name": "MathWorks (United States)",
+              "ror": "https://ror.org/01n8qtk87",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I887054487"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Saket Kumar",
+          "raw_affiliation_strings": [
+            "The Mathworks Inc"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "The Mathworks Inc",
+              "institution_ids": [
+                "https://openalex.org/I887054487"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5019676675",
+            "display_name": "Tala Talaei Khoei",
+            "orcid": "https://orcid.org/0000-0002-7630-9034"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Tala Talaei Khoei",
+          "raw_affiliation_strings": [
+            "Roux Institute at Northeastern University,Khoury College of Computer Science"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Roux Institute at Northeastern University,Khoury College of Computer Science",
+              "institution_ids": []
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1109/aiiot61789.2024.10578990"
+    },
+    {
+      "id": "https://openalex.org/W4396718668",
+      "display_name": "Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents",
+      "publication_year": 2024,
+      "abstract_inverted_index": {
+        "The": [
+          0
+        ],
+        "recent": [
+          1
+        ],
+        "rapid": [
+          2
+        ],
+        "development": [
+          3
+        ],
+        "of": [
+          4,
+          14,
+          68,
+          78,
+          106,
+          120,
+          122,
+          161,
+          175
+        ],
+        "large": [
+          5,
+          104
+        ],
+        "language": [
+          6
+        ],
+        "models": [
+          7
+        ],
+        "(LLMs)": [
+          8
+        ],
+        "has": [
+          9
+        ],
+        "sparked": [
+          10
+        ],
+        "a": [
+          11,
+          32,
+          66,
+          103,
+          172
+        ],
+        "new": [
+          12
+        ],
+        "wave": [
+          13
+        ],
+        "technological": [
+          15
+        ],
+        "revolution": [
+          16
+        ],
+        "in": [
+          17,
+          81,
+          125,
+          134,
+          170
+        ],
+        "medical": [
+          18,
+          144,
+          178
+        ],
+        "artificial": [
+          19
+        ],
+        "intelligence": [
+          20
+        ],
+        "(AI).": [
+          21
+        ],
+        "While": [
+          22
+        ],
+        "LLMs": [
+          23,
+          38
+        ],
+        "are": [
+          24,
+          88,
+          97
+        ],
+        "designed": [
+          25
+        ],
+        "to": [
+          26,
+          59,
+          99,
+          112
+        ],
+        "understand": [
+          27
+        ],
+        "and": [
+          28,
+          52,
+          86,
+          164
+        ],
+        "generate": [
+          29
+        ],
+        "text": [
+          30,
+          46
+        ],
+        "like": [
+          31
+        ],
+        "human,": [
+          33
+        ],
+        "autonomous": [
+          34,
+          90
+        ],
+        "agents": [
+          35,
+          96,
+          108,
+          124,
+          141
+        ],
+        "that": [
+          36,
+          73
+        ],
+        "utilize": [
+          37
+        ],
+        "as": [
+          39,
+          49
+        ],
+        "their": [
+          40,
+          57
+        ],
+        "\"brain\"": [
+          41
+        ],
+        "have": [
+          42,
+          167
+        ],
+        "exhibited": [
+          43
+        ],
+        "capabilities": [
+          44
+        ],
+        "beyond": [
+          45,
+          177
+        ],
+        "processing": [
+          47
+        ],
+        "such": [
+          48
+        ],
+        "planning,": [
+          50
+        ],
+        "reflection,": [
+          51
+        ],
+        "using": [
+          53
+        ],
+        "tools": [
+          54
+        ],
+        "by": [
+          55,
+          101
+        ],
+        "enabling": [
+          56
+        ],
+        "\"bodies\"": [
+          58
+        ],
+        "interact": [
+          60
+        ],
+        "with": [
+          61
+        ],
+        "the": [
+          62,
+          75,
+          93,
+          110,
+          126,
+          135,
+          138,
+          148,
+          168
+        ],
+        "environment.": [
+          63
+        ],
+        "We": [
+          64
+        ],
+        "introduce": [
+          65
+        ],
+        "simulacrum": [
+          67,
+          127,
+          162
+        ],
+        "hospital": [
+          69
+        ],
+        "called": [
+          70
+        ],
+        "Agent": [
+          71
+        ],
+        "Hospital": [
+          72
+        ],
+        "simulates": [
+          74
+        ],
+        "entire": [
+          76
+        ],
+        "process": [
+          77
+        ],
+        "treating": [
+          79,
+          102,
+          118
+        ],
+        "illness,": [
+          80
+        ],
+        "which": [
+          82
+        ],
+        "all": [
+          83
+        ],
+        "patients,": [
+          84
+        ],
+        "nurses,": [
+          85
+        ],
+        "doctors": [
+          87,
+          129
+        ],
+        "LLM-powered": [
+          89
+        ],
+        "agents.": [
+          91
+        ],
+        "Within": [
+          92
+        ],
+        "simulacrum,": [
+          94
+        ],
+        "doctor": [
+          95,
+          140
+        ],
+        "able": [
+          98
+        ],
+        "evolve": [
+          100
+        ],
+        "number": [
+          105
+        ],
+        "patient": [
+          107,
+          123
+        ],
+        "without": [
+          109
+        ],
+        "need": [
+          111
+        ],
+        "label": [
+          113
+        ],
+        "training": [
+          114
+        ],
+        "data": [
+          115
+        ],
+        "manually.": [
+          116
+        ],
+        "After": [
+          117
+        ],
+        "tens": [
+          119
+        ],
+        "thousands": [
+          121
+        ],
+        "(human": [
+          128
+        ],
+        "may": [
+          130
+        ],
+        "take": [
+          131
+        ],
+        "several": [
+          132
+        ],
+        "years": [
+          133
+        ],
+        "real": [
+          136
+        ],
+        "world),": [
+          137
+        ],
+        "evolved": [
+          139
+        ],
+        "outperform": [
+          142
+        ],
+        "state-of-the-art": [
+          143
+        ],
+        "agent": [
+          145,
+          165
+        ],
+        "methods": [
+          146,
+          160
+        ],
+        "on": [
+          147
+        ],
+        "MedQA": [
+          149
+        ],
+        "benchmark": [
+          150
+        ],
+        "comprising": [
+          151
+        ],
+        "US": [
+          152
+        ],
+        "Medical": [
+          153
+        ],
+        "Licensing": [
+          154
+        ],
+        "Examination": [
+          155
+        ],
+        "(USMLE)": [
+          156
+        ],
+        "test": [
+          157
+        ],
+        "questions.": [
+          158
+        ],
+        "Our": [
+          159
+        ],
+        "construction": [
+          163
+        ],
+        "evolution": [
+          166
+        ],
+        "potential": [
+          169
+        ],
+        "benefiting": [
+          171
+        ],
+        "broad": [
+          173
+        ],
+        "range": [
+          174
+        ],
+        "applications": [
+          176
+        ],
+        "AI.": [
+          179
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5013616833",
+            "display_name": "Junkai Li",
+            "orcid": "https://orcid.org/0000-0002-4926-2488"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Li, Junkai",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5113200669",
+            "display_name": "Yunghwei Lai",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Lai, Yunghwei",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100646162",
+            "display_name": "Weitao Li",
+            "orcid": "https://orcid.org/0000-0003-2142-4075"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Li, Weitao",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Ren, Jingyi",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Ren, Jingyi",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5096909093",
+            "display_name": "Meng Zhang",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Zhang, Meng",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5108927121",
+            "display_name": "Xinhui Kang",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Kang, Xinhui",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100358930",
+            "display_name": "Siyu Wang",
+            "orcid": "https://orcid.org/0009-0008-8726-5277"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Wang, Siyu",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Li, Peng",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Li, Peng",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Zhang, Ya-Qin",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Zhang, Ya-Qin",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5101524043",
+            "display_name": "Weizhi Ma",
+            "orcid": "https://orcid.org/0000-0001-5604-7527"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Ma, Weizhi",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5100591758",
+            "display_name": "Yang Liu",
+            "orcid": "https://orcid.org/0009-0002-3303-5018"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Liu, Yang",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        }
+      ],
+      "doi": "https://doi.org/10.48550/arxiv.2405.02957"
+    },
+    {
+      "id": "https://openalex.org/W4414023998",
+      "display_name": "The Rise of Agentic AI: A Review of Definitions, Frameworks, Architectures, Applications, Evaluation Metrics, and Challenges",
+      "publication_year": 2025,
+      "abstract_inverted_index": {
+        "Agentic": [
+          0
+        ],
+        "AI": [
+          1,
+          36,
+          103,
+          131
+        ],
+        "systems": [
+          2,
+          19,
+          37,
+          75,
+          132,
+          199
+        ],
+        "are": [
+          3
+        ],
+        "a": [
+          4,
+          31,
+          176
+        ],
+        "recently": [
+          5
+        ],
+        "emerged": [
+          6
+        ],
+        "and": [
+          7,
+          17,
+          25,
+          44,
+          46,
+          58,
+          72,
+          76,
+          84,
+          94,
+          121,
+          138,
+          147,
+          157,
+          168,
+          181,
+          191,
+          196
+        ],
+        "important": [
+          8
+        ],
+        "approach": [
+          9
+        ],
+        "that": [
+          10,
+          110,
+          200
+        ],
+        "goes": [
+          11
+        ],
+        "beyond": [
+          12
+        ],
+        "traditional": [
+          13
+        ],
+        "AI,": [
+          14,
+          16,
+          55,
+          151
+        ],
+        "generative": [
+          15,
+          54
+        ],
+        "autonomous": [
+          18
+        ],
+        "by": [
+          20,
+          38,
+          47
+        ],
+        "focusing": [
+          21
+        ],
+        "on": [
+          22,
+          69,
+          97
+        ],
+        "autonomy,": [
+          23
+        ],
+        "adaptability,": [
+          24
+        ],
+        "goal-driven": [
+          26
+        ],
+        "reasoning.": [
+          27
+        ],
+        "This": [
+          28,
+          140
+        ],
+        "study": [
+          29,
+          141
+        ],
+        "provides": [
+          30
+        ],
+        "clear": [
+          32
+        ],
+        "review": [
+          33
+        ],
+        "of": [
+          34,
+          129,
+          149
+        ],
+        "agentic": [
+          35,
+          74,
+          102,
+          130,
+          150,
+          183
+        ],
+        "bringing": [
+          39
+        ],
+        "together": [
+          40
+        ],
+        "their": [
+          41,
+          98
+        ],
+        "definitions,": [
+          42
+        ],
+        "frameworks,": [
+          43
+        ],
+        "architectures,": [
+          45,
+          167
+        ],
+        "comparing": [
+          48
+        ],
+        "them": [
+          49
+        ],
+        "with": [
+          50,
+          125
+        ],
+        "related": [
+          51
+        ],
+        "areas": [
+          52
+        ],
+        "like": [
+          53
+        ],
+        "autonomic": [
+          56
+        ],
+        "computing,": [
+          57
+        ],
+        "multi-agent": [
+          59
+        ],
+        "systems.": [
+          60
+        ],
+        "To": [
+          61
+        ],
+        "do": [
+          62
+        ],
+        "this,": [
+          63
+        ],
+        "we": [
+          64,
+          88
+        ],
+        "reviewed": [
+          65
+        ],
+        "143": [
+          66
+        ],
+        "primary": [
+          67
+        ],
+        "studies": [
+          68
+        ],
+        "current": [
+          70
+        ],
+        "LLM-based": [
+          71
+        ],
+        "non-LLM-driven": [
+          73
+        ],
+        "examined": [
+          77
+        ],
+        "how": [
+          78
+        ],
+        "they": [
+          79
+        ],
+        "support": [
+          80,
+          201
+        ],
+        "planning,": [
+          81
+        ],
+        "memory,": [
+          82
+        ],
+        "reflection,": [
+          83
+        ],
+        "goal": [
+          85
+        ],
+        "pursuit.": [
+          86
+        ],
+        "Furthermore,": [
+          87
+        ],
+        "classified": [
+          89,
+          118
+        ],
+        "architectural": [
+          90
+        ],
+        "models,": [
+          91
+        ],
+        "input–output": [
+          92
+        ],
+        "mechanisms,": [
+          93
+        ],
+        "applications": [
+          95
+        ],
+        "based": [
+          96
+        ],
+        "task": [
+          99
+        ],
+        "domains": [
+          100
+        ],
+        "where": [
+          101
+        ],
+        "is": [
+          104
+        ],
+        "applied,": [
+          105
+        ],
+        "supported": [
+          106
+        ],
+        "using": [
+          107
+        ],
+        "tabular": [
+          108
+        ],
+        "summaries": [
+          109
+        ],
+        "highlight": [
+          111
+        ],
+        "real-world": [
+          112
+        ],
+        "case": [
+          113
+        ],
+        "studies.": [
+          114
+        ],
+        "Evaluation": [
+          115
+        ],
+        "metrics": [
+          116,
+          170
+        ],
+        "were": [
+          117
+        ],
+        "as": [
+          119
+        ],
+        "qualitative": [
+          120
+        ],
+        "quantitative": [
+          122
+        ],
+        "measures,": [
+          123
+        ],
+        "along": [
+          124
+        ],
+        "available": [
+          126,
+          165
+        ],
+        "testing": [
+          127
+        ],
+        "methods": [
+          128
+        ],
+        "to": [
+          133,
+          188
+        ],
+        "check": [
+          134
+        ],
+        "the": [
+          135,
+          144,
+          162
+        ],
+        "system’s": [
+          136
+        ],
+        "performance": [
+          137
+        ],
+        "reliability.": [
+          139
+        ],
+        "also": [
+          142
+        ],
+        "highlights": [
+          143
+        ],
+        "main": [
+          145
+        ],
+        "challenges": [
+          146
+        ],
+        "limitations": [
+          148
+        ],
+        "covering": [
+          152
+        ],
+        "technical,": [
+          153
+        ],
+        "architectural,": [
+          154
+        ],
+        "coordination,": [
+          155
+        ],
+        "ethical,": [
+          156
+        ],
+        "security": [
+          158
+        ],
+        "issues.": [
+          159
+        ],
+        "We": [
+          160
+        ],
+        "organized": [
+          161
+        ],
+        "conceptual": [
+          163
+        ],
+        "foundations,": [
+          164
+        ],
+        "tools,": [
+          166
+        ],
+        "evaluation": [
+          169
+        ],
+        "in": [
+          171,
+          204
+        ],
+        "this": [
+          172
+        ],
+        "research,": [
+          173
+        ],
+        "which": [
+          174
+        ],
+        "defines": [
+          175
+        ],
+        "structured": [
+          177
+        ],
+        "foundation": [
+          178
+        ],
+        "for": [
+          179
+        ],
+        "understanding": [
+          180
+        ],
+        "advancing": [
+          182
+        ],
+        "AI.": [
+          184
+        ],
+        "These": [
+          185
+        ],
+        "findings": [
+          186
+        ],
+        "aim": [
+          187
+        ],
+        "help": [
+          189
+        ],
+        "researchers": [
+          190
+        ],
+        "developers": [
+          192
+        ],
+        "build": [
+          193
+        ],
+        "better,": [
+          194
+        ],
+        "clearer,": [
+          195
+        ],
+        "more": [
+          197
+        ],
+        "adaptable": [
+          198
+        ],
+        "responsible": [
+          202
+        ],
+        "deployment": [
+          203
+        ],
+        "different": [
+          205
+        ],
+        "domains.": [
+          206
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5047345391",
+            "display_name": "Ajay Bandi",
+            "orcid": "https://orcid.org/0000-0003-2434-736X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I11123151",
+              "display_name": "Northwest Missouri State University",
+              "ror": "https://ror.org/05maved80",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I11123151"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Ajay Bandi",
+          "raw_affiliation_strings": [
+            "School of Computer Science and Information Systems, Northwest Missouri State University, Maryville, MO 64468, USA"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-2434-736X",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science and Information Systems, Northwest Missouri State University, Maryville, MO 64468, USA",
+              "institution_ids": [
+                "https://openalex.org/I11123151"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5119552189",
+            "display_name": "Bhavani Kongari",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I11123151",
+              "display_name": "Northwest Missouri State University",
+              "ror": "https://ror.org/05maved80",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I11123151"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Bhavani Kongari",
+          "raw_affiliation_strings": [
+            "School of Computer Science and Information Systems, Northwest Missouri State University, Maryville, MO 64468, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science and Information Systems, Northwest Missouri State University, Maryville, MO 64468, USA",
+              "institution_ids": [
+                "https://openalex.org/I11123151"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5119552190",
+            "display_name": "Roshini Naguru",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I11123151",
+              "display_name": "Northwest Missouri State University",
+              "ror": "https://ror.org/05maved80",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I11123151"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Roshini Naguru",
+          "raw_affiliation_strings": [
+            "School of Computer Science and Information Systems, Northwest Missouri State University, Maryville, MO 64468, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science and Information Systems, Northwest Missouri State University, Maryville, MO 64468, USA",
+              "institution_ids": [
+                "https://openalex.org/I11123151"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5119552191",
+            "display_name": "Sahitya Pasnoor",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I122266389",
+              "display_name": "University of Nebraska at Omaha",
+              "ror": "https://ror.org/04yrkc140",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I122266389"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Sahitya Pasnoor",
+          "raw_affiliation_strings": [
+            "Independent Researcher, Omaha, NE 68022, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Independent Researcher, Omaha, NE 68022, USA",
+              "institution_ids": [
+                "https://openalex.org/I122266389"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5119552192",
+            "display_name": "Sri Vidya Vilipala",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I11123151",
+              "display_name": "Northwest Missouri State University",
+              "ror": "https://ror.org/05maved80",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I11123151"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Sri Vidya Vilipala",
+          "raw_affiliation_strings": [
+            "School of Computer Science and Information Systems, Northwest Missouri State University, Maryville, MO 64468, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science and Information Systems, Northwest Missouri State University, Maryville, MO 64468, USA",
+              "institution_ids": [
+                "https://openalex.org/I11123151"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.3390/fi17090404"
+    }
+  ],
+  "notes": [
+    {
+      "id": "https://openalex.org/W4401628481",
+      "doi": "https://doi.org/10.1109/mwc.016.2300600",
+      "title": "Large Language Model Enhanced Multi-Agent Systems for 6G Communications",
+      "year": 2024,
+      "authors": [
+        "Feibo Jiang",
+        "Yubo Peng",
+        "Li Dong",
+        "Kezhi Wang",
+        "Kun Yang"
+      ],
+      "abstract": "The rapid development of the large language model (LLM) presents huge opportunities for 6G communications – for example, network optimization and management – by allowing users to input task requirements to LLMs with natural language. However, directly applying native LLMs in 6G encounters various challenges, such as a lack of communication data and knowledge, and limited logical reasoning, evaluation, and refinement abilities. Integrating LLMs with the capabilities of retrieval, planning, memory, evaluation, and reflection in agents can greatly enhance the potential of LLMs for 6G communications. To this end, we propose CommLLM, a multi-agent system with customized communication knowledge and tools for solving communication-related tasks using natural language. This system consists of three components: multi-agent data retrieval (MDR), which employs the condensate and inference agents to refine and summarize communication knowledge from the knowledge base, expanding the knowledge boundaries of LLMs in 6G communications; multi-agent collaborative planning (MCP), which utilizes multiple planning agents to generate feasible solutions for the communication-re-lated task from different perspectives based on the retrieved knowledge; and multi-agent evaluation and reflection (MER), which utilizes the evaluation agent to assess the solutions, and applies the reflection agent and refinement agent to provide improvement suggestions for current solutions. Finally, we validate the effectiveness of the proposed multi-agent system by designing a semantic communication system as a case s"
+    },
+    {
+      "id": "https://openalex.org/W4391620956",
+      "doi": "https://doi.org/10.48550/arxiv.2402.02716",
+      "title": "Understanding the planning of LLM agents: A survey",
+      "year": 2024,
+      "authors": [
+        "Xu Huang",
+        "Weiwen Liu",
+        "Xiaolong Chen",
+        "Xingmei Wang",
+        "Hao Wang"
+      ],
+      "abstract": "As Large Language Models (LLMs) have shown significant intelligence, the progress to leverage LLMs as planning modules of autonomous agents has attracted more attention. This survey provides the first systematic view of LLM-based agents planning, covering recent works aiming to improve planning ability. We provide a taxonomy of existing works on LLM-Agent planning, which can be categorized into Task Decomposition, Plan Selection, External Module, Reflection and Memory. Comprehensive analyses are conducted for each direction, and further challenges for the field of research are discussed."
+    },
+    {
+      "id": "https://openalex.org/W4400491795",
+      "doi": "https://doi.org/10.1109/aiiot61789.2024.10578990",
+      "title": "Enhancing AI Systems with Agentic Workflows Patterns in Large Language Model",
+      "year": 2024,
+      "authors": [
+        "Aditi Singh",
+        "Abul Ehtesham",
+        "Saket Kumar",
+        "Tala Talaei Khoei"
+      ],
+      "abstract": "This paper explores the significant shift towards agentic workflows in the application of Large Language Models (LLMs), moving away from traditional, linear interactions between users and AI. Through a case study analysis, we highlight the effectiveness of agentic workflows, which facilitate a more dynamic and iterative engagement, in improving outcomes in tasks such as question answering, code generation or stock analysis. Central to the agentic workflow are four foundational design patterns: reflection, planning, multi-agent collaboration, and tool utilization. These components are crucial for boosting LLM productivity and enhancing performance. The study demonstrates how agentic workflows, by promoting an iterative and reflective process, can serve as a crucial step towards achieving Artificial General Intelligence (AGI)."
+    },
+    {
+      "id": "https://openalex.org/W4396718668",
+      "doi": "https://doi.org/10.48550/arxiv.2405.02957",
+      "title": "Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents",
+      "year": 2024,
+      "authors": [
+        "Junkai Li",
+        "Yunghwei Lai",
+        "Weitao Li",
+        "Ren, Jingyi",
+        "Meng Zhang"
+      ],
+      "abstract": "The recent rapid development of large language models (LLMs) has sparked a new wave of technological revolution in medical artificial intelligence (AI). While LLMs are designed to understand and generate text like a human, autonomous agents that utilize LLMs as their \"brain\" have exhibited capabilities beyond text processing such as planning, reflection, and using tools by enabling their \"bodies\" to interact with the environment. We introduce a simulacrum of hospital called Agent Hospital that simulates the entire process of treating illness, in which all patients, nurses, and doctors are LLM-powered autonomous agents. Within the simulacrum, doctor agents are able to evolve by treating a large number of patient agents without the need to label training data manually. After treating tens of thousands of patient agents in the simulacrum (human doctors may take several years in the real world), the evolved doctor agents outperform state-of-the-art medical agent methods on the MedQA benchmark comprising US Medical Licensing Examination (USMLE) test questions. Our methods of simulacrum construction and agent evolution have the potential in benefiting a broad range of applications beyond medical AI."
+    },
+    {
+      "id": "https://openalex.org/W4414023998",
+      "doi": "https://doi.org/10.3390/fi17090404",
+      "title": "The Rise of Agentic AI: A Review of Definitions, Frameworks, Architectures, Applications, Evaluation Metrics, and Challenges",
+      "year": 2025,
+      "authors": [
+        "Ajay Bandi",
+        "Bhavani Kongari",
+        "Roshini Naguru",
+        "Sahitya Pasnoor",
+        "Sri Vidya Vilipala"
+      ],
+      "abstract": "Agentic AI systems are a recently emerged and important approach that goes beyond traditional AI, generative AI, and autonomous systems by focusing on autonomy, adaptability, and goal-driven reasoning. This study provides a clear review of agentic AI systems by bringing together their definitions, frameworks, and architectures, and by comparing them with related areas like generative AI, autonomic computing, and multi-agent systems. To do this, we reviewed 143 primary studies on current LLM-based and non-LLM-driven agentic systems and examined how they support planning, memory, reflection, and goal pursuit. Furthermore, we classified architectural models, input–output mechanisms, and applications based on their task domains where agentic AI is applied, supported using tabular summaries that highlight real-world case studies. Evaluation metrics were classified as qualitative and quantitative measures, along with available testing methods of agentic AI systems to check the system’s performance and reliability. This study also highlights the main challenges and limitations of agentic AI, covering technical, architectural, coordination, ethical, and security issues. We organized the conceptual foundations, available tools, architectures, and evaluation metrics in this research, which defines a structured foundation for understanding and advancing agentic AI. These findings aim to help researchers and developers build better, clearer, and more adaptable systems that support responsible deployment in different domains."
+    }
+  ],
+  "final_answer": "Определение темы\nPlanning and reflection in LLM agents — это набор методов и механизмов, с помощью которых большие языковые модели (LLM), встроенные в автономные агенты или агентные системы, формируют планы действий (planning) и выполняют внутреннюю оценку, самокоррекцию или доработку своих решений (reflection). В представленных материалах reflection рассматривается как форма тестового времени вычислений (test-time compute): дополнительные итерации вывода или обмена между компонентами (например, многими агентами или внутренними модулями), направленные на уменьшение ошибок, повышение надежности и интерпретируемости рассуждений. В контексте «feedback neural networks» это коррелирует с идеей верхне-нижней (top-down / bottom-up) обратной связи внутри архитектуры для корректировки входов или промежуточных представлений на основе выходов.\n\nОсновные подходы\n- Task decomposition (декомпозиция задачи): разбивка сложной задачи на подзадачи, которые выполняются поочередно или параллельно (упомянуто в обзоре по планированию LLM-агентов). Позволяет упростить планирование и повысить модульность.\n- Plan selection (выбор плана): генерация нескольких возможных планов и выбор лучшего при помощи эвристик или оценочных модулей.\n- External modules / tools (внешние модули и инструменты): интеграция с инструментами извлечения памяти, баз знаний, вычислительных модулей и т.п., которые поддерживают как планирование, так и отражение (reflection).\n- Reflection / evaluation (рефлексия и оценка): специальные агенты или модули оценивают текущие решения, предлагают улучшения и инициируют доработку плана (вариант test-time compute).\n- Multi-agent collaboration (мультиагентные схемы): использование нескольких агентов (планирующих, конденсирующих, рефлексирующих и т.д.), которые взаимодействуют друг с другом для создания, оценки и улучшения планов. Часто включает итеративный обмен иерархической информацией (bottom-up/top-down).\n- Memory (память): хранение и извлечение релевантной информации о предыдущих итерациях, опыте или внешних знаниях для влияния на процесс планирования и рефлексии.\n\n3–5 ключевых работ (с годами и вкладом) — на основании переданных источников\n1) Huang et al., 2024 — \"Understanding the planning of LLM agents: A survey\" (arXiv 2402.02716)\n   - Вклад: систематический обзор методов планирования в LLM-агентах; даёт таксономию направлений (Task Decomposition, Plan Selection, External Module, Reflection, Memory) и аналитические сравнения по каждому направлению. Является отправной точкой для понимания ландшафта исследований по планированию.\n\n2) Jiang et al., 2024 — \"Large Language Model Enhanced Multi-Agent Systems for 6G Communications\" (DOI: 10.1109/mwc.016.2300600)\n   - Вклад: практическая архитектура CommLLM для задач 6G, объединяющая многомодульный поиск/конденсацию знаний (MDR), многоплановое генерирование решений (MCP) и модуль оценки/рефлексии (MER). Демонстрирует, как интеграция планирования, рефлексии и вспомогательных агентов улучшает прикладные решения в коммуникациях.\n\n3) Singh et al., 2024 — \"Enhancing AI Systems with Agentic Workflows Patterns in Large Language Model\" (DOI: 10.1109/aiiot61789.2024.10578990)\n   - Вклад: выделение четырёх ключевых паттернов agentic workflows — reflection, planning, multi-agent collaboration, tool utilization. Аргументирует, что итеративные и рефлексивные рабочие процессы повышают продуктивность LLM и способствуют более надёжным результатам в задачах QA, генерации кода и т.д.\n\n4) Li et al., 2024 — \"Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents\" (arXiv 2405.02957)\n   - Вклад: кейс-стадия симуляции (Agent Hospital), где LLM-агенты с возможностями планирования, рефлексии и использования инструментов обучаются и эволюционируют в большом симулированном окружении; показывает прикладную силу итеративного лечения/рефлексии для повышения качества медицинных решений и улучшения показателей на MedQA.\n\n5) Bandi et al., 2025 — \"The Rise of Agentic AI: A Review...\" (fi17090404)\n   - Вклад: широкий обзор agentic AI (включая LLM-агенты), классификация архитектур, механизмов планирования, памяти и рефлексии; обсуждение метрик оценки и ключевых проблем (технических, этических, координативных). Полезен для понимания общих требований и ограничений агентных систем, поддерживающих планирование и рефлексию.\n\nВозможные приложения\n- Сетевые и коммуникационные системы (6G): оптимизация, управление, развертывание сетей с учётом знаний и итеративной коррект",
+  "status": "finished",
+  "stop_reason": "final_answer_generated",
+  "tool_errors": 0,
+  "evaluator_result": {
+    "correctness": 5,
+    "groundedness": 5,
+    "completeness": 4,
+    "coverage_of_required_fields": 5,
+    "source_consistency": 5,
+    "comment": "Ответ корректно и ясно описывает тему, основные подходы и приводит релевантные работы с годами и вкладами, согласуясь с перечисленными источниками. Единственный небольшой недостаток — раздел \"Возможные приложения\" обрывается и не завершён; из-за этого полнота по материалу чуть ниже максимальной. В остальном все ключевые поля и ссылки согласованы с источниками.",
+    "rubric": 4.8
+  }
+}

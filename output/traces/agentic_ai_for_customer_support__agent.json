@@ -1,0 +1,1503 @@
+{
+  "topic": "Agentic AI for customer support",
+  "objective": "Подготовить структурированный научно-аналитический обзор темы",
+  "step_id": 5,
+  "history": [
+    {
+      "step_id": 0,
+      "action": "search_wikipedia",
+      "payload": {
+        "topic": "Agentic AI for customer support"
+      },
+      "result": "In the context of generative artificial intelligence, AI agents are a class of intelligent agents distinguished by their ability to operate autonomously in complex environments. Agentic AI tools prioritize decision-making over content creation and do not require continuous oversight.",
+      "n_sources": 0,
+      "n_notes": 0,
+      "next_reason": "need general context before publication search"
+    },
+    {
+      "step_id": 1,
+      "action": "search_openalex",
+      "payload": {
+        "query": "Agentic AI for customer support",
+        "per_page": 5
+      },
+      "result": "found=5",
+      "n_sources": 5,
+      "n_notes": 0,
+      "next_reason": "extract notes from returned publications"
+    },
+    {
+      "step_id": 2,
+      "action": "extract_notes",
+      "payload": {
+        "n_sources": 5,
+        "top_k": 5
+      },
+      "result": "notes_prepared=5",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "generate final answer from context and notes"
+    },
+    {
+      "step_id": 3,
+      "action": "generate_final_answer",
+      "payload": {
+        "topic": "Agentic AI for customer support"
+      },
+      "result": "Определение темы\nAgentic AI for customer support — класс систем генеративного ИИ, представляющий собой автономных «агентов», способных принимать решения и выполнять действия в сложной среде поддержки клиентов без постоянного надзора человека. В контексте рассматриваемых источников акцент делается на инструментах, которые не просто генерируют текст (content creation), а выполняют агентские функции: выбирают стратегию взаимодействия, предлагают решения, управляют диалогом и в ряде случаев способст",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "finish or run evaluator depending on configuration"
+    },
+    {
+      "step_id": 4,
+      "action": "finish",
+      "payload": {
+        "status": "finished",
+        "stop_reason": "final_answer_generated"
+      },
+      "result": "final_answer_generated",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "stop criterion reached"
+    }
+  ],
+  "sources": [
+    {
+      "id": "https://openalex.org/W4407142724",
+      "display_name": "Generative AI at Work",
+      "publication_year": 2025,
+      "abstract_inverted_index": {
+        "Abstract": [
+          0
+        ],
+        "We": [
+          1,
+          79
+        ],
+        "study": [
+          2
+        ],
+        "the": [
+          3,
+          55,
+          63,
+          108,
+          127,
+          142
+        ],
+        "staggered": [
+          4
+        ],
+        "introduction": [
+          5
+        ],
+        "of": [
+          6,
+          59,
+          144
+        ],
+        "a": [
+          7,
+          161
+        ],
+        "generative": [
+          8
+        ],
+        "AI–based": [
+          9
+        ],
+        "conversational": [
+          10
+        ],
+        "assistant": [
+          11
+        ],
+        "using": [
+          12
+        ],
+        "data": [
+          13
+        ],
+        "from": [
+          14,
+          110
+        ],
+        "5,172": [
+          15
+        ],
+        "customer-support": [
+          16
+        ],
+        "agents.": [
+          17,
+          47,
+          96
+        ],
+        "Access": [
+          18
+        ],
+        "to": [
+          19,
+          156,
+          158,
+          160
+        ],
+        "AI": [
+          20,
+          84,
+          98,
+          111,
+          139
+        ],
+        "assistance": [
+          21,
+          85,
+          140
+        ],
+        "increases": [
+          22
+        ],
+        "worker": [
+          23,
+          87
+        ],
+        "productivity,": [
+          24
+        ],
+        "as": [
+          25
+        ],
+        "measured": [
+          26
+        ],
+        "by": [
+          27,
+          32
+        ],
+        "issues": [
+          28
+        ],
+        "resolved": [
+          29
+        ],
+        "per": [
+          30
+        ],
+        "hour,": [
+          31
+        ],
+        "15%": [
+          33
+        ],
+        "on": [
+          34
+        ],
+        "average,": [
+          35
+        ],
+        "with": [
+          36,
+          101
+        ],
+        "substantial": [
+          37
+        ],
+        "heterogeneity": [
+          38
+        ],
+        "across": [
+          39,
+          45
+        ],
+        "workers.": [
+          40
+        ],
+        "The": [
+          41
+        ],
+        "effects": [
+          42
+        ],
+        "vary": [
+          43
+        ],
+        "significantly": [
+          44
+        ],
+        "different": [
+          46
+        ],
+        "Less": [
+          48
+        ],
+        "experienced": [
+          49,
+          65
+        ],
+        "and": [
+          50,
+          57,
+          66,
+          74,
+          89,
+          153
+        ],
+        "lower-skilled": [
+          51
+        ],
+        "workers": [
+          52,
+          68
+        ],
+        "improve": [
+          53,
+          100
+        ],
+        "both": [
+          54
+        ],
+        "speed": [
+          56,
+          73
+        ],
+        "quality": [
+          58
+        ],
+        "their": [
+          60
+        ],
+        "output,": [
+          61
+        ],
+        "while": [
+          62
+        ],
+        "most": [
+          64
+        ],
+        "highest-skilled": [
+          67
+        ],
+        "see": [
+          69
+        ],
+        "small": [
+          70,
+          75
+        ],
+        "gains": [
+          71,
+          109
+        ],
+        "in": [
+          72,
+          77
+        ],
+        "declines": [
+          76
+        ],
+        "quality.": [
+          78
+        ],
+        "also": [
+          80
+        ],
+        "find": [
+          81,
+          106
+        ],
+        "evidence": [
+          82,
+          137
+        ],
+        "that": [
+          83,
+          107,
+          138
+        ],
+        "facilitates": [
+          86
+        ],
+        "learning": [
+          88
+        ],
+        "improves": [
+          90,
+          141
+        ],
+        "English": [
+          91
+        ],
+        "fluency,": [
+          92
+        ],
+        "particularly": [
+          93
+        ],
+        "among": [
+          94
+        ],
+        "international": [
+          95
+        ],
+        "While": [
+          97
+        ],
+        "systems": [
+          99
+        ],
+        "more": [
+          102,
+          151
+        ],
+        "training": [
+          103,
+          132
+        ],
+        "data,": [
+          104
+        ],
+        "we": [
+          105,
+          135
+        ],
+        "adoption": [
+          112
+        ],
+        "are": [
+          113,
+          150
+        ],
+        "largest": [
+          114
+        ],
+        "for": [
+          115
+        ],
+        "moderately": [
+          116
+        ],
+        "rare": [
+          117
+        ],
+        "problems,": [
+          118
+        ],
+        "where": [
+          119
+        ],
+        "human": [
+          120
+        ],
+        "agents": [
+          121
+        ],
+        "have": [
+          122
+        ],
+        "less": [
+          123,
+          154
+        ],
+        "baseline": [
+          124
+        ],
+        "experience": [
+          125,
+          143
+        ],
+        "but": [
+          126
+        ],
+        "system": [
+          128
+        ],
+        "still": [
+          129
+        ],
+        "has": [
+          130
+        ],
+        "adequate": [
+          131
+        ],
+        "data.": [
+          133
+        ],
+        "Finally,": [
+          134
+        ],
+        "provide": [
+          136
+        ],
+        "work": [
+          145
+        ],
+        "along": [
+          146
+        ],
+        "several": [
+          147
+        ],
+        "dimensions:": [
+          148
+        ],
+        "customers": [
+          149
+        ],
+        "polite": [
+          152
+        ],
+        "likely": [
+          155
+        ],
+        "ask": [
+          157
+        ],
+        "speak": [
+          159
+        ],
+        "manager.": [
+          162
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5038255653",
+            "display_name": "Erik Brynjolfsson",
+            "orcid": "https://orcid.org/0000-0002-8031-6990"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1321305853",
+              "display_name": "National Bureau of Economic Research",
+              "ror": "https://ror.org/04grmx538",
+              "country_code": "US",
+              "type": "nonprofit",
+              "lineage": [
+                "https://openalex.org/I1321305853"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I97018004",
+              "display_name": "Stanford University",
+              "ror": "https://ror.org/00f54p054",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Erik Brynjolfsson",
+          "raw_affiliation_strings": [
+            "Stanford University and National Bureau of Economic Research ,",
+            "Stanford University and National Bureau of Economic Research, United States"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Stanford University and National Bureau of Economic Research ,",
+              "institution_ids": [
+                "https://openalex.org/I1321305853",
+                "https://openalex.org/I97018004"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Stanford University and National Bureau of Economic Research, United States",
+              "institution_ids": [
+                "https://openalex.org/I1321305853",
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5026868319",
+            "display_name": "Danielle Li",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I63966007",
+              "display_name": "Massachusetts Institute of Technology",
+              "ror": "https://ror.org/042nb2s44",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I63966007"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I1321305853",
+              "display_name": "National Bureau of Economic Research",
+              "ror": "https://ror.org/04grmx538",
+              "country_code": "US",
+              "type": "nonprofit",
+              "lineage": [
+                "https://openalex.org/I1321305853"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Danielle Li",
+          "raw_affiliation_strings": [
+            "Massachusetts Institute of Technology and National Bureau of Economic Research ,",
+            "Massachusetts Institute of Technology and National Bureau of Economic Research, United States"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Massachusetts Institute of Technology and National Bureau of Economic Research ,",
+              "institution_ids": [
+                "https://openalex.org/I1321305853"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Massachusetts Institute of Technology and National Bureau of Economic Research, United States",
+              "institution_ids": [
+                "https://openalex.org/I1321305853",
+                "https://openalex.org/I63966007"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5088662762",
+            "display_name": "Lindsey Raymond",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I63966007",
+              "display_name": "Massachusetts Institute of Technology",
+              "ror": "https://ror.org/042nb2s44",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I63966007"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Lindsey Raymond",
+          "raw_affiliation_strings": [
+            "Massachusetts Institute of Technology ,",
+            "Massachusetts Institute of Technology, United States"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Massachusetts Institute of Technology ,",
+              "institution_ids": [
+                "https://openalex.org/I63966007"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Massachusetts Institute of Technology, United States",
+              "institution_ids": [
+                "https://openalex.org/I63966007"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1093/qje/qjae044"
+    },
+    {
+      "id": "https://openalex.org/W4411768117",
+      "display_name": "Leveraging NLP for Automated Customer Support with Conversational AI Agents",
+      "publication_year": 2024,
+      "abstract_inverted_index": null,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5118685745",
+            "display_name": "Antony Satya Vivek Vardhan Akisetty",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Antony Satya Vivek Vardhan Akisetty",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Rakesh Jena",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Rakesh Jena",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5118685746",
+            "display_name": "Rajas Paresh Kshirsagar",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Rajas Paresh Kshirsagar",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5099021208",
+            "display_name": "Om Goel",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Om Goel",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5075344903",
+            "display_name": "Arpit Jain",
+            "orcid": "https://orcid.org/0000-0003-2325-5893"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Arpit Jain",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5114216210",
+            "display_name": "Punit Goel",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Punit Goel",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        }
+      ],
+      "doi": "https://doi.org/10.63345/ijrmeet.org.v12.i5.2"
+    },
+    {
+      "id": "https://openalex.org/W3195427077",
+      "display_name": "AI-chatbots on the services frontline addressing the challenges and opportunities of agency",
+      "publication_year": 2021,
+      "abstract_inverted_index": null,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5009953703",
+            "display_name": "Terrence Chong",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I31746571",
+              "display_name": "UNSW Sydney",
+              "ror": "https://ror.org/03r8z3t63",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I31746571"
+              ]
+            }
+          ],
+          "countries": [
+            "AU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Terrence Chong",
+          "raw_affiliation_strings": [
+            "School of Marketing, UNSW Business School, UNSW Sydney, Sydney, 2052, Australia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Marketing, UNSW Business School, UNSW Sydney, Sydney, 2052, Australia",
+              "institution_ids": [
+                "https://openalex.org/I31746571"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5051074190",
+            "display_name": "Ting Yu",
+            "orcid": "https://orcid.org/0000-0003-2132-5499"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I31746571",
+              "display_name": "UNSW Sydney",
+              "ror": "https://ror.org/03r8z3t63",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I31746571"
+              ]
+            }
+          ],
+          "countries": [
+            "AU"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ting Yu",
+          "raw_affiliation_strings": [
+            "School of Marketing, UNSW Business School, UNSW Sydney, Sydney, 2052, Australia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Marketing, UNSW Business School, UNSW Sydney, Sydney, 2052, Australia",
+              "institution_ids": [
+                "https://openalex.org/I31746571"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5102950446",
+            "display_name": "Debbie Keeling",
+            "orcid": "https://orcid.org/0000-0003-4998-5675"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I162608824",
+              "display_name": "University of Sussex",
+              "ror": "https://ror.org/00ayhx656",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I162608824"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Debbie Isobel Keeling",
+          "raw_affiliation_strings": [
+            "University of Sussex Business School, University of Sussex, Falmer Campus, Brighton, BN1 9SL, UK"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-4998-5675",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Sussex Business School, University of Sussex, Falmer Campus, Brighton, BN1 9SL, UK",
+              "institution_ids": [
+                "https://openalex.org/I162608824"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5110291306",
+            "display_name": "Ko de Ruyter",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I183935753",
+              "display_name": "King's College London",
+              "ror": "https://ror.org/0220mzb33",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I183935753"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I31746571",
+              "display_name": "UNSW Sydney",
+              "ror": "https://ror.org/03r8z3t63",
+              "country_code": "AU",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I31746571"
+              ]
+            }
+          ],
+          "countries": [
+            "AU",
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ko de Ruyter",
+          "raw_affiliation_strings": [
+            "King's Business School, King's College London, Bush House, 30 Aldwych, London, WC2B 4BG, UK",
+            "School of Marketing, UNSW Business School, UNSW Sydney, Sydney, 2052, Australia"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "King's Business School, King's College London, Bush House, 30 Aldwych, London, WC2B 4BG, UK",
+              "institution_ids": [
+                "https://openalex.org/I183935753"
+              ]
+            },
+            {
+              "raw_affiliation_string": "School of Marketing, UNSW Business School, UNSW Sydney, Sydney, 2052, Australia",
+              "institution_ids": [
+                "https://openalex.org/I31746571"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1016/j.jretconser.2021.102735"
+    },
+    {
+      "id": "https://openalex.org/W3081095512",
+      "display_name": "Machine learning and AI in marketing – Connecting computing power to human insights",
+      "publication_year": 2020,
+      "abstract_inverted_index": null,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5102409436",
+            "display_name": "Liye Ma",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I66946132",
+              "display_name": "University of Maryland, College Park",
+              "ror": "https://ror.org/047s2c258",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I66946132"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Liye Ma",
+          "raw_affiliation_strings": [
+            "Robert H. Smith School of Business of University of Maryland, College Park, United States of America"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Robert H. Smith School of Business of University of Maryland, College Park, United States of America",
+              "institution_ids": [
+                "https://openalex.org/I66946132"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5112257801",
+            "display_name": "Baohong Sun",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Baohong Sun",
+          "raw_affiliation_strings": [
+            "Cheung Kong Graduate School of Business Americas, New York, United States of America"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Cheung Kong Graduate School of Business Americas, New York, United States of America",
+              "institution_ids": []
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1016/j.ijresmar.2020.04.005"
+    },
+    {
+      "id": "https://openalex.org/W4390051025",
+      "display_name": "The Caring Machine: Feeling AI for Customer Care",
+      "publication_year": 2023,
+      "abstract_inverted_index": {
+        "Customer": [
+          0
+        ],
+        "care": [
+          1,
+          35,
+          57
+        ],
+        "is": [
+          2
+        ],
+        "important": [
+          3
+        ],
+        "for": [
+          4,
+          30,
+          33,
+          79,
+          128,
+          171
+        ],
+        "its": [
+          5
+        ],
+        "role": [
+          6,
+          11
+        ],
+        "in": [
+          7,
+          36,
+          46
+        ],
+        "relationship": [
+          8
+        ],
+        "building.": [
+          9
+        ],
+        "This": [
+          10
+        ],
+        "has": [
+          12
+        ],
+        "traditionally": [
+          13
+        ],
+        "been": [
+          14
+        ],
+        "performed": [
+          15
+        ],
+        "by": [
+          16
+        ],
+        "human": [
+          17
+        ],
+        "customer": [
+          18,
+          34,
+          56,
+          177,
+          181
+        ],
+        "agents;": [
+          19
+        ],
+        "however,": [
+          20
+        ],
+        "the": [
+          21,
+          43,
+          71,
+          82,
+          104,
+          110,
+          113,
+          132
+        ],
+        "emergence": [
+          22
+        ],
+        "of": [
+          23,
+          73,
+          81,
+          95,
+          108,
+          125
+        ],
+        "interactive": [
+          24
+        ],
+        "generative": [
+          25
+        ],
+        "AI": [
+          26,
+          32
+        ],
+        "(GenAI)": [
+          27
+        ],
+        "shows": [
+          28
+        ],
+        "potential": [
+          29
+        ],
+        "using": [
+          31,
+          141
+        ],
+        "emotionally": [
+          37
+        ],
+        "charged": [
+          38
+        ],
+        "interactions.": [
+          39
+        ],
+        "Bridging": [
+          40
+        ],
+        "practice": [
+          41
+        ],
+        "and": [
+          42,
+          48,
+          92,
+          130,
+          149,
+          167,
+          180
+        ],
+        "academic": [
+          44
+        ],
+        "literatures": [
+          45
+        ],
+        "marketing": [
+          47,
+          97,
+          126,
+          142
+        ],
+        "computer": [
+          49
+        ],
+        "science,": [
+          50
+        ],
+        "this": [
+          51
+        ],
+        "article": [
+          52,
+          120
+        ],
+        "develops": [
+          53
+        ],
+        "an": [
+          54,
+          74
+        ],
+        "AI-enabled": [
+          55
+        ],
+        "journey,": [
+          58
+        ],
+        "from": [
+          59,
+          86
+        ],
+        "accurate": [
+          60
+        ],
+        "emotion": [
+          61,
+          138,
+          143,
+          147,
+          157,
+          164
+        ],
+        "recognition": [
+          62,
+          139
+        ],
+        "to": [
+          63,
+          154,
+          162,
+          174
+        ],
+        "empathetic": [
+          64
+        ],
+        "response,": [
+          65
+        ],
+        "emotional": [
+          66,
+          75,
+          172,
+          178
+        ],
+        "management": [
+          67,
+          165
+        ],
+        "support,": [
+          68
+        ],
+        "and,": [
+          69
+        ],
+        "finally,": [
+          70
+        ],
+        "establishment": [
+          72
+        ],
+        "connection.": [
+          76
+        ],
+        "Marketing": [
+          77
+        ],
+        "requirements": [
+          78,
+          102
+        ],
+        "each": [
+          80
+        ],
+        "stages": [
+          83
+        ],
+        "are": [
+          84
+        ],
+        "derived": [
+          85
+        ],
+        "in-depth": [
+          87
+        ],
+        "interviews": [
+          88
+        ],
+        "with": [
+          89,
+          122
+        ],
+        "top": [
+          90
+        ],
+        "managers": [
+          91
+        ],
+        "a": [
+          93,
+          123
+        ],
+        "survey": [
+          94
+        ],
+        "chief": [
+          96
+        ],
+        "officers.": [
+          98
+        ],
+        "By": [
+          99
+        ],
+        "juxtaposing": [
+          100
+        ],
+        "these": [
+          101
+        ],
+        "against": [
+          103
+        ],
+        "current": [
+          105
+        ],
+        "feeling": [
+          106
+        ],
+        "capabilities": [
+          107
+        ],
+        "GenAI,": [
+          109
+        ],
+        "authors": [
+          111
+        ],
+        "highlight": [
+          112
+        ],
+        "technological": [
+          114
+        ],
+        "challenges": [
+          115
+        ],
+        "engineers": [
+          116
+        ],
+        "must": [
+          117
+        ],
+        "tackle.": [
+          118
+        ],
+        "The": [
+          119
+        ],
+        "concludes": [
+          121
+        ],
+        "set": [
+          124
+        ],
+        "tenets": [
+          127
+        ],
+        "implementing": [
+          129
+        ],
+        "researching": [
+          131
+        ],
+        "caring": [
+          133
+        ],
+        "machine.": [
+          134
+        ],
+        "These": [
+          135
+        ],
+        "include": [
+          136
+        ],
+        "verifying": [
+          137
+        ],
+        "accuracy": [
+          140
+        ],
+        "theories": [
+          144
+        ],
+        "through": [
+          145
+        ],
+        "multiple": [
+          146
+        ],
+        "signals": [
+          148
+        ],
+        "methods,": [
+          150
+        ],
+        "utilizing": [
+          151
+        ],
+        "prompt": [
+          152
+        ],
+        "engineering": [
+          153
+        ],
+        "enhance": [
+          155,
+          176
+        ],
+        "GenAI’s": [
+          156
+        ],
+        "understanding,": [
+          158
+        ],
+        "employing": [
+          159
+        ],
+        "“response": [
+          160
+        ],
+        "engineering”": [
+          161
+        ],
+        "personalize": [
+          163
+        ],
+        "recommendations,": [
+          166
+        ],
+        "strategically": [
+          168
+        ],
+        "deploying": [
+          169
+        ],
+        "GenAI": [
+          170
+        ],
+        "connection": [
+          173
+        ],
+        "simultaneously": [
+          175
+        ],
+        "well-being": [
+          179
+        ],
+        "lifetime": [
+          182
+        ],
+        "value.": [
+          183
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5067763065",
+            "display_name": "Ming‐Hui Huang",
+            "orcid": "https://orcid.org/0000-0001-8954-3172"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Ming-Hui Huang",
+          "raw_affiliation_strings": [],
+          "raw_orcid": "https://orcid.org/0000-0001-8954-3172",
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5037954003",
+            "display_name": "Roland T. Rust",
+            "orcid": "https://orcid.org/0000-0003-2433-7719"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Roland T. Rust",
+          "raw_affiliation_strings": [],
+          "raw_orcid": "https://orcid.org/0000-0003-2433-7719",
+          "affiliations": []
+        }
+      ],
+      "doi": "https://doi.org/10.1177/00222429231224748"
+    }
+  ],
+  "notes": [
+    {
+      "id": "https://openalex.org/W4407142724",
+      "doi": "https://doi.org/10.1093/qje/qjae044",
+      "title": "Generative AI at Work",
+      "year": 2025,
+      "authors": [
+        "Erik Brynjolfsson",
+        "Danielle Li",
+        "Lindsey Raymond"
+      ],
+      "abstract": "Abstract We study the staggered introduction of a generative AI–based conversational assistant using data from 5,172 customer-support agents. Access to AI assistance increases worker productivity, as measured by issues resolved per hour, by 15% on average, with substantial heterogeneity across workers. The effects vary significantly across different agents. Less experienced and lower-skilled workers improve both the speed and quality of their output, while the most experienced and highest-skilled workers see small gains in speed and small declines in quality. We also find evidence that AI assistance facilitates worker learning and improves English fluency, particularly among international agents. While AI systems improve with more training data, we find that the gains from AI adoption are largest for moderately rare problems, where human agents have less baseline experience but the system still has adequate training data. Finally, we provide evidence that AI assistance improves the experience of work along several dimensions: customers are more polite and less likely to ask to speak to a manager."
+    },
+    {
+      "id": "https://openalex.org/W4411768117",
+      "doi": "https://doi.org/10.63345/ijrmeet.org.v12.i5.2",
+      "title": "Leveraging NLP for Automated Customer Support with Conversational AI Agents",
+      "year": 2024,
+      "authors": [
+        "Antony Satya Vivek Vardhan Akisetty",
+        "Rakesh Jena",
+        "Rajas Paresh Kshirsagar",
+        "Om Goel",
+        "Arpit Jain"
+      ],
+      "abstract": ""
+    },
+    {
+      "id": "https://openalex.org/W3195427077",
+      "doi": "https://doi.org/10.1016/j.jretconser.2021.102735",
+      "title": "AI-chatbots on the services frontline addressing the challenges and opportunities of agency",
+      "year": 2021,
+      "authors": [
+        "Terrence Chong",
+        "Ting Yu",
+        "Debbie Keeling",
+        "Ko de Ruyter"
+      ],
+      "abstract": ""
+    },
+    {
+      "id": "https://openalex.org/W3081095512",
+      "doi": "https://doi.org/10.1016/j.ijresmar.2020.04.005",
+      "title": "Machine learning and AI in marketing – Connecting computing power to human insights",
+      "year": 2020,
+      "authors": [
+        "Liye Ma",
+        "Baohong Sun"
+      ],
+      "abstract": ""
+    },
+    {
+      "id": "https://openalex.org/W4390051025",
+      "doi": "https://doi.org/10.1177/00222429231224748",
+      "title": "The Caring Machine: Feeling AI for Customer Care",
+      "year": 2023,
+      "authors": [
+        "Ming‐Hui Huang",
+        "Roland T. Rust"
+      ],
+      "abstract": "Customer care is important for its role in relationship building. This role has traditionally been performed by human customer agents; however, the emergence of interactive generative AI (GenAI) shows potential for using AI for customer care in emotionally charged interactions. Bridging practice and the academic literatures in marketing and computer science, this article develops an AI-enabled customer care journey, from accurate emotion recognition to empathetic response, emotional management support, and, finally, the establishment of an emotional connection. Marketing requirements for each of the stages are derived from in-depth interviews with top managers and a survey of chief marketing officers. By juxtaposing these requirements against the current feeling capabilities of GenAI, the authors highlight the technological challenges engineers must tackle. The article concludes with a set of marketing tenets for implementing and researching the caring machine. These include verifying emotion recognition accuracy using marketing emotion theories through multiple emotion signals and methods, utilizing prompt engineering to enhance GenAI’s emotion understanding, employing “response engineering” to personalize emotion management recommendations, and strategically deploying GenAI for emotional connection to simultaneously enhance customer emotional well-being and customer lifetime value."
+    }
+  ],
+  "final_answer": "Определение темы\nAgentic AI for customer support — класс систем генеративного ИИ, представляющий собой автономных «агентов», способных принимать решения и выполнять действия в сложной среде поддержки клиентов без постоянного надзора человека. В контексте рассматриваемых источников акцент делается на инструментах, которые не просто генерируют текст (content creation), а выполняют агентские функции: выбирают стратегию взаимодействия, предлагают решения, управляют диалогом и в ряде случаев способствуют обучению человеческих агентов.\n\nОсновные подходы\n- Интерактивные conversational agents (разговорные агенты) с генеративными моделями: используют NLU/NLG и контекстные модели для ведения диалога, предоставления ответов и рекомендаций агентам или клиентам. (источники: \"Leveraging NLP...\" 2024; \"AI-chatbots on the services frontline\" 2021)\n- Ассистирование человеческих агентов (AI-as-assistant): агент генерирует подсказки, черновики ответов, рекомендации по разрешению проблем, что повышает продуктивность и качество работы живых операторов. (источник: \"Generative AI at Work\" 2025)\n- Эмоционально чувствительные агенты (\"Caring Machine\"): интеграция распознавания эмоций и стратегий эмпатичного ответа для управления эмоционально заряженными взаимодействиями. Это требует сочетания технических методов (эмоциональное распознавание) и маркетинговых/поведенческих стратегий. (источник: \"The Caring Machine\" 2023)\n- Агентные системы с приоритетом принятия решений: система выбирает стратегию (самостоятельно или в кооперации с человеком) для решения запроса, включая маршрутизацию, эскалацию, шаги по диагностике и измерение удовлетворенности.\n\n3–5 ключевых работ (с годами и вкладом)\n1. Brynjolfsson, Li, Raymond — \"Generative AI at Work\" (2025)\n   - Вклад: эмпирическое исследование внедрения генеративного ассистента для 5,172 агентов поддержки. Показано: средний рост производительности ~15% (issues resolved per hour), значительная гетерогенность эффектов по опыту и навыкам агентов; улучшение для менее опытных и международных агентов (включая улучшение английской речи); наибольшие выгоды при проблемах средней редкости; положительное влияние на поведение клиентов (более вежливы, реже просят менеджера). Поддерживает модель AI-as-assistant и демонстрирует эффект на обучение работников.\n2. \"Leveraging NLP for Automated Customer Support with Conversational AI Agents\" (Akisetty et al., 2024)\n   - Вклад: обзор/практическая работа по применению NLP и разговорных агентов для автоматизации поддержки. (В предоставленных метаданных абстракт отсутствует; вклад идентифицирован по заголовку как описание применения NLP в conversational agents.)\n3. Chong, Yu, Keeling, de Ruyter — \"AI-chatbots on the services frontline addressing the challenges and opportunities of agency\" (2021)\n   - Вклад: исследование чатботов на передовой сервисного взаимодействия с фокусом на проблемах и возможностях агентности (agency). Рассматривает практические и теоретические вопросы внедрения чатботов в сервисную среду, включая вопросы доверия, ответственности и управления взаимодействием.\n4. Huang, Rust — \"The Caring Machine: Feeling AI for Customer Care\" (2023)\n   - Вклад: концептуальная рамка AI-обслуживания с эмоциональным фокусом: от распознавания эмоций до эмпатичных ответов, управления эмоциями и установления эмоциональной связи. Предлагает маркетинговые требования и инженерные рекомендации (проверка точности распознавания эмоций, prompt engineering, response engineering, стратегическое применение GenAI).\n5. Ma, Sun — \"Machine learning and AI in marketing – Connecting computing power to human insights\" (2020)\n   - Вклад: общее описание роли ML/AI в маркетинге, связывающее вычислительные возможности с человеческими инсайтами; релевантно как теоретическая база для интеграции агентных систем в маркетинговую и клиентскую практику.\n\nВозможные приложения (в customer support)\n- Автономная обработка типовых запросов: быстрые ответы и действие по стандартным сценариям (возвраты, трекинг, FAQ).\n- Ассистирование живым агентам: автогенерация черновиков ответов, предложений по решению, подсказок по тональности и структуре ответа.\n- Управление эмоциями клиентов: распознавание эмоционального состояния и генерация эмпатичных ответов/эскалаций в соответствии с политикой.\n- Роутинг и принятие решений: определение потребности в эскалации, назначение приоритетов, выбор каналов взаимодействия.\n- Обучение и повышение квалификации персонала: использование логов взаимодействий и подсказок от агента как обучающего материала; адаптивная помощь менее опытным операторам.\n- Аналитика и оптимизация процессов: выявление редких проблем, где агент наиболее полезен; сбор данных для улучшения моделей и процессов.\n\nОграничения (и риски)\n- Ограниченность данных источников: обзор опирается исключительно на предоставленные документы; подробная техническая и",
+  "status": "finished",
+  "stop_reason": "final_answer_generated",
+  "tool_errors": 0,
+  "evaluator_result": null
+}

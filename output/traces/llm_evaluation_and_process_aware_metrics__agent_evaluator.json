@@ -1,0 +1,5431 @@
+{
+  "topic": "LLM evaluation and process-aware metrics",
+  "objective": "Подготовить структурированный научно-аналитический обзор темы",
+  "step_id": 6,
+  "history": [
+    {
+      "step_id": 0,
+      "action": "search_wikipedia",
+      "payload": {
+        "topic": "LLM evaluation and process-aware metrics"
+      },
+      "result": "\nIn computer programming, vibe coding is a software development practice assisted by artificial intelligence (AI) such as by chatbots or AI agents such as Codex or Claude Code. The software developer describes a project or task in a prompt to a large language model (LLM), which generates source code automatically. Vibe coding may involve accepting AI-generated code without reviewing the output thoroughly, instead relying on results and follow-up prompts to guide changes.",
+      "n_sources": 0,
+      "n_notes": 0,
+      "next_reason": "need general context before publication search"
+    },
+    {
+      "step_id": 1,
+      "action": "search_openalex",
+      "payload": {
+        "query": "LLM evaluation and process-aware metrics",
+        "per_page": 5
+      },
+      "result": "found=5",
+      "n_sources": 5,
+      "n_notes": 0,
+      "next_reason": "extract notes from returned publications"
+    },
+    {
+      "step_id": 2,
+      "action": "extract_notes",
+      "payload": {
+        "n_sources": 5,
+        "top_k": 5
+      },
+      "result": "notes_prepared=5",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "generate final answer from context and notes"
+    },
+    {
+      "step_id": 3,
+      "action": "generate_final_answer",
+      "payload": {
+        "topic": "LLM evaluation and process-aware metrics"
+      },
+      "result": "Определение темы\n\nТема обзора: оценка больших языковых моделей (LLM evaluation) и процессно-ориентированные метрики (process-aware metrics) в контексте практик разработки ПО с участием ИИ, таких как «vibe coding» — когда разработчик полностью или частично полагается на LLM (чат-бот, код-агент) для генерации исходного кода и руководит процессом через последовательность подсказок и проверок/репромптов. В этом контексте важна не только конечная корректность ответа модели (например, компилируемость ",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "finish or run evaluator depending on configuration"
+    },
+    {
+      "step_id": 4,
+      "action": "internal_evaluator",
+      "payload": {
+        "criteria": [
+          "correctness",
+          "groundedness",
+          "completeness",
+          "coverage_of_required_fields",
+          "source_consistency",
+          "comment",
+          "rubric"
+        ]
+      },
+      "result": "{'correctness': 4, 'groundedness': 4, 'completeness': 4, 'coverage_of_required_fields': 4, 'source_consistency': 4, 'comment': 'Ответ в целом корректен, согласуется с указанными источниками и логично связывает идеи (процессно-ориентированные метрики, fine-level оценки, ToolGen и generative retrieval). Некоторые утверждения выглядят немного частными или предположительными (например, точные формулировки работ Xu et al. 2025 и Wang et al. 2025 — возможно, это прогнозы/публикации 2025 года), но ссыл",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "refine if rubric is below threshold"
+    },
+    {
+      "step_id": 5,
+      "action": "finish",
+      "payload": {
+        "status": "finished",
+        "stop_reason": "final_answer_generated"
+      },
+      "result": "final_answer_generated",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "stop criterion reached"
+    }
+  ],
+  "sources": [
+    {
+      "id": "https://openalex.org/W4384071683",
+      "display_name": "Large language models encode clinical knowledge",
+      "publication_year": 2023,
+      "abstract_inverted_index": {
+        "Large": [
+          0
+        ],
+        "language": [
+          1
+        ],
+        "models": [
+          2,
+          23
+        ],
+        "(LLMs)": [
+          3
+        ],
+        "have": [
+          4
+        ],
+        "demonstrated": [
+          5
+        ],
+        "impressive": [
+          6
+        ],
+        "capabilities,": [
+          7
+        ],
+        "but": [
+          8,
+          187
+        ],
+        "the": [
+          9,
+          19,
+          144,
+          148,
+          209,
+          225
+        ],
+        "bar": [
+          10
+        ],
+        "for": [
+          11,
+          73,
+          171,
+          239
+        ],
+        "clinical": [
+          12,
+          20,
+          131,
+          240
+        ],
+        "applications": [
+          13
+        ],
+        "is": [
+          14
+        ],
+        "high.": [
+          15
+        ],
+        "Attempts": [
+          16
+        ],
+        "to": [
+          17,
+          34,
+          174,
+          190
+        ],
+        "assess": [
+          18
+        ],
+        "knowledge": [
+          21,
+          196
+        ],
+        "of": [
+          22,
+          61,
+          109,
+          147,
+          212,
+          221,
+          227
+        ],
+        "typically": [
+          24
+        ],
+        "rely": [
+          25
+        ],
+        "on": [
+          26,
+          30,
+          104,
+          116,
+          136
+        ],
+        "automated": [
+          27
+        ],
+        "evaluations": [
+          28,
+          218
+        ],
+        "based": [
+          29
+        ],
+        "limited": [
+          31
+        ],
+        "benchmarks.": [
+          32
+        ],
+        "Here,": [
+          33
+        ],
+        "address": [
+          35
+        ],
+        "these": [
+          36
+        ],
+        "limitations,": [
+          37
+        ],
+        "we": [
+          38,
+          89,
+          163
+        ],
+        "present": [
+          39
+        ],
+        "MultiMedQA,": [
+          40
+        ],
+        "a": [
+          41,
+          58,
+          69,
+          95,
+          107,
+          168,
+          178
+        ],
+        "benchmark": [
+          42
+        ],
+        "combining": [
+          43
+        ],
+        "six": [
+          44
+        ],
+        "existing": [
+          45
+        ],
+        "medical": [
+          46,
+          62
+        ],
+        "question": [
+          47
+        ],
+        "answering": [
+          48
+        ],
+        "datasets": [
+          49
+        ],
+        "spanning": [
+          50
+        ],
+        "professional": [
+          51
+        ],
+        "medicine,": [
+          52
+        ],
+        "research": [
+          53
+        ],
+        "and": [
+          54,
+          57,
+          85,
+          99,
+          124,
+          198,
+          204,
+          231
+        ],
+        "consumer": [
+          55
+        ],
+        "queries": [
+          56
+        ],
+        "new": [
+          59,
+          175
+        ],
+        "dataset": [
+          60,
+          120
+        ],
+        "questions": [
+          63
+        ],
+        "searched": [
+          64
+        ],
+        "online,": [
+          65
+        ],
+        "HealthSearchQA.": [
+          66
+        ],
+        "We": [
+          67,
+          192
+        ],
+        "propose": [
+          68
+        ],
+        "human": [
+          70,
+          155,
+          217
+        ],
+        "evaluation": [
+          71,
+          156,
+          229
+        ],
+        "framework": [
+          72
+        ],
+        "model": [
+          74,
+          202
+        ],
+        "answers": [
+          75
+        ],
+        "along": [
+          76
+        ],
+        "multiple": [
+          77
+        ],
+        "axes": [
+          78
+        ],
+        "including": [
+          79,
+          133
+        ],
+        "factuality,": [
+          80
+        ],
+        "comprehension,": [
+          81,
+          195
+        ],
+        "reasoning,": [
+          82
+        ],
+        "possible": [
+          83
+        ],
+        "harm": [
+          84
+        ],
+        "bias.": [
+          86
+        ],
+        "In": [
+          87
+        ],
+        "addition,": [
+          88
+        ],
+        "evaluate": [
+          90
+        ],
+        "Pathways": [
+          91
+        ],
+        "Language": [
+          92,
+          128
+        ],
+        "Model<sup>1</sup>": [
+          93
+        ],
+        "(PaLM,": [
+          94
+        ],
+        "540-billion": [
+          96
+        ],
+        "parameter": [
+          97
+        ],
+        "LLM)": [
+          98
+        ],
+        "its": [
+          100
+        ],
+        "instruction-tuned": [
+          101
+        ],
+        "variant,": [
+          102
+        ],
+        "Flan-PaLM<sup>2</sup>": [
+          103
+        ],
+        "MultiMedQA.": [
+          105
+        ],
+        "Using": [
+          106
+        ],
+        "combination": [
+          108
+        ],
+        "prompting": [
+          110
+        ],
+        "strategies,": [
+          111
+        ],
+        "Flan-PaLM": [
+          112
+        ],
+        "achieves": [
+          113
+        ],
+        "state-of-the-art": [
+          114
+        ],
+        "accuracy": [
+          115,
+          135
+        ],
+        "every": [
+          117
+        ],
+        "MultiMedQA": [
+          118
+        ],
+        "multiple-choice": [
+          119
+        ],
+        "(MedQA<sup>3</sup>,": [
+          121
+        ],
+        "MedMCQA<sup>4</sup>,": [
+          122
+        ],
+        "PubMedQA<sup>5</sup>": [
+          123
+        ],
+        "Measuring": [
+          125
+        ],
+        "Massive": [
+          126
+        ],
+        "Multitask": [
+          127
+        ],
+        "Understanding": [
+          129
+        ],
+        "(MMLU)": [
+          130
+        ],
+        "topics<sup>6</sup>),": [
+          132
+        ],
+        "67.6%": [
+          134
+        ],
+        "MedQA": [
+          137
+        ],
+        "(US": [
+          138
+        ],
+        "Medical": [
+          139
+        ],
+        "Licensing": [
+          140
+        ],
+        "Exam-style": [
+          141
+        ],
+        "questions),": [
+          142
+        ],
+        "surpassing": [
+          143
+        ],
+        "prior": [
+          145
+        ],
+        "state": [
+          146
+        ],
+        "art": [
+          149
+        ],
+        "by": [
+          150
+        ],
+        "more": [
+          151
+        ],
+        "than": [
+          152
+        ],
+        "17%.": [
+          153
+        ],
+        "However,": [
+          154
+        ],
+        "reveals": [
+          157
+        ],
+        "key": [
+          158
+        ],
+        "gaps.": [
+          159
+        ],
+        "To": [
+          160
+        ],
+        "resolve": [
+          161
+        ],
+        "this,": [
+          162
+        ],
+        "introduce": [
+          164
+        ],
+        "instruction": [
+          165,
+          205
+        ],
+        "prompt": [
+          166,
+          206
+        ],
+        "tuning,": [
+          167,
+          207
+        ],
+        "parameter-efficient": [
+          169
+        ],
+        "approach": [
+          170
+        ],
+        "aligning": [
+          172
+        ],
+        "LLMs": [
+          173,
+          213,
+          238
+        ],
+        "domains": [
+          176
+        ],
+        "using": [
+          177
+        ],
+        "few": [
+          179
+        ],
+        "exemplars.": [
+          180
+        ],
+        "The": [
+          181
+        ],
+        "resulting": [
+          182
+        ],
+        "model,": [
+          183
+        ],
+        "Med-PaLM,": [
+          184
+        ],
+        "performs": [
+          185
+        ],
+        "encouragingly,": [
+          186
+        ],
+        "remains": [
+          188
+        ],
+        "inferior": [
+          189
+        ],
+        "clinicians.": [
+          191
+        ],
+        "show": [
+          193
+        ],
+        "that": [
+          194
+        ],
+        "recall": [
+          197
+        ],
+        "reasoning": [
+          199
+        ],
+        "improve": [
+          200
+        ],
+        "with": [
+          201
+        ],
+        "scale": [
+          203
+        ],
+        "suggesting": [
+          208
+        ],
+        "potential": [
+          210
+        ],
+        "utility": [
+          211
+        ],
+        "in": [
+          214,
+          234
+        ],
+        "medicine.": [
+          215
+        ],
+        "Our": [
+          216
+        ],
+        "reveal": [
+          219
+        ],
+        "limitations": [
+          220
+        ],
+        "today's": [
+          222
+        ],
+        "models,": [
+          223
+        ],
+        "reinforcing": [
+          224
+        ],
+        "importance": [
+          226
+        ],
+        "both": [
+          228
+        ],
+        "frameworks": [
+          230
+        ],
+        "method": [
+          232
+        ],
+        "development": [
+          233
+        ],
+        "creating": [
+          235
+        ],
+        "safe,": [
+          236
+        ],
+        "helpful": [
+          237
+        ],
+        "applications.": [
+          241
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5027454515",
+            "display_name": "Karan Singhal",
+            "orcid": "https://orcid.org/0000-0001-9002-7490"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Karan Singhal",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA. karansinghal@google.com",
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA. karansinghal@google.com",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5047463591",
+            "display_name": "Shekoofeh Azizi",
+            "orcid": "https://orcid.org/0000-0002-7447-6031"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Shekoofeh Azizi",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA. shekazizi@google.com",
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-7447-6031",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA. shekazizi@google.com",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5059213795",
+            "display_name": "Tao Tu",
+            "orcid": "https://orcid.org/0000-0003-3420-7889"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Tao Tu",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5063201022",
+            "display_name": "S. Sara Mahdavi",
+            "orcid": "https://orcid.org/0000-0001-6823-598X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "S. Sara Mahdavi",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100657725",
+            "display_name": "Jason Lee",
+            "orcid": "https://orcid.org/0000-0003-4042-795X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jason Wei",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5051828575",
+            "display_name": "Hyung Won Chung",
+            "orcid": "https://orcid.org/0000-0002-1280-9953"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Hyung Won Chung",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5030765685",
+            "display_name": "Nathan Scales",
+            "orcid": "https://orcid.org/0000-0002-9535-7138"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Nathan Scales",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5088063475",
+            "display_name": "Ajay Kumar Tanwani",
+            "orcid": "https://orcid.org/0000-0002-6365-8315"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ajay Tanwani",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5069557194",
+            "display_name": "Heather Cole-Lewis",
+            "orcid": "https://orcid.org/0000-0002-7275-1810"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Heather Cole-Lewis",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5021812637",
+            "display_name": "Stephen Pfohl",
+            "orcid": "https://orcid.org/0000-0003-0551-9664"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Stephen Pfohl",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5014637990",
+            "display_name": "Perry W. Payne",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Perry Payne",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5058677067",
+            "display_name": "Martin Seneviratne",
+            "orcid": "https://orcid.org/0000-0003-0435-3738"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Martin Seneviratne",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5090718376",
+            "display_name": "Paul Gamble",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Paul Gamble",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5026540467",
+            "display_name": "Christopher Kelly",
+            "orcid": "https://orcid.org/0000-0002-1246-844X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Chris Kelly",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-1246-844X",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5066029226",
+            "display_name": "Abubakr Babiker",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Abubakr Babiker",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5007588003",
+            "display_name": "Nathanael Schärli",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Nathanael Schärli",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5055969617",
+            "display_name": "Aakanksha Chowdhery",
+            "orcid": "https://orcid.org/0000-0002-0628-5225"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Aakanksha Chowdhery",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5086361722",
+            "display_name": "P. Mansfield",
+            "orcid": "https://orcid.org/0000-0003-4969-0543"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Philip Mansfield",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-4969-0543",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5046764593",
+            "display_name": "Dina Demner‐Fushman",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I2800548410",
+              "display_name": "United States National Library of Medicine",
+              "ror": "https://ror.org/0060t0j89",
+              "country_code": "US",
+              "type": "archive",
+              "lineage": [
+                "https://openalex.org/I1299022934",
+                "https://openalex.org/I1299303238",
+                "https://openalex.org/I2800548410"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Dina Demner-Fushman",
+          "raw_affiliation_strings": [
+            "National Library of Medicine, Bethesda, MD, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "National Library of Medicine, Bethesda, MD, USA",
+              "institution_ids": [
+                "https://openalex.org/I2800548410"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5044698998",
+            "display_name": "Blaise Agüera y Arcas",
+            "orcid": "https://orcid.org/0000-0003-2256-9823"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Blaise Agüera y Arcas",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5060000122",
+            "display_name": "Dale R. Webster",
+            "orcid": "https://orcid.org/0000-0002-3023-8824"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Dale Webster",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-3023-8824",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5068955381",
+            "display_name": "Greg S. Corrado",
+            "orcid": "https://orcid.org/0000-0001-8817-0992"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Greg S. Corrado",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5065128060",
+            "display_name": "Yossi Matias",
+            "orcid": "https://orcid.org/0000-0003-3960-6002"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yossi Matias",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-3960-6002",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5070366042",
+            "display_name": "Katherine Chou",
+            "orcid": "https://orcid.org/0000-0002-0318-7857"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Katherine Chou",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5057932939",
+            "display_name": "Juraj Gottweis",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Juraj Gottweis",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5057195145",
+            "display_name": "Nenad Tomašev",
+            "orcid": "https://orcid.org/0000-0003-1624-0220"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210090411",
+              "display_name": "Google DeepMind (United Kingdom)",
+              "ror": "https://ror.org/00971b260",
+              "country_code": "GB",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210090411",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Nenad Tomasev",
+          "raw_affiliation_strings": [
+            "DeepMind, London, UK"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-1624-0220",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "DeepMind, London, UK",
+              "institution_ids": [
+                "https://openalex.org/I4210090411"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5078784976",
+            "display_name": "Yun Liu",
+            "orcid": "https://orcid.org/0000-0003-4079-8275"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yun Liu",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-4079-8275",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5022388476",
+            "display_name": "Alvin Rajkomar",
+            "orcid": "https://orcid.org/0000-0001-5750-5016"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Alvin Rajkomar",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5043862316",
+            "display_name": "Joëlle Barral",
+            "orcid": "https://orcid.org/0009-0009-0432-5148"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Joelle Barral",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5010171106",
+            "display_name": "Christopher Semturs",
+            "orcid": "https://orcid.org/0000-0001-6108-2773"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Christopher Semturs",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-6108-2773",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5003509342",
+            "display_name": "Alan Karthikesalingam",
+            "orcid": "https://orcid.org/0000-0001-5074-898X"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Alan Karthikesalingam",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA. alankarthi@google.com",
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA. alankarthi@google.com",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5103234563",
+            "display_name": "Vivek Natarajan",
+            "orcid": "https://orcid.org/0000-0001-7849-2074"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I1291425158",
+              "display_name": "Google (United States)",
+              "ror": "https://ror.org/00njsd438",
+              "country_code": "US",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I1291425158",
+                "https://openalex.org/I4210128969"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Vivek Natarajan",
+          "raw_affiliation_strings": [
+            "Google Research, Mountain View, CA, USA. natviv@google.com",
+            "Google Research, Mountain View, CA, USA"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA. natviv@google.com",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Google Research, Mountain View, CA, USA",
+              "institution_ids": [
+                "https://openalex.org/I1291425158"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1038/s41586-023-06291-2"
+    },
+    {
+      "id": "https://openalex.org/W4407097799",
+      "display_name": "Are Large Language Models Really Good Logical Reasoners? A Comprehensive Evaluation and Beyond",
+      "publication_year": 2025,
+      "abstract_inverted_index": {
+        "Logical": [
+          0
+        ],
+        "reasoning": [
+          1,
+          85,
+          96,
+          205,
+          232
+        ],
+        "consistently": [
+          2
+        ],
+        "plays": [
+          3
+        ],
+        "a": [
+          4,
+          26,
+          211,
+          226
+        ],
+        "fundamental": [
+          5
+        ],
+        "and": [
+          6,
+          15,
+          68,
+          87,
+          94,
+          109,
+          133,
+          139,
+          154,
+          185,
+          198,
+          253,
+          262,
+          266
+        ],
+        "significant": [
+          7
+        ],
+        "role": [
+          8
+        ],
+        "in": [
+          9,
+          29,
+          72,
+          131
+        ],
+        "the": [
+          10,
+          35,
+          43,
+          99,
+          162,
+          193,
+          203,
+          219,
+          260
+        ],
+        "domains": [
+          11
+        ],
+        "of": [
+          12,
+          37,
+          45,
+          101,
+          165,
+          195,
+          207,
+          230,
+          264
+        ],
+        "knowledge": [
+          13,
+          196
+        ],
+        "engineering": [
+          14
+        ],
+        "artificial": [
+          16
+        ],
+        "intelligence.": [
+          17
+        ],
+        "Recently,": [
+          18
+        ],
+        "Large": [
+          19
+        ],
+        "Language": [
+          20
+        ],
+        "Models": [
+          21
+        ],
+        "(LLMs)": [
+          22
+        ],
+        "have": [
+          23
+        ],
+        "emerged": [
+          24
+        ],
+        "as": [
+          25
+        ],
+        "noteworthy": [
+          27
+        ],
+        "innovation": [
+          28
+        ],
+        "natural": [
+          30
+        ],
+        "language": [
+          31
+        ],
+        "processing": [
+          32
+        ],
+        "(NLP).": [
+          33
+        ],
+        "However,": [
+          34
+        ],
+        "question": [
+          36
+        ],
+        "whether": [
+          38
+        ],
+        "LLMs": [
+          39,
+          108,
+          265
+        ],
+        "can": [
+          40
+        ],
+        "effectively": [
+          41
+        ],
+        "address": [
+          42
+        ],
+        "task": [
+          44
+        ],
+        "logical": [
+          46,
+          84,
+          163,
+          204,
+          231
+        ],
+        "reasoning,": [
+          47
+        ],
+        "which": [
+          48
+        ],
+        "requires": [
+          49
+        ],
+        "gradual": [
+          50
+        ],
+        "cognitive": [
+          51
+        ],
+        "inference": [
+          52
+        ],
+        "similar": [
+          53
+        ],
+        "to": [
+          54,
+          64,
+          76,
+          160,
+          172,
+          191
+        ],
+        "human": [
+          55
+        ],
+        "intelligence,": [
+          56
+        ],
+        "remains": [
+          57
+        ],
+        "unanswered.": [
+          58
+        ],
+        "To": [
+          59
+        ],
+        "this": [
+          60,
+          66,
+          73,
+          222
+        ],
+        "end,": [
+          61
+        ],
+        "we": [
+          62,
+          80,
+          103,
+          127,
+          209
+        ],
+        "aim": [
+          63
+        ],
+        "bridge": [
+          65
+        ],
+        "gap": [
+          67
+        ],
+        "provide": [
+          69
+        ],
+        "comprehensive": [
+          70
+        ],
+        "evaluations": [
+          71,
+          117,
+          130
+        ],
+        "paper.": [
+          74
+        ],
+        "First,": [
+          75
+        ],
+        "offer": [
+          77
+        ],
+        "systematic": [
+          78
+        ],
+        "evaluations,": [
+          79,
+          102,
+          221
+        ],
+        "select": [
+          81
+        ],
+        "fifteen": [
+          82
+        ],
+        "typical": [
+          83
+        ],
+        "datasets": [
+          86
+        ],
+        "organize": [
+          88
+        ],
+        "them": [
+          89
+        ],
+        "into": [
+          90
+        ],
+        "deductive,": [
+          91
+        ],
+        "inductive,": [
+          92
+        ],
+        "abductive": [
+          93
+        ],
+        "mixed-form": [
+          95
+        ],
+        "settings.": [
+          97
+        ],
+        "Considering": [
+          98
+        ],
+        "comprehensiveness": [
+          100
+        ],
+        "include": [
+          104
+        ],
+        "3": [
+          105
+        ],
+        "early-era": [
+          106
+        ],
+        "representative": [
+          107
+        ],
+        "4": [
+          110
+        ],
+        "trending": [
+          111
+        ],
+        "LLMs.": [
+          112
+        ],
+        "Second,": [
+          113
+        ],
+        "different": [
+          114
+        ],
+        "from": [
+          115,
+          176,
+          234
+        ],
+        "previous": [
+          116
+        ],
+        "relying": [
+          118
+        ],
+        "only": [
+          119
+        ],
+        "on": [
+          120,
+          201,
+          218
+        ],
+        "simple": [
+          121
+        ],
+        "metrics": [
+          122
+        ],
+        "(e.g.,": [
+          123
+        ],
+        "<italic": [
+          124,
+          142,
+          146,
+          150,
+          155,
+          180,
+          186,
+          238,
+          241,
+          244,
+          247,
+          250,
+          254
+        ],
+        "xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"": [
+          125,
+          143,
+          147,
+          151,
+          156,
+          181,
+          187,
+          239,
+          242,
+          245,
+          248,
+          251,
+          255
+        ],
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\">accuracy</i>),": [
+          126
+        ],
+        "propose": [
+          128,
+          210
+        ],
+        "fine-level": [
+          129
+        ],
+        "objective": [
+          132
+        ],
+        "subjective": [
+          134
+        ],
+        "manners,": [
+          135
+        ],
+        "covering": [
+          136
+        ],
+        "both": [
+          137
+        ],
+        "answers": [
+          138
+        ],
+        "explanations,": [
+          140
+        ],
+        "including": [
+          141
+        ],
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\">answer": [
+          144
+        ],
+        "correctness</i>,": [
+          145,
+          149
+        ],
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\">explain": [
+          148,
+          152,
+          157
+        ],
+        "completeness</i>": [
+          153
+        ],
+        "redundancy</i>.": [
+          158
+        ],
+        "Additionally,": [
+          159
+        ],
+        "uncover": [
+          161
+        ],
+        "flaws": [
+          164
+        ],
+        "LLMs,": [
+          166,
+          208
+        ],
+        "problematic": [
+          167
+        ],
+        "cases": [
+          168
+        ],
+        "will": [
+          169
+        ],
+        "be": [
+          170
+        ],
+        "attributed": [
+          171
+        ],
+        "five": [
+          173
+        ],
+        "error": [
+          174
+        ],
+        "types": [
+          175
+        ],
+        "two": [
+          177
+        ],
+        "dimensions,": [
+          178
+        ],
+        "i.e.,": [
+          179
+        ],
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\">evidence": [
+          182
+        ],
+        "selection": [
+          183
+        ],
+        "process</i>": [
+          184
+        ],
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\">reasoning": [
+          188
+        ],
+        "process</i>.": [
+          189
+        ],
+        "Third,": [
+          190
+        ],
+        "avoid": [
+          192
+        ],
+        "influences": [
+          194
+        ],
+        "bias": [
+          197
+        ],
+        "concentrate": [
+          199
+        ],
+        "purely": [
+          200
+        ],
+        "benchmarking": [
+          202
+        ],
+        "capability": [
+          206,
+          233
+        ],
+        "new": [
+          212
+        ],
+        "dataset": [
+          213
+        ],
+        "with": [
+          214
+        ],
+        "neutral": [
+          215
+        ],
+        "content.": [
+          216
+        ],
+        "Based": [
+          217
+        ],
+        "in-depth": [
+          220
+        ],
+        "paper": [
+          223
+        ],
+        "finally": [
+          224
+        ],
+        "forms": [
+          225
+        ],
+        "general": [
+          227
+        ],
+        "evaluation": [
+          228
+        ],
+        "scheme": [
+          229
+        ],
+        "six": [
+          235
+        ],
+        "dimensions": [
+          236
+        ],
+        "(i.e.,": [
+          237
+        ],
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\">Correct</i>,": [
+          240
+        ],
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\">Rigorous</i>,": [
+          243
+        ],
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\">Self-aware</i>,": [
+          246
+        ],
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\">Active</i>,": [
+          249
+        ],
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\">Oriented</i>": [
+          252
+        ],
+        "xmlns:xlink=\"http://www.w3.org/1999/xlink\">No": [
+          256
+        ],
+        "hallucination</i>).": [
+          257
+        ],
+        "It": [
+          258
+        ],
+        "reflects": [
+          259
+        ],
+        "pros": [
+          261
+        ],
+        "cons": [
+          263
+        ],
+        "gives": [
+          267
+        ],
+        "guiding": [
+          268
+        ],
+        "directions": [
+          269
+        ],
+        "for": [
+          270
+        ],
+        "future": [
+          271
+        ],
+        "works.": [
+          272
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5084483228",
+            "display_name": "Fangzhi Xu",
+            "orcid": "https://orcid.org/0000-0003-4712-0547"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I87445476",
+              "display_name": "Xi'an Jiaotong University",
+              "ror": "https://ror.org/017zhmm22",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Fangzhi Xu",
+          "raw_affiliation_strings": [
+            "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x2019;an Jiaotong University, Xi&#x2019;an, Shaanxi, China",
+            "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x0027;an Jiaotong University, Xi&#x0027;an, Shaanxi, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-4712-0547",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x2019;an Jiaotong University, Xi&#x2019;an, Shaanxi, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            },
+            {
+              "raw_affiliation_string": "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x0027;an Jiaotong University, Xi&#x0027;an, Shaanxi, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5086407377",
+            "display_name": "Qika Lin",
+            "orcid": "https://orcid.org/0000-0001-5650-0600"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I87445476",
+              "display_name": "Xi'an Jiaotong University",
+              "ror": "https://ror.org/017zhmm22",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Qika Lin",
+          "raw_affiliation_strings": [
+            "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x2019;an Jiaotong University, Xi&#x2019;an, Shaanxi, China",
+            "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x0027;an Jiaotong University, Xi&#x0027;an, Shaanxi, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-5650-0600",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x2019;an Jiaotong University, Xi&#x2019;an, Shaanxi, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            },
+            {
+              "raw_affiliation_string": "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x0027;an Jiaotong University, Xi&#x0027;an, Shaanxi, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5019539533",
+            "display_name": "Jiawei Han",
+            "orcid": "https://orcid.org/0000-0002-3629-2696"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I87445476",
+              "display_name": "Xi'an Jiaotong University",
+              "ror": "https://ror.org/017zhmm22",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jiawei Han",
+          "raw_affiliation_strings": [
+            "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x2019;an Jiaotong University, Xi&#x2019;an, Shaanxi, China",
+            "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x0027;an Jiaotong University, Xi&#x0027;an, Shaanxi, China"
+          ],
+          "raw_orcid": null,
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x2019;an Jiaotong University, Xi&#x2019;an, Shaanxi, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            },
+            {
+              "raw_affiliation_string": "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x0027;an Jiaotong University, Xi&#x0027;an, Shaanxi, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5034779671",
+            "display_name": "Tianzhe Zhao",
+            "orcid": "https://orcid.org/0000-0002-2879-2703"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I87445476",
+              "display_name": "Xi'an Jiaotong University",
+              "ror": "https://ror.org/017zhmm22",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Tianzhe Zhao",
+          "raw_affiliation_strings": [
+            "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x2019;an Jiaotong University, Xi&#x2019;an, Shaanxi, China",
+            "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x0027;an Jiaotong University, Xi&#x0027;an, Shaanxi, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-2879-2703",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x2019;an Jiaotong University, Xi&#x2019;an, Shaanxi, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            },
+            {
+              "raw_affiliation_string": "School of Computer Science and Technology, Ministry of Education Key Laboratory of Intelligent Networks and Network Security, Xi&#x0027;an Jiaotong University, Xi&#x0027;an, Shaanxi, China",
+              "institution_ids": [
+                "https://openalex.org/I87445476"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100361891",
+            "display_name": "Jun Liu",
+            "orcid": "https://orcid.org/0000-0002-6004-0675"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I4210141776",
+              "display_name": "China XD Group (China)",
+              "ror": "https://ror.org/04ceqst84",
+              "country_code": "CN",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I4210141776"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jun Liu",
+          "raw_affiliation_strings": [
+            "Shaanxi Provincial Key Laboratory of Big Data Knowledge Engineering, Xi&#x2019;an, Shaanxi, China",
+            "Shaanxi Provincial Key Laboratory of Big Data Knowledge Engineering, Xi&#x0027;an, Shaanxi, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-6004-0675",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Shaanxi Provincial Key Laboratory of Big Data Knowledge Engineering, Xi&#x2019;an, Shaanxi, China",
+              "institution_ids": [
+                "https://openalex.org/I4210141776"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Shaanxi Provincial Key Laboratory of Big Data Knowledge Engineering, Xi&#x0027;an, Shaanxi, China",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5100752356",
+            "display_name": "Erik Cambria",
+            "orcid": "https://orcid.org/0000-0002-3030-1280"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I172675005",
+              "display_name": "Nanyang Technological University",
+              "ror": "https://ror.org/02e7b5302",
+              "country_code": "SG",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ],
+          "countries": [
+            "SG"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Erik Cambria",
+          "raw_affiliation_strings": [
+            "College of Computing and Data Science, Nanyang Technological University, Singapore"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-3030-1280",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "College of Computing and Data Science, Nanyang Technological University, Singapore",
+              "institution_ids": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1109/tkde.2025.3536008"
+    },
+    {
+      "id": "https://openalex.org/W4406866655",
+      "display_name": "Teaching Code LLMs to Use Autocompletion Tools in Repository-Level Code Generation",
+      "publication_year": 2025,
+      "abstract_inverted_index": {
+        "Recent": [
+          0
+        ],
+        "code": [
+          1,
+          20,
+          60,
+          94,
+          122,
+          153,
+          176,
+          181,
+          198,
+          294,
+          321
+        ],
+        "large": [
+          2
+        ],
+        "language": [
+          3
+        ],
+        "models": [
+          4
+        ],
+        "(LLMs)": [
+          5
+        ],
+        "have": [
+          6
+        ],
+        "shown": [
+          7
+        ],
+        "promising": [
+          8
+        ],
+        "performance": [
+          9,
+          243,
+          316
+        ],
+        "in": [
+          10,
+          18,
+          36,
+          174,
+          244,
+          269,
+          292
+        ],
+        "generating": [
+          11,
+          305
+        ],
+        "standalone": [
+          12
+        ],
+        "functions.": [
+          13
+        ],
+        "However,": [
+          14
+        ],
+        "they": [
+          15
+        ],
+        "face": [
+          16
+        ],
+        "limitations": [
+          17
+        ],
+        "repository-level": [
+          19,
+          29,
+          175,
+          293
+        ],
+        "generation": [
+          21,
+          62,
+          177
+        ],
+        "due": [
+          22
+        ],
+        "to": [
+          23,
+          64,
+          103,
+          118,
+          151,
+          169,
+          224,
+          232,
+          301,
+          319
+        ],
+        "their": [
+          24,
+          112
+        ],
+        "lack": [
+          25
+        ],
+        "of": [
+          26,
+          28,
+          265
+        ],
+        "awareness": [
+          27
+        ],
+        "dependencies": [
+          30
+        ],
+        "(": [
+          31
+        ],
+        "e.g.,": [
+          32
+        ],
+        "user-defined": [
+          33
+        ],
+        "attributes),": [
+          34
+        ],
+        "resulting": [
+          35
+        ],
+        "dependency": [
+          37
+        ],
+        "errors": [
+          38
+        ],
+        "such": [
+          39,
+          249
+        ],
+        "as": [
+          40,
+          250
+        ],
+        "undefined-variable": [
+          41
+        ],
+        "and": [
+          42,
+          75,
+          79,
+          155,
+          185,
+          200,
+          208,
+          226,
+          255,
+          267,
+          276,
+          327
+        ],
+        "no-member": [
+          43
+        ],
+        "errors.": [
+          44
+        ],
+        "In": [
+          45,
+          124
+        ],
+        "this": [
+          46,
+          189
+        ],
+        "work,": [
+          47
+        ],
+        "we": [
+          48,
+          191
+        ],
+        "introduce": [
+          49,
+          201
+        ],
+        "ToolGen": [
+          50,
+          68,
+          88,
+          128,
+          146,
+          171,
+          217,
+          262,
+          287,
+          313
+        ],
+        ",": [
+          51
+        ],
+        "an": [
+          52
+        ],
+        "approach": [
+          53
+        ],
+        "that": [
+          54,
+          216
+        ],
+        "integrates": [
+          55
+        ],
+        "autocompletion": [
+          56,
+          105,
+          149
+        ],
+        "tools": [
+          57
+        ],
+        "into": [
+          58
+        ],
+        "the": [
+          59,
+          85,
+          125,
+          137,
+          148,
+          157,
+          235,
+          259,
+          281
+        ],
+        "LLM": [
+          61
+        ],
+        "process": [
+          63
+        ],
+        "address": [
+          65
+        ],
+        "these": [
+          66
+        ],
+        "dependencies.": [
+          67
+        ],
+        "comprises": [
+          69
+        ],
+        "two": [
+          70,
+          202
+        ],
+        "main": [
+          71
+        ],
+        "phases:": [
+          72
+        ],
+        "Trigger": [
+          73
+        ],
+        "Insertion": [
+          74
+        ],
+        "Model": [
+          76
+        ],
+        "Fine-tuning": [
+          77
+        ],
+        "(Offline),": [
+          78
+        ],
+        "Tool-integrated": [
+          80
+        ],
+        "Code": [
+          81
+        ],
+        "Generation": [
+          82
+        ],
+        "(Online).": [
+          83
+        ],
+        "During": [
+          84
+        ],
+        "offline": [
+          86
+        ],
+        "phase,": [
+          87,
+          127
+        ],
+        "augments": [
+          89
+        ],
+        "functions": [
+          90,
+          131
+        ],
+        "within": [
+          91
+        ],
+        "a": [
+          92,
+          97,
+          120,
+          141,
+          193
+        ],
+        "given": [
+          93
+        ],
+        "corpus": [
+          95
+        ],
+        "with": [
+          96,
+          111,
+          296
+        ],
+        "special": [
+          98
+        ],
+        "mark": [
+          99,
+          142
+        ],
+        "token,": [
+          100
+        ],
+        "indicating": [
+          101
+        ],
+        "positions": [
+          102
+        ],
+        "trigger": [
+          104
+        ],
+        "tools.": [
+          106
+        ],
+        "These": [
+          107
+        ],
+        "augmented": [
+          108
+        ],
+        "functions,": [
+          109
+        ],
+        "along": [
+          110
+        ],
+        "corresponding": [
+          113
+        ],
+        "descriptions,": [
+          114
+        ],
+        "are": [
+          115
+        ],
+        "then": [
+          116
+        ],
+        "used": [
+          117
+        ],
+        "fine-tune": [
+          119
+        ],
+        "selected": [
+          121
+        ],
+        "LLM.": [
+          123,
+          139
+        ],
+        "online": [
+          126
+        ],
+        "iteratively": [
+          129
+        ],
+        "generates": [
+          130
+        ],
+        "by": [
+          132,
+          222,
+          230
+        ],
+        "predicting": [
+          133
+        ],
+        "tokens": [
+          134
+        ],
+        "step-by-step": [
+          135
+        ],
+        "using": [
+          136
+        ],
+        "fine-tuned": [
+          138
+        ],
+        "Whenever": [
+          140
+        ],
+        "token": [
+          143
+        ],
+        "is": [
+          144
+        ],
+        "encountered,": [
+          145
+        ],
+        "invokes": [
+          147
+        ],
+        "tool": [
+          150
+        ],
+        "suggest": [
+          152
+        ],
+        "completions": [
+          154
+        ],
+        "selects": [
+          156
+        ],
+        "most": [
+          158
+        ],
+        "appropriate": [
+          159
+        ],
+        "one": [
+          160
+        ],
+        "through": [
+          161
+        ],
+        "constrained": [
+          162
+        ],
+        "greedy": [
+          163
+        ],
+        "search.": [
+          164
+        ],
+        "We": [
+          165
+        ],
+        "conduct": [
+          166
+        ],
+        "comprehensive": [
+          167
+        ],
+        "experiments": [
+          168
+        ],
+        "evaluate": [
+          170
+        ],
+        "’s": [
+          172,
+          314
+        ],
+        "effectiveness": [
+          173
+        ],
+        "across": [
+          178,
+          234
+        ],
+        "three": [
+          179,
+          236
+        ],
+        "distinct": [
+          180
+        ],
+        "LLMs:": [
+          182
+        ],
+        "CodeGPT,": [
+          183
+        ],
+        "CodeT5,": [
+          184
+        ],
+        "CodeLlama.": [
+          186
+        ],
+        "To": [
+          187
+        ],
+        "facilitate": [
+          188
+        ],
+        "evaluation,": [
+          190
+        ],
+        "create": [
+          192
+        ],
+        "benchmark": [
+          194
+        ],
+        "comprising": [
+          195
+        ],
+        "671": [
+          196
+        ],
+        "real-world": [
+          197
+        ],
+        "repositories": [
+          199
+        ],
+        "new": [
+          203
+        ],
+        "dependency-based": [
+          204
+        ],
+        "metrics:": [
+          205
+        ],
+        "Dependency": [
+          206,
+          220
+        ],
+        "Coverage": [
+          207,
+          221
+        ],
+        "Static": [
+          209,
+          227
+        ],
+        "Validity": [
+          210,
+          228
+        ],
+        "Rate": [
+          211,
+          229
+        ],
+        ".": [
+          212
+        ],
+        "The": [
+          213
+        ],
+        "results": [
+          214
+        ],
+        "demonstrate": [
+          215
+        ],
+        "significantly": [
+          218
+        ],
+        "improves": [
+          219
+        ],
+        "31.4%": [
+          223
+        ],
+        "39.1%": [
+          225
+        ],
+        "44.9%": [
+          231
+        ],
+        "57.7%": [
+          233
+        ],
+        "LLMs,": [
+          237,
+          322
+        ],
+        "while": [
+          238,
+          279
+        ],
+        "maintaining": [
+          239,
+          280
+        ],
+        "competitive": [
+          240
+        ],
+        "or": [
+          241
+        ],
+        "improved": [
+          242
+        ],
+        "widely": [
+          245
+        ],
+        "recognized": [
+          246
+        ],
+        "similarity": [
+          247
+        ],
+        "metrics": [
+          248
+        ],
+        "BLEU-4,": [
+          251
+        ],
+        "CodeBLEU,": [
+          252
+        ],
+        "Edit": [
+          253
+        ],
+        "Similarity,": [
+          254
+        ],
+        "Exact": [
+          256
+        ],
+        "Match.": [
+          257
+        ],
+        "On": [
+          258
+        ],
+        "CoderEval": [
+          260
+        ],
+        "dataset,": [
+          261
+        ],
+        "achieves": [
+          263
+        ],
+        "improvements": [
+          264
+        ],
+        "40.0%": [
+          266
+        ],
+        "25.0%": [
+          268
+        ],
+        "test": [
+          270
+        ],
+        "pass": [
+          271,
+          283
+        ],
+        "rate": [
+          272,
+          284
+        ],
+        "(Pass@1)": [
+          273
+        ],
+        "for": [
+          274,
+          285,
+          304
+        ],
+        "CodeT5": [
+          275
+        ],
+        "CodeLlama,": [
+          277
+        ],
+        "respectively,": [
+          278
+        ],
+        "same": [
+          282
+        ],
+        "CodeGPT.": [
+          286
+        ],
+        "also": [
+          288
+        ],
+        "demonstrates": [
+          289
+        ],
+        "high": [
+          290
+        ],
+        "efficiency": [
+          291
+        ],
+        "generation,": [
+          295
+        ],
+        "latency": [
+          297
+        ],
+        "ranging": [
+          298
+        ],
+        "from": [
+          299
+        ],
+        "0.63": [
+          300
+        ],
+        "2.34": [
+          302
+        ],
+        "seconds": [
+          303
+        ],
+        "each": [
+          306
+        ],
+        "function.": [
+          307
+        ],
+        "Furthermore,": [
+          308
+        ],
+        "our": [
+          309
+        ],
+        "generalizability": [
+          310
+        ],
+        "evaluation": [
+          311
+        ],
+        "confirms": [
+          312
+        ],
+        "consistent": [
+          315
+        ],
+        "when": [
+          317
+        ],
+        "applied": [
+          318
+        ],
+        "diverse": [
+          320
+        ],
+        "encompassing": [
+          323
+        ],
+        "various": [
+          324
+        ],
+        "model": [
+          325
+        ],
+        "architectures": [
+          326
+        ],
+        "scales.": [
+          328
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5100329466",
+            "display_name": "Chong Wang",
+            "orcid": "https://orcid.org/0000-0003-1424-6290"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I172675005",
+              "display_name": "Nanyang Technological University",
+              "ror": "https://ror.org/02e7b5302",
+              "country_code": "SG",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ],
+          "countries": [
+            "SG"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Chong Wang",
+          "raw_affiliation_strings": [
+            "Nanyang Technological University, Singapore"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-1424-6290",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Nanyang Technological University, Singapore",
+              "institution_ids": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5035797029",
+            "display_name": "Jian Zhang",
+            "orcid": "https://orcid.org/0000-0001-8316-1894"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I172675005",
+              "display_name": "Nanyang Technological University",
+              "ror": "https://ror.org/02e7b5302",
+              "country_code": "SG",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ],
+          "countries": [
+            "SG"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jian Zhang",
+          "raw_affiliation_strings": [
+            "Nanyang Technological University, Singapore, Singapore"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-8316-1894",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Nanyang Technological University, Singapore, Singapore",
+              "institution_ids": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5026905803",
+            "display_name": "Yebo Feng",
+            "orcid": "https://orcid.org/0000-0002-7235-2377"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I172675005",
+              "display_name": "Nanyang Technological University",
+              "ror": "https://ror.org/02e7b5302",
+              "country_code": "SG",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ],
+          "countries": [
+            "SG"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yebo Feng",
+          "raw_affiliation_strings": [
+            "Nanyang Technological University, Singapore, Singapore"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-7235-2377",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Nanyang Technological University, Singapore, Singapore",
+              "institution_ids": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5101674538",
+            "display_name": "Tianlin Li",
+            "orcid": "https://orcid.org/0000-0002-2207-1622"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I172675005",
+              "display_name": "Nanyang Technological University",
+              "ror": "https://ror.org/02e7b5302",
+              "country_code": "SG",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ],
+          "countries": [
+            "SG"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Tianlin Li",
+          "raw_affiliation_strings": [
+            "Nanyang Technological University, Singapore, Singapore"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-2207-1622",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Nanyang Technological University, Singapore, Singapore",
+              "institution_ids": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5013856385",
+            "display_name": "Weisong Sun",
+            "orcid": "https://orcid.org/0000-0001-9236-8264"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I172675005",
+              "display_name": "Nanyang Technological University",
+              "ror": "https://ror.org/02e7b5302",
+              "country_code": "SG",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ],
+          "countries": [
+            "SG"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Weisong Sun",
+          "raw_affiliation_strings": [
+            "Nanyang Technological University, Singapore"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-9236-8264",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Nanyang Technological University, Singapore",
+              "institution_ids": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100355692",
+            "display_name": "Yang Liu",
+            "orcid": "https://orcid.org/0000-0001-7300-9215"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I172675005",
+              "display_name": "Nanyang Technological University",
+              "ror": "https://ror.org/02e7b5302",
+              "country_code": "SG",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ],
+          "countries": [
+            "SG"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Yang Liu",
+          "raw_affiliation_strings": [
+            "Nanyang Technological University, Singapore"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0001-7300-9215",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Nanyang Technological University, Singapore",
+              "institution_ids": [
+                "https://openalex.org/I172675005"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5101854992",
+            "display_name": "Xin Peng",
+            "orcid": "https://orcid.org/0000-0003-3376-2581"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I24943067",
+              "display_name": "Fudan University",
+              "ror": "https://ror.org/013q1eq08",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I24943067"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Xin Peng",
+          "raw_affiliation_strings": [
+            "Fudan University, China"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-3376-2581",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Fudan University, China",
+              "institution_ids": [
+                "https://openalex.org/I24943067"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1145/3714462"
+    },
+    {
+      "id": "https://openalex.org/W4393160590",
+      "display_name": "Generative Multi-Modal Knowledge Retrieval with Large Language Models",
+      "publication_year": 2024,
+      "abstract_inverted_index": {
+        "Knowledge": [
+          0
+        ],
+        "retrieval": [
+          1
+        ],
+        "with": [
+          2,
+          77,
+          148
+        ],
+        "multi-modal": [
+          3,
+          12,
+          39,
+          52
+        ],
+        "queries": [
+          4
+        ],
+        "plays": [
+          5
+        ],
+        "a": [
+          6,
+          84,
+          149
+        ],
+        "crucial": [
+          7
+        ],
+        "role": [
+          8
+        ],
+        "in": [
+          9,
+          19,
+          166
+        ],
+        "supporting": [
+          10
+        ],
+        "knowledge-intensive": [
+          11
+        ],
+        "applications.": [
+          13
+        ],
+        "However,": [
+          14
+        ],
+        "existing": [
+          15
+        ],
+        "methods": [
+          16
+        ],
+        "face": [
+          17
+        ],
+        "challenges": [
+          18
+        ],
+        "terms": [
+          20
+        ],
+        "of": [
+          21,
+          59,
+          133,
+          174
+        ],
+        "their": [
+          22
+        ],
+        "effectiveness": [
+          23
+        ],
+        "and": [
+          24,
+          33,
+          95
+        ],
+        "training": [
+          25,
+          32
+        ],
+        "efficiency,": [
+          26
+        ],
+        "especially": [
+          27
+        ],
+        "when": [
+          28,
+          75,
+          197
+        ],
+        "it": [
+          29
+        ],
+        "comes": [
+          30
+        ],
+        "to": [
+          31,
+          37,
+          92,
+          117,
+          139,
+          162,
+          191,
+          199
+        ],
+        "integrating": [
+          34
+        ],
+        "multiple": [
+          35
+        ],
+        "retrievers": [
+          36
+        ],
+        "handle": [
+          38
+        ],
+        "queries.": [
+          40
+        ],
+        "In": [
+          41,
+          108
+        ],
+        "this": [
+          42
+        ],
+        "paper,": [
+          43
+        ],
+        "we": [
+          44,
+          110,
+          123,
+          144,
+          156,
+          184
+        ],
+        "propose": [
+          45,
+          157
+        ],
+        "an": [
+          46,
+          113
+        ],
+        "innovative": [
+          47
+        ],
+        "end-to-end": [
+          48
+        ],
+        "generative": [
+          49
+        ],
+        "framework": [
+          50,
+          56
+        ],
+        "for": [
+          51,
+          152
+        ],
+        "knowledge": [
+          53,
+          72,
+          82,
+          89,
+          106,
+          176
+        ],
+        "retrieval.": [
+          54
+        ],
+        "Our": [
+          55
+        ],
+        "takes": [
+          57
+        ],
+        "advantage": [
+          58
+        ],
+        "the": [
+          60,
+          93,
+          98,
+          105,
+          129,
+          134,
+          137,
+          158,
+          167,
+          172
+        ],
+        "fact": [
+          61
+        ],
+        "that": [
+          62
+        ],
+        "large": [
+          63
+        ],
+        "language": [
+          64
+        ],
+        "models": [
+          65
+        ],
+        "(LLMs)": [
+          66
+        ],
+        "can": [
+          67
+        ],
+        "effectively": [
+          68
+        ],
+        "serve": [
+          69
+        ],
+        "as": [
+          70
+        ],
+        "virtual": [
+          71
+        ],
+        "bases,": [
+          73
+        ],
+        "even": [
+          74
+        ],
+        "trained": [
+          76
+        ],
+        "limited": [
+          78
+        ],
+        "data.": [
+          79
+        ],
+        "We": [
+          80
+        ],
+        "retrieve": [
+          81
+        ],
+        "via": [
+          83
+        ],
+        "two-step": [
+          85
+        ],
+        "process:": [
+          86
+        ],
+        "1)": [
+          87
+        ],
+        "generating": [
+          88
+        ],
+        "clues": [
+          90
+        ],
+        "related": [
+          91
+        ],
+        "queries,": [
+          94
+        ],
+        "2)": [
+          96
+        ],
+        "obtaining": [
+          97
+        ],
+        "relevant": [
+          99
+        ],
+        "document": [
+          100
+        ],
+        "by": [
+          101
+        ],
+        "searching": [
+          102
+        ],
+        "databases": [
+          103
+        ],
+        "using": [
+          104
+        ],
+        "clue.": [
+          107
+        ],
+        "particular,": [
+          109
+        ],
+        "first": [
+          111
+        ],
+        "introduce": [
+          112
+        ],
+        "object-aware": [
+          114
+        ],
+        "prefix-tuning": [
+          115
+        ],
+        "technique": [
+          116
+        ],
+        "guide": [
+          118
+        ],
+        "multi-grained": [
+          119,
+          125
+        ],
+        "visual": [
+          120,
+          126
+        ],
+        "learning.": [
+          121
+        ],
+        "Then,": [
+          122
+        ],
+        "align": [
+          124
+        ],
+        "features": [
+          127
+        ],
+        "into": [
+          128
+        ],
+        "textual": [
+          130
+        ],
+        "feature": [
+          131
+        ],
+        "space": [
+          132
+        ],
+        "LLM,": [
+          135
+        ],
+        "employing": [
+          136
+        ],
+        "LLM": [
+          138
+        ],
+        "capture": [
+          140
+        ],
+        "cross-modal": [
+          141
+        ],
+        "interactions.": [
+          142
+        ],
+        "Subsequently,": [
+          143
+        ],
+        "construct": [
+          145
+        ],
+        "instruction": [
+          146
+        ],
+        "data": [
+          147
+        ],
+        "unified": [
+          150
+        ],
+        "format": [
+          151
+        ],
+        "model": [
+          153
+        ],
+        "training.": [
+          154
+        ],
+        "Finally,": [
+          155
+        ],
+        "knowledge-guided": [
+          159
+        ],
+        "generation": [
+          160,
+          173
+        ],
+        "strategy": [
+          161
+        ],
+        "impose": [
+          163
+        ],
+        "prior": [
+          164
+        ],
+        "constraints": [
+          165
+        ],
+        "decoding": [
+          168
+        ],
+        "steps,": [
+          169
+        ],
+        "thereby": [
+          170
+        ],
+        "promoting": [
+          171
+        ],
+        "distinctive": [
+          175
+        ],
+        "clues.": [
+          177
+        ],
+        "Through": [
+          178
+        ],
+        "experiments": [
+          179
+        ],
+        "conducted": [
+          180
+        ],
+        "on": [
+          181
+        ],
+        "three": [
+          182
+        ],
+        "benchmarks,": [
+          183
+        ],
+        "demonstrate": [
+          185
+        ],
+        "significant": [
+          186
+        ],
+        "improvements": [
+          187
+        ],
+        "ranging": [
+          188
+        ],
+        "from": [
+          189
+        ],
+        "3.0%": [
+          190
+        ],
+        "14.6%": [
+          192
+        ],
+        "across": [
+          193
+        ],
+        "all": [
+          194
+        ],
+        "evaluation": [
+          195
+        ],
+        "metrics": [
+          196
+        ],
+        "compared": [
+          198
+        ],
+        "strong": [
+          200
+        ],
+        "baselines.": [
+          201
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5104089217",
+            "display_name": "Xinwei Long",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I99065089",
+              "display_name": "Tsinghua University",
+              "ror": "https://ror.org/03cve4549",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Xinwei Long",
+          "raw_affiliation_strings": [
+            "Department of Electronic Engineering, Tsinghua University"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Electronic Engineering, Tsinghua University",
+              "institution_ids": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5112495273",
+            "display_name": "Jiali Zeng",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I2250653659",
+              "display_name": "Tencent (China)",
+              "ror": "https://ror.org/00hhjss72",
+              "country_code": "CN",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I2250653659"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jiali Zeng",
+          "raw_affiliation_strings": [
+            "Pattern Recognition Center, WeChat AI, Tencent Inc, China"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Pattern Recognition Center, WeChat AI, Tencent Inc, China",
+              "institution_ids": [
+                "https://openalex.org/I2250653659"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5024849044",
+            "display_name": "Fandong Meng",
+            "orcid": "https://orcid.org/0000-0002-8158-2377"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I2250653659",
+              "display_name": "Tencent (China)",
+              "ror": "https://ror.org/00hhjss72",
+              "country_code": "CN",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I2250653659"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Fandong Meng",
+          "raw_affiliation_strings": [
+            "Pattern Recognition Center, WeChat AI, Tencent Inc, China"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Pattern Recognition Center, WeChat AI, Tencent Inc, China",
+              "institution_ids": [
+                "https://openalex.org/I2250653659"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100622932",
+            "display_name": "Zhiyuan Ma",
+            "orcid": "https://orcid.org/0000-0003-2153-5824"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I99065089",
+              "display_name": "Tsinghua University",
+              "ror": "https://ror.org/03cve4549",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Zhiyuan Ma",
+          "raw_affiliation_strings": [
+            "Department of Electronic Engineering, Tsinghua University"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Electronic Engineering, Tsinghua University",
+              "institution_ids": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5101999478",
+            "display_name": "Kaiyan Zhang",
+            "orcid": "https://orcid.org/0000-0002-8059-1124"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I99065089",
+              "display_name": "Tsinghua University",
+              "ror": "https://ror.org/03cve4549",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Kaiyan Zhang",
+          "raw_affiliation_strings": [
+            "Department of Electronic Engineering, Tsinghua University"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Electronic Engineering, Tsinghua University",
+              "institution_ids": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5004875850",
+            "display_name": "Bowen Zhou",
+            "orcid": "https://orcid.org/0000-0003-4421-9787"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I99065089",
+              "display_name": "Tsinghua University",
+              "ror": "https://ror.org/03cve4549",
+              "country_code": "CN",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Bowen Zhou",
+          "raw_affiliation_strings": [
+            "Department of Electronic Engineering, Tsinghua University"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Electronic Engineering, Tsinghua University",
+              "institution_ids": [
+                "https://openalex.org/I99065089"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5024102664",
+            "display_name": "Jie Zhou",
+            "orcid": "https://orcid.org/0000-0002-3371-6780"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I2250653659",
+              "display_name": "Tencent (China)",
+              "ror": "https://ror.org/00hhjss72",
+              "country_code": "CN",
+              "type": "company",
+              "lineage": [
+                "https://openalex.org/I2250653659"
+              ]
+            }
+          ],
+          "countries": [
+            "CN"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jie Zhou",
+          "raw_affiliation_strings": [
+            "Pattern Recognition Center, WeChat AI, Tencent Inc, China"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Pattern Recognition Center, WeChat AI, Tencent Inc, China",
+              "institution_ids": [
+                "https://openalex.org/I2250653659"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1609/aaai.v38i17.29837"
+    },
+    {
+      "id": "https://openalex.org/W4381252438",
+      "display_name": "Are Large Language Models Really Good Logical Reasoners? A Comprehensive Evaluation and Beyond",
+      "publication_year": 2023,
+      "abstract_inverted_index": {
+        "Logical": [
+          0
+        ],
+        "reasoning": [
+          1,
+          85,
+          96,
+          191,
+          218
+        ],
+        "consistently": [
+          2
+        ],
+        "plays": [
+          3
+        ],
+        "a": [
+          4,
+          26,
+          197,
+          212
+        ],
+        "fundamental": [
+          5
+        ],
+        "and": [
+          6,
+          15,
+          68,
+          87,
+          94,
+          109,
+          131,
+          137,
+          146,
+          173,
+          184,
+          229,
+          236,
+          240
+        ],
+        "significant": [
+          7
+        ],
+        "role": [
+          8
+        ],
+        "in": [
+          9,
+          29,
+          72,
+          129
+        ],
+        "the": [
+          10,
+          35,
+          43,
+          99,
+          152,
+          179,
+          189,
+          205,
+          234
+        ],
+        "domains": [
+          11
+        ],
+        "of": [
+          12,
+          37,
+          45,
+          101,
+          155,
+          181,
+          193,
+          216,
+          238
+        ],
+        "knowledge": [
+          13,
+          182
+        ],
+        "engineering": [
+          14
+        ],
+        "artificial": [
+          16
+        ],
+        "intelligence.": [
+          17
+        ],
+        "Recently,": [
+          18
+        ],
+        "Large": [
+          19
+        ],
+        "Language": [
+          20
+        ],
+        "Models": [
+          21
+        ],
+        "(LLMs)": [
+          22
+        ],
+        "have": [
+          23
+        ],
+        "emerged": [
+          24
+        ],
+        "as": [
+          25
+        ],
+        "noteworthy": [
+          27
+        ],
+        "innovation": [
+          28
+        ],
+        "natural": [
+          30
+        ],
+        "language": [
+          31
+        ],
+        "processing": [
+          32
+        ],
+        "(NLP).": [
+          33
+        ],
+        "However,": [
+          34
+        ],
+        "question": [
+          36
+        ],
+        "whether": [
+          38
+        ],
+        "LLMs": [
+          39,
+          108,
+          239
+        ],
+        "can": [
+          40
+        ],
+        "effectively": [
+          41
+        ],
+        "address": [
+          42
+        ],
+        "task": [
+          44
+        ],
+        "logical": [
+          46,
+          84,
+          153,
+          190,
+          217
+        ],
+        "reasoning,": [
+          47
+        ],
+        "which": [
+          48
+        ],
+        "requires": [
+          49
+        ],
+        "gradual": [
+          50
+        ],
+        "cognitive": [
+          51
+        ],
+        "inference": [
+          52
+        ],
+        "similar": [
+          53
+        ],
+        "to": [
+          54,
+          64,
+          76,
+          150,
+          162,
+          177
+        ],
+        "human": [
+          55
+        ],
+        "intelligence,": [
+          56
+        ],
+        "remains": [
+          57
+        ],
+        "unanswered.": [
+          58
+        ],
+        "To": [
+          59
+        ],
+        "this": [
+          60,
+          66,
+          73,
+          208
+        ],
+        "end,": [
+          61
+        ],
+        "we": [
+          62,
+          80,
+          103,
+          125,
+          195
+        ],
+        "aim": [
+          63
+        ],
+        "bridge": [
+          65
+        ],
+        "gap": [
+          67
+        ],
+        "provide": [
+          69
+        ],
+        "comprehensive": [
+          70
+        ],
+        "evaluations": [
+          71,
+          117,
+          128
+        ],
+        "paper.": [
+          74
+        ],
+        "Firstly,": [
+          75
+        ],
+        "offer": [
+          77
+        ],
+        "systematic": [
+          78
+        ],
+        "evaluations,": [
+          79,
+          102,
+          207
+        ],
+        "select": [
+          81
+        ],
+        "fifteen": [
+          82
+        ],
+        "typical": [
+          83
+        ],
+        "datasets": [
+          86
+        ],
+        "organize": [
+          88
+        ],
+        "them": [
+          89
+        ],
+        "into": [
+          90
+        ],
+        "deductive,": [
+          91
+        ],
+        "inductive,": [
+          92
+        ],
+        "abductive": [
+          93
+        ],
+        "mixed-form": [
+          95
+        ],
+        "settings.": [
+          97
+        ],
+        "Considering": [
+          98
+        ],
+        "comprehensiveness": [
+          100
+        ],
+        "include": [
+          104
+        ],
+        "3": [
+          105
+        ],
+        "early-era": [
+          106
+        ],
+        "representative": [
+          107
+        ],
+        "4": [
+          110
+        ],
+        "trending": [
+          111
+        ],
+        "LLMs.": [
+          112
+        ],
+        "Secondly,": [
+          113
+        ],
+        "different": [
+          114
+        ],
+        "from": [
+          115,
+          166,
+          220
+        ],
+        "previous": [
+          116
+        ],
+        "relying": [
+          118
+        ],
+        "only": [
+          119
+        ],
+        "on": [
+          120,
+          187,
+          204
+        ],
+        "simple": [
+          121
+        ],
+        "metrics": [
+          122
+        ],
+        "(e.g.,": [
+          123
+        ],
+        "\\emph{accuracy}),": [
+          124
+        ],
+        "propose": [
+          126,
+          196
+        ],
+        "fine-level": [
+          127
+        ],
+        "objective": [
+          130
+        ],
+        "subjective": [
+          132
+        ],
+        "manners,": [
+          133
+        ],
+        "covering": [
+          134
+        ],
+        "both": [
+          135
+        ],
+        "answers": [
+          136
+        ],
+        "explanations,": [
+          138
+        ],
+        "including": [
+          139
+        ],
+        "\\emph{answer": [
+          140
+        ],
+        "correctness},": [
+          141,
+          143
+        ],
+        "\\emph{explain": [
+          142,
+          144,
+          147
+        ],
+        "completeness}": [
+          145
+        ],
+        "redundancy}.": [
+          148
+        ],
+        "Additionally,": [
+          149
+        ],
+        "uncover": [
+          151
+        ],
+        "flaws": [
+          154
+        ],
+        "LLMs,": [
+          156,
+          194
+        ],
+        "problematic": [
+          157
+        ],
+        "cases": [
+          158
+        ],
+        "will": [
+          159
+        ],
+        "be": [
+          160
+        ],
+        "attributed": [
+          161
+        ],
+        "five": [
+          163
+        ],
+        "error": [
+          164
+        ],
+        "types": [
+          165
+        ],
+        "two": [
+          167
+        ],
+        "dimensions,": [
+          168
+        ],
+        "i.e.,": [
+          169
+        ],
+        "\\emph{evidence": [
+          170
+        ],
+        "selection": [
+          171
+        ],
+        "process}": [
+          172
+        ],
+        "\\emph{reasoning": [
+          174
+        ],
+        "process}.": [
+          175
+        ],
+        "Thirdly,": [
+          176
+        ],
+        "avoid": [
+          178
+        ],
+        "influences": [
+          180
+        ],
+        "bias": [
+          183
+        ],
+        "concentrate": [
+          185
+        ],
+        "purely": [
+          186
+        ],
+        "benchmarking": [
+          188
+        ],
+        "capability": [
+          192,
+          219
+        ],
+        "new": [
+          198
+        ],
+        "dataset": [
+          199
+        ],
+        "with": [
+          200
+        ],
+        "neutral": [
+          201
+        ],
+        "content.": [
+          202
+        ],
+        "Based": [
+          203
+        ],
+        "in-depth": [
+          206
+        ],
+        "paper": [
+          209
+        ],
+        "finally": [
+          210
+        ],
+        "forms": [
+          211
+        ],
+        "general": [
+          213
+        ],
+        "evaluation": [
+          214
+        ],
+        "scheme": [
+          215
+        ],
+        "six": [
+          221
+        ],
+        "dimensions": [
+          222
+        ],
+        "(i.e.,": [
+          223
+        ],
+        "\\emph{Correct},": [
+          224
+        ],
+        "\\emph{Rigorous},": [
+          225
+        ],
+        "\\emph{Self-aware},": [
+          226
+        ],
+        "\\emph{Active},": [
+          227
+        ],
+        "\\emph{Oriented}": [
+          228
+        ],
+        "\\emph{No": [
+          230
+        ],
+        "hallucination}).": [
+          231
+        ],
+        "It": [
+          232
+        ],
+        "reflects": [
+          233
+        ],
+        "pros": [
+          235
+        ],
+        "cons": [
+          237
+        ],
+        "gives": [
+          241
+        ],
+        "guiding": [
+          242
+        ],
+        "directions": [
+          243
+        ],
+        "for": [
+          244
+        ],
+        "future": [
+          245
+        ],
+        "works.": [
+          246
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5111315441",
+            "display_name": "Fangzhi Xu",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Xu, Fangzhi",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5086407377",
+            "display_name": "Qika Lin",
+            "orcid": "https://orcid.org/0000-0001-5650-0600"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Lin, Qika",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5019539533",
+            "display_name": "Jiawei Han",
+            "orcid": "https://orcid.org/0000-0002-3629-2696"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Han, Jiawei",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5085250099",
+            "display_name": "Tianzhe Zhao",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Zhao, Tianzhe",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100361707",
+            "display_name": "Jun Liu",
+            "orcid": "https://orcid.org/0000-0001-8859-5405"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Liu, Jun",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5100752356",
+            "display_name": "Erik Cambria",
+            "orcid": "https://orcid.org/0000-0002-3030-1280"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Cambria, Erik",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        }
+      ],
+      "doi": "https://doi.org/10.48550/arxiv.2306.09841"
+    }
+  ],
+  "notes": [
+    {
+      "id": "https://openalex.org/W4384071683",
+      "doi": "https://doi.org/10.1038/s41586-023-06291-2",
+      "title": "Large language models encode clinical knowledge",
+      "year": 2023,
+      "authors": [
+        "Karan Singhal",
+        "Shekoofeh Azizi",
+        "Tao Tu",
+        "S. Sara Mahdavi",
+        "Jason Lee"
+      ],
+      "abstract": "Large language models (LLMs) have demonstrated impressive capabilities, but the bar for clinical applications is high. Attempts to assess the clinical knowledge of models typically rely on automated evaluations based on limited benchmarks. Here, to address these limitations, we present MultiMedQA, a benchmark combining six existing medical question answering datasets spanning professional medicine, research and consumer queries and a new dataset of medical questions searched online, HealthSearchQA. We propose a human evaluation framework for model answers along multiple axes including factuality, comprehension, reasoning, possible harm and bias. In addition, we evaluate Pathways Language Model<sup>1</sup> (PaLM, a 540-billion parameter LLM) and its instruction-tuned variant, Flan-PaLM<sup>2</sup> on MultiMedQA. Using a combination of prompting strategies, Flan-PaLM achieves state-of-the-art accuracy on every MultiMedQA multiple-choice dataset (MedQA<sup>3</sup>, MedMCQA<sup>4</sup>, PubMedQA<sup>5</sup> and Measuring Massive Multitask Language Understanding (MMLU) clinical topics<sup>6</sup>), including 67.6% accuracy on MedQA (US Medical Licensing Exam-style questions), surpassing the prior state of the art by more than 17%. However, human evaluation reveals key gaps. To resolve this, we introduce instruction prompt tuning, a parameter-efficient approach for aligning LLMs to new domains using a few exemplars. The resulting model, Med-PaLM, performs encouragingly, but remains inferior to clinicians. We show that comprehension, knowledge recall and reasoning improve with mod"
+    },
+    {
+      "id": "https://openalex.org/W4407097799",
+      "doi": "https://doi.org/10.1109/tkde.2025.3536008",
+      "title": "Are Large Language Models Really Good Logical Reasoners? A Comprehensive Evaluation and Beyond",
+      "year": 2025,
+      "authors": [
+        "Fangzhi Xu",
+        "Qika Lin",
+        "Jiawei Han",
+        "Tianzhe Zhao",
+        "Jun Liu"
+      ],
+      "abstract": "Logical reasoning consistently plays a fundamental and significant role in the domains of knowledge engineering and artificial intelligence. Recently, Large Language Models (LLMs) have emerged as a noteworthy innovation in natural language processing (NLP). However, the question of whether LLMs can effectively address the task of logical reasoning, which requires gradual cognitive inference similar to human intelligence, remains unanswered. To this end, we aim to bridge this gap and provide comprehensive evaluations in this paper. First, to offer systematic evaluations, we select fifteen typical logical reasoning datasets and organize them into deductive, inductive, abductive and mixed-form reasoning settings. Considering the comprehensiveness of evaluations, we include 3 early-era representative LLMs and 4 trending LLMs. Second, different from previous evaluations relying only on simple metrics (e.g., <italic xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">accuracy</i>), we propose fine-level evaluations in objective and subjective manners, covering both answers and explanations, including <italic xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">answer correctness</i>, <italic xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">explain correctness</i>, <italic xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">explain completeness</i> and <italic xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www"
+    },
+    {
+      "id": "https://openalex.org/W4406866655",
+      "doi": "https://doi.org/10.1145/3714462",
+      "title": "Teaching Code LLMs to Use Autocompletion Tools in Repository-Level Code Generation",
+      "year": 2025,
+      "authors": [
+        "Chong Wang",
+        "Jian Zhang",
+        "Yebo Feng",
+        "Tianlin Li",
+        "Weisong Sun"
+      ],
+      "abstract": "Recent code large language models (LLMs) have shown promising performance in generating standalone functions. However, they face limitations in repository-level code generation due to their lack of awareness of repository-level dependencies ( e.g., user-defined attributes), resulting in dependency errors such as undefined-variable and no-member errors. In this work, we introduce ToolGen , an approach that integrates autocompletion tools into the code LLM generation process to address these dependencies. ToolGen comprises two main phases: Trigger Insertion and Model Fine-tuning (Offline), and Tool-integrated Code Generation (Online). During the offline phase, ToolGen augments functions within a given code corpus with a special mark token, indicating positions to trigger autocompletion tools. These augmented functions, along with their corresponding descriptions, are then used to fine-tune a selected code LLM. In the online phase, ToolGen iteratively generates functions by predicting tokens step-by-step using the fine-tuned LLM. Whenever a mark token is encountered, ToolGen invokes the autocompletion tool to suggest code completions and selects the most appropriate one through constrained greedy search. We conduct comprehensive experiments to evaluate ToolGen ’s effectiveness in repository-level code generation across three distinct code LLMs: CodeGPT, CodeT5, and CodeLlama. To facilitate this evaluation, we create a benchmark comprising 671 real-world code repositories and introduce two new dependency-based metrics: Dependency Coverage and Static Validity Rate . The results "
+    },
+    {
+      "id": "https://openalex.org/W4393160590",
+      "doi": "https://doi.org/10.1609/aaai.v38i17.29837",
+      "title": "Generative Multi-Modal Knowledge Retrieval with Large Language Models",
+      "year": 2024,
+      "authors": [
+        "Xinwei Long",
+        "Jiali Zeng",
+        "Fandong Meng",
+        "Zhiyuan Ma",
+        "Kaiyan Zhang"
+      ],
+      "abstract": "Knowledge retrieval with multi-modal queries plays a crucial role in supporting knowledge-intensive multi-modal applications. However, existing methods face challenges in terms of their effectiveness and training efficiency, especially when it comes to training and integrating multiple retrievers to handle multi-modal queries. In this paper, we propose an innovative end-to-end generative framework for multi-modal knowledge retrieval. Our framework takes advantage of the fact that large language models (LLMs) can effectively serve as virtual knowledge bases, even when trained with limited data. We retrieve knowledge via a two-step process: 1) generating knowledge clues related to the queries, and 2) obtaining the relevant document by searching databases using the knowledge clue. In particular, we first introduce an object-aware prefix-tuning technique to guide multi-grained visual learning. Then, we align multi-grained visual features into the textual feature space of the LLM, employing the LLM to capture cross-modal interactions. Subsequently, we construct instruction data with a unified format for model training. Finally, we propose the knowledge-guided generation strategy to impose prior constraints in the decoding steps, thereby promoting the generation of distinctive knowledge clues. Through experiments conducted on three benchmarks, we demonstrate significant improvements ranging from 3.0% to 14.6% across all evaluation metrics when compared to strong baselines."
+    },
+    {
+      "id": "https://openalex.org/W4381252438",
+      "doi": "https://doi.org/10.48550/arxiv.2306.09841",
+      "title": "Are Large Language Models Really Good Logical Reasoners? A Comprehensive Evaluation and Beyond",
+      "year": 2023,
+      "authors": [
+        "Fangzhi Xu",
+        "Qika Lin",
+        "Jiawei Han",
+        "Tianzhe Zhao",
+        "Jun Liu"
+      ],
+      "abstract": "Logical reasoning consistently plays a fundamental and significant role in the domains of knowledge engineering and artificial intelligence. Recently, Large Language Models (LLMs) have emerged as a noteworthy innovation in natural language processing (NLP). However, the question of whether LLMs can effectively address the task of logical reasoning, which requires gradual cognitive inference similar to human intelligence, remains unanswered. To this end, we aim to bridge this gap and provide comprehensive evaluations in this paper. Firstly, to offer systematic evaluations, we select fifteen typical logical reasoning datasets and organize them into deductive, inductive, abductive and mixed-form reasoning settings. Considering the comprehensiveness of evaluations, we include 3 early-era representative LLMs and 4 trending LLMs. Secondly, different from previous evaluations relying only on simple metrics (e.g., \\emph{accuracy}), we propose fine-level evaluations in objective and subjective manners, covering both answers and explanations, including \\emph{answer correctness}, \\emph{explain correctness}, \\emph{explain completeness} and \\emph{explain redundancy}. Additionally, to uncover the logical flaws of LLMs, problematic cases will be attributed to five error types from two dimensions, i.e., \\emph{evidence selection process} and \\emph{reasoning process}. Thirdly, to avoid the influences of knowledge bias and concentrate purely on benchmarking the logical reasoning capability of LLMs, we propose a new dataset with neutral content. Based on the in-depth evaluations, this paper fi"
+    }
+  ],
+  "final_answer": "Определение темы\n\nТема обзора: оценка больших языковых моделей (LLM evaluation) и процессно-ориентированные метрики (process-aware metrics) в контексте практик разработки ПО с участием ИИ, таких как «vibe coding» — когда разработчик полностью или частично полагается на LLM (чат-бот, код-агент) для генерации исходного кода и руководит процессом через последовательность подсказок и проверок/репромптов. В этом контексте важна не только конечная корректность ответа модели (например, компилируемость или функциональные тесты), но и качество промежуточных шагов генерации, объяснений, использования инструментов и взаимодействия модели с репозиторием — то есть метрики, чувствительные к процессу генерации и интеграции.\n\nОсновные подходы\n\n- Бенчмарки и автоматизированные метрики по задачам: создание наборов тестов/вопросов (например, медицинские QA, логические задачи, кодовые репозитории) и измерение точности/accuracy, уровня-ответа на множественный выбор и т.п. (источники: Singhal et al. 2023; Xu et al. 2023/2025).\n- Человеческая оценка по многим осям: при высоких требованиях (напр., медицина) дополнительно проводится экспертная аннотация ответов по осям фактичности, причинности, возможного вреда и предвзятости (Singhal et al. 2023). Это расширяет простую автоматическую метрику качества.\n- Многоуровневое/тонкое (fine-level) оценивание: помимо булевой правильности ответа, введение метрик для оценки объяснений — их корректности, полноты, избыточности; разбор ошибок по типам, связанных с выбором доказательств и самим процессом рассуждения (Xu et al. 2023/2025).\n- Process-aware интеграция инструментов: обучение и оценка моделей, которые взаимодействуют с внешними автодополняющими инструментами или репозиторием на уровне репозитория (ToolGen — Wang et al. 2025). Для таких систем вводят новые метрики, учитывающие зависимостную корректность и статическую валидность.\n- Генеративный подход к поиску знаний/мульти-модальному retrieval: использование LLM как «виртуальной базы знаний» и двухэтапного извлечения (генерация ключевых подсказок → поиск по базе) в задачах извлечения знаний (Long et al. 2024). Это влияет на метрики качества поиска и пригодности подсказок.\n\n3–5 ключевых работ (с годами и вкладом)\n\n1) Singhal et al., 2023 — \"Large language models encode clinical knowledge\" (DOI: 10.1038/s41586-023-06291-2)\n   - Вклад: создание MultiMedQA — объединённого бенчмарка по медицинскому QA (несколько наборов + новый HealthSearchQA) и предложение человеко-ориентированной рамки оценки ответов LLM по осям фактичности, понимания, рассуждения, вреда и предвзятости. Показали, что при наличии хитрых prompt-стратегий и instruction tuning модели достигают высокого автоматизированного качества, но человеческая оценка выявляет существенные пробелы.\n\n2) Xu et al., 2023 — \"Are Large Language Models Really Good Logical Reasoners? A Comprehensive Evaluation and Beyond\" (arXiv:2306.09841)\n   - Вклад: систематизация 15 наборов задач по логическому рассуждению (дедуктивное, индуктивное, абдуктивное, смешанное); предложение fine-level метрик, которые оценивают не только корректность ответа, но и корректность/полноту/избыточность объяснений; классификация ошибок по процессным стадиям (selection of evidence vs reasoning). Эта работа подчёркивает необходимость процессно-ориентированных метрик для диагностики слабых мест LLM.\n\n3) Xu et al., 2025 — расширение/переработка той же линии (IEEE TKDE 2025)\n   - Вклад: более комплексная и формализованная оценка логического рассуждения, введение объективных и субъективных fine-level метрик для ответов и объяснений; демонстрация, что простые accuracy-метрики недостаточны для оценки reasoning-capabilities LLM.\n\n4) Wang et al., 2025 — \"Teaching Code LLMs to Use Autocompletion Tools in Repository-Level Code Generation\" (DOI: 10.1145/3714462)\n   - Вклад: ToolGen — метод обучения кодовых LLM для вызова автодополнений/инструментов при генерации кода на уровне репозитория; предложены две новые dependency-oriented метрики: Dependency Coverage и Static Validity Rate. Практический пример процессно-ориентированной оценки для задач repository-level code generation, релевантный для vibe coding.\n\n5) Long et al., 2024 — \"Generative Multi-Modal Knowledge Retrieval with Large Language Models\" (AAAI 2024)\n   - Вклад: метод, использующий LLM для генерации «knowledge clues» и последующего поиска, при этом предлагается техника object-aware prefix-tuning и knowledge-guided decoding",
+  "status": "finished",
+  "stop_reason": "final_answer_generated",
+  "tool_errors": 0,
+  "evaluator_result": {
+    "correctness": 4,
+    "groundedness": 4,
+    "completeness": 4,
+    "coverage_of_required_fields": 4,
+    "source_consistency": 4,
+    "comment": "Ответ в целом корректен, согласуется с указанными источниками и логично связывает идеи (процессно-ориентированные метрики, fine-level оценки, ToolGen и generative retrieval). Некоторые утверждения выглядят немного частными или предположительными (например, точные формулировки работ Xu et al. 2025 и Wang et al. 2025 — возможно, это прогнозы/публикации 2025 года), но ссылки и описания основных вкладов соответствуют приведённым референсам. Отмечу отсутствие явных методологических деталей для предложенных метрик и небольшой недостаток критической оценки ограничений — поэтому не максимально полный.",
+    "rubric": 4.0
+  }
+}

@@ -1,0 +1,4 @@
+mode,correctness,groundedness,completeness,coverage_of_required_fields,source_consistency,rubric,n_steps,latency,tool_errors
+agent,4.625,4.75,4.0,4.625,4.875,4.575,5.0,20.835,0.0
+agent_evaluator,4.625,4.625,3.75,4.5,4.75,4.45,6.0,26.491,0.0
+baseline,4.625,3.5,4.375,4.625,1.5,3.725,1.0,20.965,0.0

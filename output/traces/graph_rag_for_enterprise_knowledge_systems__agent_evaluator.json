@@ -1,0 +1,2739 @@
+{
+  "topic": "Graph RAG for enterprise knowledge systems",
+  "objective": "Подготовить структурированный научно-аналитический обзор темы",
+  "step_id": 6,
+  "history": [
+    {
+      "step_id": 0,
+      "action": "search_wikipedia",
+      "payload": {
+        "topic": "Graph RAG for enterprise knowledge systems"
+      },
+      "result": "In knowledge representation and reasoning, a knowledge graph is a knowledge base that uses a graph-structured data model or topology to represent and operate on data. Knowledge graphs are often used to store interlinked descriptions of entities – objects, events, situations or abstract concepts – while also encoding the free-form semantics or relationships underlying these entities.",
+      "n_sources": 0,
+      "n_notes": 0,
+      "next_reason": "need general context before publication search"
+    },
+    {
+      "step_id": 1,
+      "action": "search_openalex",
+      "payload": {
+        "query": "Graph RAG for enterprise knowledge systems",
+        "per_page": 5
+      },
+      "result": "found=5",
+      "n_sources": 5,
+      "n_notes": 0,
+      "next_reason": "extract notes from returned publications"
+    },
+    {
+      "step_id": 2,
+      "action": "extract_notes",
+      "payload": {
+        "n_sources": 5,
+        "top_k": 5
+      },
+      "result": "notes_prepared=5",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "generate final answer from context and notes"
+    },
+    {
+      "step_id": 3,
+      "action": "generate_final_answer",
+      "payload": {
+        "topic": "Graph RAG for enterprise knowledge systems"
+      },
+      "result": "Определение темы\nGraph RAG for enterprise knowledge systems — подходы и архитектуры, которые объединяют Retrieval-Augmented Generation (RAG) — методику подмешивания релевантных внешних знаний в генеративные ответы больших языковых моделей (LLM) — с представлением знаний в виде графов (knowledge graphs, KG). В таком объединении графовая структура служит источником контекстуализированных, семантически связанных фрагментов (узлы, рёбра, временные метаданные), которые извлекаются и подаются в LLM дл",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "finish or run evaluator depending on configuration"
+    },
+    {
+      "step_id": 4,
+      "action": "internal_evaluator",
+      "payload": {
+        "criteria": [
+          "correctness",
+          "groundedness",
+          "completeness",
+          "coverage_of_required_fields",
+          "source_consistency",
+          "comment",
+          "rubric"
+        ]
+      },
+      "result": "{'correctness': 4, 'groundedness': 4, 'completeness': 3, 'coverage_of_required_fields': 4, 'source_consistency': 4, 'comment': 'Ответ в целом корректен и согласуется с перечисленными источниками: хорошо описаны подходы (классический RAG, KG-enhanced, временные KG, гибриды, модульный RAG) и даны релевантные ссылки. Оценка недостаёт точности в нескольких местах: утверждения о работах 2025–2026 (Zep 2025, Feldt & Hellström 2026) представлены уверенно, тогда как для Feldt & Hellström указана только ",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "refine if rubric is below threshold"
+    },
+    {
+      "step_id": 5,
+      "action": "finish",
+      "payload": {
+        "status": "finished",
+        "stop_reason": "final_answer_generated"
+      },
+      "result": "final_answer_generated",
+      "n_sources": 5,
+      "n_notes": 5,
+      "next_reason": "stop criterion reached"
+    }
+  ],
+  "sources": [
+    {
+      "id": "https://openalex.org/W4389984066",
+      "display_name": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "publication_year": 2023,
+      "abstract_inverted_index": {
+        "Large": [
+          0
+        ],
+        "Language": [
+          1
+        ],
+        "Models": [
+          2
+        ],
+        "(LLMs)": [
+          3
+        ],
+        "showcase": [
+          4
+        ],
+        "impressive": [
+          5
+        ],
+        "capabilities": [
+          6
+        ],
+        "but": [
+          7
+        ],
+        "encounter": [
+          8
+        ],
+        "challenges": [
+          9,
+          155
+        ],
+        "like": [
+          10
+        ],
+        "hallucination,": [
+          11
+        ],
+        "outdated": [
+          12
+        ],
+        "knowledge,": [
+          13
+        ],
+        "and": [
+          14,
+          38,
+          47,
+          53,
+          93,
+          112,
+          146,
+          158,
+          165
+        ],
+        "non-transparent,": [
+          15
+        ],
+        "untraceable": [
+          16
+        ],
+        "reasoning": [
+          17
+        ],
+        "processes.": [
+          18
+        ],
+        "Retrieval-Augmented": [
+          19
+        ],
+        "Generation": [
+          20
+        ],
+        "(RAG)": [
+          21
+        ],
+        "has": [
+          22
+        ],
+        "emerged": [
+          23
+        ],
+        "as": [
+          24
+        ],
+        "a": [
+          25,
+          77,
+          130
+        ],
+        "promising": [
+          26
+        ],
+        "solution": [
+          27
+        ],
+        "by": [
+          28
+        ],
+        "incorporating": [
+          29
+        ],
+        "knowledge": [
+          30,
+          51,
+          63
+        ],
+        "from": [
+          31
+        ],
+        "external": [
+          32,
+          70
+        ],
+        "databases.": [
+          33,
+          71
+        ],
+        "This": [
+          34,
+          72
+        ],
+        "enhances": [
+          35
+        ],
+        "the": [
+          36,
+          41,
+          65,
+          81,
+          87,
+          90,
+          94,
+          100,
+          108,
+          110,
+          113,
+          119,
+          134,
+          149,
+          154
+        ],
+        "accuracy": [
+          37
+        ],
+        "credibility": [
+          39
+        ],
+        "of": [
+          40,
+          55,
+          69,
+          80,
+          83,
+          103,
+          125,
+          133
+        ],
+        "generation,": [
+          42
+        ],
+        "particularly": [
+          43
+        ],
+        "for": [
+          44,
+          49,
+          163
+        ],
+        "knowledge-intensive": [
+          45
+        ],
+        "tasks,": [
+          46
+        ],
+        "allows": [
+          48
+        ],
+        "continuous": [
+          50
+        ],
+        "updates": [
+          52
+        ],
+        "integration": [
+          54
+        ],
+        "domain-specific": [
+          56
+        ],
+        "information.": [
+          57
+        ],
+        "RAG": [
+          58,
+          84,
+          104,
+          137
+        ],
+        "synergistically": [
+          59
+        ],
+        "merges": [
+          60
+        ],
+        "LLMs'": [
+          61
+        ],
+        "intrinsic": [
+          62
+        ],
+        "with": [
+          64
+        ],
+        "vast,": [
+          66
+        ],
+        "dynamic": [
+          67
+        ],
+        "repositories": [
+          68
+        ],
+        "comprehensive": [
+          73
+        ],
+        "review": [
+          74
+        ],
+        "paper": [
+          75,
+          117,
+          141
+        ],
+        "offers": [
+          76
+        ],
+        "detailed": [
+          78
+        ],
+        "examination": [
+          79
+        ],
+        "progression": [
+          82
+        ],
+        "paradigms,": [
+          85
+        ],
+        "encompassing": [
+          86
+        ],
+        "Naive": [
+          88
+        ],
+        "RAG,": [
+          89,
+          92
+        ],
+        "Advanced": [
+          91
+        ],
+        "Modular": [
+          95
+        ],
+        "RAG.": [
+          96
+        ],
+        "It": [
+          97
+        ],
+        "meticulously": [
+          98
+        ],
+        "scrutinizes": [
+          99
+        ],
+        "tripartite": [
+          101
+        ],
+        "foundation": [
+          102
+        ],
+        "frameworks,": [
+          105
+        ],
+        "which": [
+          106
+        ],
+        "includes": [
+          107
+        ],
+        "retrieval,": [
+          109
+        ],
+        "generation": [
+          111
+        ],
+        "augmentation": [
+          114
+        ],
+        "techniques.": [
+          115
+        ],
+        "The": [
+          116
+        ],
+        "highlights": [
+          118
+        ],
+        "state-of-the-art": [
+          120
+        ],
+        "technologies": [
+          121
+        ],
+        "embedded": [
+          122
+        ],
+        "in": [
+          123,
+          136
+        ],
+        "each": [
+          124
+        ],
+        "these": [
+          126
+        ],
+        "critical": [
+          127
+        ],
+        "components,": [
+          128
+        ],
+        "providing": [
+          129
+        ],
+        "profound": [
+          131
+        ],
+        "understanding": [
+          132
+        ],
+        "advancements": [
+          135
+        ],
+        "systems.": [
+          138
+        ],
+        "Furthermore,": [
+          139
+        ],
+        "this": [
+          140,
+          151
+        ],
+        "introduces": [
+          142
+        ],
+        "up-to-date": [
+          143
+        ],
+        "evaluation": [
+          144
+        ],
+        "framework": [
+          145
+        ],
+        "benchmark.": [
+          147
+        ],
+        "At": [
+          148
+        ],
+        "end,": [
+          150
+        ],
+        "article": [
+          152
+        ],
+        "delineates": [
+          153
+        ],
+        "currently": [
+          156
+        ],
+        "faced": [
+          157
+        ],
+        "points": [
+          159
+        ],
+        "out": [
+          160
+        ],
+        "prospective": [
+          161
+        ],
+        "avenues": [
+          162
+        ],
+        "research": [
+          164
+        ],
+        "development.": [
+          166
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5102001778",
+            "display_name": "Yunfan Gao",
+            "orcid": "https://orcid.org/0000-0002-7932-2752"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Gao, Yunfan",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5001877137",
+            "display_name": "Yun Xiong",
+            "orcid": "https://orcid.org/0000-0002-8575-5415"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Xiong, Yun",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5101581913",
+            "display_name": "Xinyu Gao",
+            "orcid": "https://orcid.org/0000-0001-7654-3800"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Gao, Xinyu",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5109666673",
+            "display_name": "Kangxiang Jia",
+            "orcid": "https://orcid.org/0009-0001-0054-5049"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Jia, Kangxiang",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5104217086",
+            "display_name": "Jinliu Pan",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Pan, Jinliu",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5104217087",
+            "display_name": "Yuxi Bi",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Bi, Yuxi",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5100647639",
+            "display_name": "Yi Dai",
+            "orcid": "https://orcid.org/0000-0003-1219-2436"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Dai, Yi",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5101598822",
+            "display_name": "Jiawei Sun",
+            "orcid": "https://orcid.org/0000-0003-1332-6758"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Sun, Jiawei",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": null,
+            "display_name": "Wang, Meng",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Wang, Meng",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": null,
+            "display_name": "Wang, Haofen",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Wang, Haofen",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        }
+      ],
+      "doi": "https://doi.org/10.48550/arxiv.2312.10997"
+    },
+    {
+      "id": "https://openalex.org/W1979900513",
+      "display_name": "KNIME - the Konstanz information miner",
+      "publication_year": 2009,
+      "abstract_inverted_index": {
+        "The": [
+          0
+        ],
+        "Konstanz": [
+          1
+        ],
+        "Information": [
+          2
+        ],
+        "Miner": [
+          3
+        ],
+        "is": [
+          4,
+          21
+        ],
+        "a": [
+          5,
+          17,
+          24
+        ],
+        "modular": [
+          6
+        ],
+        "environment,": [
+          7
+        ],
+        "which": [
+          8,
+          30
+        ],
+        "enables": [
+          9,
+          31
+        ],
+        "easy": [
+          10
+        ],
+        "visual": [
+          11
+        ],
+        "assembly": [
+          12
+        ],
+        "and": [
+          13,
+          27,
+          37,
+          77
+        ],
+        "interactive": [
+          14
+        ],
+        "execution": [
+          15
+        ],
+        "of": [
+          16,
+          34,
+          50,
+          61,
+          65,
+          80,
+          84
+        ],
+        "data": [
+          18,
+          42
+        ],
+        "pipeline.": [
+          19
+        ],
+        "It": [
+          20
+        ],
+        "designed": [
+          22
+        ],
+        "as": [
+          23,
+          39,
+          41
+        ],
+        "teaching,": [
+          25
+        ],
+        "research": [
+          26
+        ],
+        "collaboration": [
+          28
+        ],
+        "platform,": [
+          29
+        ],
+        "simple": [
+          32
+        ],
+        "integration": [
+          33
+        ],
+        "new": [
+          35,
+          51,
+          72,
+          82
+        ],
+        "algorithms": [
+          36
+        ],
+        "tools": [
+          38
+        ],
+        "well": [
+          40
+        ],
+        "manipulation": [
+          43
+        ],
+        "or": [
+          44,
+          53
+        ],
+        "visualization": [
+          45
+        ],
+        "methods": [
+          46
+        ],
+        "in": [
+          47
+        ],
+        "the": [
+          48,
+          62,
+          66,
+          81
+        ],
+        "form": [
+          49
+        ],
+        "modules": [
+          52
+        ],
+        "nodes.": [
+          54
+        ],
+        "In": [
+          55
+        ],
+        "this": [
+          56
+        ],
+        "paper": [
+          57
+        ],
+        "we": [
+          58
+        ],
+        "describe": [
+          59
+        ],
+        "some": [
+          60,
+          79
+        ],
+        "design": [
+          63
+        ],
+        "aspects": [
+          64
+        ],
+        "underlying": [
+          67
+        ],
+        "architecture,": [
+          68
+        ],
+        "briey": [
+          69
+        ],
+        "sketch": [
+          70
+        ],
+        "how": [
+          71
+        ],
+        "nodes": [
+          73
+        ],
+        "can": [
+          74
+        ],
+        "be": [
+          75
+        ],
+        "incorporated,": [
+          76
+        ],
+        "highlight": [
+          78
+        ],
+        "features": [
+          83
+        ],
+        "version": [
+          85
+        ],
+        "2.0.": [
+          86
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5035270195",
+            "display_name": "Michael R. Berthold",
+            "orcid": "https://orcid.org/0000-0001-9095-3283"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I189712700",
+              "display_name": "University of Konstanz",
+              "ror": "https://ror.org/0546hnb39",
+              "country_code": "DE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Michael R. Berthold",
+          "raw_affiliation_strings": [
+            "University of Konstanz, Konstanz, Germany",
+            "University of Konstanz, Konstanz , Germany"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz, Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz , Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5083323579",
+            "display_name": "Nicolas Cebron",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I189712700",
+              "display_name": "University of Konstanz",
+              "ror": "https://ror.org/0546hnb39",
+              "country_code": "DE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Nicolas Cebron",
+          "raw_affiliation_strings": [
+            "University of Konstanz, Konstanz, Germany",
+            "University of Konstanz, Konstanz , Germany"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz, Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz , Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5043748720",
+            "display_name": "Fabian Dill",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I189712700",
+              "display_name": "University of Konstanz",
+              "ror": "https://ror.org/0546hnb39",
+              "country_code": "DE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Fabian Dill",
+          "raw_affiliation_strings": [
+            "University of Konstanz, Konstanz, Germany",
+            "University of Konstanz, Konstanz , Germany"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz, Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz , Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5065395432",
+            "display_name": "Thomas R. Gabriel",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I189712700",
+              "display_name": "University of Konstanz",
+              "ror": "https://ror.org/0546hnb39",
+              "country_code": "DE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Thomas R. Gabriel",
+          "raw_affiliation_strings": [
+            "University of Konstanz, Konstanz, Germany",
+            "University of Konstanz, Konstanz , Germany"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz, Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz , Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5023181734",
+            "display_name": "Tobias Kötter",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I189712700",
+              "display_name": "University of Konstanz",
+              "ror": "https://ror.org/0546hnb39",
+              "country_code": "DE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Tobias Kötter",
+          "raw_affiliation_strings": [
+            "University of Konstanz, Konstanz, Germany",
+            "University of Konstanz, Konstanz , Germany"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz, Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz , Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5110252252",
+            "display_name": "Thorsten Meinl",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I189712700",
+              "display_name": "University of Konstanz",
+              "ror": "https://ror.org/0546hnb39",
+              "country_code": "DE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Thorsten Meinl",
+          "raw_affiliation_strings": [
+            "University of Konstanz, Konstanz, Germany",
+            "University of Konstanz, Konstanz , Germany"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz, Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz , Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5054136569",
+            "display_name": "Peter Ohl",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I189712700",
+              "display_name": "University of Konstanz",
+              "ror": "https://ror.org/0546hnb39",
+              "country_code": "DE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Peter Ohl",
+          "raw_affiliation_strings": [
+            "University of Konstanz, Konstanz, Germany",
+            "University of Konstanz, Konstanz , Germany"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz, Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz , Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5027631426",
+            "display_name": "Kilian Thiel",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I189712700",
+              "display_name": "University of Konstanz",
+              "ror": "https://ror.org/0546hnb39",
+              "country_code": "DE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Kilian Thiel",
+          "raw_affiliation_strings": [
+            "University of Konstanz, Konstanz, Germany",
+            "University of Konstanz, Konstanz , Germany"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz, Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz , Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5062308622",
+            "display_name": "Bernd Wiswedel",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I189712700",
+              "display_name": "University of Konstanz",
+              "ror": "https://ror.org/0546hnb39",
+              "country_code": "DE",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ],
+          "countries": [
+            "DE"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Bernd Wiswedel",
+          "raw_affiliation_strings": [
+            "University of Konstanz, Konstanz, Germany",
+            "University of Konstanz, Konstanz , Germany"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz, Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            },
+            {
+              "raw_affiliation_string": "University of Konstanz, Konstanz , Germany",
+              "institution_ids": [
+                "https://openalex.org/I189712700"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.1145/1656274.1656280"
+    },
+    {
+      "id": "https://openalex.org/W4406840428",
+      "display_name": "Zep: A Temporal Knowledge Graph Architecture for Agent Memory",
+      "publication_year": 2025,
+      "abstract_inverted_index": {
+        "We": [
+          0
+        ],
+        "introduce": [
+          1
+        ],
+        "Zep,": [
+          2
+        ],
+        "a": [
+          3,
+          87
+        ],
+        "novel": [
+          4
+        ],
+        "memory": [
+          5
+        ],
+        "layer": [
+          6
+        ],
+        "service": [
+          7
+        ],
+        "for": [
+          8,
+          49,
+          197
+        ],
+        "AI": [
+          9
+        ],
+        "agents": [
+          10,
+          54
+        ],
+        "that": [
+          11,
+          36,
+          92
+        ],
+        "outperforms": [
+          12
+        ],
+        "the": [
+          13,
+          19,
+          108,
+          112,
+          136
+        ],
+        "current": [
+          14
+        ],
+        "state-of-the-art": [
+          15
+        ],
+        "system,": [
+          16
+        ],
+        "MemGPT,": [
+          17
+        ],
+        "in": [
+          18,
+          28,
+          182,
+          199
+        ],
+        "Deep": [
+          20
+        ],
+        "Memory": [
+          21
+        ],
+        "Retrieval": [
+          22
+        ],
+        "(DMR)": [
+          23
+        ],
+        "benchmark.": [
+          24
+        ],
+        "Additionally,": [
+          25
+        ],
+        "Zep": [
+          26,
+          76,
+          121,
+          155
+        ],
+        "excels": [
+          27
+        ],
+        "more": [
+          29,
+          137
+        ],
+        "comprehensive": [
+          30
+        ],
+        "and": [
+          31,
+          73,
+          99,
+          190
+        ],
+        "challenging": [
+          32,
+          138
+        ],
+        "evaluations": [
+          33
+        ],
+        "than": [
+          34
+        ],
+        "DMR": [
+          35,
+          109
+        ],
+        "better": [
+          37,
+          142
+        ],
+        "reflect": [
+          38
+        ],
+        "real-world": [
+          39,
+          200
+        ],
+        "enterprise": [
+          40,
+          61,
+          144
+        ],
+        "use": [
+          41,
+          145
+        ],
+        "cases.": [
+          42
+        ],
+        "While": [
+          43
+        ],
+        "existing": [
+          44
+        ],
+        "retrieval-augmented": [
+          45
+        ],
+        "generation": [
+          46
+        ],
+        "(RAG)": [
+          47
+        ],
+        "frameworks": [
+          48
+        ],
+        "large": [
+          50
+        ],
+        "language": [
+          51
+        ],
+        "model": [
+          52
+        ],
+        "(LLM)-based": [
+          53
+        ],
+        "are": [
+          55,
+          132,
+          179
+        ],
+        "limited": [
+          56
+        ],
+        "to": [
+          57,
+          164,
+          174
+        ],
+        "static": [
+          58
+        ],
+        "document": [
+          59
+        ],
+        "retrieval,": [
+          60
+        ],
+        "applications": [
+          62
+        ],
+        "demand": [
+          63
+        ],
+        "dynamic": [
+          64
+        ],
+        "knowledge": [
+          65,
+          89
+        ],
+        "integration": [
+          66
+        ],
+        "from": [
+          67
+        ],
+        "diverse": [
+          68
+        ],
+        "sources": [
+          69
+        ],
+        "including": [
+          70
+        ],
+        "ongoing": [
+          71
+        ],
+        "conversations": [
+          72
+        ],
+        "business": [
+          74,
+          101
+        ],
+        "data.": [
+          75
+        ],
+        "addresses": [
+          77
+        ],
+        "this": [
+          78,
+          153
+        ],
+        "fundamental": [
+          79
+        ],
+        "limitation": [
+          80
+        ],
+        "through": [
+          81,
+          135,
+          147
+        ],
+        "its": [
+          82
+        ],
+        "core": [
+          83
+        ],
+        "component": [
+          84
+        ],
+        "Graphiti": [
+          85
+        ],
+        "--": [
+          86
+        ],
+        "temporally-aware": [
+          88
+        ],
+        "graph": [
+          90
+        ],
+        "engine": [
+          91
+        ],
+        "dynamically": [
+          93
+        ],
+        "synthesizes": [
+          94
+        ],
+        "both": [
+          95
+        ],
+        "unstructured": [
+          96
+        ],
+        "conversational": [
+          97
+        ],
+        "data": [
+          98,
+          102
+        ],
+        "structured": [
+          100
+        ],
+        "while": [
+          103,
+          166
+        ],
+        "maintaining": [
+          104
+        ],
+        "historical": [
+          105
+        ],
+        "relationships.": [
+          106
+        ],
+        "In": [
+          107,
+          152
+        ],
+        "benchmark,": [
+          110,
+          140
+        ],
+        "which": [
+          111,
+          141
+        ],
+        "MemGPT": [
+          113
+        ],
+        "team": [
+          114
+        ],
+        "established": [
+          115
+        ],
+        "as": [
+          116,
+          186
+        ],
+        "their": [
+          117
+        ],
+        "primary": [
+          118
+        ],
+        "evaluation": [
+          119
+        ],
+        "metric,": [
+          120
+        ],
+        "demonstrates": [
+          122
+        ],
+        "superior": [
+          123
+        ],
+        "performance": [
+          124
+        ],
+        "(94.8%": [
+          125
+        ],
+        "vs": [
+          126
+        ],
+        "93.4%).": [
+          127
+        ],
+        "Beyond": [
+          128
+        ],
+        "DMR,": [
+          129
+        ],
+        "Zep's": [
+          130,
+          195
+        ],
+        "capabilities": [
+          131
+        ],
+        "further": [
+          133
+        ],
+        "validated": [
+          134
+        ],
+        "LongMemEval": [
+          139
+        ],
+        "reflects": [
+          143
+        ],
+        "cases": [
+          146
+        ],
+        "complex": [
+          148
+        ],
+        "temporal": [
+          149
+        ],
+        "reasoning": [
+          150
+        ],
+        "tasks.": [
+          151
+        ],
+        "evaluation,": [
+          154
+        ],
+        "achieves": [
+          156
+        ],
+        "substantial": [
+          157
+        ],
+        "results": [
+          158,
+          178
+        ],
+        "with": [
+          159
+        ],
+        "accuracy": [
+          160
+        ],
+        "improvements": [
+          161
+        ],
+        "of": [
+          162
+        ],
+        "up": [
+          163
+        ],
+        "18.5%": [
+          165
+        ],
+        "simultaneously": [
+          167
+        ],
+        "reducing": [
+          168
+        ],
+        "response": [
+          169
+        ],
+        "latency": [
+          170
+        ],
+        "by": [
+          171
+        ],
+        "90%": [
+          172
+        ],
+        "compared": [
+          173
+        ],
+        "baseline": [
+          175
+        ],
+        "implementations.": [
+          176
+        ],
+        "These": [
+          177
+        ],
+        "particularly": [
+          180
+        ],
+        "pronounced": [
+          181
+        ],
+        "enterprise-critical": [
+          183
+        ],
+        "tasks": [
+          184
+        ],
+        "such": [
+          185
+        ],
+        "cross-session": [
+          187
+        ],
+        "information": [
+          188
+        ],
+        "synthesis": [
+          189
+        ],
+        "long-term": [
+          191
+        ],
+        "context": [
+          192
+        ],
+        "maintenance,": [
+          193
+        ],
+        "demonstrating": [
+          194
+        ],
+        "effectiveness": [
+          196
+        ],
+        "deployment": [
+          198
+        ],
+        "applications.": [
+          201
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5116038748",
+            "display_name": "Preston Rasmussen",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Rasmussen, Preston",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5116038749",
+            "display_name": "Pavlo Paliychuk",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Paliychuk, Pavlo",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5116038750",
+            "display_name": "Travis Beauvais",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Beauvais, Travis",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5113563895",
+            "display_name": "Jack Ryan",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Ryan, Jack",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5116038751",
+            "display_name": "Daniel Chalef",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Chalef, Daniel",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        }
+      ],
+      "doi": "https://doi.org/10.48550/arxiv.2501.13956"
+    },
+    {
+      "id": "https://openalex.org/W7132944066",
+      "display_name": "Knowledge Graph-Enhanced RAG for Enterprise Question-Answering Systems",
+      "publication_year": 2026,
+      "abstract_inverted_index": null,
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5127497702",
+            "display_name": "Ebba Rakuljic Feldt",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Rakuljic Feldt, Ebba",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5066240764",
+            "display_name": "Elin Hellström",
+            "orcid": null
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Hellström, Elin",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        }
+      ],
+      "doi": null
+    },
+    {
+      "id": "https://openalex.org/W7133498371",
+      "display_name": "Leveraging NLP and Retrieval-Augmented Generation (RAG) Models for Automated Business Intelligence Query Resolution",
+      "publication_year": 2024,
+      "abstract_inverted_index": {
+        "The": [
+          0,
+          94,
+          193,
+          231,
+          262
+        ],
+        "rapid": [
+          1
+        ],
+        "expansion": [
+          2
+        ],
+        "of": [
+          3,
+          18,
+          272
+        ],
+        "enterprise": [
+          4,
+          116,
+          177,
+          255
+        ],
+        "data": [
+          5,
+          256
+        ],
+        "ecosystems": [
+          6
+        ],
+        "has": [
+          7
+        ],
+        "intensified": [
+          8
+        ],
+        "the": [
+          9,
+          252
+        ],
+        "demand": [
+          10
+        ],
+        "for": [
+          11,
+          52,
+          211
+        ],
+        "intelligent": [
+          12,
+          275
+        ],
+        "Business": [
+          13
+        ],
+        "Intelligence": [
+          14,
+          65
+        ],
+        "(BI)": [
+          15
+        ],
+        "systems": [
+          16,
+          164
+        ],
+        "capable": [
+          17,
+          271
+        ],
+        "translating": [
+          19
+        ],
+        "natural": [
+          20
+        ],
+        "language": [
+          21
+        ],
+        "queries": [
+          22
+        ],
+        "into": [
+          23
+        ],
+        "accurate": [
+          24
+        ],
+        "analytical": [
+          25,
+          92,
+          156,
+          191
+        ],
+        "insights": [
+          26
+        ],
+        "without": [
+          27
+        ],
+        "requiring": [
+          28
+        ],
+        "technical": [
+          29
+        ],
+        "expertise.": [
+          30
+        ],
+        "Traditional": [
+          31
+        ],
+        "BI": [
+          32,
+          173,
+          245
+        ],
+        "query": [
+          33,
+          39,
+          83,
+          157,
+          185
+        ],
+        "interfaces": [
+          34
+        ],
+        "rely": [
+          35,
+          128
+        ],
+        "heavily": [
+          36
+        ],
+        "on": [
+          37,
+          130
+        ],
+        "structured": [
+          38
+        ],
+        "languages": [
+          40
+        ],
+        "and": [
+          41,
+          49,
+          91,
+          108,
+          141,
+          151,
+          171,
+          190,
+          201,
+          217,
+          228,
+          258,
+          268
+        ],
+        "predefined": [
+          42
+        ],
+        "dashboards,": [
+          43
+        ],
+        "creating": [
+          44
+        ],
+        "bottlenecks": [
+          45
+        ],
+        "in": [
+          46,
+          184,
+          223
+        ],
+        "decision-making": [
+          47,
+          260
+        ],
+        "workflows": [
+          48
+        ],
+        "limiting": [
+          50
+        ],
+        "accessibility": [
+          51
+        ],
+        "non-technical": [
+          53
+        ],
+        "stakeholders.": [
+          54
+        ],
+        "This": [
+          55
+        ],
+        "paper": [
+          56
+        ],
+        "proposes": [
+          57
+        ],
+        "a": [
+          58,
+          109,
+          135,
+          142,
+          265
+        ],
+        "novel": [
+          59
+        ],
+        "framework": [
+          60,
+          195
+        ],
+        "titled": [
+          61
+        ],
+        "Adaptive": [
+          62
+        ],
+        "Contextual": [
+          63
+        ],
+        "Retrieval-Augmented": [
+          64,
+          76
+        ],
+        "Engine": [
+          66
+        ],
+        "(ACRIE),": [
+          67
+        ],
+        "which": [
+          68
+        ],
+        "integrates": [
+          69
+        ],
+        "advanced": [
+          70
+        ],
+        "Natural": [
+          71
+        ],
+        "Language": [
+          72
+        ],
+        "Processing": [
+          73
+        ],
+        "(NLP)": [
+          74
+        ],
+        "with": [
+          75,
+          85,
+          239
+        ],
+        "Generation": [
+          77
+        ],
+        "(RAG)": [
+          78
+        ],
+        "to": [
+          79,
+          120,
+          148
+        ],
+        "automate": [
+          80
+        ],
+        "business": [
+          81
+        ],
+        "intelligence": [
+          82,
+          238
+        ],
+        "resolution": [
+          84,
+          186
+        ],
+        "improved": [
+          86,
+          202
+        ],
+        "semantic": [
+          87,
+          99,
+          198
+        ],
+        "understanding,": [
+          88
+        ],
+        "contextual": [
+          89,
+          226
+        ],
+        "grounding,": [
+          90
+        ],
+        "accuracy.": [
+          93
+        ],
+        "proposed": [
+          95,
+          194
+        ],
+        "model": [
+          96
+        ],
+        "combines": [
+          97
+        ],
+        "transformer-based": [
+          98
+        ],
+        "parsing": [
+          100
+        ],
+        "using": [
+          101
+        ],
+        "Domain-Tuned": [
+          102
+        ],
+        "BERT": [
+          103
+        ],
+        "embeddings,": [
+          104
+        ],
+        "hybrid": [
+          105
+        ],
+        "vector–symbolic": [
+          106
+        ],
+        "retrieval,": [
+          107
+        ],
+        "dynamically": [
+          110
+        ],
+        "optimized": [
+          111
+        ],
+        "RAG": [
+          112,
+          125,
+          169
+        ],
+        "pipeline": [
+          113
+        ],
+        "that": [
+          114,
+          127,
+          234,
+          250
+        ],
+        "retrieves": [
+          115
+        ],
+        "knowledge": [
+          117
+        ],
+        "artifacts": [
+          118
+        ],
+        "prior": [
+          119
+        ],
+        "response": [
+          121,
+          224
+        ],
+        "synthesis.": [
+          122
+        ],
+        "Unlike": [
+          123
+        ],
+        "conventional": [
+          124
+        ],
+        "implementations": [
+          126
+        ],
+        "solely": [
+          129
+        ],
+        "similarity": [
+          131
+        ],
+        "search,": [
+          132
+        ],
+        "ACRIE": [
+          133
+        ],
+        "introduces": [
+          134
+        ],
+        "Context-Aware": [
+          136
+        ],
+        "Query": [
+          137
+        ],
+        "Reformulation": [
+          138
+        ],
+        "Algorithm": [
+          139
+        ],
+        "(CAQRA)": [
+          140
+        ],
+        "Multi-Stage": [
+          143
+        ],
+        "Evidence": [
+          144
+        ],
+        "Ranking": [
+          145
+        ],
+        "Mechanism": [
+          146
+        ],
+        "(MSERM)": [
+          147
+        ],
+        "minimize": [
+          149
+        ],
+        "hallucinations": [
+          150
+        ],
+        "enhance": [
+          152
+        ],
+        "numerical": [
+          153
+        ],
+        "reasoning": [
+          154
+        ],
+        "during": [
+          155
+        ],
+        "generation.": [
+          158
+        ],
+        "Performance": [
+          159
+        ],
+        "is": [
+          160
+        ],
+        "evaluated": [
+          161
+        ],
+        "against": [
+          162
+        ],
+        "baseline": [
+          163
+        ],
+        "including": [
+          165
+        ],
+        "Text-to-SQL": [
+          166
+        ],
+        "transformers,": [
+          167
+        ],
+        "standard": [
+          168
+        ],
+        "architectures,": [
+          170
+        ],
+        "rule-based": [
+          172
+        ],
+        "assistants": [
+          174
+        ],
+        "across": [
+          175
+        ],
+        "benchmark": [
+          176
+        ],
+        "datasets.": [
+          178
+        ],
+        "Experimental": [
+          179
+        ],
+        "comparisons": [
+          180
+        ],
+        "demonstrate": [
+          181
+        ],
+        "measurable": [
+          182
+        ],
+        "improvements": [
+          183
+        ],
+        "accuracy,": [
+          187
+        ],
+        "latency": [
+          188
+        ],
+        "reduction,": [
+          189
+        ],
+        "consistency.": [
+          192
+        ],
+        "achieves": [
+          196
+        ],
+        "higher": [
+          197
+        ],
+        "alignment": [
+          199
+        ],
+        "scores": [
+          200
+        ],
+        "retrieval": [
+          203,
+          237
+        ],
+        "precision": [
+          204
+        ],
+        "while": [
+          205
+        ],
+        "maintaining": [
+          206
+        ],
+        "scalable": [
+          207,
+          266
+        ],
+        "inference": [
+          208
+        ],
+        "performance": [
+          209,
+          219
+        ],
+        "suitable": [
+          210
+        ],
+        "real-time": [
+          212
+        ],
+        "analytics": [
+          213,
+          249,
+          276
+        ],
+        "environments.": [
+          214
+        ],
+        "Graph-based": [
+          215
+        ],
+        "evaluations": [
+          216
+        ],
+        "comparative": [
+          218
+        ],
+        "visualizations": [
+          220
+        ],
+        "illustrate": [
+          221
+        ],
+        "gains": [
+          222
+        ],
+        "correctness,": [
+          225
+        ],
+        "relevance,": [
+          227
+        ],
+        "decision-support": [
+          229
+        ],
+        "reliability.": [
+          230
+        ],
+        "findings": [
+          232
+        ],
+        "establish": [
+          233
+        ],
+        "integrating": [
+          235
+        ],
+        "adaptive": [
+          236
+        ],
+        "domain-aware": [
+          240
+        ],
+        "NLP": [
+          241
+        ],
+        "significantly": [
+          242
+        ],
+        "advances": [
+          243
+        ],
+        "automated": [
+          244
+        ],
+        "systems,": [
+          246
+        ],
+        "enabling": [
+          247
+        ],
+        "conversational": [
+          248
+        ],
+        "bridge": [
+          251
+        ],
+        "gap": [
+          253
+        ],
+        "between": [
+          254
+        ],
+        "warehouses": [
+          257
+        ],
+        "executive": [
+          259
+        ],
+        "processes.": [
+          261
+        ],
+        "study": [
+          263
+        ],
+        "contributes": [
+          264
+        ],
+        "architecture": [
+          267
+        ],
+        "algorithmic": [
+          269
+        ],
+        "innovation": [
+          270
+        ],
+        "redefining": [
+          273
+        ],
+        "next-generation": [
+          274
+        ],
+        "platforms.": [
+          277
+        ]
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5121292114",
+            "display_name": "Linda Aluso",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I142740786",
+              "display_name": "University of Louisville",
+              "ror": "https://ror.org/01ckdn478",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I142740786"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Linda Aluso",
+          "raw_affiliation_strings": [
+            "Department of Computer Information Systems, University of Louisville, KY, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Computer Information Systems, University of Louisville, KY, USA",
+              "institution_ids": [
+                "https://openalex.org/I142740786"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5128091458",
+            "display_name": "Joy Onma Enyejo",
+            "orcid": null
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I31959934",
+              "display_name": "Nasarawa State University",
+              "ror": "https://ror.org/04ybvje46",
+              "country_code": "NG",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I31959934"
+              ]
+            }
+          ],
+          "countries": [
+            "NG"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Joy Onma Enyejo",
+          "raw_affiliation_strings": [
+            "Department of Business Management, Nasarawa State University Keffi, Nasarawa State, Nigeria"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Business Management, Nasarawa State University Keffi, Nasarawa State, Nigeria",
+              "institution_ids": [
+                "https://openalex.org/I31959934"
+              ]
+            }
+          ]
+        }
+      ],
+      "doi": "https://doi.org/10.32628/ijsrset242439"
+    }
+  ],
+  "notes": [
+    {
+      "id": "https://openalex.org/W4389984066",
+      "doi": "https://doi.org/10.48550/arxiv.2312.10997",
+      "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "year": 2023,
+      "authors": [
+        "Yunfan Gao",
+        "Yun Xiong",
+        "Xinyu Gao",
+        "Kangxiang Jia",
+        "Jinliu Pan"
+      ],
+      "abstract": "Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination, outdated knowledge, and non-transparent, untraceable reasoning processes. Retrieval-Augmented Generation (RAG) has emerged as a promising solution by incorporating knowledge from external databases. This enhances the accuracy and credibility of the generation, particularly for knowledge-intensive tasks, and allows for continuous knowledge updates and integration of domain-specific information. RAG synergistically merges LLMs' intrinsic knowledge with the vast, dynamic repositories of external databases. This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG. It meticulously scrutinizes the tripartite foundation of RAG frameworks, which includes the retrieval, the generation and the augmentation techniques. The paper highlights the state-of-the-art technologies embedded in each of these critical components, providing a profound understanding of the advancements in RAG systems. Furthermore, this paper introduces up-to-date evaluation framework and benchmark. At the end, this article delineates the challenges currently faced and points out prospective avenues for research and development."
+    },
+    {
+      "id": "https://openalex.org/W1979900513",
+      "doi": "https://doi.org/10.1145/1656274.1656280",
+      "title": "KNIME - the Konstanz information miner",
+      "year": 2009,
+      "authors": [
+        "Michael R. Berthold",
+        "Nicolas Cebron",
+        "Fabian Dill",
+        "Thomas R. Gabriel",
+        "Tobias Kötter"
+      ],
+      "abstract": "The Konstanz Information Miner is a modular environment, which enables easy visual assembly and interactive execution of a data pipeline. It is designed as a teaching, research and collaboration platform, which enables simple integration of new algorithms and tools as well as data manipulation or visualization methods in the form of new modules or nodes. In this paper we describe some of the design aspects of the underlying architecture, briey sketch how new nodes can be incorporated, and highlight some of the new features of version 2.0."
+    },
+    {
+      "id": "https://openalex.org/W4406840428",
+      "doi": "https://doi.org/10.48550/arxiv.2501.13956",
+      "title": "Zep: A Temporal Knowledge Graph Architecture for Agent Memory",
+      "year": 2025,
+      "authors": [
+        "Preston Rasmussen",
+        "Pavlo Paliychuk",
+        "Travis Beauvais",
+        "Jack Ryan",
+        "Daniel Chalef"
+      ],
+      "abstract": "We introduce Zep, a novel memory layer service for AI agents that outperforms the current state-of-the-art system, MemGPT, in the Deep Memory Retrieval (DMR) benchmark. Additionally, Zep excels in more comprehensive and challenging evaluations than DMR that better reflect real-world enterprise use cases. While existing retrieval-augmented generation (RAG) frameworks for large language model (LLM)-based agents are limited to static document retrieval, enterprise applications demand dynamic knowledge integration from diverse sources including ongoing conversations and business data. Zep addresses this fundamental limitation through its core component Graphiti -- a temporally-aware knowledge graph engine that dynamically synthesizes both unstructured conversational data and structured business data while maintaining historical relationships. In the DMR benchmark, which the MemGPT team established as their primary evaluation metric, Zep demonstrates superior performance (94.8% vs 93.4%). Beyond DMR, Zep's capabilities are further validated through the more challenging LongMemEval benchmark, which better reflects enterprise use cases through complex temporal reasoning tasks. In this evaluation, Zep achieves substantial results with accuracy improvements of up to 18.5% while simultaneously reducing response latency by 90% compared to baseline implementations. These results are particularly pronounced in enterprise-critical tasks such as cross-session information synthesis and long-term context maintenance, demonstrating Zep's effectiveness for deployment in real-world application"
+    },
+    {
+      "id": "https://openalex.org/W7132944066",
+      "doi": null,
+      "title": "Knowledge Graph-Enhanced RAG for Enterprise Question-Answering Systems",
+      "year": 2026,
+      "authors": [
+        "Ebba Rakuljic Feldt",
+        "Elin Hellström"
+      ],
+      "abstract": ""
+    },
+    {
+      "id": "https://openalex.org/W7133498371",
+      "doi": "https://doi.org/10.32628/ijsrset242439",
+      "title": "Leveraging NLP and Retrieval-Augmented Generation (RAG) Models for Automated Business Intelligence Query Resolution",
+      "year": 2024,
+      "authors": [
+        "Linda Aluso",
+        "Joy Onma Enyejo"
+      ],
+      "abstract": "The rapid expansion of enterprise data ecosystems has intensified the demand for intelligent Business Intelligence (BI) systems capable of translating natural language queries into accurate analytical insights without requiring technical expertise. Traditional BI query interfaces rely heavily on structured query languages and predefined dashboards, creating bottlenecks in decision-making workflows and limiting accessibility for non-technical stakeholders. This paper proposes a novel framework titled Adaptive Contextual Retrieval-Augmented Intelligence Engine (ACRIE), which integrates advanced Natural Language Processing (NLP) with Retrieval-Augmented Generation (RAG) to automate business intelligence query resolution with improved semantic understanding, contextual grounding, and analytical accuracy. The proposed model combines transformer-based semantic parsing using Domain-Tuned BERT embeddings, hybrid vector–symbolic retrieval, and a dynamically optimized RAG pipeline that retrieves enterprise knowledge artifacts prior to response synthesis. Unlike conventional RAG implementations that rely solely on similarity search, ACRIE introduces a Context-Aware Query Reformulation Algorithm (CAQRA) and a Multi-Stage Evidence Ranking Mechanism (MSERM) to minimize hallucinations and enhance numerical reasoning during analytical query generation. Performance is evaluated against baseline systems including Text-to-SQL transformers, standard RAG architectures, and rule-based BI assistants across benchmark enterprise datasets. Experimental comparisons demonstrate measurable improvements"
+    }
+  ],
+  "final_answer": "Определение темы\nGraph RAG for enterprise knowledge systems — подходы и архитектуры, которые объединяют Retrieval-Augmented Generation (RAG) — методику подмешивания релевантных внешних знаний в генеративные ответы больших языковых моделей (LLM) — с представлением знаний в виде графов (knowledge graphs, KG). В таком объединении графовая структура служит источником контекстуализированных, семантически связанных фрагментов (узлы, рёбра, временные метаданные), которые извлекаются и подаются в LLM для повышения точности, трассируемости и актуальности ответов в корпоративных (enterprise) сценариях.\n\nОсновные подходы\n- Классический RAG (документно-ориентированный): извлечение фрагментов текстов из векторных эмбеддингов/индексов и их конкатенация к запросу LLM. Минусы — потеря связной семантики между документами и слабая работа с динамическими/структурированными данными (источники: Gao et al., 2023 обзор).\n- Knowledge-Graph–Enhanced RAG: вместо (или вместе с) плоских текстовых фрагментов используются подграфы KG — релевантные узлы и связи извлекаются и служат контекстом для генерации, что улучшает семантическую согласованность, объяснимость и возможность выполнять логические/реляционные рассуждения (частично подтверждается в источниках 2024–2026, см. Zep 2025 и работы 2026).\n- Временные/динамические KG + RAG: интеграция временно маркированных фактов и версий отношений (temporal knowledge graphs) для корректной работы с эволюцией корпоративных данных и конверсейшен-историй (Zep, 2025 — Temporal Knowledge Graph Architecture, Graphiti).\n- Гибридные архитектуры (вектор + символ): комбинирование семантического поиска по эмбеддингам с символными операциями по KG (традиционный RAG + графовый поиск/логика) для повышения точности числовых и аналитических задач (ACRIE, 2024 — упоминание гибрида vector–symbolic retrieval).\n- Модульный RAG: разделение pipeline на модули retrieval, augmentation, generation и оценку/ранжирование доказательств (Gao et al., 2023 описывает модульную классификацию RAG).\n\n3–5 ключевых работ (с годами и вкладом) — на базе предоставленных источников\n1. Gao, Y., Xiong, Y., Gao, X., Jia, K., Pan, J. (2023). \"Retrieval-Augmented Generation for Large Language Models: A Survey\" (arXiv:2312.10997).\n   - Вклад: систематизация RAG-парадигм (Naive, Advanced, Modular), обзор компонентов (retrieval, generation, augmentation), современные техники и оценочные рамки; подчёркивает роль retrieval для уменьшения галлюцинаций и обновления знаний.\n2. Rasmussen, P., Paliychuk, P., Beauvais, T., Ryan, J., Chalef, D. (2025). \"Zep: A Temporal Knowledge Graph Architecture for Agent Memory\" (arXiv:2501.13956).\n   - Вклад: представлена реализация temporally-aware KG (Graphiti) как память для агентов; демонстрируется, что графовый и временной подход улучшает показатели в задачах долгой памяти, кросс-сессийного синтеза и снижает задержку; подчёркнуто преимущество графовой интеграции разговорных и бизнес-структурированных данных для enterprise-кейсов.\n3. Aluso, L., Enyejo, J.O. (2024). \"Leveraging NLP and Retrieval-Augmented Generation (RAG) Models for Automated Business Intelligence Query Resolution\" (IJSRSET, 2024).\n   - Вклад: предложение ACRIE — фреймворка для автоматизации BI-запросов с использованием Domain-Tuned BERT, гибридного vector–symbolic retrieval и динамического RAG-пайплайна; введение алгоритма Context-Aware Query Reformulation (CAQRA) и Multi-Stage Evidence Ranking (MSERM) для уменьшения галлюцинаций и улучшения числового/аналитического вывода.\n4. Feldt, E.R., Hellström, E. (2026). \"Knowledge Graph-Enhanced RAG for Enterprise Question-Answering Systems\" (2026).\n   - Вклад: (метаданные присутствуют, аннотация отсутствует) название указывает на непосредственное изучение интеграции KG в RAG для корпоративных QA-систем. Ограничение: отсутствует абстракт — детали вкладов не доступны в предоставленных данных.\n5. Berthold, M. R. et al. (2009). \"KNIME - the Konstanz information miner\".\n   - Вклад: описывает модульную архитектуру для сборки data-pipelines и интеграции новых алгоритмов; релевантен как исторический пример инструментальной поддержки комплексных конвейеров, которые могут понадобиться при построении гибридных RAG+KG систем в enterprise.\n\nВозможные приложения в enterprise\n- Корпоративные QA и виртуальные ассистенты с объяснимыми источниками (ответы, подкреплённые подграфами/с",
+  "status": "finished",
+  "stop_reason": "final_answer_generated",
+  "tool_errors": 0,
+  "evaluator_result": {
+    "correctness": 4,
+    "groundedness": 4,
+    "completeness": 3,
+    "coverage_of_required_fields": 4,
+    "source_consistency": 4,
+    "comment": "Ответ в целом корректен и согласуется с перечисленными источниками: хорошо описаны подходы (классический RAG, KG-enhanced, временные KG, гибриды, модульный RAG) и даны релевантные ссылки. Оценка недостаёт точности в нескольких местах: утверждения о работах 2025–2026 (Zep 2025, Feldt & Hellström 2026) представлены уверенно, тогда как для Feldt & Hellström указана только метадата без аннотации, поэтому вклад там неполностью обоснован; некоторые формулировки (например, «значительно улучшает показатели» для Zep) следуют из абстракта, но могли бы быть более осторожными в интерпретации результатов и ограничений. Раздел «Возможные приложения» обрывается и не завершён — это снижает полноту. В целом сильная, обоснованная конспективная сводка, но требует доработки деталей и завершения перечисленных секций.",
+    "rubric": 3.8
+  }
+}
