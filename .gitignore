@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+key_*.txt
+output/traces/
+output/results/
+output/figures/
+output/report/
+
